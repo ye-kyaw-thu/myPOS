@@ -73,3 +73,11 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 | sb | Symbol | ?, #, &, %, $, £, ¥, 𝜆, π, ÷, +, ×, @ |
 | tn | Text Number | တစ် (one), နှစ် (two), သုံး (three), တစ်ရာ (one hundred), တစ်ထောင် (one thousand) |
 | v | Verb | ကူညီ (help), လိုက်နာ (observe), အားပေး (encourage) |
+
+## Development and Support
+
+Contributors
+
+Khin War War Htike (Most Tagging)  
+Win Pa Pa (Advisor)  
+Ye Kyaw Thu (Supervisor)  
