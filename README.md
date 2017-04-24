@@ -31,6 +31,7 @@ Shortest sentence : 2 words
 
 total : 16
 
-
+## Word Segmentation
+In Myanmar texts, words composed of single or multiple syllables are usually not separated by white space. Spaces are used for easier reading and generally put between phrases, but there are no clear rules for using spaces in Myanmar language. Therefore, word segmentation is a necessary prerequisite for POS tagging.
 
 
