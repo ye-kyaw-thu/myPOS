@@ -57,7 +57,7 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 15 Myanmar POS are used in our tag set to meet the necessity of further NLP processing such as information extraction, semantic processing and machine translation. The denitions and descriptions of POS tags are presented in detail as follows:
 
 | POS Tag        | Brief Definition           | Examples  |
-| ------------- |:-------------:| -----:|
+| ------------- |-------------|------|
 | abb      | Abbreviation | အထက(Basic Education High School), လ.ဝ(Confidentiality) |
 | adj      | Adjective      |  ရဲရင့် (brave), လှပ (beautiful), မွန်မြတ် (noble)  |
 | adv | Adverb      | ဖြေးဖြေး (slow), နည်းနည်း (less) |
