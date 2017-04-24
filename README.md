@@ -84,5 +84,5 @@ Ye Kyaw Thu (Supervisor)
 
 ## Future Works
 
-We plan to release our six trained models together with running scripts for Myanmar language NLP research ASAP.  
+We plan to release our six trained models (i.e. POS taggers) together with some running sripts for Myanmar language NLP research ASAP.  
 We also plan to increase size of the myCorpus little by little.
