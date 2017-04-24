@@ -98,4 +98,4 @@ The myPOS corpus (version 0.8) is being used for CICLING2017 Conference.
 [Draft version of CICLing2017 conference paper] ()
 [Poster of CICLing2017 conference] ()
 
-Important Note: We used myPOS corpus **version 0.8 with 16 POS tags** for CICLing 2017.
+Important Note: We used myPOS corpus **version 0.8 with 16 POS tags** for CICLing 2017 conference paper.
