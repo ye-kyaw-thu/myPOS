@@ -96,10 +96,14 @@ Khin War War Htike (Most Tagging)
 We plan to release our six trained models (i.e. POS taggers) together with some running sripts for Myanmar language NLP research ASAP.  
 We also plan to increase size of the myCorpus little by little.
 
-## References
+## Publications
 
 The myPOS corpus (version 0.8) is being used for CICLING2017 Conference.  
 [Draft version of CICLing2017 conference paper] (https://github.com/ye-kyaw-thu/myPOS/blob/master/CICLING2017/myPOS-CICLing2017-paper.pdf)  
 [Poster of CICLing2017 conference] (https://github.com/ye-kyaw-thu/myPOS/blob/master/CICLING2017/10K-POS-tagging-CICLing2017.pdf)
 
 Important Note: We used myPOS corpus **version 0.8 with 16 POS tags** for CICLing 2017 conference paper.
+
+## References
+1. San Lwin, Myanmar-English Dictionary (1993), Department of the Myanmar Language Commission, Ministry of Education, Union of Myanmar.
+2. Myanmar Grammar (2005). Department of the Myanmar Language Commission, Ministry of Education, Union of Myanmar.
