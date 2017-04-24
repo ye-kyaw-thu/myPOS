@@ -62,4 +62,5 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 | adj      | Adjective      |  ရဲရင့် (brave), လှပ (beautiful), မွန်မြတ် (noble)  |
 | adv | Adverb      | ဖြေးဖြေး (slow), နည်းနည်း (less) |
 | conj | Conjunction | နှင့် (and), ထို့ကြောင့် (therefore), သို့မဟုတ် (or) |
+| fw | Foreign Word | 1, 2, 3, Myanmar, ミャンマー (Myanmar in Japanese), BBC, Google. 缅甸 (Myanmar in Chinese)|
 
