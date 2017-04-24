@@ -91,3 +91,9 @@ Ye Kyaw Thu (Supervisor)
 
 We plan to release our six trained models (i.e. POS taggers) together with some running sripts for Myanmar language NLP research ASAP.  
 We also plan to increase size of the myCorpus little by little.
+
+## References
+
+The myPOS corpus (version 0.8) is being used for CICLING2017 Conference.  
+[Draft version of CICLing2017 conference paper] ()
+[Poster of CICLing2017 conference] ()
