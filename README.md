@@ -89,7 +89,7 @@ Contributors
 
 Khin War War Htike (Most Tagging)  
 Win Pa Pa (Most Checking, Advising)  
-Ye Kyaw Thu (Supervisor)  
+[Ye Kyaw Thu](https://sites.google.com/site/yekyawthunlp/) (Supervisor)  
 
 ## Future Works
 
