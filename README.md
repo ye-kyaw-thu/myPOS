@@ -34,25 +34,20 @@ total : 16
 ## Word Segmentation
 In Myanmar texts, words composed of single or multiple syllables are usually not separated by white space. Spaces are used for easier reading and generally put between phrases, but there are no clear rules for using spaces in Myanmar language. Therefore, word segmentation is a necessary prerequisite for POS tagging. In our myPOS corpus, we did manual word segmentation based on following rules:
 
-1. Myanmar word can usually be identified by the combination of root word, prefix and suffix.
-	Unsegmented word:	စားသည် (eat) 
-	Segmented word:	စား/v သည်/ppm
-2. Plural Nouns are identified by following the particle.
-	Unsegmented word:	ကျောင်းသားများ (students)
-	Segmented word:	ကျောင်းသား/n များ/part
-3. Possessive words are identified by following post positional marker.
-	Unsegmented word:	ကျွန်တော်၏စာအုပ် (my book)
-	Segmented word:	ကျွန်တော်/n ၏/ppm စာအုပ်/n
-4. Noun is identified with the combination of particle to the verb or the adjective.
-	Unsegmented word:	ဆက်သွယ်ရေး (communication),
-				ရိုးသားမှု(honesty)
-	Segmented word:	ဆက်သွယ်/v ရေး/part
-				ရိုးသား/adj မှု/part
-5. Particle state the type of noun , and used after number or text number.
-	Unsegmented word:	၁၀ယောက် (10 people)
-				ငါးခု (five pieces)
-	Segmented word:	၁၀/num ယောက်/part 
-				ငါး/tn ခု/part 
-
+1. Myanmar word can usually be identified by the combination of root word, prefix and suffix.  
+Unsegmented word: စားသည် (eat)  
+Segmented word:	စား/v သည်/ppm
+2. Plural Nouns are identified by following the particle.  
+Unsegmented word: ကျောင်းသားများ (students)  
+Segmented word:	ကျောင်းသား/n များ/part
+3. Possessive words are identified by following post positional marker.  
+Unsegmented word: ကျွန်တော်၏စာအုပ် (my book)  
+Segmented word:	ကျွန်တော်/n ၏/ppm စာအုပ်/n
+4. Noun is identified with the combination of particle to the verb or the adjective.  
+Unsegmented word: ဆက်သွယ်ရေး (communication), ရိုးသားမှု(honesty)  
+Segmented word:	ဆက်သွယ်/v ရေး/part, ရိုးသား/adj မှု/part
+5. Particle state the type of noun , and used after number or text number.  
+Unsegmented word: ၁၀ယောက် (10 people), ငါးခု (five pieces)  
+Segmented word:	၁၀/num ယောက်/part, ငါး/tn ခု/part 
 
 
