@@ -68,3 +68,7 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 | num | Number | ၁ (1), ၂ (2), ၃ (3), ၁၀ (10), ၁၀၀ (100), ၁၀၀၀ (1000) |
 | part | Particle | များ (used to form the plural nouns as "-s" , "-es"), ခဲ့ (the past tense "-ed"), သင့် (modal verb "shall"), လိမ့် (modal verb "will"), နိုင် (modal verb "can") |
 | ppm | Post-positional Marker | သည်, က, ကို, အား, သို့, မှာ, တွင် (at, on ,in, to) |
+| pron | Pronoun | ကျွန်တော် (I), ကျွန်မ (I), သင် (you), သူ (he), သူမ (she) |
+| punc | Punctuation | ။, ၊, (, ), \, _ , ', " |
+| sb | Symbol | ?, #, &, %, $, £, ¥, 𝜆, π, ÷, +, ×, @ |
+| tn | Text Number | တစ် (one), နှစ် (two), သုံး (three), တစ်ရာ (one hundred), တစ်ထောင် (one thousand) |
