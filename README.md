@@ -64,3 +64,5 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 | conj | Conjunction | နှင့် (and), ထို့ကြောင့် (therefore), သို့မဟုတ် (or) |
 | fw | Foreign Word | 1, 2, 3, Myanmar, ミャンマー (Myanmar in Japanese), BBC, Google. 缅甸 (Myanmar in Chinese)|
 | int | Interjection | အမလေး (Oh My God!) |
+| n | Noun | ကျောင်း (school), စာအုပ် (book), ဒေါ်အောင်ဆန်းစုကြည် (Daw Aung San Suu Kyi), လွတ်လပ်ရေး (freedom) |
+| num | Number | ၁ (1), ၂ (2), ၃ (3), ၁၀ (10), ၁၀၀ (100), ၁၀၀၀ (1000) |
