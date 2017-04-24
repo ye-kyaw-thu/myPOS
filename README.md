@@ -78,6 +78,6 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 
 Contributors
 
-Khin War War Htike (Most Tagging)  
+Khin War War Htike (Tagger)  
 Win Pa Pa (Advisor)  
 Ye Kyaw Thu (Supervisor)  
