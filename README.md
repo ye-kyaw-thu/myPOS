@@ -58,7 +58,7 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 
 | POS Tag        | Brief Definition           | Examples  |
 | ------------- |:-------------:| -----:|
-| abb      | Abbreviation | အထက(Basic Education High School), လ.ဝ(Con dentiality) |
+| abb      | Abbreviation | အထက(Basic Education High School), လ.ဝ(Confidentiality) |
 | adj      | Adjective      |    |
 | adv | Adverb      |    $1 |
 
