@@ -6,7 +6,7 @@ Creative Commons Attribution-NonCommercial-Share Alike 4.0 International (CC BY-
 [Details Info of License] (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## Introduction
-The myPOS Corpus (Myanmar POS Corpus) is a 10,998 sentences (242,303 words) manually word segmented and POS tagged corpus developed for Myanmar language NLP research and developments. We collected Myanmar sentences from Wikipedia that include various area such as economics, history, news, politics and philosophy. The average number of words per sentence in the whole corpus is 21.59. The longest sentence contained 423 words and shortest sentence contained 2 words as follows (here, line number : Myanamr sentence):
+The myPOS Corpus (Myanmar POS Corpus) is a 11,000 sentences (24,1736 words) manually word segmented and POS tagged corpus developed for Myanmar language NLP research and developments. We collected Myanmar sentences from Wikipedia that include various area such as economics, history, news, politics and philosophy. The average number of words per sentence in the whole corpus is 21.59. The longest sentence contained 423 words and shortest sentence contained 2 words as follows (here, line number : Myanamr sentence):
 
 Longest sentence : 423 words
 
