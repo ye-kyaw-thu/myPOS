@@ -1,5 +1,5 @@
 # myPOS (draft released 0.9)
-myPOS Corpus (Myanmar POS Corpus) for Myanmar language NLP Research and Developments
+myPOS Corpus (Myanmar Part-of-Speech Corpus) for Myanmar language NLP Research and Developments
 
 ## Introduction
 The myPOS Corpus (Myanmar POS Corpus) is a 10,998 sentences (242,303 words) manually word segmented and POS tagged corpus developed for Myanmar language NLP research and developments. We collected Myanmar sentences from Wikipedia that include various area such as economics, history, news, politics and philosophy. The average number of words per sentence in the whole corpus is 21.59. The longest sentence contained 423 words and shortest sentence contained 2 words as follows (here, line number : Myanamr sentence):
@@ -52,4 +52,8 @@ Segmented word:	၁၀/num ယောက်/part, ငါး/tn ခု/part
 6. We put breakpoints ("|", pipe character) for compound words.  
 Unsegmented word:ခရမ်းမြို့နယ် (Khayan township)  
 Segmented word: ခရမ်း/n|မြို့နယ်/n
+
+## POS Tags
+15 Myanmar POS are used in our tag set to meet the necessity of further NLP processing such as information extraction, semantic processing and machine translation. The denitions and descriptions of POS tags are presented in detail as follows:
+
 
