@@ -66,3 +66,4 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 | int | Interjection | အမလေး (Oh My God!) |
 | n | Noun | ကျောင်း (school), စာအုပ် (book), ဒေါ်အောင်ဆန်းစုကြည် (Daw Aung San Suu Kyi), လွတ်လပ်ရေး (freedom) |
 | num | Number | ၁ (1), ၂ (2), ၃ (3), ၁၀ (10), ၁၀၀ (100), ၁၀၀၀ (1000) |
+| part | Particle | များ (used to form the plural nouns as "-s" , "-es"), ခဲ့ (the past tense "-ed"), သင့် (modal verb "shall"), လိမ့် (modal verb "will"), နိုင် (modal verb "can") |
