@@ -97,3 +97,5 @@ We also plan to increase size of the myCorpus little by little.
 The myPOS corpus (version 0.8) is being used for CICLING2017 Conference.  
 [Draft version of CICLing2017 conference paper] ()
 [Poster of CICLing2017 conference] ()
+
+Important Note: We used myPOS corpus **version 0.8 with 16 POS tags** for CICLing 2017.
