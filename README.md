@@ -81,3 +81,8 @@ Contributors
 Khin War War Htike (Tagger)  
 Win Pa Pa (Advisor)  
 Ye Kyaw Thu (Supervisor)  
+
+## Future Works
+
+We plan to release our six trained models together with running scripts for Myanmar language NLP research ASAP.  
+We also plan to increase size of the myCorpus little by little.
