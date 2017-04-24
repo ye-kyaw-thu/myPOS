@@ -88,7 +88,7 @@ mypos-dver.0.9.word.txt : Tokenized Myanmar text without POS tags, UTF-8 text fi
 Contributors
 
 Khin War War Htike (Most Tagging)  
-Win Pa Pa (Most Checking, Advising)  
+[Win Pa Pa](http://www.ucsy.edu.mm/ucsy/getProfile.do?staffid=MOST002602) (Most Checking, Advising)  
 [Ye Kyaw Thu](https://sites.google.com/site/yekyawthunlp/) (Supervisor)  
 
 ## Future Works
