@@ -74,6 +74,11 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 | tn | Text Number | တစ် (one), နှစ် (two), သုံး (three), တစ်ရာ (one hundred), တစ်ထောင် (one thousand) |
 | v | Verb | ကူညီ (help), လိုက်နာ (observe), အားပေး (encourage) |
 
+## Files/Scripts
+
+mypos-dver.0.9.txt : myPOS Corpus draft version 0.9, UTF-8 text file format  
+mypos-dver.0.9.word.txt : Tokenized Myanmar text without POS tags, UTF-8 text file format
+
 ## Development and Support
 
 Contributors
