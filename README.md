@@ -58,7 +58,7 @@ Unsegmented word:ခရမ်းမြို့နယ် (Khayan township)
 Segmented word: ခရမ်း/n|မြို့နယ်/n
 
 ## POS Tags
-15 Myanmar POS are used in our tag set to meet the necessity of further NLP processing such as information extraction, semantic processing and machine translation. The denitions and descriptions of POS tags are presented in detail as follows:
+15 Myanmar POS are used in our tag set to meet the necessity of further NLP processing such as information extraction, semantic processing and machine translation. The definitions and descriptions of POS tags are presented in detail as follows:
 
 | POS Tag        | Brief Definition           | Examples  |
 | ------------- |-------------|------|
