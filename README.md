@@ -80,7 +80,7 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 
 ## Files/Scripts
 
-Corpus-draft-ver-1.0/  (## *latest version*)  
+Corpus-draft-ver-1.0/  (**_latest version_**)  
 mypos-dver.1.0.txt : myPOS Corpus draft version 1.0, UTF-8 text file format  
 mypos-dver.1.0.word.txt : print out word only (i.e. without POS tags) of myPOS Corpus draft version 1.0  
 mypos-dver.1.0.cword.txt : print out words and compound words of myPOS Corpus draft version 1.0  
