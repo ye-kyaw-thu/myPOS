@@ -1,0 +1,154 @@
+How to run:
+Here, head.out is an example 10 sentences file for demo running.
+
+1. Printing words from myPOS corpus
+
+aihb@Hatarakis-MacBook-Pro:~/data/yes/war2/pos/13may2017/prepare4github$ ./mk-wordtag.pl ./head.out "\/" w
+ယခု လ တွင် ပျားရည် နှင့် ပျားဖယောင်း များ ကို စုဆောင်း ကြ သည် ဟု ခန့်မှန်း နိုင် သည် ။
+အခန်းခ ထဲ မှာ ထည့် လိုက် ပါ ။
+ဆရာကြီး ဦးစိန် ၏ မြန်မာ အထက်တန်း ကျောင်း မှ ၉ တန်း အောင်မြင် ခဲ့ ပြီး မင်းလှ မြို့ နော်မံ ကျောင်း မှ အလယ်တန်း ဆရာ ဖြစ် အောင်မြင် ခဲ့ ၏ ။
+ရှစ်လေးလုံး လှုပ်ရှား မှု တွင် တက်ကြွ စွာ ပါဝင် ခဲ့ သလို ၊ ဗမာ နိုင်ငံ လုံး ဆိုင်ရာ ကျောင်းသား သမဂ္ဂ များ အဖွဲ့ချုပ် မှာ လည်း တက်ကြွ စွာ ပါဝင် လှုပ်ရှား ခဲ့ သည် ။
+ဗြိတိသျှ တပ် များ သည် ဂျပန် များ ၏ ငါး ဖမ်း အိမ် ၃၀၀၀၀၀ ခန့် တွင် အလုပ် လုပ်ကိုင် နေ ကြ ရ သည် ။
+ဗမာ မှာ လူ များစု ဗမာ မျိုးနွယ်စု ၏ ခေါ် ရာတွင် တရားဝင် ခေါ် သော အသုံး ဖြစ် သည် ။
+၂၀ ရာစု ၏ ပထမ ပိုင်း ရာစုနှစ် တဝက် တွင် အိန္ဒိယ အမျိုးသား ကွန်ဂရက် နှင့် အခြား နိုင်ငံ ရေး အဖွဲ့အစည်း များ မှ တစ် နိုင်ငံ လုံး အတိုင်းအတာ ဖြင့် လွတ်လပ် ရေး ကြိုးပမ်း မှု ကို စတင် ခဲ့ သည် ။
+၎င်း ဘာသာ အခွဲ ငယ် များ သည် အများစု မှ ခွဲထွက် လာ ကြ ပြီး ၊ အစ္စလာမ် မှ ကွဲကွာ ထား သည့် ဗီဒါတ် မွန်းမံ ပြင်ဆင် ချက် များ နှင့် အစွန်းရောက် နိုင်ငံ ရေး အမြင် များ ကို သွတ်သွင်း လက်ခံ သုံးစွဲ လာ ကြ သည် ။
+ပဉ္စမ အကြိမ် ၁ ၊ ဩဂုတ် ၊ ၂ဝဝ၂ ၊ ရာပြည့် စာအုပ်တိုက် ထုတ် စာဆို တော် များ အတ္ထုပ္ပတ္တိ က ရွှေဥဒေါင်း ၁၂၅၁ ၁၃၃၅ အကြောင်း မောင်သုတ အမည်ခံ ဗိုလ်မှူးဘသောင်း မဟာ ဝိဇ္ဇာ ၊ ရွှေ တံဆိပ် ရ ဖခင် ဦးဧရာ သည် သီပေါ မင်း လက်ထက် တွင် လွှတ်တော် စာရေး အဖြစ် အမှုထမ်း ခဲ့ ဖူး သည် ။
+အချို့ မွန် ကျောက်စာ တို့ ၌ မကုဋ မင်း ဟု လည်း ခေါ် သည် ။
+
+2. Printing POS-tag only from myPOS corpus
+
+aihb@Hatarakis-MacBook-Pro:~/data/yes/war2/pos/13may2017/prepare4github$ ./mk-wordtag.pl ./head.out "\/" t
+n n ppm n conj n part ppm v part ppm part v part ppm punc
+n ppm ppm v part part punc
+n n ppm n n n ppm num n v part conj n n n n ppm n n v v part ppm punc
+n v part ppm v part v part conj punc n n part n n n part n ppm part v part v v part ppm punc
+n n part ppm n part ppm n v n num part ppm n v part part part ppm punc
+n ppm n n n n ppm v conj adv v part n v ppm punc
+num n ppm adj part n n ppm n n n conj adj n part n part ppm n n part n ppm v part v part ppm v part ppm punc
+adj n n adj part ppm pron ppm v part part conj punc n ppm v part part n v v part part conj adj n part n part ppm v v v part part ppm punc
+adj n num punc n punc num punc n n v n part part n ppm n num num n n v n adj n punc n n v n n ppm n n n ppm n n n v part part ppm punc
+adj n n part ppm n n part part v ppm punc
+
+3. Printing word and POS-tag parallel sentences from myPOS corpus
+
+aihb@Hatarakis-MacBook-Pro:~/data/yes/war2/pos/13may2017/prepare4github$ ./mk-wordtag.pl ./head.out "\/" wt
+ယခု လ တွင် ပျားရည် နှင့် ပျားဖယောင်း များ ကို စုဆောင်း ကြ သည် ဟု ခန့်မှန်း နိုင် သည် ။
+n n ppm n conj n part ppm v part ppm part v part ppm punc
+အခန်းခ ထဲ မှာ ထည့် လိုက် ပါ ။
+n ppm ppm v part part punc
+ဆရာကြီး ဦးစိန် ၏ မြန်မာ အထက်တန်း ကျောင်း မှ ၉ တန်း အောင်မြင် ခဲ့ ပြီး မင်းလှ မြို့ နော်မံ ကျောင်း မှ အလယ်တန်း ဆရာ ဖြစ် အောင်မြင် ခဲ့ ၏ ။
+n n ppm n n n ppm num n v part conj n n n n ppm n n v v part ppm punc
+ရှစ်လေးလုံး လှုပ်ရှား မှု တွင် တက်ကြွ စွာ ပါဝင် ခဲ့ သလို ၊ ဗမာ နိုင်ငံ လုံး ဆိုင်ရာ ကျောင်းသား သမဂ္ဂ များ အဖွဲ့ချုပ် မှာ လည်း တက်ကြွ စွာ ပါဝင် လှုပ်ရှား ခဲ့ သည် ။
+n v part ppm v part v part conj punc n n part n n n part n ppm part v part v v part ppm punc
+ဗြိတိသျှ တပ် များ သည် ဂျပန် များ ၏ ငါး ဖမ်း အိမ် ၃၀၀၀၀၀ ခန့် တွင် အလုပ် လုပ်ကိုင် နေ ကြ ရ သည် ။
+n n part ppm n part ppm n v n num part ppm n v part part part ppm punc
+ဗမာ မှာ လူ များစု ဗမာ မျိုးနွယ်စု ၏ ခေါ် ရာတွင် တရားဝင် ခေါ် သော အသုံး ဖြစ် သည် ။
+n ppm n n n n ppm v conj adv v part n v ppm punc
+၂၀ ရာစု ၏ ပထမ ပိုင်း ရာစုနှစ် တဝက် တွင် အိန္ဒိယ အမျိုးသား ကွန်ဂရက် နှင့် အခြား နိုင်ငံ ရေး အဖွဲ့အစည်း များ မှ တစ် နိုင်ငံ လုံး အတိုင်းအတာ ဖြင့် လွတ်လပ် ရေး ကြိုးပမ်း မှု ကို စတင် ခဲ့ သည် ။
+num n ppm adj part n n ppm n n n conj adj n part n part ppm n n part n ppm v part v part ppm v part ppm punc
+၎င်း ဘာသာ အခွဲ ငယ် များ သည် အများစု မှ ခွဲထွက် လာ ကြ ပြီး ၊ အစ္စလာမ် မှ ကွဲကွာ ထား သည့် ဗီဒါတ် မွန်းမံ ပြင်ဆင် ချက် များ နှင့် အစွန်းရောက် နိုင်ငံ ရေး အမြင် များ ကို သွတ်သွင်း လက်ခံ သုံးစွဲ လာ ကြ သည် ။
+adj n n adj part ppm pron ppm v part part conj punc n ppm v part part n v v part part conj adj n part n part ppm v v v part part ppm punc
+ပဉ္စမ အကြိမ် ၁ ၊ ဩဂုတ် ၊ ၂ဝဝ၂ ၊ ရာပြည့် စာအုပ်တိုက် ထုတ် စာဆို တော် များ အတ္ထုပ္ပတ္တိ က ရွှေဥဒေါင်း ၁၂၅၁ ၁၃၃၅ အကြောင်း မောင်သုတ အမည်ခံ ဗိုလ်မှူးဘသောင်း မဟာ ဝိဇ္ဇာ ၊ ရွှေ တံဆိပ် ရ ဖခင် ဦးဧရာ သည် သီပေါ မင်း လက်ထက် တွင် လွှတ်တော် စာရေး အဖြစ် အမှုထမ်း ခဲ့ ဖူး သည် ။
+adj n num punc n punc num punc n n v n part part n ppm n num num n n v n adj n punc n n v n n ppm n n n ppm n n n v part part ppm punc
+အချို့ မွန် ကျောက်စာ တို့ ၌ မကုဋ မင်း ဟု လည်း ခေါ် သည် ။
+adj n n part ppm n n part part v ppm punc
+
+4. Printing words and compound-words (without POS-tags)
+
+aihb@Hatarakis-MacBook-Pro:~/data/yes/war2/pos/13may2017/prepare4github$ ./mk-wordtag.pl ./head.out "\/" cw
+ယခု လ တွင် ပျားရည် နှင့် ပျားဖယောင်း များ ကို စုဆောင်း ကြ သည် ဟု ခန့်မှန်း နိုင် သည် ။
+အခန်းခ ထဲ မှာ ထည့် လိုက် ပါ ။
+ဆရာကြီးဦးစိန် ၏ မြန်မာအထက်တန်းကျောင်း မှ ၉ တန်း အောင်မြင် ခဲ့ ပြီး မင်းလှမြို့ နော်မံကျောင်း မှ အလယ်တန်း ဆရာ ဖြစ် အောင်မြင် ခဲ့ ၏ ။
+ရှစ်လေးလုံးလှုပ်ရှားမှု တွင် တက်ကြွ စွာ ပါဝင် ခဲ့ သလို ၊ ဗမာနိုင်ငံလုံးဆိုင်ရာကျောင်းသားသမဂ္ဂ များ အဖွဲ့ချုပ် မှာ လည်း တက်ကြွ စွာ ပါဝင် လှုပ်ရှား ခဲ့ သည် ။
+ဗြိတိသျှတပ် များ သည် ဂျပန် များ ၏ ငါးဖမ်းအိမ် ၃၀၀၀၀၀ ခန့် တွင် အလုပ် လုပ်ကိုင် နေ ကြ ရ သည် ။
+ဗမာ မှာ လူများစု ဗမာ မျိုးနွယ်စု ၏ ခေါ် ရာတွင် တရားဝင် ခေါ် သော အသုံး ဖြစ် သည် ။
+၂၀ ရာစု ၏ ပထမ ပိုင်း ရာစုနှစ်တဝက် တွင် အိန္ဒိယအမျိုးသားကွန်ဂရက် နှင့် အခြား နိုင်ငံရေးအဖွဲ့အစည်း များ မှ တစ်နိုင်ငံ လုံး အတိုင်းအတာ ဖြင့် လွတ်လပ်ရေး ကြိုးပမ်းမှု ကို စတင် ခဲ့ သည် ။
+၎င်း ဘာသာ အခွဲ ငယ် များ သည် အများစု မှ ခွဲထွက် လာ ကြ ပြီး ၊ အစ္စလာမ် မှ ကွဲကွာ ထား သည့် ဗီဒါတ် မွန်းမံပြင်ဆင်ချက် များ နှင့် အစွန်းရောက် နိုင်ငံရေး အမြင် များ ကို သွတ်သွင်း လက်ခံ သုံးစွဲ လာ ကြ သည် ။
+ပဉ္စမ အကြိမ် ၁ ၊ ဩဂုတ် ၊ ၂ဝဝ၂ ၊ ရာပြည့်စာအုပ်တိုက် ထုတ် စာဆိုတော် များ အတ္ထုပ္ပတ္တိ က ရွှေဥဒေါင်း ၁၂၅၁ ၁၃၃၅ အကြောင်း မောင်သုတ အမည်ခံ ဗိုလ်မှူးဘသောင်း မဟာ ဝိဇ္ဇာ ၊ ရွှေတံဆိပ် ရ ဖခင် ဦးဧရာ သည် သီပေါမင်း လက်ထက် တွင် လွှတ်တော်စာရေး အဖြစ် အမှုထမ်း ခဲ့ ဖူး သည် ။
+အချို့ မွန်ကျောက်စာ တို့ ၌ မကုဋမင်း ဟု လည်း ခေါ် သည် ။
+
+5. Listing compound-words with/without POS-tags
+
+aihb@Hatarakis-MacBook-Pro:~/data/yes/war2/pos/13may2017/prepare4github$ ./mk-wordtag.pl ./head.out "\/" lcw
+ဆရာကြီး/n|ဦးစိန်/n	ဆရာကြီးဦးစိန်
+မြန်မာ/n|အထက်တန်း/n|ကျောင်း/n	မြန်မာအထက်တန်းကျောင်း
+မင်းလှ/n|မြို့/n	မင်းလှမြို့
+နော်မံ/n|ကျောင်း/n	နော်မံကျောင်း
+ရှစ်လေးလုံး/n|လှုပ်ရှား/v|မှု/part	ရှစ်လေးလုံးလှုပ်ရှားမှု
+ဗမာ/n|နိုင်ငံ/n|လုံး/part|ဆိုင်ရာ/n|ကျောင်းသား/n|သမဂ္ဂ/n	ဗမာနိုင်ငံလုံးဆိုင်ရာကျောင်းသားသမဂ္ဂ
+ဗြိတိသျှ/n|တပ်/n	ဗြိတိသျှတပ်
+ငါး/n|ဖမ်း/v|အိမ်/n	ငါးဖမ်းအိမ်
+လူ/n|များစု/n	လူများစု
+ရာစုနှစ်/n|တဝက်/n	ရာစုနှစ်တဝက်
+အိန္ဒိယ/n|အမျိုးသား/n|ကွန်ဂရက်/n	အိန္ဒိယအမျိုးသားကွန်ဂရက်
+နိုင်ငံ/n|ရေး/part|အဖွဲ့အစည်း/n	နိုင်ငံရေးအဖွဲ့အစည်း
+တစ်/n|နိုင်ငံ/n	တစ်နိုင်ငံ
+လွတ်လပ်/v|ရေး/part	လွတ်လပ်ရေး
+ကြိုးပမ်း/v|မှု/part	ကြိုးပမ်းမှု
+မွန်းမံ/v|ပြင်ဆင်/v|ချက်/part	မွန်းမံပြင်ဆင်ချက်
+နိုင်ငံ/n|ရေး/part	နိုင်ငံရေး
+ရာပြည့်/n|စာအုပ်တိုက်/n	ရာပြည့်စာအုပ်တိုက်
+စာဆို/n|တော်/part	စာဆိုတော်
+ရွှေ/n|တံဆိပ်/n	ရွှေတံဆိပ်
+သီပေါ/n|မင်း/n	သီပေါမင်း
+လွှတ်တော်/n|စာရေး/n	လွှတ်တော်စာရေး
+မွန်/n|ကျောက်စာ/n	မွန်ကျောက်စာ
+မကုဋ/n|မင်း/n	မကုဋမင်း
+
+6. Checking "word/" errors
+
+aihb@Hatarakis-MacBook-Pro:~/data/yes/war2/pos/13may2017/prepare4github$ ./mk-wordtag.pl ./head.out "\/" c
+အချို့/adj မွန်/n|ကျောက်စာ/n တို့/part ၌/ppm မကုဋ/n|မင်း/n ဟု/part လည်း/part ခေါ်/v သည်/ ။/punc
+12: 11
+အချို့ မွန် ကျောက်စာ တို့ ၌ မကုဋ မင်း ဟု လည်း ခေါ် သည် ။
+adj n n part ppm n n part part v punc
+
+=====================
+=====================
+
+
+Example running of ./mk-wordtag.pl program.
+
+Note: If you cannot run ./mk-wordtag.pl, change to executable mode as follow:
+chmod +x ./mk-pair.pl
+
+aihb@Hatarakis-MacBook-Pro:~/data/yes/war2/pos/13may2017/prepare4github$ ./mk-wordtag.pl ./head.out "\/" w > head.out.word
+aihb@Hatarakis-MacBook-Pro:~/data/yes/war2/pos/13may2017/prepare4github$ ./mk-wordtag.pl ./head.out "\/" t > head.out.tag
+
+aihb@Hatarakis-MacBook-Pro:~/data/yes/war2/pos/13may2017/prepare4github$ cat ./head.out.word 
+ယခု လ တွင် ပျားရည် နှင့် ပျားဖယောင်း များ ကို စုဆောင်း ကြ သည် ဟု ခန့်မှန်း နိုင် သည် ။
+အခန်းခ ထဲ မှာ ထည့် လိုက် ပါ ။
+ဆရာကြီး ဦးစိန် ၏ မြန်မာ အထက်တန်း ကျောင်း မှ ၉ တန်း အောင်မြင် ခဲ့ ပြီး မင်းလှ မြို့ နော်မံ ကျောင်း မှ အလယ်တန်း ဆရာ ဖြစ် အောင်မြင် ခဲ့ ၏ ။
+ရှစ်လေးလုံး လှုပ်ရှား မှု တွင် တက်ကြွ စွာ ပါဝင် ခဲ့ သလို ၊ ဗမာ နိုင်ငံ လုံး ဆိုင်ရာ ကျောင်းသား သမဂ္ဂ များ အဖွဲ့ချုပ် မှာ လည်း တက်ကြွ စွာ ပါဝင် လှုပ်ရှား ခဲ့ သည် ။
+ဗြိတိသျှ တပ် များ သည် ဂျပန် များ ၏ ငါး ဖမ်း အိမ် ၃၀၀၀၀၀ ခန့် တွင် အလုပ် လုပ်ကိုင် နေ ကြ ရ သည် ။
+ဗမာ မှာ လူ များစု ဗမာ မျိုးနွယ်စု ၏ ခေါ် ရာတွင် တရားဝင် ခေါ် သော အသုံး ဖြစ် သည် ။
+၂၀ ရာစု ၏ ပထမ ပိုင်း ရာစုနှစ် တဝက် တွင် အိန္ဒိယ အမျိုးသား ကွန်ဂရက် နှင့် အခြား နိုင်ငံ ရေး အဖွဲ့အစည်း များ မှ တစ် နိုင်ငံ လုံး အတိုင်းအတာ ဖြင့် လွတ်လပ် ရေး ကြိုးပမ်း မှု ကို စတင် ခဲ့ သည် ။
+၎င်း ဘာသာ အခွဲ ငယ် များ သည် အများစု မှ ခွဲထွက် လာ ကြ ပြီး ၊ အစ္စလာမ် မှ ကွဲကွာ ထား သည့် ဗီဒါတ် မွန်းမံ ပြင်ဆင် ချက် များ နှင့် အစွန်းရောက် နိုင်ငံ ရေး အမြင် များ ကို သွတ်သွင်း လက်ခံ သုံးစွဲ လာ ကြ သည် ။
+ပဉ္စမ အကြိမ် ၁ ၊ ဩဂုတ် ၊ ၂ဝဝ၂ ၊ ရာပြည့် စာအုပ်တိုက် ထုတ် စာဆို တော် များ အတ္ထုပ္ပတ္တိ က ရွှေဥဒေါင်း ၁၂၅၁ ၁၃၃၅ အကြောင်း မောင်သုတ အမည်ခံ ဗိုလ်မှူးဘသောင်း မဟာ ဝိဇ္ဇာ ၊ ရွှေ တံဆိပ် ရ ဖခင် ဦးဧရာ သည် သီပေါ မင်း လက်ထက် တွင် လွှတ်တော် စာရေး အဖြစ် အမှုထမ်း ခဲ့ ဖူး သည် ။
+အချို့ မွန် ကျောက်စာ တို့ ၌ မကုဋ မင်း ဟု လည်း ခေါ် သည် ။
+
+aihb@Hatarakis-MacBook-Pro:~/data/yes/war2/pos/13may2017/prepare4github$ cat ./head.out.tag
+n n ppm n conj n part ppm v part ppm part v part ppm punc
+n ppm ppm v part part punc
+n n ppm n n n ppm num n v part conj n n n n ppm n n v v part ppm punc
+n v part ppm v part v part conj punc n n part n n n part n ppm part v part v v part ppm punc
+n n part ppm n part ppm n v n num part ppm n v part part part ppm punc
+n ppm n n n n ppm v conj adv v part n v ppm punc
+num n ppm adj part n n ppm n n n conj adj n part n part ppm n n part n ppm v part v part ppm v part ppm punc
+adj n n adj part ppm pron ppm v part part conj punc n ppm v part part n v v part part conj adj n part n part ppm v v v part part ppm punc
+adj n num punc n punc num punc n n v n part part n ppm n num num n n v n adj n punc n n v n n ppm n n n ppm n n n v part part ppm punc
+adj n n part ppm n n part part v  punc
+
+Making word/tag from word-file and tag-file:
+
+aihb@Hatarakis-MacBook-Pro:~/data/yes/war2/pos/13may2017/prepare4github$ ./mk-pair.pl ./head.out.word ./head.out.tag 
+ယခု/n လ/n တွင်/ppm ပျားရည်/n နှင့်/conj ပျားဖယောင်း/n များ/part ကို/ppm စုဆောင်း/v ကြ/part သည်/ppm ဟု/part ခန့်မှန်း/v နိုင်/part သည်/ppm ။/punc
+အခန်းခ/n ထဲ/ppm မှာ/ppm ထည့်/v လိုက်/part ပါ/part ။/punc
+ဆရာကြီး/n ဦးစိန်/n ၏/ppm မြန်မာ/n အထက်တန်း/n ကျောင်း/n မှ/ppm ၉/num တန်း/n အောင်မြင်/v ခဲ့/part ပြီး/conj မင်းလှ/n မြို့/n နော်မံ/n ကျောင်း/n မှ/ppm အလယ်တန်း/n ဆရာ/n ဖြစ်/v အောင်မြင်/v ခဲ့/part ၏/ppm ။/punc
+ရှစ်လေးလုံး/n လှုပ်ရှား/v မှု/part တွင်/ppm တက်ကြွ/v စွာ/part ပါဝင်/v ခဲ့/part သလို/conj ၊/punc ဗမာ/n နိုင်ငံ/n လုံး/part ဆိုင်ရာ/n ကျောင်းသား/n သမဂ္ဂ/n များ/part အဖွဲ့ချုပ်/n မှာ/ppm လည်း/part တက်ကြွ/v စွာ/part ပါဝင်/v လှုပ်ရှား/v ခဲ့/part သည်/ppm ။/punc
+ဗြိတိသျှ/n တပ်/n များ/part သည်/ppm ဂျပန်/n များ/part ၏/ppm ငါး/n ဖမ်း/v အိမ်/n ၃၀၀၀၀၀/num ခန့်/part တွင်/ppm အလုပ်/n လုပ်ကိုင်/v နေ/part ကြ/part ရ/part သည်/ppm ။/punc
+ဗမာ/n မှာ/ppm လူ/n များစု/n ဗမာ/n မျိုးနွယ်စု/n ၏/ppm ခေါ်/v ရာတွင်/conj တရားဝင်/adv ခေါ်/v သော/part အသုံး/n ဖြစ်/v သည်/ppm ။/punc
+၂၀/num ရာစု/n ၏/ppm ပထမ/adj ပိုင်း/part ရာစုနှစ်/n တဝက်/n တွင်/ppm အိန္ဒိယ/n အမျိုးသား/n ကွန်ဂရက်/n နှင့်/conj အခြား/adj နိုင်ငံ/n ရေး/part အဖွဲ့အစည်း/n များ/part မှ/ppm တစ်/n နိုင်ငံ/n လုံး/part အတိုင်းအတာ/n ဖြင့်/ppm လွတ်လပ်/v ရေး/part ကြိုးပမ်း/v မှု/part ကို/ppm စတင်/v ခဲ့/part သည်/ppm ။/punc
+၎င်း/adj ဘာသာ/n အခွဲ/n ငယ်/adj များ/part သည်/ppm အများစု/pron မှ/ppm ခွဲထွက်/v လာ/part ကြ/part ပြီး/conj ၊/punc အစ္စလာမ်/n မှ/ppm ကွဲကွာ/v ထား/part သည့်/part ဗီဒါတ်/n မွန်းမံ/v ပြင်ဆင်/v ချက်/part များ/part နှင့်/conj အစွန်းရောက်/adj နိုင်ငံ/n ရေး/part အမြင်/n များ/part ကို/ppm သွတ်သွင်း/v လက်ခံ/v သုံးစွဲ/v လာ/part ကြ/part သည်/ppm ။/punc
+ပဉ္စမ/adj အကြိမ်/n ၁/num ၊/punc ဩဂုတ်/n ၊/punc ၂ဝဝ၂/num ၊/punc ရာပြည့်/n စာအုပ်တိုက်/n ထုတ်/v စာဆို/n တော်/part များ/part အတ္ထုပ္ပတ္တိ/n က/ppm ရွှေဥဒေါင်း/n ၁၂၅၁/num ၁၃၃၅/num အကြောင်း/n မောင်သုတ/n အမည်ခံ/v ဗိုလ်မှူးဘသောင်း/n မဟာ/adj ဝိဇ္ဇာ/n ၊/punc ရွှေ/n တံဆိပ်/n ရ/v ဖခင်/n ဦးဧရာ/n သည်/ppm သီပေါ/n မင်း/n လက်ထက်/n တွင်/ppm လွှတ်တော်/n စာရေး/n အဖြစ်/n အမှုထမ်း/v ခဲ့/part ဖူး/part သည်/ppm ။/punc
+အချို့/adj မွန်/n ကျောက်စာ/n တို့/part ၌/ppm မကုဋ/n မင်း/n ဟု/part လည်း/part ခေါ်/v သည်/punc ။/
