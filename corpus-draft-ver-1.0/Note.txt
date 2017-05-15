@@ -1,7 +1,7 @@
 
 myPOS corpus draft version 1.0 released on 16 May 2017.
 
-We removed duplicate sentences of previous draft version 0.9 and added some new Myanmar sentences.
+We removed duplicate sentences of previous draft version 0.9 and added some new POS tagged Myanmar sentences.
 Two perl scripts for using with myPOS also released.
 
 Please use latest version!
