@@ -1,4 +1,4 @@
-# myPOS (draft released 0.9)
+# myPOS (draft released 1.0)
 myPOS Corpus (Myanmar Part-of-Speech Corpus) for Myanmar language NLP Research and Developments
 
 ## Lincense
@@ -80,6 +80,13 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 
 ## Files/Scripts
 
+Corpus-draft-ver-1.0/
+mypos-dver.1.0.txt : myPOS Corpus draft version 1.0, UTF-8 text file format
+mk-wordtag.pl : Perl script for printing word only file, tag only file, listing compound-words etc.
+mk-pair.pl : Perl script for combining word file and tag file to word/tag format
+how2run.txt : Example usages of perl scripts
+
+Corpus-draft-ver-0.9/
 mypos-dver.0.9.txt : myPOS Corpus draft version 0.9, UTF-8 text file format  
 mypos-dver.0.9.word.txt : Tokenized Myanmar text without POS tags, UTF-8 text file format
 
@@ -90,6 +97,9 @@ Contributors
 Khin War War Htike (Most Tagging)  
 [Win Pa Pa](https://sites.google.com/site/winpapaucsy/) (Most Checking & Advising)  
 [Ye Kyaw Thu](https://sites.google.com/site/yekyawthunlp/) (Supervisor)  
+
+## Acknowledgements
+We would like to express our gratitude to Dr. Andrew Finch and Dr. Chenchen Ding for their valuable comments.
 
 ## Future Work
 
