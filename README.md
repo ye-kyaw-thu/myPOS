@@ -81,10 +81,18 @@ Segmented word: ခရမ်း/n|မြို့နယ်/n
 ## Files/Scripts
 
 Corpus-draft-ver-1.0/  
-mypos-dver.1.0.txt : myPOS Corpus draft version 1.0, UTF-8 text file format  
+mypos-dver.1.0.txt : myPOS Corpus draft version 1.0, UTF-8 text file format
+mypos-dver.1.0.word.txt : print out word only (i.e. without POS tags) of myPOS Corpus draft version 1.0
+mypos-dver.1.0.cword.txt : print out words and compound words of myPOS Corpus draft version 1.0
+mypos-dver.1.0.lcw.txt : list of compound Myanmar words of myPOS draft version 1.0 (17,562 words)
+mypos-dver.1.0.lcw.uniq.txt : unique list of compound Myanmar words of myPOS draft version 1.0  (8,627 words)
+mypos-dver.1.0.tag.txt : print out POS-tagged only of myPOS draft version 1.0
+
+Scripts:  
 mk-wordtag.pl : Perl script for printing word only file, tag only file, listing compound-words etc.  
 mk-pair.pl : Perl script for combining word file and tag file to word/tag format  
 how2run.txt : Example usages of perl scripts  
+
 
 Corpus-draft-ver-0.9/  
 mypos-dver.0.9.txt : myPOS Corpus draft version 0.9, UTF-8 text file format    
