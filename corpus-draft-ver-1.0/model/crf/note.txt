@@ -1,0 +1,688 @@
+This file is a note for building POS-tagging models with CRF++ on myPOS corpus draft version 1.0.
+
+Step1: Installation of CRF++ toolkit
+
+HP of CRF++: https://taku910.github.io/crfpp/
+Current latest version: CRF++-0.58.tar.gz
+Read dependencies for installation for CRF++ in detail.
+I assumed that you already prepared dependencies.
+
+Download CRF++-0.58.tar.gz.
+
+>./configure 
+>make
+>sudo make install
+
+After you compiled successfully:
+You will get following 2 files:
+
+/usr/local/bin/crf_learn 
+/usr/local/bin/crf_test
+
+>crf_learn --help
+>crf_test --help
+
+Step2: Copy myPOS data folder
+
+mkdir crf and copy open test files and t1..t10 folders.
+You should have followings: 
+
+~/experiment/pos/my-pos/model4github/crf$ ls
+otest      otest.word t1         t10        t2         t3         t4         t5         t6         t7         t8         t9
+
+Step3: Replacing pipe "|" with spaces
+(this step is required if you are not consider compound Myanmar words)
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/crf$ ./pipe2space-all.sh 
+
+ Finished replacing pipe with space for ./t1/train1!
+
+ Finished replacing pipe with space for ./t1/ctest1!
+
+ Finished replacing pipe with space for ./t2/train2!
+
+ Finished replacing pipe with space for ./t2/ctest2!
+
+ Finished replacing pipe with space for ./t3/train3!
+
+ Finished replacing pipe with space for ./t3/ctest3!
+
+ Finished replacing pipe with space for ./t4/train4!
+
+ Finished replacing pipe with space for ./t4/ctest4!
+
+ Finished replacing pipe with space for ./t5/train5!
+
+ Finished replacing pipe with space for ./t5/ctest5!
+
+ Finished replacing pipe with space for ./t6/train6!
+
+ Finished replacing pipe with space for ./t6/ctest6!
+
+ Finished replacing pipe with space for ./t7/train7!
+
+ Finished replacing pipe with space for ./t7/ctest7!
+
+ Finished replacing pipe with space for ./t8/train8!
+
+ Finished replacing pipe with space for ./t8/ctest8!
+
+ Finished replacing pipe with space for ./t9/train9!
+
+ Finished replacing pipe with space for ./t9/ctest9!
+
+ Finished replacing pipe with space for ./t10/train10!
+
+ Finished replacing pipe with space for ./t10/ctest10!
+
+ Finished replacing pipe with space for ./otest!
+
+Step4: Change line to column format for training with CRF++ tool.
+This is because CRF++ toolkit training data format is column format.
+
+Run ch2col-4all.sh shell script and you will see long outputs:
+
+~/experiment/pos/my-pos/model4github/crf$ ./ch2col-4all.sh 
+
+Finished for ./t1/train1.nopipe!
+head ./t1/train1.nopipe.col
+ယခု n
+လ n
+တွင် ppm
+ပျားရည် n
+နှင့် conj
+ပျားဖယောင်း n
+များ part
+ကို ppm
+စုဆောင်း v
+ကြ part
+
+Finished for ./t1/ctest1.nopipe!
+head ./t1/ctest1.nopipe.col
+ဂျပန် n
+စကား n
+ပြော v
+လမ်းညွှန် v
+သူ n
+ရှိ v
+ပါ part
+သလား part
+။ punc
+
+
+Finished for ./t2/train2.nopipe!
+head ./t2/train2.nopipe.col
+ယခု n
+လ n
+တွင် ppm
+ပျားရည် n
+နှင့် conj
+ပျားဖယောင်း n
+များ part
+ကို ppm
+စုဆောင်း v
+ကြ part
+
+Finished for ./t2/ctest2.nopipe!
+head ./t2/ctest2.nopipe.col
+ခင်ဗျား pron
+ကို ppm
+တကယ် adv
+ကျေးဇူးတင် v
+တယ် ppm
+။ punc
+
+ဂူဂယ် n
+ဆို v
+တဲ့ part
+
+Finished for ./t3/train3.nopipe!
+head ./t3/train3.nopipe.col
+ယခု n
+လ n
+တွင် ppm
+ပျားရည် n
+နှင့် conj
+ပျားဖယောင်း n
+များ part
+ကို ppm
+စုဆောင်း v
+ကြ part
+
+Finished for ./t3/ctest3.nopipe!
+head ./t3/ctest3.nopipe.col
+ခရီးသွားချက်လက်မှတ် n
+ကို ppm
+သုံး v
+လို့ part
+ရ part
+ပါ part
+သလား part
+။ punc
+
+ဆရာကြီး n
+
+Finished for ./t4/train4.nopipe!
+head ./t4/train4.nopipe.col
+ယခု n
+လ n
+တွင် ppm
+ပျားရည် n
+နှင့် conj
+ပျားဖယောင်း n
+များ part
+ကို ppm
+စုဆောင်း v
+ကြ part
+
+Finished for ./t4/ctest4.nopipe!
+head ./t4/ctest4.nopipe.col
+ကိုကိုး n
+ကျွန်း n
+သည် ppm
+အိန္ဒိယ n
+ပိုင် v
+နီကိုဗါ n
+ကျွန်း n
+မှ ppm
+၁၈ num
+ကီလိုမီတာ n
+
+Finished for ./t5/train5.nopipe!
+head ./t5/train5.nopipe.col
+ယခု n
+လ n
+တွင် ppm
+ပျားရည် n
+နှင့် conj
+ပျားဖယောင်း n
+များ part
+ကို ppm
+စုဆောင်း v
+ကြ part
+
+Finished for ./t5/ctest5.nopipe!
+head ./t5/ctest5.nopipe.col
+ကမ္ဘာ n
+သည် ppm
+နေ n
+ကို ppm
+၃၆၅.၂၅၆၄ num
+ရက် n
+တွင် ppm
+တစ် tn
+ကြိမ် part
+လှည့်ပတ် v
+
+Finished for ./t6/train6.nopipe!
+head ./t6/train6.nopipe.col
+ယခု n
+လ n
+တွင် ppm
+ပျားရည် n
+နှင့် conj
+ပျားဖယောင်း n
+များ part
+ကို ppm
+စုဆောင်း v
+ကြ part
+
+Finished for ./t6/ctest6.nopipe!
+head ./t6/ctest6.nopipe.col
+8 fw
+bit fw
+ပုံရိပ် n
+တစ် tn
+ခု part
+သည် ppm
+256 fw
+color fw
+သို့မဟုတ် conj
+gray fw
+
+Finished for ./t7/train7.nopipe!
+head ./t7/train7.nopipe.col
+ယခု n
+လ n
+တွင် ppm
+ပျားရည် n
+နှင့် conj
+ပျားဖယောင်း n
+များ part
+ကို ppm
+စုဆောင်း v
+ကြ part
+
+Finished for ./t7/ctest7.nopipe!
+head ./t7/ctest7.nopipe.col
+American fw
+Kachin fw
+Ranger fw
+စစ်တပ်ဖွဲ့ n
+သည် ppm
+တရုတ် n
+ပြည် n
+ယူနန် n
+ပြည်နယ် n
+ထဲ ppm
+
+Finished for ./t8/train8.nopipe!
+head ./t8/train8.nopipe.col
+ယခု n
+လ n
+တွင် ppm
+ပျားရည် n
+နှင့် conj
+ပျားဖယောင်း n
+များ part
+ကို ppm
+စုဆောင်း v
+ကြ part
+
+Finished for ./t8/ctest8.nopipe!
+head ./t8/ctest8.nopipe.col
+ကမ္ဘာမြေ n
+၏ ppm
+အပေါ်ယံလွှာ n
+မြေသား n
+မှာ ppm
+ပျမ်းမျှ adv
+အားဖြင့် ppm
+၄၀ num
+ကီလိုမီတာ n
+၂၅ num
+
+Finished for ./t9/train9.nopipe!
+head ./t9/train9.nopipe.col
+ယခု n
+လ n
+တွင် ppm
+ပျားရည် n
+နှင့် conj
+ပျားဖယောင်း n
+များ part
+ကို ppm
+စုဆောင်း v
+ကြ part
+
+Finished for ./t9/ctest9.nopipe!
+head ./t9/ctest9.nopipe.col
+ကာလ n
+အားဖြင့် ppm
+နှစ် n
+ပေါင်း n
+သန်း n
+၄၅ဝဝ num
+အတွင်း n
+ဖြစ်ရပ် n
+များ part
+အပြင် conj
+
+Finished for ./t10/train10.nopipe!
+head ./t10/train10.nopipe.col
+ယခု n
+လ n
+တွင် ppm
+ပျားရည် n
+နှင့် conj
+ပျားဖယောင်း n
+များ part
+ကို ppm
+စုဆောင်း v
+ကြ part
+
+Finished for ./t10/ctest10.nopipe!
+head ./t10/ctest10.nopipe.col
+ကင်မရာ n
+ဘက်ထရီ n
+အားသွင်း v
+ချင် part
+လိုက် part
+တာ part
+။ punc
+
+ကမ္ဘာ့ n
+အံ့ဖွယ် n
+
+Finished for open test data!
+head otest.nopipe.col
+ဆယ် tn
+ရာခိုင်နှုန်း n
+ဈေး n
+လျှော့ v
+ပေး part
+ရင် conj
+ဝယ် v
+မယ် ppm
+။ punc
+
+Step5: Preparing template file.
+
+I used following template for demo POS-Tagging experiment with myPOS:
+
+~/experiment/pos/my-pos/model4github/crf$ cat template
+# Unigram
+U00:%x[-2,0]
+U01:%x[-1,0]
+U02:%x[0,0]
+U03:%x[1,0]
+U04:%x[2,0]
+
+# Bigram
+
+Step5: Training for t1..t10 with following shell script:
+
+~/experiment/pos/my-pos/model4github/crf$ time ./train-all.sh | tee train1.log
+
+For training on my macbook pro it took 10 minutes as follows:
+
+ Finished training for ./t10/train10.nopipe.col!
+
+real	10m25.105s
+user	52m26.233s
+sys	1m11.437s
+
+***Training output I saved in train1.log file.
+Example screen output for t10/train10.nopipe.col is as follow:
+
+CRF++: Yet Another CRF Tool Kit
+Copyright (C) 2005-2013 Taku Kudo, All rights reserved.
+
+reading training data: 100.. 200.. 300.. 400.. 500.. 600.. 700.. 800.. 900.. 1000.. 1100.. 1200.. 1300.. 1400.. 1500.. 1600.. 1700.. 1800.. 1900.. 2000.. 2100.. 2200.. 2300.. 2400.. 2500.. 2600.. 2700.. 2800.. 2900.. 3000.. 3100.. 3200.. 3300.. 3400.. 3500.. 3600.. 3700.. 3800.. 3900.. 4000.. 4100.. 4200.. 4300.. 4400.. 4500.. 4600.. 4700.. 4800.. 4900.. 5000.. 5100.. 5200.. 5300.. 5400.. 5500.. 5600.. 5700.. 5800.. 5900.. 6000.. 6100.. 6200.. 6300.. 6400.. 6500.. 6600.. 6700.. 6800.. 6900.. 7000.. 7100.. 7200.. 7300.. 7400.. 7500.. 7600.. 7700.. 7800.. 7900.. 8000.. 8100.. 8200.. 8300.. 8400.. 8500.. 8600.. 8700.. 8800.. 8900.. 9000.. 9100.. 9200.. 9300.. 9400.. 9500.. 9600.. 9700.. 9800.. 9900.. 10000.. 
+Done!2.39 s
+
+Number of sentences: 10000
+Number of features:  1100085
+Number of thread(s): 8
+Freq:                1
+eta:                 0.00010
+C:                   1.00000
+shrinking size:      20
+iter=0 terr=0.99871 serr=1.00000 act=1100085 obj=589361.08942 diff=1.00000
+iter=1 terr=0.28146 serr=0.99080 act=1100085 obj=556338.44205 diff=0.05603
+iter=2 terr=0.28147 serr=0.99080 act=1100085 obj=458730.72668 diff=0.17545
+iter=3 terr=0.26514 serr=0.98750 act=1100085 obj=318180.79735 diff=0.30639
+iter=4 terr=0.24431 serr=0.98260 act=1100085 obj=225264.07699 diff=0.29202
+iter=5 terr=0.19566 serr=0.95070 act=1100085 obj=181017.63668 diff=0.19642
+iter=6 terr=0.17295 serr=0.92740 act=1100085 obj=158921.89273 diff=0.12206
+iter=7 terr=0.16265 serr=0.95470 act=1100085 obj=133101.74784 diff=0.16247
+iter=8 terr=0.13165 serr=0.87810 act=1100085 obj=112263.32132 diff=0.15656
+iter=9 terr=0.12283 serr=0.85210 act=1100085 obj=106353.56042 diff=0.05264
+iter=10 terr=0.10043 serr=0.79300 act=1100085 obj=91240.95598 diff=0.14210
+iter=11 terr=0.09176 serr=0.78050 act=1100085 obj=85369.49054 diff=0.06435
+iter=12 terr=0.08403 serr=0.74120 act=1100085 obj=78149.31949 diff=0.08458
+iter=13 terr=0.07648 serr=0.70270 act=1100085 obj=73366.82086 diff=0.06120
+iter=14 terr=0.07302 serr=0.68880 act=1100085 obj=70144.47769 diff=0.04392
+iter=15 terr=0.06769 serr=0.67430 act=1100085 obj=64601.16673 diff=0.07903
+iter=16 terr=0.06220 serr=0.64580 act=1100085 obj=61471.89325 diff=0.04844
+iter=17 terr=0.05977 serr=0.63250 act=1100085 obj=58554.09900 diff=0.04747
+iter=18 terr=0.05498 serr=0.60220 act=1100085 obj=54849.55572 diff=0.06327
+iter=19 terr=0.05130 serr=0.58220 act=1100085 obj=51660.63272 diff=0.05814
+iter=20 terr=0.04685 serr=0.54970 act=1100085 obj=49204.32779 diff=0.04755
+iter=21 terr=0.04435 serr=0.52860 act=1100085 obj=48565.64152 diff=0.01298
+iter=22 terr=0.04440 serr=0.52810 act=1100085 obj=47631.71037 diff=0.01923
+iter=23 terr=0.04380 serr=0.52590 act=1100085 obj=46958.68693 diff=0.01413
+iter=24 terr=0.04226 serr=0.51400 act=1100085 obj=46008.63338 diff=0.02023
+iter=25 terr=0.03908 serr=0.49090 act=1100085 obj=44617.89833 diff=0.03023
+iter=26 terr=0.03643 serr=0.47780 act=1100085 obj=43972.27544 diff=0.01447
+iter=27 terr=0.03494 serr=0.45910 act=1100085 obj=42687.30537 diff=0.02922
+iter=28 terr=0.03327 serr=0.44310 act=1100085 obj=41989.80468 diff=0.01634
+iter=29 terr=0.03205 serr=0.43460 act=1100085 obj=41312.01686 diff=0.01614
+iter=30 terr=0.03016 serr=0.42670 act=1100085 obj=42270.27636 diff=0.02320
+iter=31 terr=0.03006 serr=0.41480 act=1100085 obj=40823.79888 diff=0.03422
+iter=32 terr=0.02919 serr=0.40930 act=1100085 obj=40273.47838 diff=0.01348
+iter=33 terr=0.02786 serr=0.39630 act=1100085 obj=39658.90682 diff=0.01526
+iter=34 terr=0.02559 serr=0.37490 act=1100085 obj=39027.41422 diff=0.01592
+iter=35 terr=0.02424 serr=0.35850 act=1100085 obj=38637.15044 diff=0.01000
+iter=36 terr=0.02421 serr=0.35830 act=1100085 obj=38343.82516 diff=0.00759
+iter=37 terr=0.02321 serr=0.34560 act=1100085 obj=38056.16594 diff=0.00750
+iter=38 terr=0.02327 serr=0.34740 act=1100085 obj=37846.88974 diff=0.00550
+iter=39 terr=0.02253 serr=0.34040 act=1100085 obj=37660.33487 diff=0.00493
+iter=40 terr=0.02111 serr=0.32530 act=1100085 obj=37369.43009 diff=0.00772
+iter=41 terr=0.02012 serr=0.31550 act=1100085 obj=37181.31408 diff=0.00503
+iter=42 terr=0.01890 serr=0.30290 act=1100085 obj=37010.97814 diff=0.00458
+iter=43 terr=0.01847 serr=0.29810 act=1100085 obj=36865.24411 diff=0.00394
+iter=44 terr=0.01852 serr=0.29860 act=1100085 obj=36766.82004 diff=0.00267
+iter=45 terr=0.01831 serr=0.29500 act=1100085 obj=36627.76093 diff=0.00378
+iter=46 terr=0.01863 serr=0.29950 act=1100085 obj=36604.02138 diff=0.00065
+iter=47 terr=0.01786 serr=0.28860 act=1100085 obj=36459.79423 diff=0.00394
+iter=48 terr=0.01781 serr=0.28770 act=1100085 obj=36426.77245 diff=0.00091
+iter=49 terr=0.01737 serr=0.28290 act=1100085 obj=36362.97566 diff=0.00175
+iter=50 terr=0.01747 serr=0.28580 act=1100085 obj=36309.60599 diff=0.00147
+iter=51 terr=0.01684 serr=0.27740 act=1100085 obj=36252.11466 diff=0.00158
+iter=52 terr=0.01663 serr=0.27430 act=1100085 obj=36219.20668 diff=0.00091
+iter=53 terr=0.01636 serr=0.27010 act=1100085 obj=36192.29972 diff=0.00074
+iter=54 terr=0.01625 serr=0.27040 act=1100085 obj=36169.08196 diff=0.00064
+iter=55 terr=0.01598 serr=0.26600 act=1100085 obj=36122.39418 diff=0.00129
+iter=56 terr=0.01602 serr=0.26590 act=1100085 obj=36107.42848 diff=0.00041
+iter=57 terr=0.01602 serr=0.26570 act=1100085 obj=36080.56889 diff=0.00074
+iter=58 terr=0.01599 serr=0.26540 act=1100085 obj=36052.20717 diff=0.00079
+iter=59 terr=0.01549 serr=0.25790 act=1100085 obj=36049.94807 diff=0.00006
+iter=60 terr=0.01571 serr=0.26050 act=1100085 obj=36037.54767 diff=0.00034
+iter=61 terr=0.01571 serr=0.26140 act=1100085 obj=36023.30743 diff=0.00040
+iter=62 terr=0.01554 serr=0.25900 act=1100085 obj=36013.31066 diff=0.00028
+iter=63 terr=0.01567 serr=0.26180 act=1100085 obj=36004.71292 diff=0.00024
+iter=64 terr=0.01565 serr=0.26150 act=1100085 obj=35998.15984 diff=0.00018
+iter=65 terr=0.01558 serr=0.26050 act=1100085 obj=35987.94788 diff=0.00028
+iter=66 terr=0.01559 serr=0.26010 act=1100085 obj=35980.56350 diff=0.00021
+iter=67 terr=0.01563 serr=0.25990 act=1100085 obj=35964.35152 diff=0.00045
+iter=68 terr=0.01645 serr=0.27210 act=1100085 obj=35997.98661 diff=0.00094
+iter=69 terr=0.01578 serr=0.26150 act=1100085 obj=35960.71682 diff=0.00104
+iter=70 terr=0.01587 serr=0.26360 act=1100085 obj=35956.30823 diff=0.00012
+iter=71 terr=0.01590 serr=0.26480 act=1100085 obj=35951.86190 diff=0.00012
+iter=72 terr=0.01586 serr=0.26400 act=1100085 obj=35948.53324 diff=0.00009
+iter=73 terr=0.01589 serr=0.26510 act=1100085 obj=35944.67461 diff=0.00011
+iter=74 terr=0.01588 serr=0.26440 act=1100085 obj=35943.31690 diff=0.00004
+iter=75 terr=0.01593 serr=0.26580 act=1100085 obj=35940.14097 diff=0.00009
+iter=76 terr=0.01601 serr=0.26620 act=1100085 obj=35939.62811 diff=0.00001
+
+Done!654.66 s
+
+
+ Finished training for ./t10/train10.nopipe.col!
+
+
+Step6: Testing with closed-test data files:
+Note: All sentences of closed-test data file are contained in the training file.
+
+~/experiment/pos/my-pos/model4github/crf$ time ./test-closed-all.sh 
+
+ Finished testing for ./t1/ctest1.nopipe.col!
+
+ Finished testing for ./t2/ctest2.nopipe.col!
+
+ Finished testing for ./t3/ctest3.nopipe.col!
+
+ Finished testing for ./t4/ctest4.nopipe.col!
+
+ Finished testing for ./t5/ctest5.nopipe.col!
+
+ Finished testing for ./t6/ctest6.nopipe.col!
+
+ Finished testing for ./t7/ctest7.nopipe.col!
+
+ Finished testing for ./t8/ctest8.nopipe.col!
+
+ Finished testing for ./t9/ctest9.nopipe.col!
+
+ Finished testing for ./t10/ctest10.nopipe.col!
+
+real	0m2.460s
+user	0m1.646s
+sys	0m0.388s
+
+You will get results file with following format:
+
+ဂျပန်   n       n
+စကား    n       n
+ပြော    v       v
+လမ်းညွှန်       v       v
+သူ       n       n
+ရှိ      v       v
+ပါ      part    part
+သလား    part    part
+။       punc    punc
+
+Here, 2nd column is reference and the 3rd column is output of CRF model.
+
+Step7: Testing with open test file: 
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/crf$ time ./test-open-all.sh 
+
+ Finished testing for ./t1!
+
+ Finished testing for ./t2!
+
+ Finished testing for ./t3!
+
+ Finished testing for ./t4!
+
+ Finished testing for ./t5!
+
+ Finished testing for ./t6!
+
+ Finished testing for ./t7!
+
+ Finished testing for ./t8!
+
+ Finished testing for ./t9!
+
+ Finished testing for ./t10!
+
+real	0m4.018s
+user	0m2.856s
+sys	0m0.543s
+
+You will get results or tagged file with following format:
+
+ဆယ်     tn      num
+ရာခိုင်နှုန်း      n       n
+ဈေး     n       ppm
+လျှော့   v       v
+ပေး     part    part
+ရင်     conj    conj
+ဝယ်     v       v
+မယ်     ppm     ppm
+။       punc    punc
+
+
+Step8: Preparation for evaluation
+Cutting field 1 and filed 3 (i.e. tagged by CRF model) for both closed and open test results.
+
+~/experiment/pos/my-pos/model4github/crf$ ./cut-f1and3-all.sh 
+
+ Finished testing for ./t1/ !
+
+ Finished testing for ./t2/ !
+
+ Finished testing for ./t3/ !
+
+ Finished testing for ./t4/ !
+
+ Finished testing for ./t5/ !
+
+ Finished testing for ./t6/ !
+
+ Finished testing for ./t7/ !
+
+ Finished testing for ./t8/ !
+
+ Finished testing for ./t9/ !
+
+ Finished testing for ./t10/ !
+
+Step9: EVALUATION 
+
+~/experiment/pos/my-pos/model4github/crf$ ./evaluate-all.sh 
+
+### Evaluation for train1 model ###
+
+   -with closed test data
+Tag precision: 0.985294117647
+
+   -with open test data
+Tag precision: 0.91149556112
+
+### Evaluation for train2 model ###
+
+   -with closed test data
+Tag precision: 0.982066609735
+
+   -with open test data
+Tag precision: 0.928295014796
+
+### Evaluation for train3 model ###
+
+   -with closed test data
+Tag precision: 0.985377866708
+
+   -with open test data
+Tag precision: 0.936353289324
+
+### Evaluation for train4 model ###
+
+   -with closed test data
+Tag precision: 0.984540735726
+
+   -with open test data
+Tag precision: 0.940860459822
+
+### Evaluation for train5 model ###
+
+   -with closed test data
+Tag precision: 0.984221440808
+
+   -with open test data
+Tag precision: 0.944548144776
+
+### Evaluation for train6 model ###
+
+   -with closed test data
+Tag precision: 0.983672572851
+
+   -with open test data
+Tag precision: 0.947826086957
+
+### Evaluation for train7 model ###
+
+   -with closed test data
+Tag precision: 0.983915767715
+
+   -with open test data
+Tag precision: 0.950193489643
+
+### Evaluation for train8 model ###
+
+   -with closed test data
+Tag precision: 0.982540035587
+
+   -with open test data
+Tag precision: 0.952014568632
+
+### Evaluation for train9 model ###
+
+   -with closed test data
+Tag precision: 0.985762497363
+
+   -with open test data
+Tag precision: 0.952834054177
+
+### Evaluation for train10 model ###
+
+   -with closed test data
+Tag precision: 0.98431006304
+
+   -with open test data
+Tag precision: 0.953881174596
+
+
+Here,
+Train 1 model was trained with 1,000 manually POS-tagged sentences.
+Train 2 model was trained with 2,000 manually POS-tagged sentences.
+...
+...
+Train 10 model was trained with 10,000 manually POS-tagged sentences.
+
+You can see clearly how CRF POS-tagging model performance is increasing based on the size of the training data especially on open test data (1,000 sentences).
+
+Ye@Lab
