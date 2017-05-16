@@ -1,0 +1,136 @@
+This file is a note of data preparation for incremental trainings.
+
+1. Making random sentences or shuffling of myPOS corpus:
+
+~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ ./jot-shuf.sh ./mypos-dver.1.0.txt 
+head of shuffled output file ./mypos-dver.1.0.txt.shuf: 
+Avaaz.org/fw အားဗဇ်/n|အဖွဲ့အစည်း/n သည်/ppm ပုဂ္ဂလိက/adj သီးခြား/adj အလှူပစ္စည်း/n များ/part ၂၅,၀၆၂/num ကျော်/part မှ/ppm တစ်ဆင့်/adv မြန်မာ/n|ပြည်/n တွင်/ppm ကယ်ဆယ်/v|ရေး/part ဦးတည်/v|ကြိုးပမ်း/v|ဆောင်ရွက်/v|မှု/part များ/part အတွက်/ppm အမေရိကန်/n|ဒေါ်လာ/n ၂/num သန်း/n ကျော်/adj မတည်/v ခဲ့/part သည်/ppm ။/punc
+ကချင်/n|တိုင်းရင်းသား/n များ/part က/ppm အမဲ/n|ရောင်/n ဝတ်/v ပြီး/conj ရဝမ်/n တိုင်းရင်းသား/n များ/part က/ppm အဖြူ/n|ရောင်/n ဝတ်/v သည်/ppm ။/punc
+ကမ္ဘာ့/n|လူဦးရေ/n ဒုတိယ/adj အများဆုံး/adj နိုင်ငံ/n ဖြစ်/v ပြီးလျှင်/conj သယံဇာတ/n|ပစ္စည်း/n ပေါကြွယ်/adj လှ/part သော/part နိုင်ငံ/n လည်း/part ဖြစ်/v လေ/part သည်/ppm ။/punc
+ကလာပ်စည်း/n ကွဲထွက်/v|ခြင်း/part ၊/punc အသားဓာတ်/n ပရိုတင်း/n ထုတ်လုပ်/v|ခြင်း/part စသည့်/part အခြေခံ/n ဘဝဖြစ်စဉ်/n များ/part အား/ppm လေ့လာ/v ရာတွင်/conj အပင်/n များ/part သည်/ppm အဆင်ပြေ/v စေ/part သည့်/part သက်ရှိ/n များ/part ဖြစ်/v သည်/ppm ။/punc
+ကာဖီ/n ကို/ppm တမီနာဒူ/n ၊/punc ကာနတက/n ၊/punc ကဲရာလာ/n|ပြည်နယ်/n တို့/part ၌/ppm စိုက်ပျိုး/v လုပ်ကိုင်/v ကြ/part သည်/ppm ။/punc
+ကား/n အတိုက်ခံ/v လိုက်/part ရ/part တယ်/ppm ။/punc
+ကုန်စည်ဒိုင်/n နှင့်/conj အဝေး/n|ပြေး/v|ကားဂိတ်/n ၊/punc မီးရထား/n|ဘူတာရုံ/n ၊/punc သင်္ဘောဆိပ်/n တည်ရှိ/v|ခြင်း/part ကြောင့်/ppm ဒေသခံ/n|ပြည်သူ/n များ/part အလုပ်အကိုင်/n အခွင့်အလမ်း/n အပြည့်အဝ/adv ရရှိ/v နေ/part ကြ/part ပြီ/ppm ဖြစ်/v သည်/ppm ။/punc
+ကုရ်အာန်/n|ကျမ်းစာ/n တွင်/ppm ၁၁၄/num ဆူရာဟ်/n အခန်း/n နှင့်/conj ၆၂၃၆/num အာယသ်/n စာပိုဒ်/n ပါရှိ/v သည်/ppm ။/punc
+ကျေးဇူးပြုပြီး/int ဘယ်/adj မြေအောက်/adj ရထား/n က/ppm စင်ထရယ်/n|ပန်းခြံ/n ကို/ppm သွား/v တာ/part လဲ/part ဆို/v တာ/part ညွှန်ပြ/v ပေး/part ပါ/part ။/punc
+ကျွန်တော်/pron ဘယ်တော့/pron ပေး/v သင့်/part ပါ/part သလဲ/part ။/punc
+
+2. Splitting into 11 files, each file contained 1,000 sentences:
+~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ split -l 1000 ./mypos-dver.1.0.txt part
+
+3. Check splitted files:
+~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ ls part*
+partaa partab partac partad partae partaf partag partah partai partaj partak
+
+4. Make t1 to t10 folders and prepare 1,000 sentences, 2,000 sentences, ..., 10,000 sentences training files under each training folder.
+Run ./concat-cp.sh as follows:
+
+~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ ./concat-cp.sh 
+    1000   22735  400530 ./t1/train1
+    2000   44387  784811 ./t2/train2
+    3000   66548 1178131 ./t3/train3
+    4000   88705 1570479 ./t4/train4
+    5000  110160 1949801 ./t5/train5
+    6000  132665 2347169 ./t6/train6
+    7000  154953 2738757 ./t7/train7
+    8000  176754 3124390 ./t8/train8
+    9000  199259 3521510 ./t9/train9
+   10000  221289 3912071 ./t10/train10
+
+5. Prepare closed-test file:
+
+~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0/t10$ ./mk-closed-test-files.sh
+
+After running above command, you will have 10 closed-test files.
+I prepared closed-test files with 10% of the training data such as follow:
+
+For t1 (train1):
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ wc ./t1/*
+     100    2254   40598 ./t1/ctest1
+    1000   22735  400530 ./t1/train1
+    1000   22735  400530 ./t1/train1.shuf
+    2100   47724  841658 total
+
+For t10 (train10):
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ wc ./t10/*
+    1000   21912  384928 ./t10/ctest10
+   10000  221289 3912071 ./t10/train10
+   10000  221289 3912071 ./t10/train10.shuf
+   21000  464490 8209070 total
+
+6. Prepare open test file:
+
+~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ cp partak otest
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ wc otest
+    1000   22358  392923 otest
+
+I used partak (last randomized 1,000 sentences file) as open test file.
+I wanna see how POS-tagging models' (t1 model to t10 models) tagging performance on 1,000 open test data.
+
+7. Prepare word only files for all training, closed-test and open test data:
+
+~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ ./prepare-word-files.sh 
+
+Finished for ./t1/train1!
+Finished for ./t1/ctest1!
+
+Finished for ./t2/train2!
+Finished for ./t2/ctest2!
+
+Finished for ./t3/train3!
+Finished for ./t3/ctest3!
+
+Finished for ./t4/train4!
+Finished for ./t4/ctest4!
+
+Finished for ./t5/train5!
+Finished for ./t5/ctest5!
+
+Finished for ./t6/train6!
+Finished for ./t6/ctest6!
+
+Finished for ./t7/train7!
+Finished for ./t7/ctest7!
+
+Finished for ./t8/train8!
+Finished for ./t8/ctest8!
+
+Finished for ./t9/train9!
+Finished for ./t9/ctest9!
+
+Finished for ./t10/train10!
+Finished for ./t10/ctest10!
+
+Finished for ./otest!
+
+8. Checking .word files before training POS-tagging models:
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ head -n 3 ./t1/ctest1.word 
+ဂျပန် စကား ပြော လမ်းညွှန် သူ ရှိ ပါ သလား ။
+တံခါး က မ ပိတ် ဘူး ။
+ထို အစည်းအရုံး သည် အမျိုးသား ရေး စိတ်ဓာတ် ပြင်းပြ ၍ နုပျို တက်ကြွ သည့် အခြေခံ လက္ခဏာ ရှိ ပြီး အစည်းအရုံး ခေါင်းဆောင် များ သည် သက်ကြီး နိုင်ငံရေးသမား များ နှင့် မ တူ တမူထူးခြား ကြ ပါ သည် ။
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ head -n 3 ./t10/ctest10.word
+ကင်မရာ ဘက်ထရီ အားသွင်း ချင် လိုက် တာ ။
+ကမ္ဘာ့ အံ့ဖွယ် အရာ များ ရေးသား သည့် The Guinness Book of Records စာအုပ် တွင် အပြည်ပြည် ဆိုင်ရာ လူ့ အခွင့်အရေး ကြေညာစာတမ်း သည် ကမ္ဘာ တွင် အများဆုံး ဘာသာပြန်ဆို ထား သည့် စာတမ်း တစ် ခု အဖြစ် အသိအမှတ်ပြု ခံ ရ သည် ။
+ကမ်းခြေ မှ စ ၍ တောင်ကုန်း မြင့် များ ဖြစ် ပြီး လျှင် ထို တောင်ကုန်း မြင့် များ ပေါ် တွင် အစိုးရ ရုံး အဆောက်အဦ များ ရှိ သည် ။
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ head -n 3 ./t7/train7.word 
+ယခု လ တွင် ပျားရည် နှင့် ပျားဖယောင်း များ ကို စုဆောင်း ကြ သည် ဟု ခန့်မှန်း နိုင် သည် ။
+အခန်းခ ထဲ မှာ ထည့် လိုက် ပါ ။
+ဆရာကြီး ဦးစိန် ၏ မြန်မာ အထက်တန်း ကျောင်း မှ ၉ တန်း အောင်မြင် ခဲ့ ပြီး မင်းလှ မြို့ နော်မံ ကျောင်း မှ အလယ်တန်း ဆရာ ဖြစ် အောင်မြင် ခဲ့ ၏ ။
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ head -n 3 ./t10/train10.word 
+ယခု လ တွင် ပျားရည် နှင့် ပျားဖယောင်း များ ကို စုဆောင်း ကြ သည် ဟု ခန့်မှန်း နိုင် သည် ။
+အခန်းခ ထဲ မှာ ထည့် လိုက် ပါ ။
+ဆရာကြီး ဦးစိန် ၏ မြန်မာ အထက်တန်း ကျောင်း မှ ၉ တန်း အောင်မြင် ခဲ့ ပြီး မင်းလှ မြို့ နော်မံ ကျောင်း မှ အလယ်တန်း ဆရာ ဖြစ် အောင်မြင် ခဲ့ ၏ ။
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/data/myPOS-dver1.0$ head -n 3 otest.word 
+ဆယ် ရာခိုင်နှုန်း ဈေး လျှော့ ပေး ရင် ဝယ် မယ် ။
+ယခု လ ၏ အထိမ်းအမှတ် ပန်း မှာ မြတ်လေးပန်း Pomeacoccinea ဖြစ် သည် ။
+ကရင် ဗမာ အဓိကရုဏ်း သည် သူ့ အား များ စွာ ဒေါမနဿ ဖြစ် စေ ပါ သည် ။
+
+Finished preparation of training and test data files for 10 incremental POS-tagging models.
+You just need to copy t1..t10 folders and two open test data files (otest and otest.word) to the folder that you want to make some POS-tagging experiments.
+
+*** Don't forget to replace pipe "|" with space " ", if you are not considering Myanmar compound words.
