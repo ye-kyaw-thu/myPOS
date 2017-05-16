@@ -90,7 +90,7 @@ mk-wordtag.pl : Perl script for printing word only file, tag only file, listing 
 mk-pair.pl : Perl script for combining word file and tag file to word/tag format  
 how2run.txt : Example usages of perl scripts  
 
-Model:
+Model:  
 crf/ : Incremental training of CRF POS-tagging models (1,000 to 10,000 sentences) with myPOS corpus. check [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/crf/note.txt)  
 
 Corpus-draft-ver-0.9/  
