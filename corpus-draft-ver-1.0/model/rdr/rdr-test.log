@@ -1,0 +1,200 @@
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/train1.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/train1.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/ctest1.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/ctest1.nopipe.word.TAGGED
+
+ Finished testing with closed-test data file with train1 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/train1.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/train1.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/otest.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train1 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/train2.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/train2.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/ctest2.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/ctest2.nopipe.word.TAGGED
+
+ Finished testing with closed-test data file with train2 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/train2.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/train2.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/otest.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train2 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/train3.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/train3.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/ctest3.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/ctest3.nopipe.word.TAGGED
+
+ Finished testing with closed-test data file with train3 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/train3.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/train3.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/otest.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train3 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/train4.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/train4.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/ctest4.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/ctest4.nopipe.word.TAGGED
+
+ Finished testing with closed-test data file with train4 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/train4.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/train4.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/otest.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train4 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/train5.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/train5.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/ctest5.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/ctest5.nopipe.word.TAGGED
+
+ Finished testing with closed-test data file with train5 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/train5.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/train5.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/otest.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train5 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/train6.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/train6.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/ctest6.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/ctest6.nopipe.word.TAGGED
+
+ Finished testing with closed-test data file with train6 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/train6.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/train6.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/otest.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train6 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/train7.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/train7.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/ctest7.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/ctest7.nopipe.word.TAGGED
+
+ Finished testing with closed-test data file with train7 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/train7.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/train7.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/otest.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train7 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/train8.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/train8.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/ctest8.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/ctest8.nopipe.word.TAGGED
+
+ Finished testing with closed-test data file with train8 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/train8.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/train8.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/otest.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train8 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/train9.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/train9.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/ctest9.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/ctest9.nopipe.word.TAGGED
+
+ Finished testing with closed-test data file with train9 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/train9.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/train9.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/otest.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train9 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/ctest10.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/ctest10.nopipe.word.TAGGED
+
+ Finished testing with closed-test data file with train10 RDR model!
+
+=> Read a POS tagging model from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.RDR
+
+=> Read a lexicon from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.DICT
+
+=> Perform POS tagging on /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/otest.nopipe.word
+
+Output file: /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train10 RDR model!

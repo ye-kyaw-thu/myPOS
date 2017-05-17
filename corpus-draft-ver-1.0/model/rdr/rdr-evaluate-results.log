@@ -1,0 +1,80 @@
+
+### Evaluation for RDR train1 model ###
+
+   -with closed test data
+Tag precision: 0.975935828877
+
+   -with open test data
+Tag precision: 0.940496244025
+
+### Evaluation for RDR train2 model ###
+
+   -with closed test data
+Tag precision: 0.979718189582
+
+   -with open test data
+Tag precision: 0.952014568632
+
+### Evaluation for RDR train3 model ###
+
+   -with closed test data
+Tag precision: 0.981683854087
+
+   -with open test data
+Tag precision: 0.957250170726
+
+### Evaluation for RDR train4 model ###
+
+   -with closed test data
+Tag precision: 0.981042654028
+
+   -with open test data
+Tag precision: 0.960573639882
+
+### Evaluation for RDR train5 model ###
+
+   -with closed test data
+Tag precision: 0.981967360923
+
+   -with open test data
+Tag precision: 0.961757341225
+
+### Evaluation for RDR train6 model ###
+
+   -with closed test data
+Tag precision: 0.983086835554
+
+   -with open test data
+Tag precision: 0.964762121557
+
+### Evaluation for RDR train7 model ###
+
+   -with closed test data
+Tag precision: 0.982623861508
+
+   -with open test data
+Tag precision: 0.966218984748
+
+### Evaluation for RDR train8 model ###
+
+   -with closed test data
+Tag precision: 0.983485320285
+
+   -with open test data
+Tag precision: 0.967175051218
+
+### Evaluation for RDR train9 model ###
+
+   -with closed test data
+Tag precision: 0.98307319131
+
+   -with open test data
+Tag precision: 0.967994536763
+
+### Evaluation for RDR train10 model ###
+
+   -with closed test data
+Tag precision: 0.983236049498
+
+   -with open test data
+Tag precision: 0.968313225586

@@ -1,0 +1,460 @@
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/train1.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/train1.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/train1.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/train1.nopipe and /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/train1.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file  /Users/aihb/experiment/pos/my-pos/model4github/rdr/t1/train1.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train1!
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/train2.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/train2.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/train2.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/train2.nopipe and /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/train2.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file  /Users/aihb/experiment/pos/my-pos/model4github/rdr/t2/train2.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train2!
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/train3.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/train3.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/train3.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/train3.nopipe and /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/train3.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file  /Users/aihb/experiment/pos/my-pos/model4github/rdr/t3/train3.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train3!
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/train4.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/train4.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/train4.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/train4.nopipe and /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/train4.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file  /Users/aihb/experiment/pos/my-pos/model4github/rdr/t4/train4.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train4!
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/train5.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/train5.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/train5.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/train5.nopipe and /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/train5.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file  /Users/aihb/experiment/pos/my-pos/model4github/rdr/t5/train5.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train5!
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/train6.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/train6.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/train6.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/train6.nopipe and /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/train6.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file  /Users/aihb/experiment/pos/my-pos/model4github/rdr/t6/train6.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train6!
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/train7.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/train7.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/train7.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/train7.nopipe and /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/train7.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file  /Users/aihb/experiment/pos/my-pos/model4github/rdr/t7/train7.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train7!
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/train8.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/train8.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/train8.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/train8.nopipe and /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/train8.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file  /Users/aihb/experiment/pos/my-pos/model4github/rdr/t8/train8.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train8!
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/train9.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/train9.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/train9.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/train9.nopipe and /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/train9.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file  /Users/aihb/experiment/pos/my-pos/model4github/rdr/t9/train9.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train9!
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe and /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file  /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train10!
