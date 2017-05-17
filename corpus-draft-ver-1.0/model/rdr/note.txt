@@ -1,0 +1,246 @@
+First, you have to download Ripple Down Rule-based POSTagger.
+Downlink link of Rule-based Part-of-Speech and Morphological Tagging Toolkit:
+https://github.com/datquocnguyen/RDRPOSTagger
+
+I used python program for Demo training with myPOS corpus draft version 1.0.
+(I run with Python version 2.7)
+
+Step1: Remove Pipe "|" from training, closed and open test files:
+$./pipe2space-all.sh
+
+Step2: Training:
+$time ./train-rdr-all.sh | tee rdr-train.log
+(training screen outputs were logged in rdr-train.log file)
+
+Here is the screen output for t10 (FYI):
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe and /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file  /Users/aihb/experiment/pos/my-pos/model4github/rdr/t10/train10.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train10!
+
+real	19m35.902s
+user	19m17.021s
+sys	0m9.887s
+
+If you training finished successfully, you will get .RDR and .DICT files under t1/..t10/ folders.
+
+.RDR file format is as follow:
+
+True : object.conclusion = "NN"
+        object.tag == "adv" : object.conclusion = "adv"
+        object.tag == "num" : object.conclusion = "num"
+        object.tag == "punc" : object.conclusion = "punc"
+        object.tag == "fw" : object.conclusion = "fw"
+        object.tag == "int" : object.conclusion = "int"
+        object.tag == "abb" : object.conclusion = "abb"
+        object.tag == "ppm" : object.conclusion = "ppm"
+                object.prevTag1 == "adj" and object.word == "သို့" : object.conclusion = "part"
+                object.prevTag1 == "conj" and object.word == "မှ" : object.conclusion = "conj"
+                object.nextWord1 == "သည့်" : object.conclusion = "pron"
+        object.tag == "n" : object.conclusion = "n"
+                object.nextWord1 == "ခုနှစ်" : object.conclusion = "num"
+                object.nextWord1 == "ခဲ့" : object.conclusion = "v"
+                object.nextWord1 == "မှု" : object.conclusion = "v"
+                object.nextWord1 == "ထား" : object.conclusion = "v"
+                object.nextWord1 == "နေ" : object.conclusion = "v"
+
+*** We can see rules!!! :)
+
+.DICT file format is as follows:
+
+က ppm
+ကက်သုတ် n
+ကချင် n
+ကင် v
+ကင်ပုံကင်နည်း n
+ကင်းကင်းရှင်းရှင်း adv
+ကင်းစခန်း n
+ကင်းစင် v
+ကင်းစ် n
+ကင်းမဲ့ adj
+
+Note: myPOS corpus contained English words (that is natural in Myanmar language, many English words are using ...) and thus 1st you will see English words and their POS-tags.
+
+Step3: Making word only files for training, closed and test data files:
+(This process is required for training, testing without considering Myanmar compound words)
+$ ./prepare-word-files4rdr.sh 
+
+Finished for ./t1/train1.nopipe!
+Finished for ./t1/ctest1.nopipe!
+
+Finished for ./t2/train2.nopipe!
+Finished for ./t2/ctest2.nopipe!
+
+Finished for ./t3/train3.nopipe!
+Finished for ./t3/ctest3.nopipe!
+
+Finished for ./t4/train4.nopipe!
+Finished for ./t4/ctest4.nopipe!
+
+Finished for ./t5/train5.nopipe!
+Finished for ./t5/ctest5.nopipe!
+
+Finished for ./t6/train6.nopipe!
+Finished for ./t6/ctest6.nopipe!
+
+Finished for ./t7/train7.nopipe!
+Finished for ./t7/ctest7.nopipe!
+
+Finished for ./t8/train8.nopipe!
+Finished for ./t8/ctest8.nopipe!
+
+Finished for ./t9/train9.nopipe!
+Finished for ./t9/ctest9.nopipe!
+
+Finished for ./t10/train10.nopipe!
+Finished for ./t10/ctest10.nopipe!
+
+Finished for ./otest.nopipe!
+
+Step4: Copy ./rdr/otest.nopipe.word files to all training folders (./t1/ .. ./t10/)
+(This step is requried because of RDR output file will be written based on the input test file path.)
+
+/rdr$  for((i=1;i<=10;i+=1)); do cp otest.nopipe.word ./t$i/; done;
+(I used bash for loop in one line)
+
+Step5: Testing with closed and open test data for all models train1 to train10:
+$ time ./test-all.sh | tee rdr-test.log 
+(test screen outputs were logged in rdr-test.log file)
+
+Time for running ./test-all.sh or testing with RDR models:
+real	0m9.676s
+user	0m15.077s
+sys	0m1.175s
+
+You will get .TAGGED files such as t1/ctest1.nopipe.word.TAGGED, t2/ctest2.nopipe.word.TAGGED, ... t10/ctest10.nopipe.word.TAGGED for closed-test.
+For the open test, you will get t1/otest.nopipe.word.TAGGED, t2/otest.nopipe.word.TAGGED, ... t10/otest.nopipe.word.TAGGED files.
+ 
+Step6: Evaluation
+
+/rdr$ time ./evaluate-all.sh | tee rdr-evaluate-results.log
+
+### Evaluation for RDR train1 model ###
+
+   -with closed test data
+Tag precision: 0.975935828877
+
+   -with open test data
+Tag precision: 0.940496244025
+
+### Evaluation for RDR train2 model ###
+
+   -with closed test data
+Tag precision: 0.979718189582
+
+   -with open test data
+Tag precision: 0.952014568632
+
+### Evaluation for RDR train3 model ###
+
+   -with closed test data
+Tag precision: 0.981683854087
+
+   -with open test data
+Tag precision: 0.957250170726
+
+### Evaluation for RDR train4 model ###
+
+   -with closed test data
+Tag precision: 0.981042654028
+
+   -with open test data
+Tag precision: 0.960573639882
+
+### Evaluation for RDR train5 model ###
+
+   -with closed test data
+Tag precision: 0.981967360923
+
+   -with open test data
+Tag precision: 0.961757341225
+
+### Evaluation for RDR train6 model ###
+
+   -with closed test data
+Tag precision: 0.983086835554
+
+   -with open test data
+Tag precision: 0.964762121557
+
+### Evaluation for RDR train7 model ###
+
+   -with closed test data
+Tag precision: 0.982623861508
+
+   -with open test data
+Tag precision: 0.966218984748
+
+### Evaluation for RDR train8 model ###
+
+   -with closed test data
+Tag precision: 0.983485320285
+
+   -with open test data
+Tag precision: 0.967175051218
+
+### Evaluation for RDR train9 model ###
+
+   -with closed test data
+Tag precision: 0.98307319131
+
+   -with open test data
+Tag precision: 0.967994536763
+
+### Evaluation for RDR train10 model ###
+
+   -with closed test data
+Tag precision: 0.983236049498
+
+   -with open test data
+Tag precision: 0.968313225586
+
+real	0m1.621s
+user	0m1.277s
+sys	0m0.290s 
