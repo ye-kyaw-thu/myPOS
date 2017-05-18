@@ -1,0 +1,522 @@
+start closed testing!
+start tagging ...
+Loading tagger model from ./2hours/t1/train1.nopipe.pipe.ser
+Tagging data in ./2hours/t1/ctest1.nopipe.word and writing to ./2hours/t1/ctest1.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t1/train1.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဂျပန်|n စကား|n ပြော|v လမ်းညွှန်|v သူ|n ရှိ|v ပါ|part သလား|part ။|punc
+တံခါး|n က|ppm မ|part ပိတ်|v ဘူး|part ။|punc
+===== Start evaluation on ./2hours/t1/train1.nopipe.pipe.ser model with ./2hours/t1/ctest1.nopipe.pipe (closed test data)  =====
+Loading tagger model from ./2hours/t1/train1.nopipe.pipe.ser
+Evaluating on ./2hours/t1/ctest1.nopipe.pipe
+starting: testing
+finished: testing in 0.091 seconds
+Accuracy: 97.06  (2178/2244)
+ count  gold  model
+    10  conj  ppm
+     8  v     part
+     7  part  v
+     6  n     part
+     5  part  ppm
+     5  adj   v
+     5  part  n
+     3  adj   n
+     1  ppm   v
+     1  part  num
+avg tagging: 0.0008 sec
+==========
+
+start tagging ...
+Loading tagger model from ./2hours/t2/train2.nopipe.pipe.ser
+Tagging data in ./2hours/t2/ctest2.nopipe.word and writing to ./2hours/t2/ctest2.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t2/train2.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+===== Start evaluation on ./2hours/t2/train2.nopipe.pipe.ser model with ./2hours/t2/ctest2.nopipe.pipe (closed test data)  =====
+Loading tagger model from ./2hours/t2/train2.nopipe.pipe.ser
+Evaluating on ./2hours/t2/ctest2.nopipe.pipe
+starting: testing
+finished: testing in 0.154 seconds
+Accuracy: 95.56  (4476/4684)
+ count  gold  model
+    35  conj  ppm
+    18  v     part
+    16  part  adv
+    16  n     part
+    13  part  ppm
+    13  part  v
+    12  part  n
+    11  part  conj
+     8  adj   part
+     7  n     v
+avg tagging: 0.0007 sec
+==========
+
+start tagging ...
+Loading tagger model from ./2hours/t3/train3.nopipe.pipe.ser
+Tagging data in ./2hours/t3/ctest3.nopipe.word and writing to ./2hours/t3/ctest3.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t3/train3.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ခရီးသွားချက်လက်မှတ်|n ကို|ppm သုံး|v လို့|part ရ|part ပါ|part သလား|part ။|punc
+ဆရာကြီး|n ဦးစိန်|n ၏|ppm မြန်မာ|n အထက်တန်း|n ကျောင်း|n မှ|ppm ၉|num တန်း|n အောင်မြင်|v ခဲ့|part ပြီး|conj မင်းလှ|n မြို့|n နော်မံ|n ကျောင်း|n မှ|ppm အလယ်တန်း|n ဆရာ|n ဖြစ်|v အောင်မြင်|v ခဲ့|part ၏|ppm ။|punc
+===== Start evaluation on ./2hours/t3/train3.nopipe.pipe.ser model with ./2hours/t3/ctest3.nopipe.pipe (closed test data)  =====
+Loading tagger model from ./2hours/t3/train3.nopipe.pipe.ser
+Evaluating on ./2hours/t3/ctest3.nopipe.pipe
+starting: testing
+finished: testing in 0.19 seconds
+Accuracy: 95.77  (6222/6497)
+ count  gold  model
+    57  conj  ppm
+    31  part  n
+    31  v     part
+    18  part  v
+    17  adj   v
+    13  n     part
+    11  n     pron
+    10  adj   part
+     6  part  ppm
+     6  pron  adj
+avg tagging: 0.0006 sec
+==========
+
+start tagging ...
+Loading tagger model from ./2hours/t4/train4.nopipe.pipe.ser
+Tagging data in ./2hours/t4/ctest4.nopipe.word and writing to ./2hours/t4/ctest4.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t4/train4.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ကိုကိုး|n ကျွန်း|n သည်|ppm အိန္ဒိယ|n ပိုင်|v နီကိုဗါ|n ကျွန်း|n မှ|ppm ၁၈|num ကီလိုမီတာ|n ဝေးကွာ|v သည်|ppm ။|punc
+ကုန်းလိပ်|n ကြီး|part များ|part သည်|ppm မြေ|n ပေါ်|n တွင်|ppm တွားသွားကောင်|n များ|part အနက်|ppm အလွန်|adv ပင်|part ရှေးကျ|v သော|part သတ္တဝါ|n များ|part ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t4/train4.nopipe.pipe.ser model with ./2hours/t4/ctest4.nopipe.pipe (closed test data)  =====
+Loading tagger model from ./2hours/t4/train4.nopipe.pipe.ser
+Evaluating on ./2hours/t4/ctest4.nopipe.pipe
+starting: testing
+finished: testing in 0.223 seconds
+Accuracy: 94.58  (8382/8862)
+ count  gold  model
+   153  punc  n
+    32  part  n
+    32  part  v
+    30  v     part
+    22  ppm   conj
+    18  n     pron
+    17  n     part
+    15  adj   v
+    14  punc  conj
+    12  adj   part
+avg tagging: 0.0005 sec
+==========
+
+start tagging ...
+Loading tagger model from ./2hours/t5/train5.nopipe.pipe.ser
+Tagging data in ./2hours/t5/ctest5.nopipe.word and writing to ./2hours/t5/ctest5.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t5/train5.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ကမ္ဘာ|n သည်|ppm နေ|part ကို|ppm ၃၆၅.၂၅၆၄|num ရက်|n တွင်|ppm တစ်|tn ကြိမ်|part လှည့်ပတ်|v နေ|part ပြီး|conj တစ်|tn နှစ်|tn ဟု|part သတ်မှတ်|v ကြ|part သည်|ppm ။|punc
+ကောင်း|adj လိုက်|part တဲ့|part လက်ဖက်ရည်|n ။|punc
+===== Start evaluation on ./2hours/t5/train5.nopipe.pipe.ser model with ./2hours/t5/ctest5.nopipe.pipe (closed test data)  =====
+Loading tagger model from ./2hours/t5/train5.nopipe.pipe.ser
+Evaluating on ./2hours/t5/ctest5.nopipe.pipe
+starting: testing
+finished: testing in 0.245 seconds
+Accuracy: 94.25  (10453/11091)
+ count  gold  model
+   159  punc  ppm
+    82  conj  ppm
+    49  n     part
+    45  v     part
+    39  part  n
+    27  adj   part
+    26  part  v
+    25  adj   v
+    21  part  ppm
+    17  part  conj
+avg tagging: 0.0004 sec
+==========
+
+start tagging ...
+Loading tagger model from ./2hours/t6/train6.nopipe.pipe.ser
+Tagging data in ./2hours/t6/ctest6.nopipe.word and writing to ./2hours/t6/ctest6.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t6/train6.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+8|fw bit|fw ပုံရိပ်|n တစ်|tn ခု|part သည်|ppm 256|fw color|fw သို့မဟုတ်|conj gray|fw scale|fw များ|part ကို|ppm အထောက်အကူ|n ပြု|v သည်|ppm ။|punc
+ကမ္ဘာ|n ပေါ်|n ၌|ppm အမြင့်ဆုံး|adj တောင်ထွတ်|n များ|part ဖြစ်|v ကြ|part သော|part ဧဝရက်|n တောင်|n ၂၉ဝ၂၈|num ပေ|part ၊|sb ကန်ချန်ဂျန်ဂါ|n တောင်|n ၂၈၁၄၆|num ပေ|part ၊|sb ဒေါ်လာဂီရိ|n တောင်|n ၂၆၈၂၆|num ပေ|part နှင့်|conj နန္ဒာဒေဝီ|n တောင်|n ၂၅၆၆၁|num ပေ|part တို့|part ကို|ppm ထို|adj တောင်တန်း|n ဒေသ|n ၌|ppm တွေ့|v ရ|part သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t6/train6.nopipe.pipe.ser model with ./2hours/t6/ctest6.nopipe.pipe (closed test data)  =====
+Loading tagger model from ./2hours/t6/train6.nopipe.pipe.ser
+Evaluating on ./2hours/t6/ctest6.nopipe.pipe
+starting: testing
+finished: testing in 0.264 seconds
+Accuracy: 93.81  (12812/13658)
+ count  gold  model
+   241  punc  sb
+   105  conj  ppm
+    65  part  n
+    65  v     part
+    42  part  v
+    37  n     part
+    26  adj   v
+    25  adj   part
+    23  part  conj
+    22  part  ppm
+avg tagging: 0.0004 sec
+==========
+
+start tagging ...
+Loading tagger model from ./2hours/t7/train7.nopipe.pipe.ser
+Tagging data in ./2hours/t7/ctest7.nopipe.word and writing to ./2hours/t7/ctest7.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t7/train7.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+American|fw Kachin|fw Ranger|fw စစ်တပ်ဖွဲ့|n သည်|ppm တရုတ်|n ပြည်|n ယူနန်|n ပြည်နယ်|n ထဲ|ppm ထိ|ppm ဂျပန်|n စစ်တပ်|n အား|ppm တိုက်ခိုက်|v အောင်ပွဲခံ|v ခဲ့|part ကာ|conj ယခု|n YingJiang|fw မှာ|ppm အထိမ်းအမှတ်|n အဖြင့်|ppm ကျောက်တိုင်|n စိုက်ထူ|v ထား|part သည်|ppm ။|punc
+Computer|fw တွင်|ppm ဖတ်မှတ်|v ခြင်း|part ၊|sb သိမ်းဆည်း|v ခြင်း|part များ|part ကို|ppm ကိန်းဂဏန်း|n များ|part ဖြင့်|ppm သာ|part ပြုလုပ်|v နိုင်|part သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t7/train7.nopipe.pipe.ser model with ./2hours/t7/ctest7.nopipe.pipe (closed test data)  =====
+Loading tagger model from ./2hours/t7/train7.nopipe.pipe.ser
+Evaluating on ./2hours/t7/ctest7.nopipe.pipe
+starting: testing
+finished: testing in 0.327 seconds
+Accuracy: 93.48  (14472/15481)
+ count  gold  model
+   278  punc  sb
+   112  conj  ppm
+   101  part  n
+    62  v     part
+    41  n     pron
+    36  adj   v
+    35  n     part
+    32  part  v
+    30  part  conj
+    24  adj   part
+avg tagging: 0.0004 sec
+==========
+
+start tagging ...
+Loading tagger model from ./2hours/t8/train8.nopipe.pipe.ser
+Tagging data in ./2hours/t8/ctest8.nopipe.word and writing to ./2hours/t8/ctest8.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t8/train8.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ကမ္ဘာမြေ|n ၏|ppm အပေါ်ယံလွှာ|n မြေသား|n မှာ|ppm ပျမ်းမျှ|adv အားဖြင့်|ppm ၄၀|num ကီလိုမီတာ|n ၂၅|num မိုင်|n မျှ|part ထူထပ်|adj သဖြင့်|conj အင်္ဂါ|n ဂြိုဟ်|n နှင့်|ppm ကမ္ဘာ|n တို့|part ၏|ppm အရွယ်အစား|n ကို|ppm ထည့်|v တွက်|v နှိုင်းယှဉ်|v ပါ|part က|ppm အင်္ဂါ|n ဂြိုဟ်|n မြေသား|n ထက်|conj ၃|num ဆ|n မျှ|part သေးငယ်|v သည်|ppm ။|punc
+ကမ္ဘောဒီးယား|n နိုင်ငံ|n ၏|ppm စပါး|n စိုက်ပျိုး|v မြေ|n ကို|ppm ဧရိယာ|n အားဖြင့်|ppm ၃|num မျိုး|n ခွဲခြား|v နိုင်|part သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t8/train8.nopipe.pipe.ser model with ./2hours/t8/ctest8.nopipe.pipe (closed test data)  =====
+Loading tagger model from ./2hours/t8/train8.nopipe.pipe.ser
+Evaluating on ./2hours/t8/ctest8.nopipe.pipe
+starting: testing
+finished: testing in 0.335 seconds
+Accuracy: 92.32  (16603/17984)
+ count  gold  model
+   316  punc  sb
+   273  part  conj
+   116  conj  ppm
+    77  part  n
+    74  v     part
+    55  part  v
+    46  n     part
+    41  adj   part
+    38  part  ppm
+    37  adj   v
+avg tagging: 0.0004 sec
+==========
+
+start tagging ...
+Loading tagger model from ./2hours/t9/train9.nopipe.pipe.ser
+Tagging data in ./2hours/t9/ctest9.nopipe.word and writing to ./2hours/t9/ctest9.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t9/train9.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ကာလ|n အားဖြင့်|ppm နှစ်|n ပေါင်း|n သန်း|n ၄၅ဝဝ|num အတွင်း|n ဖြစ်ရပ်|n များ|part အပြင်|conj ၊|n လေ့လာ|v ဖွယ်|part ရာ|conj ဝတ္ထု|n ပစ္စည်း|n များ|part မှာ|ppm လည်း|part ကမ္ဘာ|n တစ်|tn ခု|part လုံး|part ၏|ppm အတွင်း|n အပြင်|conj ရှိ|v ပထဝီ|n မြေကြီး|n တစ်|tn ခု|part လုံး|part ဖြစ်|v လေ|part ရာ|conj ၊|n အလွန်|adv မှ|ppm ပင်|n ကျယ်ဝန်း|adj နက်နဲ|adj လှ|part ၏|ppm ။|punc
+ကျောက်ဖြစ်ရုပ်ကြွင်း|n မှတ်တမ်း|n များ|part အရ|ppm ငှက်|n များ|part သည်|ppm သယ်ယိုပေါ့ဒ်ဒိုင်နိုဆော|n များ|part မှ|ppm ဂျူရက်ဆစ်|n အချိန်ကာလ|n မှ|ppm စ|v ၍|conj ဆင်းသက်|v လာ|part သည်|ppm ဟု|part ခန့်မှန်း|v နိုင်|part ပြီး|conj နှစ်|n ပေါင်း|n သန်း|n ၁၅၀|num မှ|ppm သန်း|n ၂၀၀|num ခန့်|part တွင်|ppm ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t9/train9.nopipe.pipe.ser model with ./2hours/t9/ctest9.nopipe.pipe (closed test data)  =====
+Loading tagger model from ./2hours/t9/train9.nopipe.pipe.ser
+Evaluating on ./2hours/t9/ctest9.nopipe.pipe
+starting: testing
+finished: testing in 0.414 seconds
+Accuracy: 94.83  (17984/18964)
+ count  gold  model
+   233  punc  n
+    78  v     part
+    71  part  n
+    53  part  v
+    40  adj   v
+    37  adj   part
+    37  n     part
+    37  part  conj
+    28  ppm   conj
+    26  n     pron
+avg tagging: 0.0004 sec
+==========
+
+start tagging ...
+Loading tagger model from ./2hours/t10/train10.nopipe.pipe.ser
+Tagging data in ./2hours/t10/ctest10.nopipe.word and writing to ./2hours/t10/ctest10.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t10/train10.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ကင်မရာ|n ဘက်ထရီ|n အားသွင်း|v ချင်|part လိုက်|part တာ|part ။|punc
+ကမ္ဘာ့|n အံ့ဖွယ်|n အရာ|n များ|part ရေးသား|v သည့်|part The|fw Guinness|fw Book|fw of|fw Records|fw စာအုပ်|n တွင်|ppm အပြည်ပြည်|n ဆိုင်ရာ|n လူ့|n အခွင့်အရေး|n ကြေညာစာတမ်း|n သည်|ppm ကမ္ဘာ|n တွင်|ppm အများဆုံး|adv ဘာသာပြန်ဆို|v ထား|part သည့်|part စာတမ်း|n တစ်|tn ခု|part အဖြစ်|ppm အသိအမှတ်ပြု|v ခံ|v ရ|part သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t10/train10.nopipe.pipe.ser model with ./2hours/t10/ctest10.nopipe.pipe (closed test data)  =====
+Loading tagger model from ./2hours/t10/train10.nopipe.pipe.ser
+Evaluating on ./2hours/t10/ctest10.nopipe.pipe
+starting: testing
+finished: testing in 0.506 seconds
+Accuracy: 93.74  (20074/21415)
+ count  gold  model
+   236  punc  ppm
+   131  conj  ppm
+    89  v     part
+    76  part  n
+    73  part  v
+    58  part  adj
+    52  adj   v
+    47  punc  adj
+    44  n     pron
+    43  adj   part
+avg tagging: 0.0005 sec
+==========
+
+===========
+===========
+start open testing!
+start tagging ...
+Loading tagger model from ./2hours/t1/train1.nopipe.pipe.ser
+Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t1/otest1.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t1/train1.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဆယ်|n ရာခိုင်နှုန်း|n ဈေး|n လျှော့|v ပေး|part ရင်|conj ဝယ်|v မယ်|ppm ။|punc
+ယခု|n လ|n ၏|ppm အထိမ်းအမှတ်|n ပန်း|n မှာ|ppm မြတ်လေးပန်း|n Pomeacoccinea|fw ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t1/train1.nopipe.pipe.ser model with ./2hours/otest.nopipe.pipe (open test data) =====
+Loading tagger model from ./2hours/t1/train1.nopipe.pipe.ser
+Evaluating on ./2hours/otest.nopipe.pipe
+starting: testing
+finished: testing in 0.424 seconds
+Accuracy: 92.62  (20343/21965)
+ count  gold  model
+   214  conj  ppm
+   111  v     part
+   109  v     n
+    99  adj   v
+    87  n     v
+    83  n     part
+    79  part  v
+    60  adj   n
+    58  part  n
+    57  adj   part
+avg tagging: 0.0004 sec
+start tagging ...
+Loading tagger model from ./2hours/t2/train2.nopipe.pipe.ser
+Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t2/otest2.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t2/train2.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဆယ်|tn ရာခိုင်နှုန်း|n ဈေး|n လျှော့|part ပေး|v ရင်|conj ဝယ်|v မယ်|ppm ။|punc
+ယခု|n လ|n ၏|ppm အထိမ်းအမှတ်|n ပန်း|n မှာ|ppm မြတ်လေးပန်း|n Pomeacoccinea|fw ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t2/train2.nopipe.pipe.ser model with ./2hours/otest.nopipe.pipe (open test data) =====
+Loading tagger model from ./2hours/t2/train2.nopipe.pipe.ser
+Evaluating on ./2hours/otest.nopipe.pipe
+starting: testing
+finished: testing in 0.408 seconds
+Accuracy: 93.12  (20454/21965)
+ count  gold  model
+   194  conj  ppm
+   114  n     part
+   112  v     part
+    85  adj   v
+    80  v     n
+    75  part  v
+    74  n     v
+    70  part  adv
+    67  part  n
+    58  part  ppm
+avg tagging: 0.0004 sec
+start tagging ...
+Loading tagger model from ./2hours/t3/train3.nopipe.pipe.ser
+Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t3/otest3.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t3/train3.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဆယ်|tn ရာခိုင်နှုန်း|n ဈေး|n လျှော့|v ပေး|part ရင်|conj ဝယ်|v မယ်|ppm ။|punc
+ယခု|n လ|n ၏|ppm အထိမ်းအမှတ်|n ပန်း|n မှာ|ppm မြတ်လေးပန်း|n Pomeacoccinea|fw ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t3/train3.nopipe.pipe.ser model with ./2hours/otest.nopipe.pipe (open test data) =====
+Loading tagger model from ./2hours/t3/train3.nopipe.pipe.ser
+Evaluating on ./2hours/otest.nopipe.pipe
+starting: testing
+finished: testing in 0.535 seconds
+Accuracy: 93.76  (20594/21965)
+ count  gold  model
+   193  conj  ppm
+   107  v     part
+    77  adj   v
+    74  part  n
+    73  part  v
+    70  n     v
+    61  n     part
+    61  v     n
+    53  adj   part
+    49  adj   n
+avg tagging: 0.0005 sec
+start tagging ...
+Loading tagger model from ./2hours/t4/train4.nopipe.pipe.ser
+Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t4/otest4.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t4/train4.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဆယ်|tn ရာခိုင်နှုန်း|n ဈေး|n လျှော့|v ပေး|part ရင်|conj ဝယ်|v မယ်|ppm ။|punc
+ယခု|n လ|n ၏|ppm အထိမ်းအမှတ်|n ပန်း|n မှာ|ppm မြတ်လေးပန်း|n Pomeacoccinea|fw ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t4/train4.nopipe.pipe.ser model with ./2hours/otest.nopipe.pipe (open test data) =====
+Loading tagger model from ./2hours/t4/train4.nopipe.pipe.ser
+Evaluating on ./2hours/otest.nopipe.pipe
+starting: testing
+finished: testing in 0.591 seconds
+Accuracy: 92.98  (20423/21965)
+ count  gold  model
+   324  punc  n
+   100  v     part
+    95  part  n
+    79  v     n
+    74  n     v
+    73  part  v
+    68  adj   v
+    65  ppm   conj
+    57  n     part
+    52  adj   part
+avg tagging: 0.0006 sec
+start tagging ...
+Loading tagger model from ./2hours/t5/train5.nopipe.pipe.ser
+Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t5/otest5.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t5/train5.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဆယ်|tn ရာခိုင်နှုန်း|n ဈေး|n လျှော့|v ပေး|v ရင်|conj ဝယ်|v မယ်|ppm ။|punc
+ယခု|n လ|n ၏|ppm အထိမ်းအမှတ်|n ပန်း|n မှာ|ppm မြတ်လေးပန်း|n Pomeacoccinea|fw ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t5/train5.nopipe.pipe.ser model with ./2hours/otest.nopipe.pipe (open test data) =====
+Loading tagger model from ./2hours/t5/train5.nopipe.pipe.ser
+Evaluating on ./2hours/otest.nopipe.pipe
+starting: testing
+finished: testing in 0.458 seconds
+Accuracy: 92.24  (20260/21965)
+ count  gold  model
+   377  punc  ppm
+   183  conj  ppm
+   105  n     part
+   101  v     part
+    92  part  n
+    71  part  v
+    68  adj   v
+    62  v     n
+    58  n     v
+    53  adj   part
+avg tagging: 0.0004 sec
+start tagging ...
+Loading tagger model from ./2hours/t6/train6.nopipe.pipe.ser
+Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t6/otest6.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t6/train6.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဆယ်|tn ရာခိုင်နှုန်း|n ဈေး|n လျှော့|v ပေး|v ရင်|conj ဝယ်|v မယ်|ppm ။|punc
+ယခု|n လ|n ၏|ppm အထိမ်းအမှတ်|n ပန်း|n မှာ|ppm မြတ်လေးပန်း|n Pomeacoccinea|fw ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t6/train6.nopipe.pipe.ser model with ./2hours/otest.nopipe.pipe (open test data) =====
+Loading tagger model from ./2hours/t6/train6.nopipe.pipe.ser
+Evaluating on ./2hours/otest.nopipe.pipe
+starting: testing
+finished: testing in 0.495 seconds
+Accuracy: 92.01  (20209/21965)
+ count  gold  model
+   445  punc  sb
+   179  conj  ppm
+   128  part  n
+   100  v     part
+    75  part  v
+    71  adj   v
+    56  n     part
+    55  adj   part
+    54  v     n
+    53  n     pron
+avg tagging: 0.0005 sec
+start tagging ...
+Loading tagger model from ./2hours/t7/train7.nopipe.pipe.ser
+Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t7/otest7.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t7/train7.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဆယ်|tn ရာခိုင်နှုန်း|n ဈေး|n လျှော့|v ပေး|part ရင်|conj ဝယ်|v မယ်|ppm ။|punc
+ယခု|n လ|n ၏|ppm အထိမ်းအမှတ်|n ပန်း|n မှာ|ppm မြတ်လေးပန်း|n Pomeacoccinea|fw ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t7/train7.nopipe.pipe.ser model with ./2hours/otest.nopipe.pipe (open test data) =====
+Loading tagger model from ./2hours/t7/train7.nopipe.pipe.ser
+Evaluating on ./2hours/otest.nopipe.pipe
+starting: testing
+finished: testing in 0.542 seconds
+Accuracy: 92.13  (20236/21965)
+ count  gold  model
+   438  punc  sb
+   178  conj  ppm
+   130  part  n
+   101  v     part
+    71  part  v
+    61  adj   v
+    61  v     n
+    60  n     part
+    54  adj   part
+    52  n     pron
+avg tagging: 0.0005 sec
+start tagging ...
+Loading tagger model from ./2hours/t8/train8.nopipe.pipe.ser
+Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t8/otest8.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t8/train8.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဆယ်|tn ရာခိုင်နှုန်း|n ဈေး|n လျှော့|v ပေး|part ရင်|conj ဝယ်|v မယ်|ppm ။|punc
+ယခု|n လ|n ၏|ppm အထိမ်းအမှတ်|n ပန်း|n မှာ|ppm မြတ်လေးပန်း|n Pomeacoccinea|fw ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t8/train8.nopipe.pipe.ser model with ./2hours/otest.nopipe.pipe (open test data) =====
+Loading tagger model from ./2hours/t8/train8.nopipe.pipe.ser
+Evaluating on ./2hours/otest.nopipe.pipe
+starting: testing
+finished: testing in 0.51 seconds
+Accuracy: 90.65  (19911/21965)
+ count  gold  model
+   441  punc  sb
+   382  part  conj
+   182  conj  ppm
+   106  v     part
+   102  part  n
+    68  part  v
+    62  adj   v
+    55  adj   part
+    53  n     pron
+    51  n     part
+avg tagging: 0.0005 sec
+start tagging ...
+Loading tagger model from ./2hours/t9/train9.nopipe.pipe.ser
+Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t9/otest9.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t9/train9.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဆယ်|tn ရာခိုင်နှုန်း|n ဈေး|n လျှော့|v ပေး|part ရင်|conj ဝယ်|v မယ်|ppm ။|punc
+ယခု|n လ|n ၏|ppm အထိမ်းအမှတ်|n ပန်း|n မှာ|ppm မြတ်လေးပန်း|n Pomeacoccinea|fw ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t9/train9.nopipe.pipe.ser model with ./2hours/otest.nopipe.pipe (open test data) =====
+Loading tagger model from ./2hours/t9/train9.nopipe.pipe.ser
+Evaluating on ./2hours/otest.nopipe.pipe
+starting: testing
+finished: testing in 0.6 seconds
+Accuracy: 93.06  (20440/21965)
+ count  gold  model
+   331  punc  n
+   101  v     part
+    95  part  n
+    71  adj   v
+    68  part  v
+    55  ppm   conj
+    53  v     n
+    51  adj   part
+    50  punc  sb
+    49  n     part
+avg tagging: 0.0006 sec
+start tagging ...
+Loading tagger model from ./2hours/t10/train10.nopipe.pipe.ser
+Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t10/otest10.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t10/train10.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဆယ်|tn ရာခိုင်နှုန်း|n ဈေး|n လျှော့|v ပေး|part ရင်|conj ဝယ်|v မယ်|ppm ။|punc
+ယခု|n လ|n ၏|ppm အထိမ်းအမှတ်|n ပန်း|n မှာ|ppm မြတ်လေးပန်း|n Pomeacoccinea|fw ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t10/train10.nopipe.pipe.ser model with ./2hours/otest.nopipe.pipe (open test data) =====
+Loading tagger model from ./2hours/t10/train10.nopipe.pipe.ser
+Evaluating on ./2hours/otest.nopipe.pipe
+starting: testing
+finished: testing in 0.536 seconds
+Accuracy: 92.16  (20244/21965)
+ count  gold  model
+   338  punc  ppm
+   174  conj  ppm
+    98  v     part
+    94  part  n
+    68  part  v
+    66  adj   v
+    59  n     part
+    57  v     n
+    55  punc  adj
+    53  part  adj
+avg tagging: 0.0005 sec
