@@ -10,7 +10,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t1/train1.nopipe.pipe.ser
 Evaluating on ./2hours/t1/ctest1.nopipe.pipe
 starting: testing
-finished: testing in 0.091 seconds
+finished: testing in 0.09 seconds
 Accuracy: 97.06  (2178/2244)
  count  gold  model
     10  conj  ppm
@@ -31,11 +31,13 @@ Loading tagger model from ./2hours/t2/train2.nopipe.pipe.ser
 Tagging data in ./2hours/t2/ctest2.nopipe.word and writing to ./2hours/t2/ctest2.nopipe.word.tagged
 ===== Finished tagging with model ./2hours/t2/train2.nopipe.pipe.ser! =====
 head first 2 lines of tagged file
+ခင်ဗျား|pron ကို|ppm တကယ်|adv ကျေးဇူးတင်|v တယ်|ppm ။|punc
+ဂူဂယ်|n ဆို|v တဲ့|part နာမည်|n ဖြစ်|v လာ|part ပုံ|part က|ppm တော့|part googol|fw အဓိပ္ပါယ်|n က|ppm 10pow|fw ဆို|v တဲ့|part စာလုံး|n ကို|ppm google|fw လို့|part မှား|adj ပေါင်း|n ရာ|part က|ppm စ|v လာ|part ခဲ့|part တာ|part ဖြစ်|v ပြီး|conj Merriam|fw Webster|fw Collegiate|fw Dictionary|fw နဲ့|ppm Oxford|fw English|fw Dictionary|fw တွေ|part မှာ|ppm google|fw ရဲ့|ppm အဓိပ္ပါယ်|n ကို|ppm အင်တာနက်|n မှ|ppm အချက်အလက်|n များ|part ရယူ|v ရန်|conj ဂူဂယ်|n search|fw engine|fw ကို|ppm အသုံးပြု|v ခြင်း|part လို့|part ၂၀၀၆|num မှ|ppm စတင်|v ပြီး|conj ထည့်သွင်း|v ပေး|part ခဲ့|part ပါ|part တယ်|ppm ။|punc
 ===== Start evaluation on ./2hours/t2/train2.nopipe.pipe.ser model with ./2hours/t2/ctest2.nopipe.pipe (closed test data)  =====
 Loading tagger model from ./2hours/t2/train2.nopipe.pipe.ser
 Evaluating on ./2hours/t2/ctest2.nopipe.pipe
 starting: testing
-finished: testing in 0.154 seconds
+finished: testing in 0.16 seconds
 Accuracy: 95.56  (4476/4684)
  count  gold  model
     35  conj  ppm
@@ -62,7 +64,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t3/train3.nopipe.pipe.ser
 Evaluating on ./2hours/t3/ctest3.nopipe.pipe
 starting: testing
-finished: testing in 0.19 seconds
+finished: testing in 0.196 seconds
 Accuracy: 95.77  (6222/6497)
  count  gold  model
     57  conj  ppm
@@ -89,7 +91,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t4/train4.nopipe.pipe.ser
 Evaluating on ./2hours/t4/ctest4.nopipe.pipe
 starting: testing
-finished: testing in 0.223 seconds
+finished: testing in 0.227 seconds
 Accuracy: 94.58  (8382/8862)
  count  gold  model
    153  punc  n
@@ -116,7 +118,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t5/train5.nopipe.pipe.ser
 Evaluating on ./2hours/t5/ctest5.nopipe.pipe
 starting: testing
-finished: testing in 0.245 seconds
+finished: testing in 0.235 seconds
 Accuracy: 94.25  (10453/11091)
  count  gold  model
    159  punc  ppm
@@ -143,7 +145,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t6/train6.nopipe.pipe.ser
 Evaluating on ./2hours/t6/ctest6.nopipe.pipe
 starting: testing
-finished: testing in 0.264 seconds
+finished: testing in 0.261 seconds
 Accuracy: 93.81  (12812/13658)
  count  gold  model
    241  punc  sb
@@ -197,7 +199,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t8/train8.nopipe.pipe.ser
 Evaluating on ./2hours/t8/ctest8.nopipe.pipe
 starting: testing
-finished: testing in 0.335 seconds
+finished: testing in 0.344 seconds
 Accuracy: 92.32  (16603/17984)
  count  gold  model
    316  punc  sb
@@ -224,7 +226,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t9/train9.nopipe.pipe.ser
 Evaluating on ./2hours/t9/ctest9.nopipe.pipe
 starting: testing
-finished: testing in 0.414 seconds
+finished: testing in 0.421 seconds
 Accuracy: 94.83  (17984/18964)
  count  gold  model
    233  punc  n
@@ -251,7 +253,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t10/train10.nopipe.pipe.ser
 Evaluating on ./2hours/t10/ctest10.nopipe.pipe
 starting: testing
-finished: testing in 0.506 seconds
+finished: testing in 0.484 seconds
 Accuracy: 93.74  (20074/21415)
  count  gold  model
    236  punc  ppm
@@ -281,7 +283,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t1/train1.nopipe.pipe.ser
 Evaluating on ./2hours/otest.nopipe.pipe
 starting: testing
-finished: testing in 0.424 seconds
+finished: testing in 0.441 seconds
 Accuracy: 92.62  (20343/21965)
  count  gold  model
    214  conj  ppm
@@ -306,7 +308,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t2/train2.nopipe.pipe.ser
 Evaluating on ./2hours/otest.nopipe.pipe
 starting: testing
-finished: testing in 0.408 seconds
+finished: testing in 0.426 seconds
 Accuracy: 93.12  (20454/21965)
  count  gold  model
    194  conj  ppm
@@ -331,7 +333,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t3/train3.nopipe.pipe.ser
 Evaluating on ./2hours/otest.nopipe.pipe
 starting: testing
-finished: testing in 0.535 seconds
+finished: testing in 0.556 seconds
 Accuracy: 93.76  (20594/21965)
  count  gold  model
    193  conj  ppm
@@ -356,7 +358,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t4/train4.nopipe.pipe.ser
 Evaluating on ./2hours/otest.nopipe.pipe
 starting: testing
-finished: testing in 0.591 seconds
+finished: testing in 0.522 seconds
 Accuracy: 92.98  (20423/21965)
  count  gold  model
    324  punc  n
@@ -369,7 +371,7 @@ Accuracy: 92.98  (20423/21965)
     65  ppm   conj
     57  n     part
     52  adj   part
-avg tagging: 0.0006 sec
+avg tagging: 0.0005 sec
 start tagging ...
 Loading tagger model from ./2hours/t5/train5.nopipe.pipe.ser
 Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t5/otest5.nopipe.word.tagged
@@ -381,7 +383,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t5/train5.nopipe.pipe.ser
 Evaluating on ./2hours/otest.nopipe.pipe
 starting: testing
-finished: testing in 0.458 seconds
+finished: testing in 0.457 seconds
 Accuracy: 92.24  (20260/21965)
  count  gold  model
    377  punc  ppm
@@ -406,7 +408,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t6/train6.nopipe.pipe.ser
 Evaluating on ./2hours/otest.nopipe.pipe
 starting: testing
-finished: testing in 0.495 seconds
+finished: testing in 0.459 seconds
 Accuracy: 92.01  (20209/21965)
  count  gold  model
    445  punc  sb
@@ -419,7 +421,7 @@ Accuracy: 92.01  (20209/21965)
     55  adj   part
     54  v     n
     53  n     pron
-avg tagging: 0.0005 sec
+avg tagging: 0.0004 sec
 start tagging ...
 Loading tagger model from ./2hours/t7/train7.nopipe.pipe.ser
 Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t7/otest7.nopipe.word.tagged
@@ -431,7 +433,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t7/train7.nopipe.pipe.ser
 Evaluating on ./2hours/otest.nopipe.pipe
 starting: testing
-finished: testing in 0.542 seconds
+finished: testing in 0.496 seconds
 Accuracy: 92.13  (20236/21965)
  count  gold  model
    438  punc  sb
@@ -456,7 +458,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t8/train8.nopipe.pipe.ser
 Evaluating on ./2hours/otest.nopipe.pipe
 starting: testing
-finished: testing in 0.51 seconds
+finished: testing in 0.534 seconds
 Accuracy: 90.65  (19911/21965)
  count  gold  model
    441  punc  sb
@@ -481,7 +483,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t9/train9.nopipe.pipe.ser
 Evaluating on ./2hours/otest.nopipe.pipe
 starting: testing
-finished: testing in 0.6 seconds
+finished: testing in 0.507 seconds
 Accuracy: 93.06  (20440/21965)
  count  gold  model
    331  punc  n
@@ -494,7 +496,7 @@ Accuracy: 93.06  (20440/21965)
     51  adj   part
     50  punc  sb
     49  n     part
-avg tagging: 0.0006 sec
+avg tagging: 0.0005 sec
 start tagging ...
 Loading tagger model from ./2hours/t10/train10.nopipe.pipe.ser
 Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t10/otest10.nopipe.word.tagged
@@ -506,7 +508,7 @@ head first 2 lines of tagged file
 Loading tagger model from ./2hours/t10/train10.nopipe.pipe.ser
 Evaluating on ./2hours/otest.nopipe.pipe
 starting: testing
-finished: testing in 0.536 seconds
+finished: testing in 0.516 seconds
 Accuracy: 92.16  (20244/21965)
  count  gold  model
    338  punc  ppm
