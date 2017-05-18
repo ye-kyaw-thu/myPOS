@@ -96,6 +96,7 @@ data/ : Data preparation folder for incremental POS-tagging models
 Model:  
 crf/ : Incremental training of CRF POS-tagging models (1,000 to 10,000 sentences) with myPOS corpus. check [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/crf/note.txt)  
 rdr/ : Incremental training of RDR (Ripple Down Rule-based) models (1,000 to 10,000 sentences) with myPOS corpus. check [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/rdr/note.txt)  
+low-resource-pos-tagging-2014/: Incremental training of 2hours annotation approach models (1,000 to 10,000 sentences) with myPOS corpus. check [note.txt[(https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/low-resource-pos-tagging-2014/2hours/note.txt)  
 
 Corpus-draft-ver-0.9/  
 mypos-dver.0.9.txt : myPOS Corpus draft version 0.9, UTF-8 text file format    
