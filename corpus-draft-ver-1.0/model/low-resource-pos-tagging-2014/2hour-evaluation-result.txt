@@ -1,0 +1,80 @@
+
+### Evaluation for 2-hours train1 model ###
+
+   -with closed test data
+Tag precision: 0.970588235294
+
+   -with open test data
+Tag precision: 0.925882085135
+
+### Evaluation for 2-hours train2 model ###
+
+   -with closed test data
+Warning: the reference and the candidate consists of different number of lines!
+
+   -with open test data
+Tag precision: 0.930981106305
+
+### Evaluation for 2-hours train3 model ###
+
+   -with closed test data
+Tag precision: 0.957364937664
+
+   -with open test data
+Tag precision: 0.937354882768
+
+### Evaluation for 2-hours train4 model ###
+
+   -with closed test data
+Tag precision: 0.937260212142
+
+   -with open test data
+Tag precision: 0.91996357842
+
+### Evaluation for 2-hours train5 model ###
+
+   -with closed test data
+Tag precision: 0.941033270219
+
+   -with open test data
+Tag precision: 0.916503528341
+
+### Evaluation for 2-hours train6 model ###
+
+   -with closed test data
+Tag precision: 0.934031336945
+
+   -with open test data
+Tag precision: 0.910812656499
+
+### Evaluation for 2-hours train7 model ###
+
+   -with closed test data
+Tag precision: 0.929720302306
+
+   -with open test data
+Tag precision: 0.91236057364
+
+### Evaluation for 2-hours train8 model ###
+
+   -with closed test data
+Tag precision: 0.917204181495
+
+   -with open test data
+Tag precision: 0.895925335761
+
+### Evaluation for 2-hours train9 model ###
+
+   -with closed test data
+Tag precision: 0.94542290656
+
+   -with open test data
+Tag precision: 0.919690416572
+
+### Evaluation for 2-hours train10 model ###
+
+   -with closed test data
+Tag precision: 0.93677328975
+
+   -with open test data
+Tag precision: 0.915410880947
