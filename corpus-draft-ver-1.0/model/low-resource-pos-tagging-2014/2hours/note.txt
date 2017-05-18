@@ -1,0 +1,273 @@
+This file is a note for building models with low-resource-pos-tagging-2014 or 2 hours annotation approach and testing with closed and open test data.
+
+1st download and prepare Low-Resource POS-Tagging: 2014
+link for downlod: https://github.com/dhgarrette/low-resource-pos-tagging-2014
+
+The procedure for downloading and installing are as follows:
+
+Clone the project:
+
+~/experiment/pos/my-pos/model4github$ git clone https://github.com/dhgarrette/low-resource-pos-tagging-2014.git
+Cloning into 'low-resource-pos-tagging-2014'...
+remote: Counting objects: 204, done.
+remote: Total 204 (delta 0), reused 0 (delta 0), pack-reused 204
+Receiving objects: 100% (204/204), 1.67 MiB | 614.00 KiB/s, done.
+Resolving deltas: 100% (56/56), done.
+Checking connectivity... done.
+
+The rest of these instructions assume starting from the `low-
+resource-pos-tagging-2014` directory.
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014$ ./compile 
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+[info] Loading project definition from /Users/aihb/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014/project
+[info] Updating {file:/Users/aihb/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014/project/}low-resource-pos-tagging-2014-build...
+[info] Resolving org.fusesource.jansi#jansi;1.4 ...
+[info] Done updating.
+[info] Set current project to low-resource-pos-tagging-2014 (in build file:/Users/aihb/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014/)
+[info] Updating {file:/Users/aihb/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014/}low-resource-pos-tagging-2014...
+[info] Resolving jline#jline;2.12.1 ...
+[info] Done updating.
+[info] Compiling 33 Scala sources to /Users/aihb/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014/target/scala-2.11/classes...
+[warn] /Users/aihb/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014/src/main/scala/dhg/pos/tag/MemmTagger.scala:68: method train in object POSTaggerME is deprecated: see corresponding Javadoc for more information.
+[warn]       POSTaggerME.train(
+[warn]                   ^
+[warn] /Users/aihb/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014/src/main/scala/opennlp/tools/postag/OpenNlpPosDictionary.scala:18: method addTags in class POSDictionary is deprecated: see corresponding Javadoc for more information.
+[warn]       self.addTags(word, tags.toSeq: _*)
+[warn]            ^
+[warn] two warnings found
+[warn] Multiple main classes detected.  Run 'show discoveredMainClasses' to see the list
+[info] Wrote start script for mainClass := None to /Users/aihb/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014/target/start
+[success] Total time: 19 s, completed May 18, 2017 2:43:18 PM
+
+I assumed you already prepared training, closed and open test data.
+(or just copy data foder that I prepared for incremental POSTagging from my GitHub. For this demo, I used myPOS draft version 1.0)
+
+============
+============
+
+################################################################
+Step1: Replace / with | for all training, closed and test files
+################################################################
+(this is format adjusting with program of low-resource-pos-tagging-2014)
+
+$ ./slash2pipe-all.sh 
+
+##################################################################
+Step2: Moved your data folder uder low-resource-pos-tagging-2014/
+###################################################################
+If not when you train, you will get an error "/Users/aihb/tool/low-resource-pos-tagging-2014-master/run: line 1: target/start: No such file or directory"
+
+############################################################################
+Step3: copy ./2h-train-all.sh to your low-resource-pos-tagging-2014/ folder
+############################################################################
+
+###############
+Step4: Training
+###############
+
+*** Please note that I am running under the "low-resource-pos-tagging-2014" folder!!!
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014$ time ./2h-train-all.sh | tee 2hours-training.log 
+
+I found that train1, train4, train5 and train9 are faild by checking training log file "2hours-training.log".
+
+For example, when you check folder t1 and t2 after the training process:
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014$ ls ./2hours/t1/
+ctest1             ctest1.nopipe      ctest1.nopipe.pipe ctest1.nopipe.word otest.nopipe.word  train1             train1.nopipe      train1.nopipe.pipe train1.nopipe.word
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014$ ls ./2hours/t2/
+ctest2                 ctest2.nopipe          ctest2.nopipe.pipe     otest.nopipe.word      train2                 train2.nopipe          train2.nopipe.pipe     train2.nopipe.pipe.ser train2.nopipe.wor
+
+*** There is no .ser file under t1/
+
+*** Checking log of training 1 or t1/
+
+[main] INFO junto.algorithm.ModifiedAdsorption - Iteration: 199
+[main] INFO junto.algorithm.ModifiedAdsorption - Iteration: 200
+[main] INFO junto.graph.GraphIo$ - Total test instances evaluated: 0
+Extract a generalized tag dictionary
+Induce a hard tagging via model minimization on the soft LP output
+learn a smoothed HMM from EM
+learn an HMM initialized with the estimated transition and emission distributions
+raw tokens = 22315  (1000 sentences)
+numWords = 4022
+numTags  = 17
+
+Make Indexed Distributions
+Make Prior Counts (from the 1000 gold labeled sentences)
+Start Training
+iteration 1:   0.042 sec   avgLogProb=-141.65266567497346,   avgProb=3.0271152116825445E-62
+iteration 2:   0.030 sec   avgLogProb=-137.4445024344209,    avgProb=2.035218420796938E-60
+iteration 3:   0.026 sec   avgLogProb=-137.1255251343326,    avgProb=2.7998908808874395E-60
+iteration 4:   0.024 sec   avgLogProb=-137.05360010966623,   avgProb=3.0086921117897623E-60
+iteration 5:   0.022 sec   avgLogProb=-137.04350312865554,   avgProb=3.039224703009508E-60
+iteration 6:   0.022 sec   avgLogProb=-137.04477677708672,   avgProb=3.0353562632735583E-60
+DIVERGENCE!
+Exception in thread "main" java.lang.AssertionError: assertion failed: DIVERGENCE!
+	at scala.Predef$.assert(Predef.scala:165)
+	at dhg.pos.tag.learn.SoftEmHmmTaggerTrainer.iterate(EmHmm.scala:285)
+	at dhg.pos.tag.learn.SoftEmHmmTaggerTrainer.doTrain(EmHmm.scala:260)
+	at dhg.pos.tag.learn.SemisupervisedHmmTaggerTrainer.trainWithTagsetsAndSomeGold(EmHmm.scala:129)
+	at dhg.pos.tag.learn.SemisupervisedHmmTaggerTrainer.trainWithTagsetsAndSomeGold(EmHmm.scala:50)
+	at dhg.pos.tag.SemisupervisedTaggerTrainer$class.trainWithSomeGold(Tagger.scala:68)
+	at dhg.pos.tag.learn.SemisupervisedHmmTaggerTrainer.trainWithSomeGold(EmHmm.scala:50)
+	at dhg.pos.run.Naacl2013Autotagger.induceRawCorpusTagging(Naacl2013Trainer.scala:156)
+	at dhg.pos.run.Run$.main(Run.scala:67)
+	at dhg.pos.run.Run.main(Run.scala)
+
+ training finished !!!
+ls ./2hours/t1/
+ctest1             ctest1.nopipe      ctest1.nopipe.pipe ctest1.nopipe.word otest.nopipe.word  train1             train1.nopipe      train1.nopipe.pipe train1.nopipe.word
+
+
+*** I found failed after interation 6 of em
+*** I thus I re-run with parameter --emIterations 6 for t1
+*** I did similar approach for all failed trainings.
+*** check 2h-RE-TRAIN-for-t1t4t5t9.sh file
+
+##################
+Step5: Re-training
+##################
+
+*** Re-train for t1, t4, t5 and t9:
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014$ ./2h-RE-TRAIN-for-t1t4t5t9.sh | tee retrain-for-t1-t4-t5-t9.log
+
+For this time, I got .ser or model files for t1, t4, t5 and t9!
+
+#############################
+Step6: Testing and Evaluation
+#############################
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014$ time ./2h-test-all.sh | tee ./2hours-testing.log 
+
+Check detail results in ./2hours-testing.log file.
+Example output screen (for testing train10 model with open test data)
+
+start tagging ...
+Loading tagger model from ./2hours/t10/train10.nopipe.pipe.ser
+Tagging data in ./2hours/otest.nopipe.word and writing to ./2hours/t10/otest10.nopipe.word.tagged
+===== Finished tagging with model ./2hours/t10/train10.nopipe.pipe.ser! =====
+head first 2 lines of tagged file
+ဆယ်|tn ရာခိုင်နှုန်း|n ဈေး|n လျှော့|v ပေး|part ရင်|conj ဝယ်|v မယ်|ppm ။|punc
+ယခု|n လ|n ၏|ppm အထိမ်းအမှတ်|n ပန်း|n မှာ|ppm မြတ်လေးပန်း|n Pomeacoccinea|fw ဖြစ်|v သည်|ppm ။|punc
+===== Start evaluation on ./2hours/t10/train10.nopipe.pipe.ser model with ./2hours/otest.nopipe.pipe (open test data) =====
+Loading tagger model from ./2hours/t10/train10.nopipe.pipe.ser
+Evaluating on ./2hours/otest.nopipe.pipe
+starting: testing
+finished: testing in 0.536 seconds
+Accuracy: 92.16  (20244/21965)
+ count  gold  model
+   338  punc  ppm
+   174  conj  ppm
+    98  v     part
+    94  part  n
+    68  part  v
+    66  adj   v
+    59  n     part
+    57  v     n
+    55  punc  adj
+    53  part  adj
+avg tagging: 0.0005 sec
+
+Note: above evaluation was done with low-resource-pos-tagging program!
+
+==========
+
+If you want to make comparison with other trained models such as CRF, RDR ...
+Run following shell script:
+
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014$ time ./evaluate-all.sh | tee 2hour-evaluation-result.txt
+
+### Evaluation for 2-hours train1 model ###
+
+   -with closed test data
+Tag precision: 0.970588235294
+
+   -with open test data
+Tag precision: 0.925882085135
+
+### Evaluation for 2-hours train2 model ###
+
+   -with closed test data
+Traceback (most recent call last):
+  File "./evaluate.py", line 378, in <module>
+Warning: the reference and the candidate consists of different number of lines!
+    word_precision = float(nTotalCorrectWords) / float(nCandidateWords)
+ZeroDivisionError: float division by zero
+
+   -with open test data
+Tag precision: 0.930981106305
+
+### Evaluation for 2-hours train3 model ###
+
+   -with closed test data
+Tag precision: 0.957364937664
+
+   -with open test data
+Tag precision: 0.937354882768
+
+### Evaluation for 2-hours train4 model ###
+
+   -with closed test data
+Tag precision: 0.937260212142
+
+   -with open test data
+Tag precision: 0.91996357842
+
+### Evaluation for 2-hours train5 model ###
+
+   -with closed test data
+Tag precision: 0.941033270219
+
+   -with open test data
+Tag precision: 0.916503528341
+
+### Evaluation for 2-hours train6 model ###
+
+   -with closed test data
+Tag precision: 0.934031336945
+
+   -with open test data
+Tag precision: 0.910812656499
+
+### Evaluation for 2-hours train7 model ###
+
+   -with closed test data
+Tag precision: 0.929720302306
+
+   -with open test data
+Tag precision: 0.91236057364
+
+### Evaluation for 2-hours train8 model ###
+
+   -with closed test data
+Tag precision: 0.917204181495
+
+   -with open test data
+Tag precision: 0.895925335761
+
+### Evaluation for 2-hours train9 model ###
+
+   -with closed test data
+Tag precision: 0.94542290656
+
+   -with open test data
+Tag precision: 0.919690416572
+
+### Evaluation for 2-hours train10 model ###
+
+   -with closed test data
+Tag precision: 0.93677328975
+
+   -with open test data
+Tag precision: 0.915410880947
+
+real	0m1.630s
+user	0m1.288s
+sys	0m0.283s
+
+Note: This approach will be useful for building POSTagging models for low resource languages such as our Myanmar language.
