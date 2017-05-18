@@ -15,8 +15,7 @@ Receiving objects: 100% (204/204), 1.67 MiB | 614.00 KiB/s, done.
 Resolving deltas: 100% (56/56), done.
 Checking connectivity... done.
 
-The rest of these instructions assume starting from the `low-
-resource-pos-tagging-2014` directory.
+The rest of these instructions assume starting from the `low-resource-pos-tagging-2014` directory.
 
 aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014$ ./compile 
 Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
