@@ -122,7 +122,7 @@ ctest1             ctest1.nopipe      ctest1.nopipe.pipe ctest1.nopipe.word otes
 
 
 *** I found failed after interation 6 of em
-*** I thus I re-run with parameter --emIterations 6 for t1
+*** And thus I re-run with parameter --emIterations 6 for t1, --emIterations 6 for t4, --emIterations 24 for t5 and --emIterations 8 for t9.
 *** I did similar approach for all failed trainings.
 *** check 2h-RE-TRAIN-for-t1t4t5t9.sh file
 
