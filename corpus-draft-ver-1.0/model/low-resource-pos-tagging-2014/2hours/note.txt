@@ -180,7 +180,7 @@ If you want to make comparison with other trained models such as CRF, RDR ...
 Run following shell script:
 
 
-aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014$ time ./evaluate-all.sh | tee 2hour-evaluation-result.txt
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/low-resource-pos-tagging-2014$ time ./evaluate-all.sh | tee ./2hour-evaluation-result.txt 
 
 ### Evaluation for 2-hours train1 model ###
 
@@ -193,11 +193,7 @@ Tag precision: 0.925882085135
 ### Evaluation for 2-hours train2 model ###
 
    -with closed test data
-Traceback (most recent call last):
-  File "./evaluate.py", line 378, in <module>
-Warning: the reference and the candidate consists of different number of lines!
-    word_precision = float(nTotalCorrectWords) / float(nCandidateWords)
-ZeroDivisionError: float division by zero
+Tag precision: 0.955593509821
 
    -with open test data
 Tag precision: 0.930981106305
@@ -266,8 +262,9 @@ Tag precision: 0.93677328975
    -with open test data
 Tag precision: 0.915410880947
 
-real	0m1.630s
-user	0m1.288s
-sys	0m0.283s
+real	0m1.664s
+user	0m1.285s
+sys	0m0.310s
+
 
 Note: This approach will be useful for building POSTagging models for low resource languages such as our Myanmar language.
