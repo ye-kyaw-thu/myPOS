@@ -10,7 +10,7 @@ Tag precision: 0.925882085135
 ### Evaluation for 2-hours train2 model ###
 
    -with closed test data
-Warning: the reference and the candidate consists of different number of lines!
+Tag precision: 0.955593509821
 
    -with open test data
 Tag precision: 0.930981106305
