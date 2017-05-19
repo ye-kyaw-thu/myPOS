@@ -5,6 +5,10 @@ https://github.com/datquocnguyen/RDRPOSTagger
 I used python program for Demo training with myPOS corpus draft version 1.0.
 (I run with Python version 2.7)
 
+I assumed that you already prepared training and test data.
+*** Note: Just download the whole folder of rdr/ from my github
+*** you will get all scripts and training and test data including trained models.
+
 Step1: Remove Pipe "|" from training, closed and open test files:
 $./pipe2space-all.sh
 
