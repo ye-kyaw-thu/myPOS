@@ -95,7 +95,7 @@ data/ : Data preparation folder for incremental POS-tagging models
 
 **Models:**  
 
-3gHMM : Incremental training of 3-gram Hidden Markov Model approach models (1,000 to 10,000 sentences) with myPOS corpus.  
+3gHMM/ : Incremental training of 3-gram Hidden Markov Model approach models (1,000 to 10,000 sentences) with myPOS corpus.  
 Running logfile: [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/3gHMM/note.txt)  
 
 crf/ : Incremental training of CRF POS-tagging models (1,000 to 10,000 sentences) with myPOS corpus.  
