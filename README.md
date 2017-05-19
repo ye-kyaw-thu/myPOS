@@ -85,15 +85,15 @@ mypos-dver.1.0.lcw.txt : list of compound Myanmar words of myPOS draft version 1
 mypos-dver.1.0.lcw.uniq.txt : unique list of compound Myanmar words of myPOS draft version 1.0  (8,627 words)  
 mypos-dver.1.0.tag.txt : print out POS-tagged only of myPOS draft version 1.0  
 
-Scripts:  
+**Scripts:**  
 mk-wordtag.pl : Perl script for printing word only file, tag only file, listing compound-words etc.  
 mk-pair.pl : Perl script for combining word file and tag file to word/tag format  
 how2run.txt : Example usages of perl scripts  
 
-Data:  
+**Data:**  
 data/ : Data preparation folder for incremental POS-tagging models  
 
-Model:  
+**Model:**  
 crf/ : Incremental training of CRF POS-tagging models (1,000 to 10,000 sentences) with myPOS corpus. check [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/crf/note.txt)  
 rdr/ : Incremental training of RDR (Ripple Down Rule-based) models (1,000 to 10,000 sentences) with myPOS corpus. check [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/rdr/note.txt)  
 low-resource-pos-tagging-2014/: Incremental training of 2hours annotation approach models (1,000 to 10,000 sentences) with myPOS corpus. check [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/low-resource-pos-tagging-2014/2hours/note.txt)  
