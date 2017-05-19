@@ -1,0 +1,496 @@
+Note of training 3-gram HMM POSTagger with jita-0.3.3.
+
+Download link of jita-0.3.3:
+https://github.com/danieldk/jitar/releases
+
+I assumed that you already prepared able to run jita-0.3.3 POSTagger on your computer.
+
+############################################################
+Step1: Prepared training, closed and open test data of myPOS
+############################################################
+
+*** Note: For your case just download the whole foder of 3gHMM!!! from my github ***
+
+I copied t1/ to t10/ folders to /Users/aihb/experiment/pos/my-pos/model4github/3gHMM/.
+I also copied open test data to /Users/aihb/experiment/pos/my-pos/model4github/3gHMM/.
+
+FYI:
+ls command output of /Users/aihb/experiment/pos/my-pos/model4github/3gHMM/ path is as follow:
+
+~/experiment/pos/my-pos/model4github/3gHMM$ ls -1 | xargs -n 2
+note.txt otest
+otest.nopipe otest.nopipe.word
+t1 t10
+t2 t3
+t4 t5
+t6 t7
+t8 t9
+
+###############
+Step2: Training 
+###############
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/3gHMM$ time ./train-all.sh | tee 3gHMM-training.log
+
+Start training 3-gram HMM POSTagging model for ./t1/train1.nopipe.word ...
+
+ctest1
+ctest1.nopipe
+ctest1.nopipe.word
+otest.nopipe.word
+train1
+train1.nopipe
+train1.nopipe.word
+train1.nopipe.word.model
+========== End for ./t1/ =========
+
+Start training 3-gram HMM POSTagging model for ./t2/train2.nopipe.word ...
+
+ctest2
+ctest2.nopipe
+otest.nopipe.word
+train2
+train2.nopipe
+train2.nopipe.word
+train2.nopipe.word.model
+========== End for ./t2/ =========
+
+Start training 3-gram HMM POSTagging model for ./t3/train3.nopipe.word ...
+
+ctest3
+ctest3.nopipe
+ctest3.nopipe.word
+otest.nopipe.word
+train3
+train3.nopipe
+train3.nopipe.word
+train3.nopipe.word.model
+========== End for ./t3/ =========
+
+Start training 3-gram HMM POSTagging model for ./t4/train4.nopipe.word ...
+
+ctest4
+ctest4.nopipe
+ctest4.nopipe.word
+otest.nopipe.word
+train4
+train4.nopipe
+train4.nopipe.word
+train4.nopipe.word.model
+========== End for ./t4/ =========
+
+Start training 3-gram HMM POSTagging model for ./t5/train5.nopipe.word ...
+
+ctest5
+ctest5.nopipe
+ctest5.nopipe.word
+otest.nopipe.word
+train5
+train5.nopipe
+train5.nopipe.word
+train5.nopipe.word.model
+========== End for ./t5/ =========
+
+Start training 3-gram HMM POSTagging model for ./t6/train6.nopipe.word ...
+
+ctest6
+ctest6.nopipe
+ctest6.nopipe.word
+otest.nopipe.word
+train6
+train6.nopipe
+train6.nopipe.word
+train6.nopipe.word.model
+========== End for ./t6/ =========
+
+Start training 3-gram HMM POSTagging model for ./t7/train7.nopipe.word ...
+
+ctest7
+ctest7.nopipe
+ctest7.nopipe.word
+otest.nopipe.word
+train7
+train7.nopipe
+train7.nopipe.word
+train7.nopipe.word.model
+========== End for ./t7/ =========
+
+Start training 3-gram HMM POSTagging model for ./t8/train8.nopipe.word ...
+
+ctest8
+ctest8.nopipe
+ctest8.nopipe.word
+otest.nopipe.word
+train8
+train8.nopipe
+train8.nopipe.word
+train8.nopipe.word.model
+========== End for ./t8/ =========
+
+Start training 3-gram HMM POSTagging model for ./t9/train9.nopipe.word ...
+
+ctest9
+ctest9.nopipe
+ctest9.nopipe.word
+otest.nopipe.word
+train9
+train9.nopipe
+train9.nopipe.word
+train9.nopipe.word.model
+========== End for ./t9/ =========
+
+Start training 3-gram HMM POSTagging model for ./t10/train10.nopipe.word ...
+
+ctest10
+ctest10.nopipe
+ctest10.nopipe.word
+otest.nopipe.word
+train10
+train10.nopipe
+train10.nopipe.word
+train10.nopipe.word.model
+========== End for ./t10/ =========
+
+real	0m7.026s
+user	0m22.064s
+sys	0m2.219s
+
+##############
+Step3: Testing
+##############
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/3gHMM$ time ./test-all.sh | tee 3gHMM-testing.log
+
+For train1:
+
+start closed testing ...
+closed testing with train1 Fin!
+
+head -n 3 ./t1/ctest1.nopipe.word.TAGGED
+n n v v n v part part punc
+n ppm part v part punc
+adj n ppm n part n v conj adj v part n n v conj n n part ppm adj n part ppm part v adv part part ppm punc
+
+start open testing ...
+open testing with train1 Fin!
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED
+n n n n v conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train2:
+
+start closed testing ...
+closed testing with train2 Fin!
+
+head -n 3 ./t2/ctest2.nopipe.word.TAGGED
+pron ppm adv v ppm punc
+n v part n v part part ppm part fw n ppm fw v part n ppm fw part adj n part ppm v part part part v conj fw fw fw fw conj fw fw fw part ppm fw ppm n ppm n ppm n part v conj n fw fw ppm v part part num ppm v conj v part part part ppm punc
+n adj part ppm n ppm n ppm ppm v part part conj v part punc n part ppm n ppm v conj n ppm v part part ppm part n ppm n part v part ppm n ppm n n ppm v part ppm punc
+
+start open testing ...
+open testing with train2 Fin!
+
+head -n 3 ./t2/otest2.nopipe.word.TAGGED
+tn n n ppm v conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train3:
+
+start closed testing ...
+closed testing with train3 Fin!
+
+head -n 3 ./t3/ctest3.nopipe.word.TAGGED
+n ppm v part part part part punc
+n n ppm n n n ppm num n v part conj n n n n ppm n n v v part ppm punc
+part part punc v part part punc
+
+start open testing ...
+open testing with train3 Fin!
+
+head -n 3 ./t3/otest3.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train4:
+
+start closed testing ...
+closed testing with train4 Fin!
+
+head -n 3 ./t4/ctest4.nopipe.word.TAGGED
+n n ppm n v n n ppm num n v ppm punc
+n part part ppm n n ppm n part ppm adv part v part n part v ppm punc
+n part punc
+
+start open testing ...
+open testing with train4 Fin!
+
+head -n 3 ./t4/otest4.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train5:
+
+start closed testing ...
+closed testing with train5 Fin!
+
+head -n 3 ./t5/ctest5.nopipe.word.TAGGED
+n ppm n ppm num n ppm tn part v part conj tn n part v part ppm punc
+adj part part n punc
+n adj v part ppm punc
+
+start open testing ...
+open testing with train5 Fin!
+
+head -n 3 ./t5/otest5.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train6:
+
+start closed testing ...
+closed testing with train6 Fin!
+
+head -n 3 ./t6/ctest6.nopipe.word.TAGGED
+fw fw n tn part ppm fw fw conj fw fw part ppm n v ppm punc
+n n ppm adj n part v part part n n num part punc n n num part punc n n num part conj n n num part part ppm adj n n ppm v part ppm punc
+n adj part v part fw fw fw n ppm n n ppm v conj v v part part n n ppm tn part v conj v part part ppm adv v part part n part ppm n v v part n adv n part n n adv v part ppm pron part v part ppm punc
+
+start open testing ...
+open testing with train6 Fin!
+
+head -n 3 ./t6/otest6.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train7:
+
+start closed testing ...
+closed testing with train7 Fin!
+
+head -n 3 ./t7/ctest7.nopipe.word.TAGGED
+fw fw fw n ppm n n n n ppm ppm n n ppm v v part conj n fw ppm n ppm n v part ppm punc
+fw ppm v part punc v part part ppm n part ppm part v part ppm punc
+fw ppm n v n fw ppm n part ppm v part adj n ppm v conj v conj punc n n v part n n n ppm n part ppm fw ppm v v part part fw conj adv n tn part ppm v part part part ppm punc
+
+start open testing ...
+open testing with train7 Fin!
+
+head -n 3 ./t7/otest7.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train8:
+
+start closed testing ...
+closed testing with train8 Fin!
+
+head -n 3 ./t8/ctest8.nopipe.word.TAGGED
+n ppm n n ppm adv ppm num n num n part adj conj n n conj n part ppm n ppm v v v part ppm n n n conj num n part v ppm punc
+n n ppm n v n ppm n ppm num n v part ppm punc
+n n num n n num adj ppm punc
+
+start open testing ...
+open testing with train8 Fin!
+
+head -n 3 ./t8/otest8.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train9:
+
+start closed testing ...
+closed testing with train9 Fin!
+
+head -n 3 ./t9/ctest9.nopipe.word.TAGGED
+n ppm n n n num n n part conj punc v part conj n n part ppm part n tn part part ppm n n v n n tn part part v part conj punc adv ppm part adj adj part ppm punc
+n n part ppm n part ppm n part ppm n n ppm v conj v part ppm part v part conj n n n num ppm n num part ppm v ppm punc
+int n adj v part part punc
+
+start open testing ...
+open testing with train9 Fin!
+
+head -n 3 ./t9/otest9.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train10:
+
+start closed testing ...
+closed testing with train10 Fin!
+
+head -n 3 ./t10/ctest10.nopipe.word.TAGGED
+n n v part part part punc
+n n n part v part fw fw fw fw fw n ppm n n n n n ppm n ppm adv v part part n tn part n v v part ppm punc
+n ppm v conj n adj part v conj conj adj n adj part n ppm n n n part v ppm punc
+
+start open testing ...
+open testing with train10 Fin!
+
+head -n 3 ./t10/otest10.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part n v part part ppm punc
+============
+
+
+real	0m11.251s
+user	0m29.793s
+sys	0m3.635s
+
+###########################
+Step4: Make word/tag format
+###########################
+
+Preparation for evaluation.
+As you seen above, the tagged output are only tags and thus we need to change word/tag format for using with current evaluation program.
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/3gHMM$ time ./pair-all.sh | tee make-pair.log
+
+start making word/POS-tag pairs for train1 ...
+
+head -n 3 ./t1/ctest1.nopipe.word.TAGGED.pair
+ဂျပန်/n စကား/n ပြော/v လမ်းညွှန်/v သူ/n ရှိ/v ပါ/part သလား/part ။/punc
+တံခါး/n က/ppm မ/part ပိတ်/v ဘူး/part ။/punc
+ထို/adj အစည်းအရုံး/n သည်/ppm အမျိုးသား/n ရေး/part စိတ်ဓာတ်/n ပြင်းပြ/v ၍/conj နုပျို/adj တက်ကြွ/v သည့်/part အခြေခံ/n လက္ခဏာ/n ရှိ/v ပြီး/conj အစည်းအရုံး/n ခေါင်းဆောင်/n များ/part သည်/ppm သက်ကြီး/adj နိုင်ငံရေးသမား/n များ/part နှင့်/ppm မ/part တူ/v တမူထူးခြား/adv ကြ/part ပါ/part သည်/ppm ။/punc
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED.pair
+ဆယ်/n ရာခိုင်နှုန်း/n ဈေး/n လျှော့/n ပေး/v ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/adv ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t1/ =========
+
+...
+...
+...
+
+
+start making word/POS-tag pairs for train10 ...
+
+head -n 3 ./t10/ctest10.nopipe.word.TAGGED.pair
+ကင်မရာ/n ဘက်ထရီ/n အားသွင်း/v ချင်/part လိုက်/part တာ/part ။/punc
+ကမ္ဘာ့/n အံ့ဖွယ်/n အရာ/n များ/part ရေးသား/v သည့်/part The/fw Guinness/fw Book/fw of/fw Records/fw စာအုပ်/n တွင်/ppm အပြည်ပြည်/n ဆိုင်ရာ/n လူ့/n အခွင့်အရေး/n ကြေညာစာတမ်း/n သည်/ppm ကမ္ဘာ/n တွင်/ppm အများဆုံး/adv ဘာသာပြန်ဆို/v ထား/part သည့်/part စာတမ်း/n တစ်/tn ခု/part အဖြစ်/n အသိအမှတ်ပြု/v ခံ/v ရ/part သည်/ppm ။/punc
+ကမ်းခြေ/n မှ/ppm စ/v ၍/conj တောင်ကုန်း/n မြင့်/adj များ/part ဖြစ်/v ပြီး/conj လျှင်/conj ထို/adj တောင်ကုန်း/n မြင့်/adj များ/part ပေါ်/n တွင်/ppm အစိုးရ/n ရုံး/n အဆောက်အဦ/n များ/part ရှိ/v သည်/ppm ။/punc
+
+head -n 3 ./t10/otest10.nopipe.word.TAGGED.pair
+ဆယ်/tn ရာခိုင်နှုန်း/n ဈေး/n လျှော့/v ပေး/part ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/n ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t10/ =========
+
+
+real	0m0.984s
+user	0m0.758s
+sys	0m0.133s
+
+#################
+Step5: Evaluation
+#################
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/3gHMM$ time ./evaluate-all.sh | tee 3gHMM-evaluate-results.log 
+
+### Evaluation for 3gram HMM train1 model ###
+
+   -with closed test data
+Tag precision: 0.97816399287
+
+   -with open test data
+Tag precision: 0.937263828819
+
+### Evaluation for 3gram HMM train2 model ###
+
+   -with closed test data
+Tag precision: 0.975448334757
+
+   -with open test data
+Tag precision: 0.946187115866
+
+### Evaluation for 3gram HMM train3 model ###
+
+   -with closed test data
+Tag precision: 0.976758503925
+
+   -with open test data
+Tag precision: 0.951240610061
+
+### Evaluation for 3gram HMM train4 model ###
+
+   -with closed test data
+Tag precision: 0.973482283909
+
+   -with open test data
+Tag precision: 0.953289323924
+
+### Evaluation for 3gram HMM train5 model ###
+
+   -with closed test data
+Tag precision: 0.97186908304
+
+   -with open test data
+Tag precision: 0.954564079217
+
+### Evaluation for 3gram HMM train6 model ###
+
+   -with closed test data
+Tag precision: 0.974007907454
+
+   -with open test data
+Tag precision: 0.956111996358
+
+### Evaluation for 3gram HMM train7 model ###
+
+   -with closed test data
+Tag precision: 0.971319682191
+
+   -with open test data
+Tag precision: 0.957341224676
+
+### Evaluation for 3gram HMM train8 model ###
+
+   -with closed test data
+Tag precision: 0.971752669039
+
+   -with open test data
+Tag precision: 0.958524926019
+
+### Evaluation for 3gram HMM train9 model ###
+
+   -with closed test data
+Tag precision: 0.973950643324
+
+   -with open test data
+Tag precision: 0.958843614842
+
+### Evaluation for 3gram HMM train10 model ###
+
+   -with closed test data
+Tag precision: 0.971982255428
+
+   -with open test data
+Tag precision: 0.95911677669
+
+real	0m1.630s
+user	0m1.269s
+sys	0m0.290s
+
+FIN for 3gHMM !!!
+Now, you already got POSTagging accuracy results for train1 to train10 models with 3gHMM approach and you can start analysis on POSTagging errors.
+Enjoy! :)
