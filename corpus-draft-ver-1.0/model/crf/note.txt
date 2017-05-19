@@ -24,6 +24,9 @@ You will get following 2 files:
 
 Step2: Copy myPOS data folder
 
+*** Note: For your case just download the whole folder of crf/ from my github
+*** you will get all scripts and training and test data
+
 mkdir crf and copy open test files and t1..t10 folders.
 You should have followings: 
 
