@@ -40,7 +40,12 @@ Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; sup
 [success] Total time: 19 s, completed May 18, 2017 2:43:18 PM
 
 I assumed you already prepared training, closed and open test data.
-(or just copy data foder that I prepared for incremental POSTagging from my GitHub. For this demo, I used myPOS draft version 1.0)
+(or just copy data foder that I prepared for incremental POSTagging from my GitHub.
+For this demo, I used myPOS draft version 1.0)
+
+*** If you want to get example data of incremental training of  myPOS,
+**** just download the whole folder of low-resource-pos-tagging-2014/ from my github
+*** you will get all scripts and training and test data including trained models
 
 ============
 ============
