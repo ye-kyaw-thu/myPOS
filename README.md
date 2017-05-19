@@ -97,6 +97,7 @@ Model:
 crf/ : Incremental training of CRF POS-tagging models (1,000 to 10,000 sentences) with myPOS corpus. check [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/crf/note.txt)  
 rdr/ : Incremental training of RDR (Ripple Down Rule-based) models (1,000 to 10,000 sentences) with myPOS corpus. check [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/rdr/note.txt)  
 low-resource-pos-tagging-2014/: Incremental training of 2hours annotation approach models (1,000 to 10,000 sentences) with myPOS corpus. check [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/low-resource-pos-tagging-2014/2hours/note.txt)  
+3gHMM : Incremental training of 3-gram Hidden Markov Model approach models (1,000 to 10,000 sentences) with myPOS corpus. check [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/3gHMM/note.txt)  
 
 =============================
 
