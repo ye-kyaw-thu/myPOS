@@ -118,7 +118,7 @@ We would like to express our gratitude to Dr. Andrew Finch and Dr. Chenchen Ding
 
 ## Future Work
 
-We plan to release our six trained models (i.e. POS taggers) together with some running sripts for Myanmar language NLP research ASAP.  
+We plan to release two more trained models (i.e. POS taggers) together with some running sripts for Myanmar language NLP research ASAP.  
 We also plan to increase size of the myCorpus little by little.
 
 ## Publication
