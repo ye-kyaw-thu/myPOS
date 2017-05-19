@@ -1,0 +1,119 @@
+
+Start training 3-gram HMM POSTagging model for ./t1/train1.nopipe.word ...
+
+ctest1
+ctest1.nopipe
+ctest1.nopipe.word
+otest.nopipe.word
+train1
+train1.nopipe
+train1.nopipe.word
+train1.nopipe.word.model
+========== End for ./t1/ =========
+
+Start training 3-gram HMM POSTagging model for ./t2/train2.nopipe.word ...
+
+ctest2
+ctest2.nopipe
+otest.nopipe.word
+train2
+train2.nopipe
+train2.nopipe.word
+train2.nopipe.word.model
+========== End for ./t2/ =========
+
+Start training 3-gram HMM POSTagging model for ./t3/train3.nopipe.word ...
+
+ctest3
+ctest3.nopipe
+ctest3.nopipe.word
+otest.nopipe.word
+train3
+train3.nopipe
+train3.nopipe.word
+train3.nopipe.word.model
+========== End for ./t3/ =========
+
+Start training 3-gram HMM POSTagging model for ./t4/train4.nopipe.word ...
+
+ctest4
+ctest4.nopipe
+ctest4.nopipe.word
+otest.nopipe.word
+train4
+train4.nopipe
+train4.nopipe.word
+train4.nopipe.word.model
+========== End for ./t4/ =========
+
+Start training 3-gram HMM POSTagging model for ./t5/train5.nopipe.word ...
+
+ctest5
+ctest5.nopipe
+ctest5.nopipe.word
+otest.nopipe.word
+train5
+train5.nopipe
+train5.nopipe.word
+train5.nopipe.word.model
+========== End for ./t5/ =========
+
+Start training 3-gram HMM POSTagging model for ./t6/train6.nopipe.word ...
+
+ctest6
+ctest6.nopipe
+ctest6.nopipe.word
+otest.nopipe.word
+train6
+train6.nopipe
+train6.nopipe.word
+train6.nopipe.word.model
+========== End for ./t6/ =========
+
+Start training 3-gram HMM POSTagging model for ./t7/train7.nopipe.word ...
+
+ctest7
+ctest7.nopipe
+ctest7.nopipe.word
+otest.nopipe.word
+train7
+train7.nopipe
+train7.nopipe.word
+train7.nopipe.word.model
+========== End for ./t7/ =========
+
+Start training 3-gram HMM POSTagging model for ./t8/train8.nopipe.word ...
+
+ctest8
+ctest8.nopipe
+ctest8.nopipe.word
+otest.nopipe.word
+train8
+train8.nopipe
+train8.nopipe.word
+train8.nopipe.word.model
+========== End for ./t8/ =========
+
+Start training 3-gram HMM POSTagging model for ./t9/train9.nopipe.word ...
+
+ctest9
+ctest9.nopipe
+ctest9.nopipe.word
+otest.nopipe.word
+train9
+train9.nopipe
+train9.nopipe.word
+train9.nopipe.word.model
+========== End for ./t9/ =========
+
+Start training 3-gram HMM POSTagging model for ./t10/train10.nopipe.word ...
+
+ctest10
+ctest10.nopipe
+ctest10.nopipe.word
+otest.nopipe.word
+train10
+train10.nopipe
+train10.nopipe.word
+train10.nopipe.word.model
+========== End for ./t10/ =========

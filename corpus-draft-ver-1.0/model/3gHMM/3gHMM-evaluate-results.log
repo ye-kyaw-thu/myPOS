@@ -1,0 +1,80 @@
+
+### Evaluation for 3gram HMM train1 model ###
+
+   -with closed test data
+Tag precision: 0.97816399287
+
+   -with open test data
+Tag precision: 0.937263828819
+
+### Evaluation for 3gram HMM train2 model ###
+
+   -with closed test data
+Tag precision: 0.975448334757
+
+   -with open test data
+Tag precision: 0.946187115866
+
+### Evaluation for 3gram HMM train3 model ###
+
+   -with closed test data
+Tag precision: 0.976758503925
+
+   -with open test data
+Tag precision: 0.951240610061
+
+### Evaluation for 3gram HMM train4 model ###
+
+   -with closed test data
+Tag precision: 0.973482283909
+
+   -with open test data
+Tag precision: 0.953289323924
+
+### Evaluation for 3gram HMM train5 model ###
+
+   -with closed test data
+Tag precision: 0.97186908304
+
+   -with open test data
+Tag precision: 0.954564079217
+
+### Evaluation for 3gram HMM train6 model ###
+
+   -with closed test data
+Tag precision: 0.974007907454
+
+   -with open test data
+Tag precision: 0.956111996358
+
+### Evaluation for 3gram HMM train7 model ###
+
+   -with closed test data
+Tag precision: 0.971319682191
+
+   -with open test data
+Tag precision: 0.957341224676
+
+### Evaluation for 3gram HMM train8 model ###
+
+   -with closed test data
+Tag precision: 0.971752669039
+
+   -with open test data
+Tag precision: 0.958524926019
+
+### Evaluation for 3gram HMM train9 model ###
+
+   -with closed test data
+Tag precision: 0.973950643324
+
+   -with open test data
+Tag precision: 0.958843614842
+
+### Evaluation for 3gram HMM train10 model ###
+
+   -with closed test data
+Tag precision: 0.971982255428
+
+   -with open test data
+Tag precision: 0.95911677669

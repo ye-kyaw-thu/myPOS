@@ -1,0 +1,140 @@
+
+start making word/POS-tag pairs for train1 ...
+
+head -n 3 ./t1/ctest1.nopipe.word.TAGGED.pair
+ဂျပန်/n စကား/n ပြော/v လမ်းညွှန်/v သူ/n ရှိ/v ပါ/part သလား/part ။/punc
+တံခါး/n က/ppm မ/part ပိတ်/v ဘူး/part ။/punc
+ထို/adj အစည်းအရုံး/n သည်/ppm အမျိုးသား/n ရေး/part စိတ်ဓာတ်/n ပြင်းပြ/v ၍/conj နုပျို/adj တက်ကြွ/v သည့်/part အခြေခံ/n လက္ခဏာ/n ရှိ/v ပြီး/conj အစည်းအရုံး/n ခေါင်းဆောင်/n များ/part သည်/ppm သက်ကြီး/adj နိုင်ငံရေးသမား/n များ/part နှင့်/ppm မ/part တူ/v တမူထူးခြား/adv ကြ/part ပါ/part သည်/ppm ။/punc
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED.pair
+ဆယ်/n ရာခိုင်နှုန်း/n ဈေး/n လျှော့/n ပေး/v ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/adv ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t1/ =========
+
+
+start making word/POS-tag pairs for train2 ...
+
+head -n 3 ./t2/ctest2.nopipe.word.TAGGED.pair
+ခင်ဗျား/pron ကို/ppm တကယ်/adv ကျေးဇူးတင်/v တယ်/ppm ။/punc
+ဂူဂယ်/n ဆို/v တဲ့/part နာမည်/n ဖြစ်/v လာ/part ပုံ/part က/ppm တော့/part googol/fw အဓိပ္ပါယ်/n က/ppm 10pow/fw ဆို/v တဲ့/part စာလုံး/n ကို/ppm google/fw လို့/part မှား/adj ပေါင်း/n ရာ/part က/ppm စ/v လာ/part ခဲ့/part တာ/part ဖြစ်/v ပြီး/conj Merriam/fw Webster/fw Collegiate/fw Dictionary/fw နဲ့/conj Oxford/fw English/fw Dictionary/fw တွေ/part မှာ/ppm google/fw ရဲ့/ppm အဓိပ္ပါယ်/n ကို/ppm အင်တာနက်/n မှ/ppm အချက်အလက်/n များ/part ရယူ/v ရန်/conj ဂူဂယ်/n search/fw engine/fw ကို/ppm အသုံးပြု/v ခြင်း/part လို့/part ၂၀၀၆/num မှ/ppm စတင်/v ပြီး/conj ထည့်သွင်း/v ပေး/part ခဲ့/part ပါ/part တယ်/ppm ။/punc
+ငှက်/n ငယ်/adj တို့/part သည်/ppm အစာ/n ကို/ppm ပါးစပ်/n ထဲ/ppm သို့/ppm ထည့်/v ပေး/part ရုံ/part နှင့်/conj မျိုမချ/v နိုင်/part ၊/punc မိဘ/n တို့/part က/ppm အာခေါင်အာရင်း/n သို့/ppm ရောက်/v အောင်/conj အစာ/n ကို/ppm သွင်း/v ပေး/part နိုင်/part မှ/ppm သာ/part လည်ချောင်း/n မှ/ppm ကြွက်သား/n များ/part လှုပ်ရှား/v မှု/part ဖြင့်/ppm အစာ/n သည်/ppm ဝမ်း/n တွင်း/n သို့/ppm လျှောဆင်း/v နိုင်/part သည်/ppm ။/punc
+
+head -n 3 ./t2/otest2.nopipe.word.TAGGED.pair
+ဆယ်/tn ရာခိုင်နှုန်း/n ဈေး/n လျှော့/ppm ပေး/v ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/adv ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t2/ =========
+
+
+start making word/POS-tag pairs for train3 ...
+
+head -n 3 ./t3/ctest3.nopipe.word.TAGGED.pair
+ခရီးသွားချက်လက်မှတ်/n ကို/ppm သုံး/v လို့/part ရ/part ပါ/part သလား/part ။/punc
+ဆရာကြီး/n ဦးစိန်/n ၏/ppm မြန်မာ/n အထက်တန်း/n ကျောင်း/n မှ/ppm ၉/num တန်း/n အောင်မြင်/v ခဲ့/part ပြီး/conj မင်းလှ/n မြို့/n နော်မံ/n ကျောင်း/n မှ/ppm အလယ်တန်း/n ဆရာ/n ဖြစ်/v အောင်မြင်/v ခဲ့/part ၏/ppm ။/punc
+တော်/part တော့/part ၊/punc နားငြီး/v လိုက်/part တာ/part ။/punc
+
+head -n 3 ./t3/otest3.nopipe.word.TAGGED.pair
+ဆယ်/tn ရာခိုင်နှုန်း/n ဈေး/n လျှော့/v ပေး/part ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/adv ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t3/ =========
+
+
+start making word/POS-tag pairs for train4 ...
+
+head -n 3 ./t4/ctest4.nopipe.word.TAGGED.pair
+ကိုကိုး/n ကျွန်း/n သည်/ppm အိန္ဒိယ/n ပိုင်/v နီကိုဗါ/n ကျွန်း/n မှ/ppm ၁၈/num ကီလိုမီတာ/n ဝေးကွာ/v သည်/ppm ။/punc
+ကုန်းလိပ်/n ကြီး/part များ/part သည်/ppm မြေ/n ပေါ်/n တွင်/ppm တွားသွားကောင်/n များ/part အနက်/ppm အလွန်/adv ပင်/part ရှေးကျ/v သော/part သတ္တဝါ/n များ/part ဖြစ်/v သည်/ppm ။/punc
+ကျေးဇူး/n ပါ/part ။/punc
+
+head -n 3 ./t4/otest4.nopipe.word.TAGGED.pair
+ဆယ်/tn ရာခိုင်နှုန်း/n ဈေး/n လျှော့/v ပေး/part ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/adv ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t4/ =========
+
+
+start making word/POS-tag pairs for train5 ...
+
+head -n 3 ./t5/ctest5.nopipe.word.TAGGED.pair
+ကမ္ဘာ/n သည်/ppm နေ/n ကို/ppm ၃၆၅.၂၅၆၄/num ရက်/n တွင်/ppm တစ်/tn ကြိမ်/part လှည့်ပတ်/v နေ/part ပြီး/conj တစ်/tn နှစ်/n ဟု/part သတ်မှတ်/v ကြ/part သည်/ppm ။/punc
+ကောင်း/adj လိုက်/part တဲ့/part လက်ဖက်ရည်/n ။/punc
+ကျေးဇူး/n အများကြီး/adj တင်/v ပါ/part တယ်/ppm ။/punc
+
+head -n 3 ./t5/otest5.nopipe.word.TAGGED.pair
+ဆယ်/tn ရာခိုင်နှုန်း/n ဈေး/n လျှော့/v ပေး/part ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/adv ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t5/ =========
+
+
+start making word/POS-tag pairs for train6 ...
+
+head -n 3 ./t6/ctest6.nopipe.word.TAGGED.pair
+8/fw bit/fw ပုံရိပ်/n တစ်/tn ခု/part သည်/ppm 256/fw color/fw သို့မဟုတ်/conj gray/fw scale/fw များ/part ကို/ppm အထောက်အကူ/n ပြု/v သည်/ppm ။/punc
+ကမ္ဘာ/n ပေါ်/n ၌/ppm အမြင့်ဆုံး/adj တောင်ထွတ်/n များ/part ဖြစ်/v ကြ/part သော/part ဧဝရက်/n တောင်/n ၂၉ဝ၂၈/num ပေ/part ၊/punc ကန်ချန်ဂျန်ဂါ/n တောင်/n ၂၈၁၄၆/num ပေ/part ၊/punc ဒေါ်လာဂီရိ/n တောင်/n ၂၆၈၂၆/num ပေ/part နှင့်/conj နန္ဒာဒေဝီ/n တောင်/n ၂၅၆၆၁/num ပေ/part တို့/part ကို/ppm ထို/adj တောင်တန်း/n ဒေသ/n ၌/ppm တွေ့/v ရ/part သည်/ppm ။/punc
+ကလေး/n ငယ်/adj များ/part ကယ်ဆယ်/v ရေး/part Save/fw the/fw Children/fw အေဂျင်စီ/n သည်/ppm မြန်မာ/n ပြည်/n တွင်/ppm အလုပ်လုပ်/v ရန်/conj ခွင့်ပြု/v ခံ/v ရ/part သည့်/part အေဂျင်စီ/n အနည်းစု/n မှ/ppm တစ်/tn ခု/part ဖြစ်/v ပြီး/conj ဆုံးရှုံး/v မှု/part များ/part သည်/ppm သီးခြား/adv ဖြစ်/v နေ/part သော/part ဧရိယာ/n များ/part သို့/ppm အကူအညီ/n ရောက်/v ရှိ/v သည့်/part အခါ/n နောက်ထပ်/adv ရက်/n များ/part အနည်းငယ်/n အတွင်း/n သိသိသာသာ/adv တိုးတက်/v လာ/part လိမ့်/ppm မည်/pron ဟု/part ပြောကြား/v ခဲ့/part သည်/ppm ။/punc
+
+head -n 3 ./t6/otest6.nopipe.word.TAGGED.pair
+ဆယ်/tn ရာခိုင်နှုန်း/n ဈေး/n လျှော့/v ပေး/part ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/adv ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t6/ =========
+
+
+start making word/POS-tag pairs for train7 ...
+
+head -n 3 ./t7/ctest7.nopipe.word.TAGGED.pair
+American/fw Kachin/fw Ranger/fw စစ်တပ်ဖွဲ့/n သည်/ppm တရုတ်/n ပြည်/n ယူနန်/n ပြည်နယ်/n ထဲ/ppm ထိ/ppm ဂျပန်/n စစ်တပ်/n အား/ppm တိုက်ခိုက်/v အောင်ပွဲခံ/v ခဲ့/part ကာ/conj ယခု/n YingJiang/fw မှာ/ppm အထိမ်းအမှတ်/n အဖြင့်/ppm ကျောက်တိုင်/n စိုက်ထူ/v ထား/part သည်/ppm ။/punc
+Computer/fw တွင်/ppm ဖတ်မှတ်/v ခြင်း/part ၊/punc သိမ်းဆည်း/v ခြင်း/part များ/part ကို/ppm ကိန်းဂဏန်း/n များ/part ဖြင့်/ppm သာ/part ပြုလုပ်/v နိုင်/part သည်/ppm ။/punc
+MITS/fw ၏/ppm ဥက္ကဋ္ဌ/n ဖြစ်/v သူ/n EdRoberts/fw က/ppm ဂိတ်စ်/n တို့/part ၏/ppm တီထွင်/v မှု/part အစမ်း/adj သရုပ်ပြ/n ကို/ppm ကြည့်/v ရန်/conj သဘောတူ/v ပြီး/conj ၊/punc ရက်သတ္တပတ်/n အနည်းငယ်/n ကြာ/v သည့်/part သင်တန်း/n ကာလ/n အတွင်း/n တွင်/ppm ဂိတ်စ်/n တို့/part က/ppm minicomputer/fw တွင်/ppm ထည့်သွင်း/v အသုံးပြု/v နိုင်/part သည့်/part Altair/fw နှင့်/conj အလားတူ/adv နည်းပညာ/n တစ်/tn ခု/part ကို/ppm ဖော်ထုတ်/v နိုင်/part ခဲ့/part ကြ/part သည်/ppm ။/punc
+
+head -n 3 ./t7/otest7.nopipe.word.TAGGED.pair
+ဆယ်/tn ရာခိုင်နှုန်း/n ဈေး/n လျှော့/v ပေး/part ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/adv ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t7/ =========
+
+
+start making word/POS-tag pairs for train8 ...
+
+head -n 3 ./t8/ctest8.nopipe.word.TAGGED.pair
+ကမ္ဘာမြေ/n ၏/ppm အပေါ်ယံလွှာ/n မြေသား/n မှာ/ppm ပျမ်းမျှ/adv အားဖြင့်/ppm ၄၀/num ကီလိုမီတာ/n ၂၅/num မိုင်/n မျှ/part ထူထပ်/adj သဖြင့်/conj အင်္ဂါ/n ဂြိုဟ်/n နှင့်/conj ကမ္ဘာ/n တို့/part ၏/ppm အရွယ်အစား/n ကို/ppm ထည့်/v တွက်/v နှိုင်းယှဉ်/v ပါ/part က/ppm အင်္ဂါ/n ဂြိုဟ်/n မြေသား/n ထက်/conj ၃/num ဆ/n မျှ/part သေးငယ်/v သည်/ppm ။/punc
+ကမ္ဘောဒီးယား/n နိုင်ငံ/n ၏/ppm စပါး/n စိုက်ပျိုး/v မြေ/n ကို/ppm ဧရိယာ/n အားဖြင့်/ppm ၃/num မျိုး/n ခွဲခြား/v နိုင်/part သည်/ppm ။/punc
+ကမ်းရိုးတန်း/n အလျား/n ၁၄,၅၀၀/num ကီလိုမီတာ/n မိုင်/n ၉၀၀၀/num ရှည်လျား/adj သည်/ppm ။/punc
+
+head -n 3 ./t8/otest8.nopipe.word.TAGGED.pair
+ဆယ်/tn ရာခိုင်နှုန်း/n ဈေး/n လျှော့/v ပေး/part ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/adv ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t8/ =========
+
+
+start making word/POS-tag pairs for train9 ...
+
+head -n 3 ./t9/ctest9.nopipe.word.TAGGED.pair
+ကာလ/n အားဖြင့်/ppm နှစ်/n ပေါင်း/n သန်း/n ၄၅ဝဝ/num အတွင်း/n ဖြစ်ရပ်/n များ/part အပြင်/conj ၊/punc လေ့လာ/v ဖွယ်/part ရာ/conj ဝတ္ထု/n ပစ္စည်း/n များ/part မှာ/ppm လည်း/part ကမ္ဘာ/n တစ်/tn ခု/part လုံး/part ၏/ppm အတွင်း/n အပြင်/n ရှိ/v ပထဝီ/n မြေကြီး/n တစ်/tn ခု/part လုံး/part ဖြစ်/v လေ/part ရာ/conj ၊/punc အလွန်/adv မှ/ppm ပင်/part ကျယ်ဝန်း/adj နက်နဲ/adj လှ/part ၏/ppm ။/punc
+ကျောက်ဖြစ်ရုပ်ကြွင်း/n မှတ်တမ်း/n များ/part အရ/ppm ငှက်/n များ/part သည်/ppm သယ်ယိုပေါ့ဒ်ဒိုင်နိုဆော/n များ/part မှ/ppm ဂျူရက်ဆစ်/n အချိန်ကာလ/n မှ/ppm စ/v ၍/conj ဆင်းသက်/v လာ/part သည်/ppm ဟု/part ခန့်မှန်း/v နိုင်/part ပြီး/conj နှစ်/n ပေါင်း/n သန်း/n ၁၅၀/num မှ/ppm သန်း/n ၂၀၀/num ခန့်/part တွင်/ppm ဖြစ်/v သည်/ppm ။/punc
+ကျေးဇူးပြု၍/int ပေါင်မုန့်/n ဖြူ/adj ပေး/v ပါ/part လား/part ။/punc
+
+head -n 3 ./t9/otest9.nopipe.word.TAGGED.pair
+ဆယ်/tn ရာခိုင်နှုန်း/n ဈေး/n လျှော့/v ပေး/part ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/adv ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t9/ =========
+
+
+start making word/POS-tag pairs for train10 ...
+
+head -n 3 ./t10/ctest10.nopipe.word.TAGGED.pair
+ကင်မရာ/n ဘက်ထရီ/n အားသွင်း/v ချင်/part လိုက်/part တာ/part ။/punc
+ကမ္ဘာ့/n အံ့ဖွယ်/n အရာ/n များ/part ရေးသား/v သည့်/part The/fw Guinness/fw Book/fw of/fw Records/fw စာအုပ်/n တွင်/ppm အပြည်ပြည်/n ဆိုင်ရာ/n လူ့/n အခွင့်အရေး/n ကြေညာစာတမ်း/n သည်/ppm ကမ္ဘာ/n တွင်/ppm အများဆုံး/adv ဘာသာပြန်ဆို/v ထား/part သည့်/part စာတမ်း/n တစ်/tn ခု/part အဖြစ်/n အသိအမှတ်ပြု/v ခံ/v ရ/part သည်/ppm ။/punc
+ကမ်းခြေ/n မှ/ppm စ/v ၍/conj တောင်ကုန်း/n မြင့်/adj များ/part ဖြစ်/v ပြီး/conj လျှင်/conj ထို/adj တောင်ကုန်း/n မြင့်/adj များ/part ပေါ်/n တွင်/ppm အစိုးရ/n ရုံး/n အဆောက်အဦ/n များ/part ရှိ/v သည်/ppm ။/punc
+
+head -n 3 ./t10/otest10.nopipe.word.TAGGED.pair
+ဆယ်/tn ရာခိုင်နှုန်း/n ဈေး/n လျှော့/v ပေး/part ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/part စွာ/part ဒေါမနဿ/n ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+========== End for ./t10/ =========
+

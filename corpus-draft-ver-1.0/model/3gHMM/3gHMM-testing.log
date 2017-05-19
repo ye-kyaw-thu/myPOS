@@ -1,0 +1,190 @@
+For train1:
+
+start closed testing ...
+closed testing with train1 Fin!
+
+head -n 3 ./t1/ctest1.nopipe.word.TAGGED
+n n v v n v part part punc
+n ppm part v part punc
+adj n ppm n part n v conj adj v part n n v conj n n part ppm adj n part ppm part v adv part part ppm punc
+
+start open testing ...
+open testing with train1 Fin!
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED
+n n n n v conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train2:
+
+start closed testing ...
+closed testing with train2 Fin!
+
+head -n 3 ./t2/ctest2.nopipe.word.TAGGED
+pron ppm adv v ppm punc
+n v part n v part part ppm part fw n ppm fw v part n ppm fw part adj n part ppm v part part part v conj fw fw fw fw conj fw fw fw part ppm fw ppm n ppm n ppm n part v conj n fw fw ppm v part part num ppm v conj v part part part ppm punc
+n adj part ppm n ppm n ppm ppm v part part conj v part punc n part ppm n ppm v conj n ppm v part part ppm part n ppm n part v part ppm n ppm n n ppm v part ppm punc
+
+start open testing ...
+open testing with train2 Fin!
+
+head -n 3 ./t2/otest2.nopipe.word.TAGGED
+tn n n ppm v conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train3:
+
+start closed testing ...
+closed testing with train3 Fin!
+
+head -n 3 ./t3/ctest3.nopipe.word.TAGGED
+n ppm v part part part part punc
+n n ppm n n n ppm num n v part conj n n n n ppm n n v v part ppm punc
+part part punc v part part punc
+
+start open testing ...
+open testing with train3 Fin!
+
+head -n 3 ./t3/otest3.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train4:
+
+start closed testing ...
+closed testing with train4 Fin!
+
+head -n 3 ./t4/ctest4.nopipe.word.TAGGED
+n n ppm n v n n ppm num n v ppm punc
+n part part ppm n n ppm n part ppm adv part v part n part v ppm punc
+n part punc
+
+start open testing ...
+open testing with train4 Fin!
+
+head -n 3 ./t4/otest4.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train5:
+
+start closed testing ...
+closed testing with train5 Fin!
+
+head -n 3 ./t5/ctest5.nopipe.word.TAGGED
+n ppm n ppm num n ppm tn part v part conj tn n part v part ppm punc
+adj part part n punc
+n adj v part ppm punc
+
+start open testing ...
+open testing with train5 Fin!
+
+head -n 3 ./t5/otest5.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train6:
+
+start closed testing ...
+closed testing with train6 Fin!
+
+head -n 3 ./t6/ctest6.nopipe.word.TAGGED
+fw fw n tn part ppm fw fw conj fw fw part ppm n v ppm punc
+n n ppm adj n part v part part n n num part punc n n num part punc n n num part conj n n num part part ppm adj n n ppm v part ppm punc
+n adj part v part fw fw fw n ppm n n ppm v conj v v part part n n ppm tn part v conj v part part ppm adv v part part n part ppm n v v part n adv n part n n adv v part ppm pron part v part ppm punc
+
+start open testing ...
+open testing with train6 Fin!
+
+head -n 3 ./t6/otest6.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train7:
+
+start closed testing ...
+closed testing with train7 Fin!
+
+head -n 3 ./t7/ctest7.nopipe.word.TAGGED
+fw fw fw n ppm n n n n ppm ppm n n ppm v v part conj n fw ppm n ppm n v part ppm punc
+fw ppm v part punc v part part ppm n part ppm part v part ppm punc
+fw ppm n v n fw ppm n part ppm v part adj n ppm v conj v conj punc n n v part n n n ppm n part ppm fw ppm v v part part fw conj adv n tn part ppm v part part part ppm punc
+
+start open testing ...
+open testing with train7 Fin!
+
+head -n 3 ./t7/otest7.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train8:
+
+start closed testing ...
+closed testing with train8 Fin!
+
+head -n 3 ./t8/ctest8.nopipe.word.TAGGED
+n ppm n n ppm adv ppm num n num n part adj conj n n conj n part ppm n ppm v v v part ppm n n n conj num n part v ppm punc
+n n ppm n v n ppm n ppm num n v part ppm punc
+n n num n n num adj ppm punc
+
+start open testing ...
+open testing with train8 Fin!
+
+head -n 3 ./t8/otest8.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train9:
+
+start closed testing ...
+closed testing with train9 Fin!
+
+head -n 3 ./t9/ctest9.nopipe.word.TAGGED
+n ppm n n n num n n part conj punc v part conj n n part ppm part n tn part part ppm n n v n n tn part part v part conj punc adv ppm part adj adj part ppm punc
+n n part ppm n part ppm n part ppm n n ppm v conj v part ppm part v part conj n n n num ppm n num part ppm v ppm punc
+int n adj v part part punc
+
+start open testing ...
+open testing with train9 Fin!
+
+head -n 3 ./t9/otest9.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part adv v part part ppm punc
+============
+
+For train10:
+
+start closed testing ...
+closed testing with train10 Fin!
+
+head -n 3 ./t10/ctest10.nopipe.word.TAGGED
+n n v part part part punc
+n n n part v part fw fw fw fw fw n ppm n n n n n ppm n ppm adv v part part n tn part n v v part ppm punc
+n ppm v conj n adj part v conj conj adj n adj part n ppm n n n part v ppm punc
+
+start open testing ...
+open testing with train10 Fin!
+
+head -n 3 ./t10/otest10.nopipe.word.TAGGED
+tn n n v part conj v ppm punc
+n n ppm n n ppm n fw v ppm punc
+n n n ppm pron ppm part part n v part part ppm punc
+============
+
