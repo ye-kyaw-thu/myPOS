@@ -1,0 +1,238 @@
+Note of training with SVM.
+I used KyTea (http://www.phontron.com/kytea/index.html).
+
+Installation of KyTea:
+
+tar -xzf kytea-X.X.X.tar.gz
+cd kytea-X.X.X
+./configure
+make
+make install
+kytea --help
+
+I assumed that you already prepared training, closed and open test data.
+
+################
+Step 1: Training
+################
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/kytea$ time ./train-all.sh | tee kytea-train.log
+
+Scanning dictionaries and corpora for vocabulary
+Reading corpus from ./t1/train1.nopipe  done (1000 lines)
+Building dictionary index done!
+Creating tagging features (tag 1) done!
+Training local tag classifiers done!
+Printing model to ./t1/train1.nopipe.model done!
+==========
+
+Scanning dictionaries and corpora for vocabulary
+Reading corpus from ./t2/train2.nopipe  done (2000 lines)
+Building dictionary index done!
+Creating tagging features (tag 1) done!
+Training local tag classifiers done!
+Printing model to ./t2/train2.nopipe.model done!
+==========
+
+Scanning dictionaries and corpora for vocabulary
+Reading corpus from ./t3/train3.nopipe  done (3000 lines)
+Building dictionary index done!
+Creating tagging features (tag 1) done!
+Training local tag classifiers done!
+Printing model to ./t3/train3.nopipe.model done!
+==========
+
+Scanning dictionaries and corpora for vocabulary
+Reading corpus from ./t4/train4.nopipe  done (4000 lines)
+Building dictionary index done!
+Creating tagging features (tag 1) done!
+Training local tag classifiers done!
+Printing model to ./t4/train4.nopipe.model done!
+==========
+
+Scanning dictionaries and corpora for vocabulary
+Reading corpus from ./t5/train5.nopipe  done (5000 lines)
+Building dictionary index done!
+Creating tagging features (tag 1) done!
+Training local tag classifiers done!
+Printing model to ./t5/train5.nopipe.model done!
+==========
+
+Scanning dictionaries and corpora for vocabulary
+Reading corpus from ./t6/train6.nopipe  done (6000 lines)
+Building dictionary index done!
+Creating tagging features (tag 1) done!
+Training local tag classifiers done!
+Printing model to ./t6/train6.nopipe.model done!
+==========
+
+Scanning dictionaries and corpora for vocabulary
+Reading corpus from ./t7/train7.nopipe  done (7000 lines)
+Building dictionary index done!
+Creating tagging features (tag 1) done!
+Training local tag classifiers done!
+Printing model to ./t7/train7.nopipe.model done!
+==========
+
+Scanning dictionaries and corpora for vocabulary
+Reading corpus from ./t8/train8.nopipe  done (8000 lines)
+Building dictionary index done!
+Creating tagging features (tag 1) done!
+Training local tag classifiers done!
+Printing model to ./t8/train8.nopipe.model done!
+==========
+
+Scanning dictionaries and corpora for vocabulary
+Reading corpus from ./t9/train9.nopipe  done (9000 lines)
+Building dictionary index done!
+Creating tagging features (tag 1) done!
+Training local tag classifiers done!
+Printing model to ./t9/train9.nopipe.model done!
+==========
+
+Scanning dictionaries and corpora for vocabulary
+Reading corpus from ./t10/train10.nopipe  done (10000 lines)
+Building dictionary index done!
+Creating tagging features (tag 1) done!
+Training local tag classifiers done!
+Printing model to ./t10/train10.nopipe.model done!
+==========
+
+
+real	0m35.511s
+user	0m26.071s
+sys	0m9.126s
+
+
+##############
+Step2: Testing
+##############
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/kytea$ time ./test-all.sh | tee kytea-test.log
+ဂျပန်/n စကား/n ပြော/v လမ်းညွှန်/v သူ/n ရှိ/v ပါ/part သလား/part ။/punc
+တံခါး/n က/ppm မ/part ပိတ်/v ဘူး/part ။/punc
+ထို/adj အစည်းအရုံး/n သည်/ppm အမျိုးသား/n ရေး/part စိတ်ဓာတ်/n ပြင်းပြ/v ၍/conj နုပျို/adj တက်ကြွ/v သည့်/part အခြေခံ/n လက္ခဏာ/n ရှိ/v ပြီး/conj အစည်းအရုံး/n ခေါင်းဆောင်/n များ/part သည်/ppm သက်ကြီး/adj နိုင်ငံရေးသမား/n များ/part နှင့်/ppm မ/part တူ/v တမူထူးခြား/adv ကြ/part ပါ/part သည်/ppm ။/punc
+ဓာတုဗေဒ/n ပညာရပ်/n ပိုင်း/part က/ppm သုံးသပ်/v ရင်/conj လည်း/part ဓာတု/n ပညာရပ်/n ကို/ppm စ/v ခဲ့/part တဲ့/part ရှေး/adj ခေတ်/n အဂ္ဂိရတ်/n ဆရာကြီး/n တွေ/part ရဲ့/ppm ယမ်းငရဲမီး/n ၊/punc ကန့်ငရဲမီး/n ၊/punc ဆားငရဲမီး/n နဲ့/conj ရွှေစားငရဲမီး/n ထုတ်လုပ်/v ပုံ/part နည်းစနစ်/n တွေ/part နဲ့/ppm ပုံစံ/n တူ/v တာ/part တွေ့/v ရ/part သည်/ppm ။/punc
+နာရီ/n ဘယ်/pron မှာ/ppm ဝယ်/v လို့/part ရ/part နိုင်/part မလဲ/part ။/punc
+ဘီအိုင်အေ/abb အမှတ်/n ၅၅/num ဂျပန်/n တပ်မ/n တွင်/ppm ဗိုလ်ကြီး/n အဖြစ်/n လိုက်/v ပါ/part ခဲ့/part ၏/ppm ။/punc
+ရောဂါ/n လက္ခဏာ/n တွေ/part က/ppm ဘာ/pron တွေ/part လဲ/part ။/punc
+အင်္ဂလိပ်/n လူမျိုး/n တို့/part သည်/ppm သိုး/n မျိုး/n ကောင်း/adj များ/part ကို/ppm နှစ်/n ပေါင်း/n ရှည်/adj ကြာ/adj စွာ/part မွေးမြူ/v ခဲ့/part ကြ/part သည်/ppm ဖြစ်/v ရာ/conj အင်္ဂလန်/n နိုင်ငံ/n သည်/ppm ကမ္ဘာ/n ပေါ်/n တွင်/ppm သိုးမွေး/n ထည်/n အကောင်းဆုံး/adj ရက်လုပ်/v နိုင်/part သော/part တိုင်းပြည်/n ဖြစ်/v သည်/ppm ။/punc
+အမေရိကန်/n နိုင်ငံ/n ရှိ/v အင်ဒီးယန်း/n ခေါ်/v တိုင်းရင်းသား/n များ/part သည်/ppm ထို/adj ဝက်ဝံ/n မျိုး/n ကို/ppm လွန်/v စွာ/part ကြောက်/v ရွံ့/v ကြ/part လေ/part သည်/ppm ။/punc
+အဲဒီ/pron လို/ppm မ/part ဟုတ်/v ဘူး/part လို့/part ထင်/v ပါ/part တယ်/ppm ။/punc
+=================
+
+...
+...
+...
+
+
+ဆယ်/tn ရာခိုင်နှုန်း/n ဈေး/n လျှော့/v ပေး/v ရင်/conj ဝယ်/v မယ်/ppm ။/punc
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/UNK ဖြစ်/v သည်/ppm ။/punc
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/adj စွာ/part ဒေါမနဿ/UNK ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc
+ကျောကုန်း/UNK ၏/ppm အလယ်/n သည်/ppm ဝက်ဝံ/n ၏/ppm တစ်ကိုယ်လုံး/n တွင်/ppm အမြင့်ဆုံး/adj အစိတ်အပိုင်း/n ဖြစ်/v သည်/ppm ။/punc
+သို့သော်/conj ၂၀၀၄/num ခုနှစ်/n မှ/ppm စတင်/v ၍/conj အစိုးရ/n ၏/ppm နိုင်ငံ/n ရေး/part လှုပ်ရှား/v မှု/part များ/part ကို/ppm ကန့်သတ်/v သော/part စစ်ဆင်/v ရေး/part တစ်/tn ရပ်/part အနေဖြင့်/part ၎င်း/pron ရုံးခွဲ/n များ/part ကို/ppm ပြန်လည်/adv ပိတ်/v စေ/part ခြင်း/part သို့မဟုတ်/conj ပြင်းထန်/v သော/part ပိတ်ပင်/v တားဆီး/v မှု/part များ/part ကို/ppm ပြုလုပ်/v ခဲ့/part သည်/ppm ။/punc
+အပိုအလျှံ/UNK များ/part ကို/ppm နိုင်ငံတော်/n အဖွဲ့အစည်း/n များ/part သို့/ppm တိုက်ရိုက်/adv ရောင်းချ/v သည်/ppm ။/punc
+ထို/adj ထက်/adj တိကျ/v စွာ/part ဖော်ပြ/v ဦး/part မည်/ppm ။/punc
+ဆရာကြီး/n ၏/ppm ဇနီး/n ဖြစ်/v သူ/n ဒေါ်စိုး/n မ/part သေ/v ခင်/part ရွှေဥဒေါင်း/n စာမူ/n ကိစ္စ/n နှင့်/ppm ပတ်သက်/v ၍/conj သေတမ်းစာ/UNK ရေး/v ခဲ့/part သည်/ppm ။/punc
+မြစ်ကြီးနား/n မှ/ppm ၁၁၈/num မိုင်/n အကွာ/n တွင်/ppm တည်ရှိ/v သည်/ppm ။/punc
+ကုန်းလိပ်/n နှင့်/conj ပင်လယ်လိပ်/n တို့/part သည်/ppm ကိလိုနီယာ/UNK မျိုးစဉ်/n တွင်/ppm ပါဝင်/v လေ/part သည်/ppm ။/punc
+=================
+
+real	0m15.162s
+user	0m14.347s
+sys	0m0.656s
+
+
+#################
+Step3: Evaluation
+#################
+
+aihb@Hatarakis-MacBook-Pro:~/experiment/pos/my-pos/model4github/kytea$ time ./evaluate-all.sh | tee kytea-evaluate-results.log
+
+### Evaluation for L2 regularized SVM train1 model ###
+
+   -with closed test data
+Tag precision: 0.999554367201
+
+   -with open test data
+Tag precision: 0.849578875484
+
+### Evaluation for L2 regularized SVM train2 model ###
+
+   -with closed test data
+Tag precision: 0.999146029035
+
+   -with open test data
+Tag precision: 0.880081948555
+
+### Evaluation for L2 regularized SVM train3 model ###
+
+   -with closed test data
+Tag precision: 0.999076496845
+
+   -with open test data
+Tag precision: 0.896517186433
+
+### Evaluation for L2 regularized SVM train4 model ###
+
+   -with closed test data
+Tag precision: 0.998758745204
+
+   -with open test data
+Tag precision: 0.906760755748
+
+### Evaluation for L2 regularized SVM train5 model ###
+
+   -with closed test data
+Tag precision: 0.998918041655
+
+   -with open test data
+Tag precision: 0.912906897337
+
+### Evaluation for L2 regularized SVM train6 model ###
+
+   -with closed test data
+Tag precision: 0.998389222434
+
+   -with open test data
+Tag precision: 0.918096972456
+
+### Evaluation for L2 regularized SVM train7 model ###
+
+   -with closed test data
+Tag precision: 0.998772689103
+
+   -with open test data
+Tag precision: 0.922831777828
+
+### Evaluation for L2 regularized SVM train8 model ###
+
+   -with closed test data
+Tag precision: 0.998276245552
+
+   -with open test data
+Tag precision: 0.926656043706
+
+### Evaluation for L2 regularized SVM train9 model ###
+
+   -with closed test data
+Tag precision: 0.998576249736
+
+   -with open test data
+Tag precision: 0.929023446392
+
+### Evaluation for L2 regularized SVM train10 model ###
+
+   -with closed test data
+Tag precision: 0.998085454121
+
+   -with open test data
+Tag precision: 0.9318916458
+
+real	0m1.668s
+user	0m1.286s
+sys	0m0.319s
+
+FIN! :)
+
+Ye@Lab

@@ -1,0 +1,80 @@
+
+### Evaluation for L2 regularized SVM train1 model ###
+
+   -with closed test data
+Tag precision: 0.999554367201
+
+   -with open test data
+Tag precision: 0.849578875484
+
+### Evaluation for L2 regularized SVM train2 model ###
+
+   -with closed test data
+Tag precision: 0.999146029035
+
+   -with open test data
+Tag precision: 0.880081948555
+
+### Evaluation for L2 regularized SVM train3 model ###
+
+   -with closed test data
+Tag precision: 0.999076496845
+
+   -with open test data
+Tag precision: 0.896517186433
+
+### Evaluation for L2 regularized SVM train4 model ###
+
+   -with closed test data
+Tag precision: 0.998758745204
+
+   -with open test data
+Tag precision: 0.906760755748
+
+### Evaluation for L2 regularized SVM train5 model ###
+
+   -with closed test data
+Tag precision: 0.998918041655
+
+   -with open test data
+Tag precision: 0.912906897337
+
+### Evaluation for L2 regularized SVM train6 model ###
+
+   -with closed test data
+Tag precision: 0.998389222434
+
+   -with open test data
+Tag precision: 0.918096972456
+
+### Evaluation for L2 regularized SVM train7 model ###
+
+   -with closed test data
+Tag precision: 0.998772689103
+
+   -with open test data
+Tag precision: 0.922831777828
+
+### Evaluation for L2 regularized SVM train8 model ###
+
+   -with closed test data
+Tag precision: 0.998276245552
+
+   -with open test data
+Tag precision: 0.926656043706
+
+### Evaluation for L2 regularized SVM train9 model ###
+
+   -with closed test data
+Tag precision: 0.998576249736
+
+   -with open test data
+Tag precision: 0.929023446392
+
+### Evaluation for L2 regularized SVM train10 model ###
+
+   -with closed test data
+Tag precision: 0.998085454121
+
+   -with open test data
+Tag precision: 0.9318916458
