@@ -95,16 +95,19 @@ data/ : Data preparation folder for incremental POS-tagging models
 
 **Models:**  
 
-3gHMM/ : Incremental training of 3-gram Hidden Markov Model approach models (1,000 to 10,000 sentences) with myPOS corpus.  
+3gHMM/ : Incremental training (1,000 to 10,000 sentences) of 3-gram Hidden Markov Model models with myPOS corpus.  
 Running logfile: [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/3gHMM/note.txt)  
 
-crf/ : Incremental training of CRF POS-tagging models (1,000 to 10,000 sentences) with myPOS corpus.  
+crf/ : Incremental training (1,000 to 10,000 sentences) of CRF POS-tagging models with myPOS corpus.  
 Running logfile: [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/crf/note.txt)  
+
+kytea/ : Incremental training (1,000 to 10,000 sentences) of L2 regularized SVM models with myPOS corpus.  
+Running logfile: [note](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/kytea/note.txt)
   
-low-resource-pos-tagging-2014/: Incremental training of 2hours annotation approach models (1,000 to 10,000 sentences) with myPOS corpus.  
+low-resource-pos-tagging-2014/: Incremental training (1,000 to 10,000 sentences) of 2hours annotation approach models with myPOS corpus.  
 Running logfile: [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/low-resource-pos-tagging-2014/2hours/note.txt)  
 
-rdr/ : Incremental training of RDR (Ripple Down Rule-based) models (1,000 to 10,000 sentences) with myPOS corpus.  
+rdr/ : Incremental training (1,000 to 10,000 sentences) of RDR (Ripple Down Rule-based) models with myPOS corpus.  
 Running logfile: [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/rdr/note.txt)  
   
 =============================
