@@ -3,6 +3,8 @@ Note of training, testing, evaluation with Maximum Entrophy approach.
 I assumed that you already installed Maximum Entropy Modeling Toolkit for Python and C++.
 Download link: https://github.com/lzhang10/maxent
 
+My installation note for maxent: maxent-install-note.txt
+
 Prepared data t1/ .. t10/ and open test data in a folder.
 For me, I prepared under ~/experiment/maxent/mypos/demo/.
 ls output is as follow:
