@@ -1,0 +1,325 @@
+First pass: gather word frequency information
+1000 lines
+4020 words found in training data
+Saving word frequence information to [0m[1;32m./t1/train1.nopipe.wordfreq[0m
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+34748 features found
+600 words found in pos dict
+Applying cutoff 10 to features
+2531 features remained after cutoff
+saving features to file ./t1/train1.nopipe.model.features
+Saving tag dict object to [0m[1;32m./t1/train1.nopipe.model.tagdict[0m done
+Third pass:training ME model...
+1000 lines
+training finished
+saving tagger model to ./t1/train1.nopipe.model done
+First pass: gather word frequency information
+1000 lines
+2000 lines
+5952 words found in training data
+Saving word frequence information to [0m[1;32m./t2/train2.nopipe.wordfreq[0m
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+2000 lines
+53669 features found
+1074 words found in pos dict
+Applying cutoff 10 to features
+4361 features remained after cutoff
+saving features to file ./t2/train2.nopipe.model.features
+Saving tag dict object to [0m[1;32m./t2/train2.nopipe.model.tagdict[0m done
+Third pass:training ME model...
+1000 lines
+2000 lines
+training finished
+saving tagger model to ./t2/train2.nopipe.model done
+First pass: gather word frequency information
+1000 lines
+2000 lines
+3000 lines
+7586 words found in training data
+Saving word frequence information to [0m[1;32m./t3/train3.nopipe.wordfreq[0m
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+2000 lines
+3000 lines
+69613 features found
+1448 words found in pos dict
+Applying cutoff 10 to features
+5950 features remained after cutoff
+saving features to file ./t3/train3.nopipe.model.features
+Saving tag dict object to [0m[1;32m./t3/train3.nopipe.model.tagdict[0m done
+Third pass:training ME model...
+1000 lines
+2000 lines
+3000 lines
+training finished
+saving tagger model to ./t3/train3.nopipe.model done
+First pass: gather word frequency information
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+9037 words found in training data
+Saving word frequence information to [0m[1;32m./t4/train4.nopipe.wordfreq[0m
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+83439 features found
+1818 words found in pos dict
+Applying cutoff 10 to features
+7478 features remained after cutoff
+saving features to file ./t4/train4.nopipe.model.features
+Saving tag dict object to [0m[1;32m./t4/train4.nopipe.model.tagdict[0m done
+Third pass:training ME model...
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+training finished
+saving tagger model to ./t4/train4.nopipe.model done
+First pass: gather word frequency information
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+10115 words found in training data
+Saving word frequence information to [0m[1;32m./t5/train5.nopipe.wordfreq[0m
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+94609 features found
+2094 words found in pos dict
+Applying cutoff 10 to features
+8803 features remained after cutoff
+saving features to file ./t5/train5.nopipe.model.features
+Saving tag dict object to [0m[1;32m./t5/train5.nopipe.model.tagdict[0m done
+Third pass:training ME model...
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+training finished
+saving tagger model to ./t5/train5.nopipe.model done
+First pass: gather word frequency information
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+11213 words found in training data
+Saving word frequence information to [0m[1;32m./t6/train6.nopipe.wordfreq[0m
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+106050 features found
+2369 words found in pos dict
+Applying cutoff 10 to features
+10184 features remained after cutoff
+saving features to file ./t6/train6.nopipe.model.features
+Saving tag dict object to [0m[1;32m./t6/train6.nopipe.model.tagdict[0m done
+Third pass:training ME model...
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+training finished
+saving tagger model to ./t6/train6.nopipe.model done
+First pass: gather word frequency information
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+12276 words found in training data
+Saving word frequence information to [0m[1;32m./t7/train7.nopipe.wordfreq[0m
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+116601 features found
+2622 words found in pos dict
+Applying cutoff 10 to features
+11461 features remained after cutoff
+saving features to file ./t7/train7.nopipe.model.features
+Saving tag dict object to [0m[1;32m./t7/train7.nopipe.model.tagdict[0m done
+Third pass:training ME model...
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+training finished
+saving tagger model to ./t7/train7.nopipe.model done
+First pass: gather word frequency information
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+13255 words found in training data
+Saving word frequence information to [0m[1;32m./t8/train8.nopipe.wordfreq[0m
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+126224 features found
+2870 words found in pos dict
+Applying cutoff 10 to features
+12696 features remained after cutoff
+saving features to file ./t8/train8.nopipe.model.features
+Saving tag dict object to [0m[1;32m./t8/train8.nopipe.model.tagdict[0m done
+Third pass:training ME model...
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+training finished
+saving tagger model to ./t8/train8.nopipe.model done
+First pass: gather word frequency information
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+9000 lines
+14175 words found in training data
+Saving word frequence information to [0m[1;32m./t9/train9.nopipe.wordfreq[0m
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+9000 lines
+135324 features found
+3097 words found in pos dict
+Applying cutoff 10 to features
+13909 features remained after cutoff
+saving features to file ./t9/train9.nopipe.model.features
+Saving tag dict object to [0m[1;32m./t9/train9.nopipe.model.tagdict[0m done
+Third pass:training ME model...
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+9000 lines
+training finished
+saving tagger model to ./t9/train9.nopipe.model done
+First pass: gather word frequency information
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+9000 lines
+10000 lines
+15048 words found in training data
+Saving word frequence information to [0m[1;32m./t10/train10.nopipe.wordfreq[0m
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+9000 lines
+10000 lines
+144072 features found
+3318 words found in pos dict
+Applying cutoff 10 to features
+15096 features remained after cutoff
+saving features to file ./t10/train10.nopipe.model.features
+Saving tag dict object to [0m[1;32m./t10/train10.nopipe.model.tagdict[0m done
+Third pass:training ME model...
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+9000 lines
+10000 lines
+training finished
+saving tagger model to ./t10/train10.nopipe.model done

@@ -1,0 +1,219 @@
+Installation note of maxent.
+
+lar@lar-air:~/tool/maxent-master$ sudo apt-get install libboost-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  snap-confine
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  libboost1.58-dev
+Suggested packages:
+  libboost-doc libboost1.58-doc libboost-atomic1.58-dev libboost-chrono1.58-dev libboost-context1.58-dev libboost-coroutine1.58-dev
+  libboost-date-time1.58-dev libboost-exception1.58-dev libboost-filesystem1.58-dev libboost-graph1.58-dev libboost-graph-parallel1.58-dev
+  libboost-iostreams1.58-dev libboost-locale1.58-dev libboost-log1.58-dev libboost-math1.58-dev libboost-mpi1.58-dev libboost-mpi-python1.58-dev
+  libboost-program-options1.58-dev libboost-python1.58-dev libboost-random1.58-dev libboost-regex1.58-dev libboost-serialization1.58-dev
+  libboost-signals1.58-dev libboost-system1.58-dev libboost-test1.58-dev libboost-thread1.58-dev libboost-timer1.58-dev libboost-wave1.58-dev
+  libboost1.58-tools-dev libmpfrc++-dev libntl-dev
+The following NEW packages will be installed:
+  libboost-dev libboost1.58-dev
+0 upgraded, 2 newly installed, 0 to remove and 5 not upgraded.
+Need to get 6,225 kB of archives.
+After this operation, 105 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://jp.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libboost1.58-dev amd64 1.58.0+dfsg-5ubuntu3.1 [6,222 kB]
+Get:2 http://jp.archive.ubuntu.com/ubuntu xenial/main amd64 libboost-dev amd64 1.58.0.1ubuntu1 [3,134 B]
+Fetched 2,957 kB in 1s (1,577 kB/s)     
+Selecting previously unselected package libboost1.58-dev:amd64.
+(Reading database ... 217860 files and directories currently installed.)
+Preparing to unpack .../libboost1.58-dev_1.58.0+dfsg-5ubuntu3.1_amd64.deb ...
+Unpacking libboost1.58-dev:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+Selecting previously unselected package libboost-dev:amd64.
+Preparing to unpack .../libboost-dev_1.58.0.1ubuntu1_amd64.deb ...
+Unpacking libboost-dev:amd64 (1.58.0.1ubuntu1) ...
+Setting up libboost1.58-dev:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+Setting up libboost-dev:amd64 (1.58.0.1ubuntu1) ...
+lar@lar-air:~/tool/maxent-master$ make clean
+...found 1 target(s)...
+...updating 1 target(s)...
+Clean clean 
+...updated 1 target(s)...
+lar@lar-air:~/tool/maxent-master$ ./configure
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for gfortran... gfortran
+checking whether we are using the GNU Fortran compiler... yes
+checking whether gfortran accepts -g... yes
+checking how to get verbose linking output from gfortran... -v
+checking for Fortran libraries of gfortran...  -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. -lgfortran -lm -lquadmath
+checking how to run the C++ preprocessor... g++ -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking for pwd... /bin/pwd
+checking for ccdv... /home/lar/tool/maxent-master/ccdv
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking boost/config.hpp usability... yes
+checking boost/config.hpp presence... yes
+checking for boost/config.hpp... yes
+checking for gettimeofday... yes
+checking for getopt_long... yes
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for getpagesize... yes
+checking for working mmap... yes
+checking for main in -lm... yes
+checking for getopt in -lgnugetopt... no
+checking for main in -lz... yes
+
+
+configure: creating ./config.status
+config.status: creating Jamrules
+config.status: creating python/setup.py
+config.status: creating config.h
+config.status: config.h is unchanged
+configure complete, now type make to build.
+
+================
+
+lar@lar-air:~/tool/maxent-master$ sudo ldconfig
+lar@lar-air:~/tool/maxent-master$ make
+Compiling display.cpp:                                                [OK]     
+Compiling modelfile.cpp:                                              [OK]     
+Compiling trainer.cpp:                                                [OK]     
+Compiling gistrainer.cpp:                                             [OK]     
+Compiling maxentmodel.cpp:                                            [OK]     
+Compiling mmapfile.c:                                                 [OK]     
+Compiling lbfgs_wrapper.c:                                            [OK]     
+Running gfortran:                                                     [OK]     
+Compiling lbfgstrainer.cpp:                                           [OK]     
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: creating src/opt/libmaxent.a
+Compiling maxent.cpp:                                                 [OK]     
+Compiling maxent_cmdline.c:                                           [OK]     
+Compiling f77_dummy_main.cpp:                                         [OK]     
+Linking maxent:                                                       [OK]    
+
+==================
+
+lar@lar-air:~/tool/maxent-master$ sudo make install
+...found 122 target(s)...
+...updating 13 target(s)...
+C++ src/opt/display.o 
+Compiling display.cpp:                                                [OK]     
+C++ src/opt/modelfile.o 
+Compiling modelfile.cpp:                                              [OK]     
+C++ src/opt/trainer.o 
+Compiling trainer.cpp:                                                [OK]     
+C++ src/opt/gistrainer.o 
+Compiling gistrainer.cpp:                                             [OK]     
+C++ src/opt/maxentmodel.o 
+Compiling maxentmodel.cpp:                                            [OK]     
+Cc src/opt/mmapfile.o 
+Compiling mmapfile.c:                                                 [OK]     
+Cc src/opt/lbfgs_wrapper.o 
+Compiling lbfgs_wrapper.c:                                            [OK]     
+Fortran src/opt/lbfgs.o 
+Running gfortran:                                                     [OK]     
+C++ src/opt/lbfgstrainer.o 
+Compiling lbfgstrainer.cpp:                                           [OK]     
+Archive src/opt/libmaxent.a 
+ar: `u' modifier ignored since `D' is the default (see `U')
+Ranlib src/opt/libmaxent.a 
+Link src/opt/maxent 
+Linking maxent:                                                       [OK]     
+Chmod1 src/opt/maxent 
+Install /usr/local/bin/maxent 
+Chmod1 /usr/local/bin/maxent 
+Install /usr/local/lib/libmaxent.a 
+Chmod1 /usr/local/lib/libmaxent.a 
+...updated 13 target(s)...
+
+================
+
+lar@lar-air:~/tool/maxent-master/src$ sudo apt install jam
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  snap-confine
+Use 'sudo apt autoremove' to remove it.
+The following NEW packages will be installed:
+  jam
+0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+Need to get 103 kB of archives.
+After this operation, 307 kB of additional disk space will be used.
+Get:1 http://jp.archive.ubuntu.com/ubuntu xenial/universe amd64 jam amd64 2.6-1 [103 kB]
+Fetched 103 kB in 0s (155 kB/s)
+Selecting previously unselected package jam.
+(Reading database ... 229387 files and directories currently installed.)
+Preparing to unpack .../archives/jam_2.6-1_amd64.deb ...
+Unpacking jam (2.6-1) ...
+Processing triggers for man-db (2.7.5-1) ...
+Processing triggers for doc-base (0.10.7) ...
+Processing 1 added doc-base file...
+Setting up jam (2.6-1) ...
+update-alternatives: using /usr/bin/jam.perforce to provide /usr/bin/jam (jam) in auto mode
+
+===============
+
+lar@lar-air:~/tool/maxent-master/python$ python2.7 setup.py build
+running build
+running build_py
+running build_ext
+lar@lar-air:~/tool/maxent-master/python$ sudo python2.7 setup.py install
+running install
+running build
+running build_py
+running build_ext
+running install_lib
+running install_egg_info
+Removing /usr/local/lib/python2.7/dist-packages/maxent-version_devel.egg-info
+Writing /usr/local/lib/python2.7/dist-packages/maxent-version_devel.egg-info
+
+===============
+
+lar@lar-air:~/tool/maxent-master/test$ python2.7 test_pyext.py 
+testing cmaxent
+Conditional Maximum Entropy Model (C++ version)
+Number of context predicates  : 1
+Number of outcome             : 4
+Number of paramaters(features): 4
+.testing pymaxent
+Conditional Maximum Entropy Model (Python Version)
+        Number of context predicates  : 1
+        Number of outcome             : 4
+        Number of paramaters(features): 4
+.
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+
+

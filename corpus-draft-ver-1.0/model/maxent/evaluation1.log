@@ -1,0 +1,80 @@
+
+### Evaluation for Maximum Entrophy train1 model ###
+
+   -with closed test data
+Tag precision: 0.928698752228
+
+   -with open test data
+Tag precision: 0.91736854086
+
+### Evaluation for Maximum Entrophy train2 model ###
+
+   -with closed test data
+Tag precision: 0.949188727583
+
+   -with open test data
+Tag precision: 0.937445936718
+
+### Evaluation for Maximum Entrophy train3 model ###
+
+   -with closed test data
+Tag precision: 0.959365861167
+
+   -with open test data
+Tag precision: 0.945686319144
+
+### Evaluation for Maximum Entrophy train4 model ###
+
+   -with closed test data
+Tag precision: 0.95881290905
+
+   -with open test data
+Tag precision: 0.950876394264
+
+### Evaluation for Maximum Entrophy train5 model ###
+
+   -with closed test data
+Tag precision: 0.964024885042
+
+   -with open test data
+Tag precision: 0.952651946278
+
+### Evaluation for Maximum Entrophy train6 model ###
+
+   -with closed test data
+Tag precision: 0.964196807732
+
+   -with open test data
+Tag precision: 0.954154336444
+
+### Evaluation for Maximum Entrophy train7 model ###
+
+   -with closed test data
+Tag precision: 0.965183127705
+
+   -with open test data
+Tag precision: 0.955338037787
+
+### Evaluation for Maximum Entrophy train8 model ###
+
+   -with closed test data
+Tag precision: 0.965802935943
+
+   -with open test data
+Tag precision: 0.956203050307
+
+### Evaluation for Maximum Entrophy train9 model ###
+
+   -with closed test data
+Tag precision: 0.969310272094
+
+   -with open test data
+Tag precision: 0.957933075347
+
+### Evaluation for Maximum Entrophy train10 model ###
+
+   -with closed test data
+Tag precision: 0.971141723091
+
+   -with open test data
+Tag precision: 0.959298884589

@@ -1,0 +1,250 @@
+Note of training, testing, evaluation with Maximum Entrophy approach.
+
+I assumed that you already installed Maximum Entropy Modeling Toolkit for Python and C++.
+Download link: https://github.com/lzhang10/maxent
+
+Prepared data t1/ .. t10/ and open test data in a folder.
+For me, I prepared under ~/experiment/maxent/mypos/demo/.
+ls output is as follow:
+
+lar@lar-air:~/experiment/maxent/mypos/demo$ ls
+evaluate-all.sh  evaluate.py  otest  otest.nopipe  otest.nopipe.word  t1  t10  t2  t3  t4  t5  t6  t7  t8  t9  test-all.sh  train-all.sh
+ 
+###############
+Step1: Training
+###############
+
+lar@lar-air:~/experiment/maxent/mypos/demo$ time ./train-all.sh | tee maxent-training.log
+LBFGS module not compiled in, use GIS insteadFirst pass: gather word frequency information
+1000 lines
+4020 words found in training data
+Saving word frequence information to ./t1/train1.nopipe.wordfreq
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+34748 features found
+600 words found in pos dict
+Applying cutoff 10 to features
+2531 features remained after cutoff
+saving features to file ./t1/train1.nopipe.model.features
+Saving tag dict object to ./t1/train1.nopipe.model.tagdict done
+Third pass:training ME model...
+1000 lines
+
+training finished
+saving tagger model to ./t1/train1.nopipe.model done
+
+...
+...
+...
+
+LBFGS module not compiled in, use GIS insteadFirst pass: gather word frequency information
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+9000 lines
+10000 lines
+15048 words found in training data
+Saving word frequence information to ./t10/train10.nopipe.wordfreq
+
+Second pass: gather features and tag dict to be used in tagger
+feature cutoff:10
+rare word freq:5
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+9000 lines
+10000 lines
+144072 features found
+3318 words found in pos dict
+Applying cutoff 10 to features
+15096 features remained after cutoff
+saving features to file ./t10/train10.nopipe.model.features
+Saving tag dict object to ./t10/train10.nopipe.model.tagdict done
+Third pass:training ME model...
+1000 lines
+2000 lines
+3000 lines
+4000 lines
+5000 lines
+6000 lines
+7000 lines
+8000 lines
+9000 lines
+10000 lines
+
+training finished
+saving tagger model to ./t10/train10.nopipe.model done
+
+real	29m51.086s
+user	29m50.148s
+sys	0m1.036s
+
+###############
+Step2: Testing
+###############
+
+lar@lar-air:~/experiment/maxent/mypos/demo$ time ./test-all.sh | tee ./maxent-test-GIS.log
+
+Start closed testing with ./t1/ctest1.nopipe.word ...
+Finished!
+
+Start open testing with ./otest.nopipe.word ...
+Finished!
+
+...
+...
+...
+
+Start closed testing with ./t10/ctest10.nopipe.word ...
+Finished!
+
+Start open testing with ./otest.nopipe.word ...
+Finished!
+
+real	0m33.602s
+user	0m33.444s
+sys	0m0.116s
+
+##########################
+Step3: Removed blank lines
+##########################
+
+When I checked output of tagged file, I found blank lines exist between tagged lines as follows:
+
+lar@lar-air:~/experiment/maxent/mypos/demo/t1$ head ctest1.nopipe.word.Tagged 
+ဂျပန်/n စကား/n ပြော/v လမ်းညွှန်/v သူ/n ရှိ/v ပါ/part သလား/part ။/punc 
+
+တံခါး/n က/ppm မ/part ပိတ်/v ဘူး/part ။/punc 
+
+ထို/adj အစည်းအရုံး/n သည်/ppm အမျိုးသား/n ရေး/part စိတ်ဓာတ်/n ပြင်းပြ/v ၍/conj နုပျို/n တက်ကြွ/v သည့်/part အခြေခံ/n လက္ခဏာ/n ရှိ/v ပြီး/conj အစည်းအရုံး/n ခေါင်းဆောင်/n များ/part သည်/ppm သက်ကြီး/n နိုင်ငံရေးသမား/n များ/part နှင့်/ppm မ/part တူ/v တမူထူးခြား/v ကြ/part ပါ/part သည်/ppm ။/punc 
+
+ဓာတုဗေဒ/n ပညာရပ်/n ပိုင်း/part က/ppm သုံးသပ်/n ရင်/conj လည်း/part ဓာတု/n ပညာရပ်/n ကို/ppm စ/v ခဲ့/part တဲ့/part ရှေး/adj ခေတ်/n အဂ္ဂိရတ်/n ဆရာကြီး/n တွေ/part ရဲ့/ppm ယမ်းငရဲမီး/n ၊/punc ကန့်ငရဲမီး/n ၊/punc ဆားငရဲမီး/n နဲ့/ppm ရွှေစားငရဲမီး/v ထုတ်လုပ်/v ပုံ/part နည်းစနစ်/n တွေ/part နဲ့/ppm ပုံစံ/n တူ/v တာ/part တွေ့/v ရ/part သည်/ppm ။/punc 
+
+နာရီ/n ဘယ်/pron မှာ/ppm ဝယ်/part လို့/part ရ/part နိုင်/part မလဲ/part ။/punc 
+
+And thus, we have to removed blank lines for evaluation.
+Run following bash shell script that I prepared.
+
+lar@lar-air:~/experiment/maxent/mypos/demo$ ./rm-blank-lines.sh | tee clean.log
+Check with head -n 3 ./t1/ctest1.nopipe.word.Tagged.clean
+ဂျပန်/n စကား/n ပြော/v လမ်းညွှန်/v သူ/n ရှိ/v ပါ/part သလား/part ။/punc 
+တံခါး/n က/ppm မ/part ပိတ်/v ဘူး/part ။/punc 
+ထို/adj အစည်းအရုံး/n သည်/ppm အမျိုးသား/n ရေး/part စိတ်ဓာတ်/n ပြင်းပြ/v ၍/conj နုပျို/n တက်ကြွ/v သည့်/part အခြေခံ/n လက္ခဏာ/n ရှိ/v ပြီး/conj အစည်းအရုံး/n ခေါင်းဆောင်/n များ/part သည်/ppm သက်ကြီး/n နိုင်ငံရေးသမား/n များ/part နှင့်/ppm မ/part တူ/v တမူထူးခြား/v ကြ/part ပါ/part သည်/ppm ။/punc 
+
+Check with head -n 3 ./t1/otest1.nopipe.word.Tagged.clean
+ဆယ်/n ရာခိုင်နှုန်း/n ဈေး/n လျှော့/v ပေး/part ရင်/conj ဝယ်/v မယ်/ppm ။/punc 
+ယခု/n လ/n ၏/ppm အထိမ်းအမှတ်/n ပန်း/n မှာ/ppm မြတ်လေးပန်း/n Pomeacoccinea/fw ဖြစ်/v သည်/ppm ။/punc 
+ကရင်/n ဗမာ/n အဓိကရုဏ်း/n သည်/ppm သူ့/pron အား/ppm များ/adj စွာ/part ဒေါမနဿ/n ဖြစ်/v စေ/part ပါ/part သည်/ppm ။/punc 
+==========
+
+...
+...
+...
+
+#################
+STep4: Evaluation
+#################
+
+lar@lar-air:~/experiment/maxent/mypos/demo$ time ./evaluate-all.sh | tee evaluation1.log
+
+### Evaluation for Maximum Entrophy train1 model ###
+
+   -with closed test data
+Tag precision: 0.928698752228
+
+   -with open test data
+Tag precision: 0.91736854086
+
+### Evaluation for Maximum Entrophy train2 model ###
+
+   -with closed test data
+Tag precision: 0.949188727583
+
+   -with open test data
+Tag precision: 0.937445936718
+
+### Evaluation for Maximum Entrophy train3 model ###
+
+   -with closed test data
+Tag precision: 0.959365861167
+
+   -with open test data
+Tag precision: 0.945686319144
+
+### Evaluation for Maximum Entrophy train4 model ###
+
+   -with closed test data
+Tag precision: 0.95881290905
+
+   -with open test data
+Tag precision: 0.950876394264
+
+### Evaluation for Maximum Entrophy train5 model ###
+
+   -with closed test data
+Tag precision: 0.964024885042
+
+   -with open test data
+Tag precision: 0.952651946278
+
+### Evaluation for Maximum Entrophy train6 model ###
+
+   -with closed test data
+Tag precision: 0.964196807732
+
+   -with open test data
+Tag precision: 0.954154336444
+
+### Evaluation for Maximum Entrophy train7 model ###
+
+   -with closed test data
+Tag precision: 0.965183127705
+
+   -with open test data
+Tag precision: 0.955338037787
+
+### Evaluation for Maximum Entrophy train8 model ###
+
+   -with closed test data
+Tag precision: 0.965802935943
+
+   -with open test data
+Tag precision: 0.956203050307
+
+### Evaluation for Maximum Entrophy train9 model ###
+
+   -with closed test data
+Tag precision: 0.969310272094
+
+   -with open test data
+Tag precision: 0.957933075347
+
+### Evaluation for Maximum Entrophy train10 model ###
+
+   -with closed test data
+Tag precision: 0.971141723091
+
+   -with open test data
+Tag precision: 0.959298884589
+
+real	0m1.310s
+user	0m1.204s
+sys	0m0.060s
+
+FIN!
+
+
+
