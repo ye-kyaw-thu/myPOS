@@ -107,6 +107,9 @@ Running logfile: [note](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-
 low-resource-pos-tagging-2014/: Incremental training (1,000 to 10,000 sentences) of 2hours annotation approach models with myPOS corpus.  
 Running logfile: [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/low-resource-pos-tagging-2014/2hours/note.txt)  
 
+maxent/ : Incremental training (1,000 to 10,000 sentences) of Maximum Entrophy models with myPOS corpus.  
+Running logfile: [note](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/maxent/note.txt)  
+
 rdr/ : Incremental training (1,000 to 10,000 sentences) of RDR (Ripple Down Rule-based) models with myPOS corpus.  
 Running logfile: [note.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-draft-ver-1.0/model/rdr/note.txt)  
   
