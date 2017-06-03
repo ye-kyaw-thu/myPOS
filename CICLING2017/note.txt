@@ -1,5 +1,5 @@
 File list:
 myPOS-CICLing2017-paper.pdf (draft version of CICLing2017 conference paper)
-(poster that we used for poster presentation at CICling2017 conference)
+10K-POS-tagging-CICLing2017.pdf (poster that we used for poster presentation at CICling2017 conference)
 
 Important Note: We used myPOS corpus "version 0.8 with 16 POS tags" for CICLing 2017.
