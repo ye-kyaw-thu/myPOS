@@ -144,3 +144,17 @@ Important Note: We used myPOS corpus **(version 0.8 with 16 POS tags and no comp
 ## Reference
 1. San Lwin, Myanmar-English Dictionary (1993), Department of the Myanmar Language Commission, Ministry of Education, Union of Myanmar.
 2. Myanmar Grammar (2005). Department of the Myanmar Language Commission, Ministry of Education, Union of Myanmar.
+
+## FAQ
+
+Q1. Do I neeed to perform word segmentation for using your trained POS tagging models or myPOS taggers?  
+Answer: Yes, we need to perform word segmentation before we can proceed part-of-speech (POS) tagging.  
+
+Q2. CRF model training and testing is slow ...
+Answer: Try RDR POS Tagger. It is really fast for both training and testing.
+
+Q3. Should I follow your Myanmar word segmentation rules for using your pretrained myPOS models?
+Answer: Yes, please.
+FYI: We used this word segmentation scheme for all of our NLP experiments such as machine translation, automatic speech recognition, text to speech.  
+
+
