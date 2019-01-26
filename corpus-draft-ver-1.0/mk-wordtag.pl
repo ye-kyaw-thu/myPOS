@@ -118,4 +118,4 @@ my $one_token; my $tmpLine=""; my $tmpLine2="";
          }
       }
 
-close(inputFILE);
+close($inputFILE);
