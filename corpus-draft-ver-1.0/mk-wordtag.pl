@@ -25,8 +25,7 @@ binmode STDOUT, ":utf8";
 my $TagMarker=$ARGV[1]; # give command line parameter such as "\|", "\/" ...
 my $word_or_tag=$ARGV[2];
 
-open(my $inputFILE, '<:encoding(UTF-8)', $ARGV[0])
-  or die "Could not open file '$inputFILE' $!";
+open (my $inputFILE,"<:encoding(utf8)", $ARGV[0]) or die "Couldn't open input file $ARGV[0]!, $!\n";
 
 my $one_token; my $tmpLine=""; my $tmpLine2="";
 
