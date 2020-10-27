@@ -157,4 +157,17 @@ Q3. Should I follow your Myanmar word segmentation rules for using your pretrain
 Answer: Yes, please.  
 FYI: We used this word segmentation scheme for all of our NLP experiments such as machine translation, automatic speech recognition, text to speech.  
 
+Q4. I got following email relating to using RDR POS tagger.
+
+```
+ဆရာရှင့်  
+ဖော်ပြထားတဲ့ model တွေအရ စမ်းကြည့်လို့ မရ ဖြစ်နေလို့ပါ။
+ဆရာတင်ထားတာ ဖတ်ကြည့်တော့ rdr က performance ပိုကောင်းတယ်ဆိုတာကို ဖတ်ပြီး rdr model ကို စမ်းကြည့်ရင်း အဆင်မပြေနေလို့ပါရှင့်။
+note.txt အရ လိုက်လုပ်ပါတယ်။ error ဖြစ်ပြီး run မရ ဖြစ်နေပါတယ်။
+command prompt ကနေ run တာပါ။
+ဘယ်ကနေ run ရင် အဆင်ပြေနိုင်ပါလဲရှင့်။ အဆင်ပြေနိုင်မယ့်နည်းလေးကို ပြောပြပေးစေချင်ပါတယ်ရှင့်။
+ကျေးဇူးတင်ပါတယ်ရှင့်
+```
+
+Answer: [https://github.com/ye-kyaw-thu/error-overflow/blob/master/Demo-of-Running-RDRPOSTagger-with-myPOS-RDR-model.md](https://github.com/ye-kyaw-thu/error-overflow/blob/master/Demo-of-Running-RDRPOSTagger-with-myPOS-RDR-model.md)  
 
