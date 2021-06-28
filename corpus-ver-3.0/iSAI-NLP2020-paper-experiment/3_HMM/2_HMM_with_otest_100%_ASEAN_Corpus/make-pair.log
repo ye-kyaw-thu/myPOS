@@ -1,0 +1,14 @@
+
+start making word/POS-tag pairs for train1 ...
+
+head -n 3 ./t1/ctest1.nopipe.word.TAGGED.pair
+ဒီ/adj ဆေး/n က/ppm ၁၀၀/num ရာခိုင်နှုန်း/n ဆေးဘက်ဝင်/adj အပင်/n များ/part မှ/ppm ဖော်စပ်/v ထား/part တာ/part ဖြစ်/v တယ်/ppm ။/punc
+အသစ်/n ဝယ်/v ထား/part တဲ့/part ဆွယ်တာ/n က/ppm အသီး/n ထ/v နေ/part ပါ/part ပေါ့/part ။/punc
+မ/part ကျန်းမာ/v လျှင်/conj နတ်/n ဆရာ/n ထံ/ppm မေးမြန်း/v ၍/conj သက်ဆိုင်ရာ/n နတ်/n တို့/part အား/ppm ပူဇော်ပသ/v ရ/part သည်/ppm ။/punc
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED.pair
+မြန်မာ/n
+ဟုတ်ကဲ့/int ၊/punc ကျွန်တော်/pron ထိုင်း/n စစ်တုရင်/n ကစား/v ရ/part တာ/part ကြိုက်/v တယ်/ppm ။/punc
+ကလေးများ/n အတွက်/ppm တစ်/tn ခု/part ခု/part အကြံပြု/v ပေး/part နိုင်/part မလား/part ။/punc
+========== End for ./t1/ =========
+

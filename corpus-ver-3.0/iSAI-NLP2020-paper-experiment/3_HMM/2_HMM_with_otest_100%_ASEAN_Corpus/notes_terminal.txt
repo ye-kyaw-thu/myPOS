@@ -1,0 +1,129 @@
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ ./pipe2space-all.sh
+
+ Finished replacing pipe with space for ./t1/train1!
+
+ Finished replacing pipe with space for ./t1/ctest1!
+
+ Finished replacing pipe with space for ./otest!
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ ./prepare-word-files4hmm.sh
+./prepare-word-files4hmm.sh: line 10: ./mk-wordtag.pl: Permission denied
+
+Finished for ./t1/train1.nopipe!
+./prepare-word-files4hmm.sh: line 12: ./mk-wordtag.pl: Permission denied
+Finished for ./t1/ctest1.nopipe!
+./prepare-word-files4hmm.sh: line 16: ./mk-wordtag.pl: Permission denied
+
+Finished for ./otest.nopipe!
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ chmod +x ./mk-wordtag.pl
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ chmod +x ./prepare-word-files4hmm.sh
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ ./prepare-word-files4hmm.sh
+
+Finished for ./t1/train1.nopipe!
+Finished for ./t1/ctest1.nopipe!
+
+Finished for ./otest.nopipe!
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ time ./train-all.sh | tee 3gHMM-training.log
+
+Start training 3-gram HMM POSTagging model for ./t1/train1.nopipe.word ...
+
+ctest1
+ctest1.nopipe
+ctest1.nopipe.word
+train1
+train1.nopipe
+train1.nopipe.word
+train1.nopipe.word.model
+========== End for ./t1/ =========
+
+real	0m0.811s
+user	0m1.860s
+sys	0m0.232s
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ time ./test-all.sh | tee 3gHMM-testing.log
+For train1:
+
+start closed testing ...
+closed testing with train1 Fin!
+
+head -n 3 ./t1/ctest1.nopipe.word.TAGGED
+n ppm n ppm n part adv v part ppm punc
+tn n ppm tn part punc
+n adv v ppm punc
+
+start open testing ...
+open testing with train1 Fin!
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED
+n n ppm adv v ppm punc
+part v part n v conj v part v ppm punc
+n part v part part punc
+============
+
+
+real	0m1.355s
+user	0m3.865s
+sys	0m0.269s
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ time ./pair-all.sh | tee make-pair.log
+bash: ./pair-all.sh: Permission denied
+
+real	0m0.001s
+user	0m0.002s
+sys	0m0.001s
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ chmod +x ./pair-all.sh
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ time ./pair-all.sh | tee make-pair.log
+
+start making word/POS-tag pairs for train1 ...
+./pair-all.sh: line 12: ./mk-pair.pl: Permission denied
+
+head -n 3 ./t1/ctest1.nopipe.word.TAGGED.pair
+./pair-all.sh: line 18: ./mk-pair.pl: Permission denied
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED.pair
+========== End for ./t1/ =========
+
+
+real	0m0.005s
+user	0m0.005s
+sys	0m0.001s
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ chmod +x ./mk-pair.pl
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ time ./pair-all.sh | tee make-pair.log
+
+start making word/POS-tag pairs for train1 ...
+
+head -n 3 ./t1/ctest1.nopipe.word.TAGGED.pair
+ဘေးအိမ်/n က/ppm တရုတ်တည်သီးပင်/n မှာ/ppm တရုတ်တည်သီး/n တွေ/part တို့လို့တွဲလောင်း/adv သီး/v နေ/part တယ်/ppm ။/punc
+နှစ်ဆယ့်လေး/tn နာရီ/n ကို/ppm တစ်သောင်း/tn ပါ/part ။/punc
+မနက်ဖြန်/n စောစော/adv ထ/v မယ်/ppm ။/punc
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED.pair
+ဂန္ထဝင်/n တေးဂီတ/n ကို/ppm တကယ့်ကို/adv နှစ်သက်/v တယ်/ppm ။/punc
+မ/part ကောင်း/v တဲ့/part အကျင့်/n ဖြစ်/v ရင်/conj ပြင်/v ရ/part ခက်/v တယ်/ppm ။/punc
+ကျီးကန်းသား/n များ/part စား/v လိုက်/part သလား/part ။/punc
+========== End for ./t1/ =========
+
+
+real	0m0.096s
+user	0m0.089s
+sys	0m0.008s
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ time ./evaluate-all.sh | tee 3gHMM-evaluate-results.log 
+bash: ./evaluate-all.sh: Permission denied
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.002s
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ chmod +x ./evaluate-all.sh
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ time ./evaluate-all.sh | tee 3gHMM-evaluate-results.log 
+
+### Evaluation for 3gram HMM train1 model ###
+
+   -with closed test data
+Tag precision: 0.947894032177
+
+   -with open test data
+Tag precision: 0.937437090389
+
+real	0m0.167s
+user	0m0.160s
+sys	0m0.008s
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM$ 
+
+

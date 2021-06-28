@@ -1,0 +1,8 @@
+
+### Evaluation for 3gram HMM train1 model ###
+
+   -with closed test data
+Tag precision: 0.951951485684
+
+   -with open test data
+Tag precision: 0.950611551132

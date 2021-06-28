@@ -1,0 +1,19 @@
+For train1:
+
+start closed testing ...
+closed testing with train1 Fin!
+
+head -n 3 ./t1/ctest1.nopipe.word.TAGGED
+adj n ppm num n adj n part ppm v part part v ppm punc
+n v part part n ppm n v part part part punc
+part v conj n n ppm v conj n n part ppm v part ppm punc
+
+start open testing ...
+open testing with train1 Fin!
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED
+n
+int punc pron n n v part part v ppm punc
+n ppm tn part part v part part part punc
+============
+
