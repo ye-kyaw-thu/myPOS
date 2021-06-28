@@ -1,0 +1,221 @@
+Step1: Remove Pipe "|" from training, closed and open test files:
+******************************************************************************
+(base) zar@zar-zar:~/1_pos_model_setup/rdr_pos1_2_3$ ./pipe2space-all.sh
+
+
+
+Output:
+=======
+
+ Finished replacing pipe with space for ./t1/train1!
+
+ Finished replacing pipe with space for ./t1/ctest1!
+
+ Finished replacing pipe with space for ./otest!
+
+ ===============================================================================================
+ 
+ Step2: Training:
+ ================
+ 
+(base) zar@zar-zar:~/1_pos_model_setup/rdr_pos1_2_3$ time ./train-rdr-all.sh | tee rdr-train.log
+
+
+====== Start ======
+
+Generate from the gold standard training corpus a lexicon /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/train1.nopipe.DICT
+
+Extract from the gold standard training corpus a raw text corpus /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/train1.nopipe.RAW
+
+Perform initially POS tagging on the raw text corpus, to generate /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/train1.nopipe.INIT
+
+Learn a tree model of rules for POS tagging from /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/train1.nopipe and /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/train1.nopipe.INIT
+
+===> Building exception rules for tag adv
+
+===> Building exception rules for tag num
+
+===> Building exception rules for tag punc
+
+===> Building exception rules for tag fw
+
+===> Building exception rules for tag int
+
+===> Building exception rules for tag abb
+
+===> Building exception rules for tag ppm
+
+===> Building exception rules for tag n
+
+===> Building exception rules for tag tn
+
+===> Building exception rules for tag pron
+
+===> Building exception rules for tag part
+
+===> Building exception rules for tag v
+
+===> Building exception rules for tag sb
+
+===> Building exception rules for tag conj
+
+===> Building exception rules for tag adj
+
+Write the learned tree model to file /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/train1.nopipe.RDR
+
+Done!
+
+ Finished RDR training for train1!
+
+real	8m46.562s
+user	8m46.189s
+sys	0m0.248s
+
+If the training finished successfully, we will get .RDR and .DICT files under t1/ folder.
+
+.RDR file format is as follow:
+------------------------------
+
+True : object.conclusion = "NN"
+	object.tag == "adv" : object.conclusion = "adv"
+		object.word == "ဘယ်လောက်" and object.nextTag1 == "part" and object.nextTag2 == "punc" : object.conclusion = "adj"
+		object.word == "ဘယ်လို" and object.nextTag1 == "n" and object.nextTag2 == "n" : object.conclusion = "adj"
+			object.nextWord1 == "ကား" : object.conclusion = "adv"
+			object.prevTag2 == "part" : object.conclusion = "adv"
+		object.word == "ဆက်" and object.nextTag1 == "part" : object.conclusion = "v"
+		object.word == "အရင်" and object.nextTag1 == "ppm" : object.conclusion = "n"
+		object.word == "ထပ်" and object.nextTag1 == "ppm" : object.conclusion = "n"
+			object.prevTag2 == "punc" : object.conclusion = "part"
+		object.word == "တရားဝင်" and object.nextTag1 == "n" : object.conclusion = "adj"
+		object.word == "တိုက်ရိုက်" and object.nextWord1 == "ရထား" : object.conclusion = "adj"
+		object.word == "အရင်" and object.nextWord2 == "က" : object.conclusion = "n"
+		object.word == "ကြို" and object.nextTag1 == "part" : object.conclusion = "v"
+		object.prevTag1 == "num" and object.word == "ဆက်" : object.conclusion = "n"
+		object.word == "သီးသန့်" and object.nextTag1 == "n" : object.conclusion = "adj"
+		object.word == "တိုက်ရိုက်" and object.nextWord1 == "လေယာဉ်" : object.conclusion = "adj"
+		object.prevTag1 == "n" and object.word == "လွန်း" : object.conclusion = "part"
+		object.prevTag1 == "tn" and object.word == "ထပ်" : object.conclusion = "part"
+		object.word == "သေချာ" and object.nextTag1 == "part" and object.nextTag2 == "punc" : object.conclusion = "v"
+		object.nextWord1 == "မှု" : object.conclusion = "v"
+		object.word == "သေချာ" and object.nextTag1 == "part" and object.nextTag2 == "ppm" : object.conclusion = "v"
+		object.word == "သေချာ" and object.nextWord2 == "လား" : object.conclusion = "v"
+		object.prevTag1 == "n" and object.word == "ကောင်းကောင်း" and object.nextTag1 == "ppm" : object.conclusion = "adj"
+		object.prevTag1 == "n" and object.word == "အမြဲတမ်း" : object.conclusion = "adj"
+		object.word == "ယာယီ" and object.nextTag1 == "n" : object.conclusion = "adj"
+		object.word == "အမြန်" and object.nextTag1 == "n" : object.conclusion = "n"
+		object.word == "ထပ်" and object.nextTag1 == "n" : object.conclusion = "part"
+			object.prevWord1 == "ဘတ်" and object.nextWord1 == "ပေါင်း" : object.conclusion = "adv"
+		object.prevTag2 == "pron" and object.prevTag1 == "v" and object.word == "လွန်း" : object.conclusion = "part"
+		object.word == "လွန်း" and object.nextWord1 == "ပါ" : object.conclusion = "part"
+		object.prevWord1 == "လာ" and object.word == "ကြို" : object.conclusion = "v"
+		object.word == "ဆက်" and object.nextTag1 == "n" : object.conclusion = "v"
+		object.word == "ဆက်" and object.nextTag1 == "ppm" and object.nextTag2 == "part" : object.conclusion = "v"
+		object.word == "ပူးတွဲ" and object.nextTag1 == "conj" : object.conclusion = "v"
+		object.prevTag1 == "part" and object.word == "အမြန်ဆုံး" and object.nextTag1 == "n" : object.conclusion = "adj"
+		object.word == "ပျမ်းမျှ" and object.nextWord1 == "သက်တမ်း" and object.nextWord2 == "မှာ" : object.conclusion = "adj"
+		object.word == "တရားဝင်" and object.nextTag1 == "adj" : object.conclusion = "adj"
+	object.tag == "num" : object.conclusion = "num"
+	object.tag == "punc" : object.conclusion = "punc"
+
+**********************************************************
+	We can see rules!!!  
+**********************************************************
+
+.DICT file format is as follows:
+--------------------------------
+က ppm
+ကက္ကစတန် n
+ကက္ကူကမည်း n
+ကက်စက် n
+ကက်စပျန် n
+ကက်စဘီ n
+ကက်ဆက် n
+ကက်တာဗော်လစ်ဇင် n
+ကက်ပတိန် n
+ကက်ဖာ n
+ကက်ဘိနက် n
+ကက်ရှ်မီးယား n
+===============================================================================================
+
+Step3: Making word only files for training, closed and test data files:
+=======================================================================
+(This process is required for training, testing without considering Myanmar compound words)
+
+(base) zar@zar-zar:~/1_pos_model_setup/rdr_pos1_2_3$ ./prepare-word-files4rdr.sh
+
+
+Finished for ./t1/train1.nopipe!
+Finished for ./t1/ctest1.nopipe!
+
+Finished for ./otest.nopipe!
+
+===============================================================================================
+
+Step4: Copy ./rdr/otest.nopipe.word files to all training folders (./t1/ .. ./t1/)
+(This step is requried because of RDR output file will be written based on the input test file path.)
+******************************************************************************
+
+(base) zar@zar-zar:~/1_pos_model_setup/rdr_pos1_2_3$ for((i=1;i<=1;i+=1)); do cp otest.nopipe.word ./t$i/; done;
+
+
+In this case, I used only one training folder
+
+===============================================================================================
+
+Step5: Testing with closed and open test data for all models train1 to train10:
+******************************************************************************
+
+(base) zar@zar-zar:~/1_pos_model_setup/rdr_pos1_2_3$ time ./test-all.sh | tee rdr-test.log
+
+=> Read a POS tagging model from /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/train1.nopipe.RDR
+
+=> Read a lexicon from /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/train1.nopipe.DICT
+
+=> Perform POS tagging on /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/ctest1.nopipe.word
+
+Output file: /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/ctest1.nopipe.word.TAGGED
+
+ Finished testing with closed-test data file with train1 RDR model!
+
+=> Read a POS tagging model from /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/train1.nopipe.RDR
+
+=> Read a lexicon from /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/train1.nopipe.DICT
+
+=> Perform POS tagging on /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/otest.nopipe.word
+
+Output file: /home/zar/1_pos_model_setup/rdr_pos1_2_3/t1/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train1 RDR model!
+
+real	0m2.299s
+user	0m3.871s
+sys	0m0.086s
+
+
+We will get .TAGGED files such as t1/ctest1.nopipe.word.TAGGED for closed-test.
+For the open test, we will get t1/otest.nopipe.word.TAGGED file.
+
+===============================================================================================
+
+
+Step6: Evaluation
+*****************
+
+(base) zar@zar-zar:~/1_pos_model_setup/rdr_pos1_2_3$ time ./evaluate-all.sh | tee rdr-evaluate-results.log
+
+### Evaluation for RDR train1 model ###
+
+   -with closed test data
+Tag precision: 0.973712980734
+Recall: 0.973712980734
+F-Measure:  0.999052501154
+
+   -with open test data
+Tag precision: 0.975161211187
+Recall: 0.975161211187
+F-Measure:  1.0
+
+real	0m0.265s
+user	0m0.258s
+sys	0m0.008s
+
