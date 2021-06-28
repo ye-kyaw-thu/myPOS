@@ -1,0 +1,65 @@
+             			#######################
+             			#NCRF++ Model Training# 
+             			#######################
+
+################################
+Step 1 : Basic Requirements
+################################
+
+To Run NCRFPP, we need to install Python: 2 or 3  && PyTorch: 1.0 with GPU version
+
+Installation of PyTorch: 1.0 with GPU version
+=============================================
+1. Crate Conda Environment 
+	conda create -n NCRFPP_GPU python=3.6
+	
+2. Go to the conda environment we created to install pytorch with cuda version
+	conda activate NCRFPP_GP
+	>> (NCRFPP_GPU) zar@zar-zar:~$ 
+	
+3. After doing above step, we can install pytorch v-1.0 with cuda version
+	conda install pytorch==1.0.0 torchvision==0.2.1 cuda100 -c pytorch
+	
+
+#######################################################################
+Step 2 : Prepare Data (Remove Pipe "|" from the Tagging Data file:)
+#######################################################################
+If your file is permisson denied,
+$ chmod +x ./pipe2space-all.sh
+
+After that, Run
+$./pipe2space-all.sh
+	
+After running, we will get .nopipe file
+
+#################################################################################################
+Step 3 : Change Our Data to column format (train.nopipe, dev.nopipe, test.nopipe to train.bmes, dev.bmes, test.bmes)
+#################################################################################################
+
+To change the column, Run
+$./ch2col.pl ./train.nopipe> ./train.bmes
+$./ch2col.pl ./test.nopipe> ./test.bmes
+$./ch2col.pl ./dev.nopipe> ./dev.bmes
+
+Place these .bmes files under folde name "sample_data"
+
+#########################################
+Step 4 : Training the Configuration File
+#########################################
+
+>>>>go to the conda environment we created with pytorch version 1.0 with Cuda by using
+ #########################################
+ 
+ (base) zar@zar-zar:~/1_pos_model_setup/3_ncrfpp_pos_1_2_3$ conda activate NCRFPP_GPU
+ 
+ #########################################
+ 
+ >>>
+ 
+(NCRFPP_GPU) zar@zar-zar:~/1_pos_model_setup/3_ncrfpp_pos_1_2_3_with_otest$ time python main.py --config wordCNN-CRF-charLSTM.train.config
+
+#########################################
+
+
+*****Note***
+We can customize the configure file 	
