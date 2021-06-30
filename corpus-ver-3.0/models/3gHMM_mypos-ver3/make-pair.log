@@ -1,0 +1,9 @@
+
+start making word/POS-tag pairs for train1 ...
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED.pair
+တစ်/tn ကိုက်/n ကို/ppm ဝမ်/n ခုနှစ်ထောင်/v ပါ/part ။/punc
+မနှစ်/n က/ppm သူ/pron ကျွန်မ/pron ကို/ppm သင်/v ပေး/part တယ်/ppm ။/punc
+ကျွန်တော့်/pron ခုံ/n သွား/part ရှာ/v မလို့/part ။/punc
+========== End for ./t1/ =========
+

@@ -1,0 +1,7 @@
+
+### Evaluation for 3gram HMM train1 model ###
+
+   -with open test data
+Tag precision: 0.947430947431
+Tag recall: 0.947430947431
+Tag F-Measure: 0.947430947431

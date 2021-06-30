@@ -1,0 +1,8 @@
+
+Start training 3-gram HMM POSTagging model for ./t1/train1.nopipe.word ...
+
+train1
+train1.nopipe
+train1.nopipe.word
+train1.nopipe.word.model
+========== End for ./t1/ =========

@@ -1,0 +1,12 @@
+For train1:
+
+
+start open testing ...
+open testing with train1 Fin!
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED
+tn n ppm n v part punc
+n ppm pron pron ppm v part ppm punc
+pron n part v part punc
+============
+

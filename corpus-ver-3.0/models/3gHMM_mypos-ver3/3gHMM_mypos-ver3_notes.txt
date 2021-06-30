@@ -1,0 +1,144 @@
+Note of training 3-gram HMM POSTagger with jita-0.3.3.
+
+Download link of jita-0.3.3:
+https://github.com/danieldk/jitar/releases
+
+I assumed that you already prepared able to run jita-0.3.3 POSTagger on your computer.
+
+#####################################################
+Step1: Prepared training and open test data of myPOS
+#####################################################
+
+FYI:
+ls command output of /home/zar/1_pos_model_setup/3gHMM_mypos-ver3$  path is as follow:
+
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM_mypos-ver3$ ls -1 | xargs -n 2
+
+3gHMM_mypos-ver3_notes.txt 	evaluate-all.sh
+evaluate.py 			make-pair.log
+mk-pair.pl 			mk-wordtag.pl
+otest 				pair4all.sh
+pair-all.sh 			pipe2space-all.sh
+prepare-word-files4hmm.sh 	t1
+terminal_logs.txt 		test-all.sh	
+train-all.sh
+
+
+
+############################################################
+Step2:  Remove Pipe "|" from training and opened test files:
+##################################################################
+
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM_mypos-ver3$ ./pipe2space-all.sh
+
+ Finished replacing pipe with space for ./t1/train1!
+
+ Finished replacing pipe with space for ./otest!
+ 
+ 
+################################################################
+Step3: Making word only files for training, and test data files: 
+################################################################
+
+(This process is required for training, testing without considering Myanmar compound words)
+
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM_mypos-ver3$ ./prepare-word-files4hmm.sh
+
+
+Finished for ./t1/train1.nopipe!
+
+Finished for ./otest.nopipe!
+
+
+###############
+Step4: Training 
+###############
+
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM_mypos-ver3$ time ./train-all.sh | tee 3gHMM-training.log
+
+Start training 3-gram HMM POSTagging model for ./t1/train1.nopipe.word ...
+
+train1
+train1.nopipe
+train1.nopipe.word
+train1.nopipe.word.model
+========== End for ./t1/ =========
+
+real	0m2.112s
+user	0m2.998s
+sys	0m0.261s
+
+
+##############
+Step5: Testing
+##############
+
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM_mypos-ver3$ time ./test-all.sh | tee 3gHMM-testing.log
+For train1:
+
+start open testing ...
+open testing with train1 Fin!
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED
+tn n ppm n v part punc
+n ppm pron pron ppm v part ppm punc
+pron n part v part punc
+============
+
+
+real	0m0.826s
+user	0m1.978s
+sys	0m0.179s
+
+
+###########################
+Step6: Make word/tag format
+###########################
+
+Preparation for evaluation.
+As you seen above, the tagged output are only tags and thus we need to change word/tag format for using with current evaluation program.
+
+----------------
+
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM_mypos-ver3$ time ./pair-all.sh | tee make-pair.log
+
+If you get permission denied error, you can use the following "chmod" option.
+
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM_mypos-ver3$ chmod +x ./mk-pair.pl
+
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM_mypos-ver3$ time ./pair-all.sh | tee make-pair.log
+
+start making word/POS-tag pairs for train1 ...
+
+head -n 3 ./t1/otest1.nopipe.word.TAGGED.pair
+တစ်/tn ကိုက်/n ကို/ppm ဝမ်/n ခုနှစ်ထောင်/v ပါ/part ။/punc
+မနှစ်/n က/ppm သူ/pron ကျွန်မ/pron ကို/ppm သင်/v ပေး/part တယ်/ppm ။/punc
+ကျွန်တော့်/pron ခုံ/n သွား/part ရှာ/v မလို့/part ။/punc
+
+========== End for ./t1/ =========
+
+real	0m0.027s
+user	0m0.025s
+sys	0m0.003s
+
+
+#################
+Step7: Evaluation
+#################
+
+(base) zar@zar-zar:~/1_pos_model_setup/3gHMM_mypos-ver3$ time ./evaluate-all.sh | tee 3gHMM-evaluate-results.log 
+
+### Evaluation for 3gram HMM train1 model ###
+
+   -with open test data
+Tag precision: 0.947430947431
+Tag recall: 0.947430947431
+Tag F-Measure: 0.947430947431
+
+real	0m0.588s
+user	0m0.053s
+sys	0m0.004s
+
+
+######################################################################## 
+ 
