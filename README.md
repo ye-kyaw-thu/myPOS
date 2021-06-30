@@ -123,9 +123,17 @@ mypos-dver.0.9.word.txt : Tokenized Myanmar text without POS tags, UTF-8 text fi
 
 Contributors
 
+For myPOS draft version 1.0:  
 Khin War War Htike (Most Tagging)  
-[Win Pa Pa](https://sites.google.com/site/winpapaucsy/) (Most Checking & Advising)  
-[Ye Kyaw Thu](https://sites.google.com/site/yekyawthunlp/) (Supervisor)  
+- [Win Pa Pa](https://sites.google.com/site/winpapaucsy/) (Most Checking & Advising)  
+- [Ye Kyaw Thu](https://sites.google.com/site/yekyawthunlp/) (Supervisor)  
+
+For myPOS version 2.0 and 3.0:  
+- Zar Zar Hlaing (King Mongkut's Institute of Technology Ladkrabang:KMITL, Bangkok, Thailand)  
+- Ye Kyaw Thu (National Electronics and Computer Technology Center: NECTEC, Pathumthani, Thailand)  
+- Myat Myo Nwe Wai (Myanmar Institute of Information Technology:MIIT, Mandalay, Myanmar)  
+- Thepchai Supnithi (National Electronics and Computer Technology Center: NECTEC, Pathumthani, Thailand)  
+- Ponrudee Netisopakul (King Mongkut's Institute of Technology Ladkrabang:KMITL, Bangkok, Thailand) 
 
 ## Acknowledgements
 We would like to express our gratitude to Dr. Andrew Finch and Dr. Chenchen Ding for their valuable comments for myPOS draft version 0.8.
@@ -145,7 +153,7 @@ The myPOS corpus (version 2.0) is being used for iSAI-NLP 2020 Conference paper.
 
 ## Citation
 
-If you want to use myPOS models or POS-tagged data in your research and we'd appreciate if you use the following reference:
+If you want to use myPOS models or POS-tagged data in your research and we'd appreciate if you use the following two references:
 
 Khin War War Htike, Ye Kyaw Thu, Zuping Zhang, Win Pa Pa, Yoshinori Sagisaka and Naoto Iwahashi, "Comparison of Six POS Tagging Methods on 10K Sentences Myanmar Language (Burmese) POS Tagged Corpus", at 18th International Conference on Computational Linguistics and Intelligent Text Processing (CICLing 2017), April 17~23, 2017, Budapest, Hungary.
 
