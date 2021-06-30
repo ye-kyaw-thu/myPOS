@@ -12,6 +12,15 @@ I am uploading models and data ....
 
 ## iSAI-NLP 2020 Experiment with myPOS Version 2.0
 
+## Contributors  
+
+For myPOS version 2.0 and 3.0:  
+- Zar Zar Hlaing (King Mongkut's Institute of Technology Ladkrabang:KMITL, Bangkok, Thailand)  
+- Ye Kyaw Thu (National Electronics and Computer Technology Center: NECTEC, Pathumthani, Thailand)  
+- Myat Myo Nwe Wai (Myanmar Institute of Information Technology:MIIT, Mandalay, Myanmar)  
+- Thepchai Supnithi (National Electronics and Computer Technology Center: NECTEC, Pathumthani, Thailand)  
+- Ponrudee Netisopakul (King Mongkut's Institute of Technology Ladkrabang:KMITL, Bangkok, Thailand)
+
 ## Citation
 
 If you want to use myPOS models or POS-tagged data in your research and we'd appreciate if you use the following two references:
