@@ -1,0 +1,7 @@
+
+### Evaluation for RDR train1 model ###
+
+   -with open test data
+Tag precision: 0.965250965251
+Tag Recall: 0.965250965251
+Tag F-Measure:  0.965250965251

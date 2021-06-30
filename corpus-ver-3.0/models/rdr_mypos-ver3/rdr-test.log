@@ -1,0 +1,10 @@
+
+=> Read a POS tagging model from /home/zar/1_pos_model_setup/rdr_mypos-ver3/t1/train1.nopipe.RDR
+
+=> Read a lexicon from /home/zar/1_pos_model_setup/rdr_mypos-ver3/t1/train1.nopipe.DICT
+
+=> Perform POS tagging on /home/zar/1_pos_model_setup/rdr_mypos-ver3/t1/otest.nopipe.word
+
+Output file: /home/zar/1_pos_model_setup/rdr_mypos-ver3/t1/otest.nopipe.word.TAGGED
+
+ Finished testing with open test data file with train1 RDR model!
