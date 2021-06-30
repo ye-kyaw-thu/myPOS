@@ -124,7 +124,7 @@ mypos-dver.0.9.word.txt : Tokenized Myanmar text without POS tags, UTF-8 text fi
 Contributors
 
 For myPOS draft version 1.0:  
-Khin War War Htike (Most Tagging)  
+- Khin War War Htike (Most Tagging)  
 - [Win Pa Pa](https://sites.google.com/site/winpapaucsy/) (Most Checking & Advising)  
 - [Ye Kyaw Thu](https://sites.google.com/site/yekyawthunlp/) (Supervisor)  
 
