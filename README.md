@@ -128,18 +128,28 @@ Khin War War Htike (Most Tagging)
 [Ye Kyaw Thu](https://sites.google.com/site/yekyawthunlp/) (Supervisor)  
 
 ## Acknowledgements
-We would like to express our gratitude to Dr. Andrew Finch and Dr. Chenchen Ding for their valuable comments.
+We would like to express our gratitude to Dr. Andrew Finch and Dr. Chenchen Ding for their valuable comments for myPOS draft version 0.8.
 
 ## Future Work
 We also plan to increase size of the myCorpus little by little.
 
 ## Publication
 
-The myPOS corpus (version 0.8) is being used for CICLING2017 Conference.  
+The myPOS corpus (version 0.8) is being used for CICLING2017 Conference paper.  
 [Draft version of CICLing2017 conference paper](https://github.com/ye-kyaw-thu/myPOS/blob/master/CICLING2017/myPOS-CICLing2017-paper.pdf)  
 [Poster of CICLing2017 conference](https://github.com/ye-kyaw-thu/myPOS/blob/master/CICLING2017/10K-POS-tagging-CICLing2017.pdf)
 
 Important Note: We used myPOS corpus **(version 0.8 with 16 POS tags and no compound words)** for CICLing 2017 conference paper.
+
+The myPOS corpus (version 2.0) is being used for iSAI-NLP 2020 Conference paper.
+
+## Citation
+
+If you want to use myPOS models or POS-tagged data in your research and we'd appreciate if you use the following reference:
+
+Khin War War Htike, Ye Kyaw Thu, Zuping Zhang, Win Pa Pa, Yoshinori Sagisaka and Naoto Iwahashi, "Comparison of Six POS Tagging Methods on 10K Sentences Myanmar Language (Burmese) POS Tagged Corpus", at 18th International Conference on Computational Linguistics and Intelligent Text Processing (CICLing 2017), April 17~23, 2017, Budapest, Hungary.
+
+Zar Zar Hlaing, Ye Kyaw Thu, Myat Myo Nwe Wai, Thepchai Supnithi, Ponrudee Netisopakul, "Myanmar POS resource extension effects on automatic tagging methods", In Proceedings of the 15th International Joint Symposium on Artificial Intelligence and Natural Language Processing (iSAI-NLP 2020), Nov 18 to Nov 20, 2020, Bangkok, Thailand, pp. 189-194.
 
 ## Reference
 1. San Lwin, Myanmar-English Dictionary (1993), Department of the Myanmar Language Commission, Ministry of Education, Union of Myanmar.
