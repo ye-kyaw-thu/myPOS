@@ -11,25 +11,6 @@ I am uploading models and data ....
 - 10K of ASEAN MT Myanmar data
 
 
-It provides
-users with an inference for building the
-custom model structure through configuration file with flexible neural feature design and utilization. Built on PyTorch1
-,
-the core operations are calculated in batch,
-making the toolkit efficient with the acceleration of GPU. It also includes the implementations of most state-of-the-art neural
-sequence labeling models such as LSTMCRF, facilitating reproducing and refinement on those methods.
-
-We presented NCRF++, an open-source neural
-sequence labeling toolkit, which has a CRF architecture with configurable neural representation
-layers. Users can design custom neural models
-through the configuration file. NCRF++ supports
-flexible feature utilization, including handcrafted
-features and automatically extracted features. It
-can also generate nbest label sequences rather than
-the best one. We conduct a series of experiments
-and the results show models built on NCRF++
-can achieve state-of-the-art results with an efficient running speed.
-
 myPOS version 3.0 က မှာ သုံးခဲ့တဲ့ tag-set တွေက ရှေ့က ဗားရှင်းတွေ ဖြစ်တဲ့ version 1.0, 2.0 နဲ့ အတူတူပါပဲ။ POS tag စုစုပေါင်း 15 ခုပါဝင်ပါတယ်။ ဒီနေရာမှာ tag တွေကို အတိုကောက်တွေနဲ့တကွ တွဲဖော်ပြရရင် abb (Abbreviation), adj (Adjective), adv (Adverb), conj (Conjunction), fw (Foreign Word), int (Interjection), n (Noun), num (Number), part (Particle), ppm (Post-positional Marker), pronc (Pronoun), punc (Punctuation), sb (Symbol), tn (Text Number) နဲ့ v (Verb) တို့ဖြစ်ကြပါတယ်။ တကယ်က ဒီနှစ်ထဲမှာ myPOS version 2.0 အနေနဲ့ပဲ release လုပ်နိုင်လိမ့်မယ်လို ထင်ထားခဲ့တာပါ။ ဒါပေမဲ့ ဝမ်းသာစရာကောင်းတာက... myPOS version 2.0 မှာ open-test data အဖြစ် သုံးခဲ့တဲ့ ASEAN-MT corpus ထဲက travel-tour ဒိုမိန်းဒေတာ စာကြောင်းရေ တစ်သောင်းနှစ်ထောင်ကျော်ကိုပါ ရှဲလုပ်ဖို့ လက်ရှိ ကျွန်တော် အလုပ်လုပ်နေတဲ့ Lab ရဲ့ Leader ဒေါက်တာ Thepchai က ခွင့်ပြုလို့ myPOS version 3.0 အနေနဲ့ release လုပ်ဖို့ ဖြစ်လာခဲ့ရပါတယ်။ NECTEC မှာ အလုပ်လုပ်နေစဉ် မှာ မြန်မာစာ NLP R&D အတွက် contribution/collaboration တစ်ခု ဖြစ်သွားလို့ အတိုင်းထက်မသိ ဝမ်းသာရပါတယ်။  
 
 ဒီ myPOS version 3.0 အတွက် corpus တစ်ခုလုံးနီးပါးကို manual POS tagging အလုပ်ကို အဓိက အပင်ပန်းခံ ကြိုးစားအလုပ်လုပ်ခဲ့သူက ကျွန်တော်ရဲ့ ဒေါက်တာတန်း ကျောင်းသူတစ်ယောက်ဖြစ်တဲ့ ဇာဇာလှိုင် (KMITL, Bangkok, Thailand) ပါ။ ဒီအလုပ်က သူ့ရဲ့ ဒေါက်တာတန်း သုတေသနရဲ့ အစိတ်အပိုင်း တစ်ခုလည်း ဖြစ်ပါတယ်။ myPOS version 2.0 corpus ကို သုံးပြီးတော့ experiment လုပ်ခဲ့တဲ့ မော်ဒယ် ဖိုလ်ဒါတွေကိုလည်း repository ရဲ့ ဒီ link: [https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/models](https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/models) မှာ တင်ပေးထားတာမို့ သုတေသန ထုံးစံအတိုင်း reproduce လုပ်ကြည့်ဖို့အတွက်လည်း အဆင်ပြေပါလိမ့်မယ်။  
@@ -63,6 +44,7 @@ myPOS version 3.0 ရဲ့ စာကြောင်းရေတိုင်း�
 
 P.S. \[at\] နေရာမှာ @ သင်္ကေတကို အစားထိုးပေးပါ။  
 
+myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့ experiment လုပ်ခဲ့တဲ့ မော်ဒယ်တွေကတော့ စုစုပေါင်း လေးခုပါ။ 
 
 ## NCRF++ for myPOS  
 
