@@ -39,9 +39,24 @@ Corpus ထဲမှာ ပါတဲ့ မြန်မာစာ စာကြေ�
 
 | Unit | myPOS (ver. 1.0) | Ext-1: my-zh | Ext-2: my-ko | Ext-3: ASEAN-MT my | myPOS (ver. 3.0) |
 | :------------- | :-------------: | :----------: | :-----------: | :-----------: |:-----------: |
-| Sentences | 11,000 | 10,000 | 10,052| | |
-| Words  | 239,598 | 103,909 | 106,864 | | |
+| Sentences | 11,000 | 10,000 | 10,052| 12,144 | |
+| Words  | 239,598 | 103,909 | 106,864 |  | |
 | Average Words/Sentence | 21.78 | 10.39 | 10.63| | |
+
+<div align="center">
+  Fig. With compound word  
+</div>  
+
+| Unit | myPOS (ver. 1.0) | Ext-1: my-zh | Ext-2: my-ko | Ext-3: ASEAN-MT my | myPOS (ver. 3.0) |
+| :------------- | :-------------: | :----------: | :-----------: | :-----------: |:-----------: |
+| Sentences | 11,000 | 10,000 | 10,052| 12,144 | |
+| Words  | 239,598 | 103,909 | 106,864 |  | |
+| Average Words/Sentence | 21.78 | 10.39 | 10.63| | |
+
+<div align="center">
+  Fig. Without compound word  
+</div>  
+
 
 ## NCRF++ for myPOS  
 
