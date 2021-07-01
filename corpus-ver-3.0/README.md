@@ -54,7 +54,7 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
 </div>    
 
 
-<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+<table class="center">
   <caption>Table.2 POS tagging accuracies of myPOS (version 3.0) </caption>    
   <tr>
     <th>Methods</th>
