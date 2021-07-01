@@ -10,7 +10,7 @@ I am uploading models and data ....
 Creative Commons Attribution-NonCommercial-Share Alike 4.0 International (CC BY-NC-SA 4.0) License  
 [Details Info of License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-## Corpus Information
+## Corpus File Information
 
 The link of the myPOS corpus (ver. 3.0) is as follow:  
 (myPOS corpus ver. 3.0 ကအောက်ပါ link or path မှာ ရှိပါတယ်။)  
