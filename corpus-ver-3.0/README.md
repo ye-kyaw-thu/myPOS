@@ -8,6 +8,7 @@ I am uploading models and data ....
 
 - 10K of ASEAN MT Myanmar data
 - 
+## NCRF++ for myPOS  
 
 After I read the paper of NCRF++ (Yang Jie and Zhang Yue, ACL 2018) approach, I do wish to apply NCRF++ for POS tagging of Myanmar language with the extended corpus of myPOS. This open-source neural sequence labeling toolkit provides building custom model architectures through a configuration file. It supports flexible feature utilization, including handcrafted features and automatically extracted features. In short, it has a Conditional Random Fields (CRFs) architecture with configurable neural representation layers.
 
