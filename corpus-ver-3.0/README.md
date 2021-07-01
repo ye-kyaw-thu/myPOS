@@ -37,6 +37,12 @@ myPOS version 3.0 က မှာ သုံးခဲ့တဲ့ tag-set တွေ
 Corpus ထဲမှာ ပါတဲ့ မြန်မာစာ စာကြောင်းအရေအတွက်၊ ဒိုမိန်းနဲ့ ပတ်သက်ပြီး အသေးစိတ်ကလည်း iSAI-NLP 2020 conference မှာ ဖတ်ခဲ့တဲ့ myPOS version 2.0 ရဲ့ စာတမ်းထဲမှာ ပြည့်စုံစွာ ဖော်ပြပေးထားပါတယ်။ ဒီနေရာမှာလည်း အသုံးပြုမယ့် user/developer/researcher တွေအတွက် အဆင်ပြေအောင် ထပ်တိုးထားတဲ့စာကြောင်းတွေနဲ့ ပတ်သက်ပြီးတော့ information အနေနဲ့ ချပြရရင် machine translation သုတေသနအလုပ်တွေအတွက်ရည်ရွယ်ပြီး develop လုပ်နေဆဲဖြစ်တဲ့ မြန်မာ-တရုပ် parallel corpus ထဲကနေ ဗမာစာကြောင်း တစ်သောင်း၊ အလားတူပဲ မြန်မာ-ကိုရီးယား parallel corpus ထဲကနေ ဗမာစာကြောင်း တစ်သောင်းတစ်ထောင် နဲ့ ASEAN MT corpus ထဲကနေ ဗမာစာကြောင်း တစ်သောင်းနှစ်ထောင်ကျော် စုစုပေါင်း သုံးသောင်းကျော်ကို တိုးလိုက်နိုင်တာဖြစ်ပါတယ်။ အတိအကျ စာကြောင်းရေအရေအတွက် နဲ့ စာလုံး အရေအတွက်ကတော့ အောက်ပါဇယားကို မှီငြမ်းပါ။  
 
 
+| Total | myPOS ver. 1.0       | Extension-1: my-zh | Extension-2: my-ko | Extension-3: ASEAN-MT my |
+| :------------- | :------------- | :----------: | -----------: | -----------: |
+| Sentences | | || | |
+| Words  |  |  | | | |
+| Average Words/Sentence | | | | |
+
 ## NCRF++ for myPOS  
 
 After I read the paper of NCRF++ (Yang Jie and Zhang Yue, ACL 2018) approach, I do wish to apply NCRF++ for POS tagging of Myanmar language with the extended corpus of myPOS. This open-source neural sequence labeling toolkit provides building custom model architectures through a configuration file. It supports flexible feature utilization, including handcrafted features and automatically extracted features. In short, it has a Conditional Random Fields (CRFs) architecture with configurable neural representation layers.
