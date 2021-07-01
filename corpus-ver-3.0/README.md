@@ -33,3 +33,9 @@ Khin War War Htike, Ye Kyaw Thu, Zuping Zhang, Win Pa Pa, Yoshinori Sagisaka and
 
 Zar Zar Hlaing, Ye Kyaw Thu, Myat Myo Nwe Wai, Thepchai Supnithi, Ponrudee Netisopakul, "Myanmar POS resource extension effects on automatic tagging methods", In Proceedings of the 15th International Joint Symposium on Artificial Intelligence and Natural Language Processing (iSAI-NLP 2020), Nov 18 to Nov 20, 2020, Bangkok, Thailand, pp. 189-194. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9376835)  
 
+## Tool/Framework References
+
+- [CRF++ Toolkit (CRF++-0.58.tar.gz)](https://drive.google.com/drive/u/0/folders/0B4y35FiV1wh7fngteFhHQUN2Y1B5eUJBNHZUemJYQV9VWlBUb3JlX0xBdWVZTWtSbVBneU0)
+- [RDR Toolkit (RDRPOSTagger)](https://github.com/datquocnguyen/RDRPOSTagger)
+- [3gHMM Toolkit (jita-0.3.3 GitHub Repository)](https://github.com/danieldk/jitar/releases)  
+- [NCRF++ GitHub Repository:](https://github.com/jiesutd/NCRFpp)  
