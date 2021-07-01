@@ -57,7 +57,47 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
 | NCRF++  | xx.xx |
 | NCRF++  | xx.xx |
 | NCRF++  | xx.xx |
+  
+  <table style="width:100%">
+  <tr>
+    <th>Methods</th>
+    <th>open-test data</th> 
+  </tr>
+  <tr>
+    <td>CRFs</td>
+    <td> xx.xx </td>
+  </tr>
+  <tr>
+    <td>HMM</td>
+    <td> xx.xx </td>
+  </tr>
+  <tr>
+    <td>RDR</td>
+    <td> xx.xx </td>
 
+  </tr>
+    <tr>
+    <td>NCRF++ xxx</td>
+    <td> xx.xx </td>
+
+  </tr>
+  <tr>
+    <td>NCRF++ xxx</td>
+    <td> xx.xx </td>
+
+  </tr>
+  <tr>
+    <td>NCRF++ xxx</td>
+    <td> xx.xx </td>
+
+  </tr>
+  <tr>
+    <td>NCRF++ xxx</td>
+    <td> xx.xx </td>
+
+  </tr>
+
+</table>
 </center>
 
 <div align="center">
