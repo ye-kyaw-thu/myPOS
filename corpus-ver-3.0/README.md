@@ -66,7 +66,8 @@ Here, the following words are compound Myanmar words:
 - ကောသလ/n|မင်း/n|အိပ်မက်/n
   - The word "ကောသလမင်းအိပ်မက်" ([Dreams of King Kosala](https://nofearmanju.weebly.com/king-kosala-and-his-16-dreams.html)) is a compound word and it is a combination of "ကောသလ" ([Kosala](https://en.wikipedia.org/wiki/Pasenadi)), "မင်း" (king) and "အိပ်မက်" (dream). 
 - ဘက်ပတစ်/n|ကျောင်း/n
-
+  - "ဘက်ပတစ်ကျောင်း" means "Baptist church" in English. It is a Myanmar compound word formed by combination of "ဘက်ပတစ်" (Baptist) and "ကျောင်း" (church or school)  
+ 
 ## Models of myPOS Version 3.0
 
 The 3gHMM, CRF, RDR and NCRF++ models are under the following link:  
