@@ -1,5 +1,7 @@
-# myPOS (draft released 1.0)
+# myPOS 
 myPOS Corpus (Myanmar Part-of-Speech Corpus) for Myanmar language NLP Research and Developments
+
+Latest Version: [myPOS (Version 3.0)](https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0)  
 
 ## Lincense
 Creative Commons Attribution-NonCommercial-Share Alike 4.0 International (CC BY-NC-SA 4.0) License  
