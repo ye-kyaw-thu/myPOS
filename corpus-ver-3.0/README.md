@@ -12,6 +12,7 @@ I am uploading models and data ....
 <div align="center">
   Fig. Character sequence, word sequence and inference layers of NCRF++  
   (Figure inspired from reference [NCRF++](https://github.com/jiesutd/NCRFpp))  
+  
 </div>   
 
 
