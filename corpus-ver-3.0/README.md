@@ -55,7 +55,7 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
 
 
 <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
-  <caption>Table.3 POS tagging accuracies of myPOS (version 3.0) </caption>    
+  <caption>Table.2 POS tagging accuracies of myPOS (version 3.0) </caption>    
   <tr>
     <th>Methods</th>
     <th>open-test data</th> 
