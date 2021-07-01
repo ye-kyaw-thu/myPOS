@@ -19,11 +19,11 @@ Creative Commons Attribution-NonCommercial-Share Alike 4.0 International (CC BY-
 ## Contributors  
 
 For myPOS version 2.0 and 3.0:  
-- Zar Zar Hlaing (King Mongkut's Institute of Technology Ladkrabang:KMITL, Bangkok, Thailand)  
+- Zar Zar Hlaing (King Mongkut's Institute of Technology Ladkrabang: KMITL, Bangkok, Thailand)  
 - Ye Kyaw Thu (National Electronics and Computer Technology Center: NECTEC, Pathumthani, Thailand)  
-- Myat Myo Nwe Wai (Myanmar Institute of Information Technology:MIIT, Mandalay, Myanmar)  
+- Myat Myo Nwe Wai (Myanmar Institute of Information Technology: MIIT, Mandalay, Myanmar)  
 - Thepchai Supnithi (National Electronics and Computer Technology Center: NECTEC, Pathumthani, Thailand)  
-- Ponrudee Netisopakul (King Mongkut's Institute of Technology Ladkrabang:KMITL, Bangkok, Thailand)
+- Ponrudee Netisopakul (King Mongkut's Institute of Technology Ladkrabang: KMITL, Bangkok, Thailand)
 
 ## Citation
 
