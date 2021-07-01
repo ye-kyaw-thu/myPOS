@@ -46,7 +46,7 @@ P.S. \[at\] နေရာမှာ @ သင်္ကေတကို အစား�
 
 myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့ experiment လုပ်ခဲ့တဲ့ မော်ဒယ်တွေကတော့ စုစုပေါင်း လေးခုပါ။ အဲဒီ မော်ဒယ်တွေကတော့ 3-gram HMM, CRF, RDR နဲ့ NCRF++ တို့ ဖြစ်ကြပါတယ်။  
 
-<center>
+
   
 | Methods | open-test data |
 | :------------- | :-------------: |
@@ -57,8 +57,14 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
 | NCRF++  | xx.xx |
 | NCRF++  | xx.xx |
 | NCRF++  | xx.xx |
-  
+
+<div align="center">
+  Table.2 POS tagging accuracies of myPOS (version 3.0)  
+</div>    
+
+<center>
   <table style="width:100%">
+  <caption>Table.3 POS tagging accuracies of myPOS (version 3.0) </caption>    
   <tr>
     <th>Methods</th>
     <th>open-test data</th> 
@@ -100,9 +106,6 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
 </table>
 </center>
 
-<div align="center">
-  Table.2 POS tagging accuracies of myPOS (version 3.0)  
-</div>  
 
 ## NCRF++ for myPOS  
 
