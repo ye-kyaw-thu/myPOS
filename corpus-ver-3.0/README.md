@@ -1,5 +1,7 @@
 # myPOS Version 3.0
 
+myPOS Corpus (Myanmar Part-of-Speech Corpus) for Myanmar language NLP Research and Developments
+
 WAIT!!!
 I am uploading models and data ....
 
@@ -7,7 +9,29 @@ I am uploading models and data ....
 ခဏစောင့်ပါ။ ပြင်ဆင်နေဆဲ။ မပြီးသေးပါ....
 
 - 10K of ASEAN MT Myanmar data
-- 
+
+
+It provides
+users with an inference for building the
+custom model structure through configuration file with flexible neural feature design and utilization. Built on PyTorch1
+,
+the core operations are calculated in batch,
+making the toolkit efficient with the acceleration of GPU. It also includes the implementations of most state-of-the-art neural
+sequence labeling models such as LSTMCRF, facilitating reproducing and refinement on those methods.
+
+We presented NCRF++, an open-source neural
+sequence labeling toolkit, which has a CRF architecture with configurable neural representation
+layers. Users can design custom neural models
+through the configuration file. NCRF++ supports
+flexible feature utilization, including handcrafted
+features and automatically extracted features. It
+can also generate nbest label sequences rather than
+the best one. We conduct a series of experiments
+and the results show models built on NCRF++
+can achieve state-of-the-art results with an efficient running speed.
+
+myPOS Version 3.0 က မှာ သုံးခဲ့တဲ့ tag-set တွေက ရှေ့က ဗားရှင်းတွေ ဖြစ်တဲ့ version 1.0, 2.0 နဲ့ အတူတူပါပဲ။ POS tag စုစုပေါင်း 15 ခုပါဝင်ပါတယ်။ ဒီနေရာမှာ tag တွေကို အတိုကောက်တွေနဲ့တကွ တွဲဖော်ပြရရင် abb (Abbreviation), adj (Adjective), adv (Adverb), conj (Conjunction), fw (Foreign Word), int (Interjection), n (Noun), num (Number), part (Particle), ppm (Post-positional Marker), pronc (Pronoun), punc (Punctuation), sb (Symbol), tn (Text Number) နဲ့ v (Verb) တို့ဖြစ်ကြပါတယ်။ 
+
 ## NCRF++ for myPOS  
 
 After I read the paper of NCRF++ (Yang Jie and Zhang Yue, ACL 2018) approach, I do wish to apply NCRF++ for POS tagging of Myanmar language with the extended corpus of myPOS. This open-source neural sequence labeling toolkit provides building custom model architectures through a configuration file. It supports flexible feature utilization, including handcrafted features and automatically extracted features. In short, it has a Conditional Random Fields (CRFs) architecture with configurable neural representation layers.
