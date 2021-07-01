@@ -44,7 +44,7 @@ Corpus ထဲမှာ ပါတဲ့ မြန်မာစာ စာကြေ�
 | Average Words/Sentence | 21.78 | 10.39 | 10.63| | |
 
 <div align="center">
-  Fig. With compound word  
+  Table. With compound word  
 </div>  
 
 | Unit | myPOS (ver. 1.0) | Ext-1: my-zh | Ext-2: my-ko | Ext-3: ASEAN-MT my | myPOS (ver. 3.0) |
@@ -54,7 +54,7 @@ Corpus ထဲမှာ ပါတဲ့ မြန်မာစာ စာကြေ�
 | Average Words/Sentence | 21.78 | 10.39 | 10.63| | |
 
 <div align="center">
-  Fig. Without compound word  
+  Table. Without compound word  
 </div>  
 
 
