@@ -57,6 +57,8 @@ Corpus ထဲမှာ ပါတဲ့ မြန်မာစာ စာကြေ�
   Table. Without compound word  
 </div>  
 
+ဒေတာပြင်ဆင်တဲ့ အပိုင်းမှာ နောက်ထပ် contribution လုပ်ခဲ့တဲ့ သူကတော့ MIIT မန္တလေးက ဆရာမ ဒေါ်မြတ်မျိုးနွယ်ဝေပါ။ 
+
 
 ## NCRF++ for myPOS  
 
