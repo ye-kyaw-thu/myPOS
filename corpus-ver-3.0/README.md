@@ -12,9 +12,9 @@ Creative Commons Attribution-NonCommercial-Share Alike 4.0 International (CC BY-
 
 ## Corpus Information
 
-## Models
+## Models of myPOS Version 3.0
 
-## iSAI-NLP 2020 Experiment with myPOS Version 2.0
+## iSAI-NLP 2020 Experiment (used myPOS Version 2.0)
 
 ## Contributors  
 
