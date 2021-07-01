@@ -204,3 +204,9 @@ Zar Zar Hlaing, Ye Kyaw Thu, Myat Myo Nwe Wai, Thepchai Supnithi, Ponrudee Netis
 ### Paper
 - Prachya, Boonkwan and Thepchai, Supnithi, "Technical Report for The Network-based ASEAN Language Translation Public Service Project", Online Materials of Network-based ASEAN Languages Translation Public Service for Members, NECTEC, 2013.
 - Yang Jie and Zhang Yue, "NCRF++: An Open-source Neural Sequence Labeling Toolkit", In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018), System Demonstrations, 2018, pp. 74-79.
+
+## To Do
+
+- updating compound words
+- rechecking manual tagging errors
+- corpus extension and accuracy improvements
