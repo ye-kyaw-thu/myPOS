@@ -6,6 +6,8 @@ I am uploading models and data ....
 ဒီ ၂ရက်လောက်အတွင်းမှာ training လုပ်ထားတဲ့ မော်ဒယ်တွေအားလုံးနဲ့ ဒေတာကို အချိန်ရရင် ရသလို တင်ပေးသွားပါမယ်။
 ခဏစောင့်ပါ။ ပြင်ဆင်နေဆဲ။ မပြီးသေးပါ....
 
+- 10K of ASEAN MT Myanmar data
+
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/etc/fig_iSAI-NLP2020-paper_updated.png" />  
 </p>  
@@ -109,9 +111,12 @@ Khin War War Htike, Ye Kyaw Thu, Zuping Zhang, Win Pa Pa, Yoshinori Sagisaka and
 
 Zar Zar Hlaing, Ye Kyaw Thu, Myat Myo Nwe Wai, Thepchai Supnithi, Ponrudee Netisopakul, "Myanmar POS resource extension effects on automatic tagging methods", In Proceedings of the 15th International Joint Symposium on Artificial Intelligence and Natural Language Processing (iSAI-NLP 2020), Nov 18 to Nov 20, 2020, Bangkok, Thailand, pp. 189-194. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9376835)  
 
-## Tool/Framework References
-
+## References
+### Tool
 - [CRF++ Toolkit (CRF++-0.58.tar.gz)](https://drive.google.com/drive/u/0/folders/0B4y35FiV1wh7fngteFhHQUN2Y1B5eUJBNHZUemJYQV9VWlBUb3JlX0xBdWVZTWtSbVBneU0)
 - [RDR Toolkit (RDRPOSTagger)](https://github.com/datquocnguyen/RDRPOSTagger)
 - [3gHMM Toolkit (jita-0.3.3 GitHub Repository)](https://github.com/danieldk/jitar/releases)  
 - [NCRF++ GitHub Repository](https://github.com/jiesutd/NCRFpp)  
+
+## Paper
+- Prachya, Boonkwan and Thepchai, Supnithi, “Technical Report for The Network-based ASEAN Language Translation Public Service Project”, Online Materials of Network-based ASEAN Languages Translation Public Service for Members, NECTEC, 2013
