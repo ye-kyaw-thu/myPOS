@@ -59,14 +59,14 @@ The corpus format is `word/POS-tag<SPACE>word/POS-tag` and the delimiter pipe "|
 Here, the following words are compound Myanmar words:  
 
 - နတ်/n|ဆရာ/n
-  - "နတ်ဆရာ" means spiritualist in English, a combination of two words "နတ်" and "ဆရာ", "နတ်" means "god or deity" and "ဆရာ" means "teacher" in English  
+  - The word "နတ်ဆရာ" means spiritualist in English. It is a combination of two words "နတ်" and "ဆရာ" and here, "နတ်" means "god or deity" and "ဆရာ" means "teacher" in English.  
  
 - ပေဟိုင်/n|ဥယျာဉ်/n
-  - "ပေဟိုင်ဥယျာဉ်" (Beihai Park) is the name of a garden located in the northwestern part of the Imperial City, Beijing, a combination of two words "ပေဟိုင်" (Beihai) and "ဥယျာဉ်" (park or garden)
+  - The word "ပေဟိုင်ဥယျာဉ်" (Beihai Park) is the name of a garden located in the northwestern part of the Imperial City, Beijing. It is a combination of two words "ပေဟိုင်" (Beihai) and "ဥယျာဉ်" (park or garden).
 - ကောသလ/n|မင်း/n|အိပ်မက်/n
   - The word "ကောသလမင်းအိပ်မက်" ([Dreams of King Kosala](https://nofearmanju.weebly.com/king-kosala-and-his-16-dreams.html)) is a compound word and it is a combination of "ကောသလ" ([Kosala](https://en.wikipedia.org/wiki/Pasenadi)), "မင်း" (king) and "အိပ်မက်" (dream). 
 - ဘက်ပတစ်/n|ကျောင်း/n
-  - "ဘက်ပတစ်ကျောင်း" means "Baptist church" in English. It is a Myanmar compound word formed by combination of "ဘက်ပတစ်" (Baptist) and "ကျောင်း" (church or school)  
+  - "ဘက်ပတစ်ကျောင်း" means "Baptist church" in English. It is a Myanmar compound word formed by combination of "ဘက်ပတစ်" (Baptist) and "ကျောင်း" (church or school).  
  
 ## Models of myPOS Version 3.0
 
