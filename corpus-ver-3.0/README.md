@@ -59,7 +59,10 @@ The corpus format is `word/POS-tag<SPACE>word/POS-tag` and the delimiter pipe "|
 Here, the following words are compound Myanmar words:  
 
 - နတ်/n|ဆရာ/n
+ -- "နတ်ဆရာ" means spiritualist in English, a combination of two words "နတ်" and "ဆရာ", "နတ်" means "god or deity" and "ဆရာ" means "teacher" in English  
+ 
 - ပေဟိုင်/n|ဥယျာဉ်/n
+  -- "ပေဟိုင်ဥယျာဉ်" (Beihai Park) is the name of a garden located in the northwestern part of the Imperial City, Beijing, a combination of two words "ပေဟိုင်" (Beihai) and "ဥယျာဉ်" (park or garden)
 - ကောသလ/n|မင်း/n|အိပ်မက်/n
 - ဘက်ပတစ်/n|ကျောင်း/n
 
