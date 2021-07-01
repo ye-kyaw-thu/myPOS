@@ -206,6 +206,16 @@ Zar Zar Hlaing, Ye Kyaw Thu, Myat Myo Nwe Wai, Thepchai Supnithi, Ponrudee Netis
 - Yang Jie and Zhang Yue, "NCRF++: An Open-source Neural Sequence Labeling Toolkit", In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018), System Demonstrations, 2018, pp. 74-79.
 
 ## Quick Start
+### Using Pre-trained Models
+First, download or clone the myPOS repository. It contains pre-trained models for each version.  
+
+```
+$git clone https://github.com/ye-kyaw-thu/myPOS
+```
+
+
+### Evaluation
+Although some modeling tools provide the accuracy or F1-score, we will use `evaluate.py` for comparison among different models.  
 
 
 ## To Do
