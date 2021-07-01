@@ -10,7 +10,7 @@ I am uploading models and data ....
 <img src="https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/etc/fig_iSAI-NLP2020-paper_updated.png" />  
 </p>  
 <div align="center">
-  Fig. Character sequence, word sequence and inference layers of NCRF++ 
+  Fig. Character sequence, word sequence and inference layers of NCRF++  
   (Figure inspired from reference [NCRF++](https://github.com/jiesutd/NCRFpp))  
 </div>   
 
