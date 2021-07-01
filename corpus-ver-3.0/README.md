@@ -40,7 +40,7 @@ $ wc otest.1k.txt
 
 ### Format of the myPOS Tagged Corpus  
 
-The corpus format is `word/POS-tag<SPACE>word/POS-tag` and the elimiter pipe "|" is used for compound words `word/POS-tag|word/POS-tag`. Refer following first 10 sentences of the corpus file "mypos-ver.3.0.txt":  
+The corpus format is `word/POS-tag<SPACE>word/POS-tag` and the delimiter pipe "|" is used for compound words `word/POS-tag|word/POS-tag`. Refer following first 10 sentences of the corpus file "mypos-ver.3.0.txt":  
 
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/myPOS2/corpus-ver-2.0/git/myPOS/corpus-ver-3.0/corpus$ head ./mypos-ver.3.0.txt 
