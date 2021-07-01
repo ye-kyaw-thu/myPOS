@@ -7,6 +7,9 @@ I am uploading models and data ....
 ခဏစောင့်ပါ။ ပြင်ဆင်နေဆဲ။ မပြီးသေးပါ....
 
 - 10K of ASEAN MT Myanmar data
+- 
+
+After I read the paper of NCRF++ (Yang Jie and Zhang Yue, ACL 2018) approach, I do wish to apply NCRF++ for POS tagging of Myanmar language with the extended corpus of myPOS. This open-source neural sequence labeling toolkit provides building custom model architectures through a configuration file. It supports flexible feature utilization, including handcrafted features and automatically extracted features. In short, it has a Conditional Random Fields (CRFs) architecture with configurable neural representation layers.
 
 The following figure shows an example NCRF++ architecture for parsing a Myanmar sentence "မင်းကျောင်းမသွားဘူးလား" (Don't you go to school?). Here, green, red, yellow and blue circles represent character embeddings, word embeddings, character sequence representations and word sequence representations, respectively. The gray circles represent the embeddings of sparse features.  
 
@@ -20,7 +23,6 @@ The following figure shows an example NCRF++ architecture for parsing a Myanmar 
   
   
 </div>   
-
 
 ## Lincense
 Creative Commons Attribution-NonCommercial-Share Alike 4.0 International (CC BY-NC-SA 4.0) License  
