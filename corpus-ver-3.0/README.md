@@ -30,7 +30,13 @@ the best one. We conduct a series of experiments
 and the results show models built on NCRF++
 can achieve state-of-the-art results with an efficient running speed.
 
-myPOS Version 3.0 က မှာ သုံးခဲ့တဲ့ tag-set တွေက ရှေ့က ဗားရှင်းတွေ ဖြစ်တဲ့ version 1.0, 2.0 နဲ့ အတူတူပါပဲ။ POS tag စုစုပေါင်း 15 ခုပါဝင်ပါတယ်။ ဒီနေရာမှာ tag တွေကို အတိုကောက်တွေနဲ့တကွ တွဲဖော်ပြရရင် abb (Abbreviation), adj (Adjective), adv (Adverb), conj (Conjunction), fw (Foreign Word), int (Interjection), n (Noun), num (Number), part (Particle), ppm (Post-positional Marker), pronc (Pronoun), punc (Punctuation), sb (Symbol), tn (Text Number) နဲ့ v (Verb) တို့ဖြစ်ကြပါတယ်။ 
+myPOS version 3.0 က မှာ သုံးခဲ့တဲ့ tag-set တွေက ရှေ့က ဗားရှင်းတွေ ဖြစ်တဲ့ version 1.0, 2.0 နဲ့ အတူတူပါပဲ။ POS tag စုစုပေါင်း 15 ခုပါဝင်ပါတယ်။ ဒီနေရာမှာ tag တွေကို အတိုကောက်တွေနဲ့တကွ တွဲဖော်ပြရရင် abb (Abbreviation), adj (Adjective), adv (Adverb), conj (Conjunction), fw (Foreign Word), int (Interjection), n (Noun), num (Number), part (Particle), ppm (Post-positional Marker), pronc (Pronoun), punc (Punctuation), sb (Symbol), tn (Text Number) နဲ့ v (Verb) တို့ဖြစ်ကြပါတယ်။ myPOS version 2.0 မှာ open-test data အဖြစ် သုံးခဲ့တဲ့ ASEAN-MT corpus ထဲက travel-tour ဒိုမိန်းဒေတာ စာကြောင်းရေ တစ်သောင်းကျော်ကိုပါ ရှဲလုပ်ဖို့ လက်ရှိ ကျွန်တော် အလုပ်လုပ်နေတဲ့ Lab ရဲ့ Leader ဒေါက်တာ Thepchai က ခွင့်ပြုလို့ myPOS version 3.0 အနေနဲ့ release လုပ်ဖို့ ဖြစ်လာခဲ့ရပါတယ်။ NECTEC မှာ အလုပ်လုပ်နေစဉ် မှာ မြန်မာစာ NLP R&D အတွက် contribution တစ်ခု ဖြစ်သွားလို့ ဝမ်းသာရပါတယ်။  
+
+ဒီ myPOS version 3.0 အတွက် corpus တစ်ခုလုံးနီးပါးကို manual POS tagging အလုပ်ကို အဓိက အပင်ပန်းခံ ကြိုးစားအလုပ်လုပ်ခဲ့သူက ကျွန်တော်ရဲ့ ဒေါက်တာတန်း ကျောင်းသူတစ်ယောက်ဖြစ်တဲ့ ဇာဇာလှိုင် (KMITL, Bangkok, Thailand) ပါ။ ဒီအလုပ်က သူ့ရဲ့ ဒေါက်တာတန်း သုတေသနရဲ့ အစိတ်အပိုင်း တစ်ခုလည်း ဖြစ်ပါတယ်။ myPOS version 2.0 corpus ကို သုံးပြီးတော့ experiment လုပ်ခဲ့တဲ့ မော်ဒယ် ဖိုလ်ဒါတွေကိုလည်း repository ရဲ့ ဒီ link မှာ [https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/models](https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/models) တင်ပေးထားတာမို့ သုတေသန ထုံးစံအတိုင်း reproduce လုပ်ကြည့်ဖို့အတွက်လည်း အဆင်ပြေပါလိမ့်မယ်။  
+
+Corpus ထဲမှာ ပါတဲ့ မြန်မာစာ စာကြောင်းတွေ၊ ဒိုမိန်းနဲ့ ပတ်သက်ပြီး အသေးစိတ်ကလည်း iSAI-NLP 2020 conference မှာ ဖတ်ခဲ့တဲ့ myPOS version 2.0 ရဲ့ စာတမ်းထဲမှာ ပြည့်စုံစွာ ဖော်ပြပေးထားပါတယ်။ ဒီနေရာမှာလည်း အသုံးပြုမယ့် user/developer/researcher တွေအတွက် အဆင်ပြေအောင် ဇယားနဲ့ အောက်ပါအတိုင်း ဖော်ပြပေးထားပါတယ်။  
+
+
 
 ## NCRF++ for myPOS  
 
