@@ -6,10 +6,11 @@ I am uploading models and data ....
 ဒီ ၂ရက်လောက်အတွင်းမှာ training လုပ်ထားတဲ့ မော်ဒယ်တွေအားလုံးနဲ့ ဒေတာကို အချိန်ရရင် ရသလို တင်ပေးသွားပါမယ်။
 ခဏစောင့်ပါ။ ပြင်ဆင်နေဆဲ။ မပြီးသေးပါ....
 
+<p align="center">
 ![three-layers-of-NCRFpp](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/etc/fig_iSAI-NLP2020-paper_updated.png)
 
 Fig. Character sequence, word sequence and inference layers of NCRF++  
-
+<p>
 
 ## Lincense
 Creative Commons Attribution-NonCommercial-Share Alike 4.0 International (CC BY-NC-SA 4.0) License  
