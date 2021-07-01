@@ -48,15 +48,15 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
   </tr>
   <tr>
     <td>CRFs</td>
-    <td> xx.xx </td>
+    <td> 95.39% </td>
   </tr>
   <tr>
     <td>HMM</td>
-    <td> xx.xx </td>
+    <td> 94.74% </td>
   </tr>
   <tr>
     <td>RDR</td>
-    <td> xx.xx </td>
+    <td> 96.53% </td>
 
   </tr>
     <tr>
