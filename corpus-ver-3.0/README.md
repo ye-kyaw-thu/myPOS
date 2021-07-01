@@ -8,6 +8,7 @@ I am uploading models and data ....
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/etc/fig_iSAI-NLP2020-paper_updated.png" />  
+  
 Fig. Character sequence, word sequence and inference layers of NCRF++   
 </p>
 
