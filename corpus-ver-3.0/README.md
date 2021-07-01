@@ -12,7 +12,8 @@ Creative Commons Attribution-NonCommercial-Share Alike 4.0 International (CC BY-
 
 ## Corpus Information
 
-myPOS version 3.0 corpus က အောက်ပါ link or path မှာ ရှိပါတယ်။  
+The link of the myPOS corpus (ver. 3.0) is as follow:  
+(myPOS corpus ver. 3.0 ကအောက်ပါ link or path မှာ ရှိပါတယ်။)  
 [https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/corpus](https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/corpus)  
 
 The myPOS corpus version 3.0: [mypos-ver.3.0.txt](https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/corpus/mypos-ver.3.0.txt)  
