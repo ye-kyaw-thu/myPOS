@@ -17,13 +17,6 @@ myPOS version 3.0 က မှာ သုံးခဲ့တဲ့ tag-set တွေ
 
 Corpus ထဲမှာ ပါတဲ့ မြန်မာစာ စာကြောင်းအရေအတွက်၊ ဒိုမိန်းနဲ့ ပတ်သက်ပြီး အသေးစိတ်ကလည်း iSAI-NLP 2020 conference မှာ ဖတ်ခဲ့တဲ့ myPOS version 2.0 ရဲ့ စာတမ်းထဲမှာ ပြည့်စုံစွာ ဖော်ပြပေးထားပါတယ်။ ဒီနေရာမှာလည်း အသုံးပြုမယ့် user/developer/researcher တွေအတွက် အဆင်ပြေအောင် ထပ်တိုးထားတဲ့စာကြောင်းတွေနဲ့ ပတ်သက်ပြီးတော့ information အနေနဲ့ ချပြရရင် machine translation သုတေသနအလုပ်တွေအတွက်ရည်ရွယ်ပြီး develop လုပ်နေဆဲဖြစ်တဲ့ မြန်မာ-တရုပ် (my-zh) parallel corpus ထဲကနေ ဗမာစာကြောင်း တစ်သောင်း၊ အလားတူပဲ မြန်မာ-ကိုရီးယား (my-ko) parallel corpus ထဲကနေ ဗမာစာကြောင်း တစ်သောင်းတစ်ထောင် နဲ့ ASEAN MT corpus ထဲကနေ ဗမာစာကြောင်း တစ်သောင်းနှစ်ထောင်ကျော် စုစုပေါင်း သုံးသောင်းကျော်ကို တိုးလိုက်နိုင်တာဖြစ်ပါတယ်။ အတိအကျ စာကြောင်းရေအရေအတွက် နဲ့ စာလုံး အရေအတွက်ကတော့ အောက်ပါဇယားကို မှီငြမ်းပါ။  
 
-
-| Unit | myPOS (ver. 1.0) | Ext-1: my-zh | Ext-2: my-ko | Ext-3: ASEAN-MT my | myPOS (ver. 3.0) |
-| :------------- | :-------------: | :----------: | :-----------: | :-----------: |:-----------: |
-| Sentences | 11,000 | 10,000 | 10,052| 12,144 | |
-| Words  | 239,598 | 103,909 | 106,864 |  | |
-| Average Words/Sentence | 21.78 | 10.39 | 10.63| | |
-
 <div align="center">
   Table.1 With compound word  
 </div>  
@@ -37,6 +30,14 @@ Corpus ထဲမှာ ပါတဲ့ မြန်မာစာ စာကြေ�
 <div align="center">
   Table.2 Without compound word  
 </div>  
+
+| Unit | myPOS (ver. 1.0) | Ext-1: my-zh | Ext-2: my-ko | Ext-3: ASEAN-MT my | myPOS (ver. 3.0) |
+| :------------- | :-------------: | :----------: | :-----------: | :-----------: |:-----------: |
+| Sentences | 11,000 | 10,000 | 10,052| 12,144 | |
+| Words  | 239,598 | 103,909 | 106,864 |  | |
+| Average Words/Sentence | 21.78 | 10.39 | 10.63| | |
+
+
 
 ဒေတာပြင်ဆင်တဲ့ အပိုင်းမှာ နောက်ထပ် contribution လုပ်ခဲ့တဲ့ သူကတော့ MIIT မန္တလေးက ဆရာမ ဒေါ်မြတ်မျိုးနွယ်ဝေပါ။ သူကတော့ ကျွန်တော်တို့ အတူတူပြင်ဆင်နေကြတဲ့ မြန်မာ-ကိုရီးယား (my-ko) corpus ကနေ မြန်မာစာကြောင်း တစ်သောင်းကျော်ကို manual POS tagging လုပ်ခဲ့ပါတယ်။   
 
@@ -62,8 +63,9 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
   Table.2 POS tagging accuracies of myPOS (version 3.0)  
 </div>    
 
-<center>
+
   <table style="width:100%">
+  <center>
   <caption>Table.3 POS tagging accuracies of myPOS (version 3.0) </caption>    
   <tr>
     <th>Methods</th>
@@ -102,9 +104,9 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
     <td> xx.xx </td>
 
   </tr>
-
-</table>
 </center>
+</table>
+
 
 
 ## NCRF++ for myPOS  
