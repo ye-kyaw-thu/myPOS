@@ -15,7 +15,13 @@ Creative Commons Attribution-NonCommercial-Share Alike 4.0 International (CC BY-
 myPOS version 3.0 corpus က အောက်ပါ link or path မှာ ရှိပါတယ်။  
 [https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/corpus](https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/corpus)  
 
+[mypos-ver.3.0.txt](https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/corpus/mypos-ver.3.0.txt)  
+[mypos-ver.3.0.shuf.txt](https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/corpus/mypos-ver.3.0.shuf.txt)
 
+[train.mypos-ver3.txt](https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/corpus/train.mypos-ver3.txt)  
+[otest.1k.txt](https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/corpus/otest.1k.txt)  
+
+[mypos2-final.data.preparation.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/corpus/mypos2-final.data.preparation.txt)  
 
 ## Models of myPOS Version 3.0
 
