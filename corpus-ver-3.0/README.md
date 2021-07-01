@@ -12,6 +12,11 @@ Creative Commons Attribution-NonCommercial-Share Alike 4.0 International (CC BY-
 
 ## Corpus Information
 
+myPOS version 3.0 corpus က အောက်ပါ link or path မှာ ရှိပါတယ်။  
+[https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/corpus](https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/corpus)  
+
+
+
 ## Models of myPOS Version 3.0
 
 ## iSAI-NLP 2020 Experiment (used myPOS Version 2.0)
