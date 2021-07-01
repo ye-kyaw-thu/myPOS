@@ -5,7 +5,7 @@ myPOS Corpus (Myanmar Part-of-Speech Corpus) for Myanmar language NLP Research a
 
 **WAIT!!!
 I am uploading models and data .... and keep updating this README file also!
-Hope to finish & release ASAP...  **
+Hope to finish & release ASAP...**
 
 **ဒီ ၂ရက်လောက်အတွင်းမှာ training လုပ်ထားတဲ့ မော်ဒယ်တွေအားလုံးနဲ့ ဒေတာကို အချိန်ရရင် ရသလို တင်ပေးသွားပါမယ်။
 ခဏစောင့်ပါ။ ပြင်ဆင်နေဆဲ။ မပြီးသေးပါ....**
