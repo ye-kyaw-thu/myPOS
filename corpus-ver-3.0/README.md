@@ -56,6 +56,13 @@ The corpus format is `word/POS-tag<SPACE>word/POS-tag` and the delimiter pipe "|
 တစ်/tn ကျပ်သား/n ။/punc
 ```
 
+Here, the following words are compound Myanmar words:  
+
+- နတ်/n|ဆရာ/n
+- ပေဟိုင်/n|ဥယျာဉ်/n
+- ကောသလ/n|မင်း/n|အိပ်မက်/n
+- ဘက်ပတစ်/n|ကျောင်း/n
+
 ## Models of myPOS Version 3.0
 
 The 3gHMM, CRF, RDR and NCRF++ models are under the following link:  
