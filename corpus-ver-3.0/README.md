@@ -24,7 +24,19 @@ Open-test data for evaluation: [otest.1k.txt](https://raw.githubusercontent.com/
 
 Data preparation log file: [mypos2-final.data.preparation.txt](https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/corpus/mypos2-final.data.preparation.txt)  
 
+File size information is as follows:  
+```
+$ wc ./mypos-ver.3.0.txt 
+  43196  537233 9581544 ./mypos-ver.3.0.txt
+$ wc ./train.mypos-ver3.txt 
+  42196  524408 9351786 ./train.mypos-ver3.txt
+$ wc otest.1k.txt 
+  1000  12825 229758 otest.1k.txt
+```
 
+`mypos-ver.3.0.txt` file contains 43,196 sentences and 537,233 words (including compound word) in total.  
+`train.mypos-ver3.txt` file contains 42,196 sentences and 524,408 words (including compound word) in total.  
+`otest.1k.txt` file contains 1,000 sentences and 12,825 words in total.  
 
 ## Models of myPOS Version 3.0
 
