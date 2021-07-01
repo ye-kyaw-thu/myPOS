@@ -3,12 +3,12 @@
 ### Introduction in English (for ver. 3.0)
 myPOS Corpus (Myanmar Part-of-Speech Corpus) for Myanmar language NLP Research and Developments
 
-WAIT!!!
+**WAIT!!!
 I am uploading models and data .... and keep updating this README file also!
-Hope to finish & release ASAP...  
+Hope to finish & release ASAP...  **
 
-ဒီ ၂ရက်လောက်အတွင်းမှာ training လုပ်ထားတဲ့ မော်ဒယ်တွေအားလုံးနဲ့ ဒေတာကို အချိန်ရရင် ရသလို တင်ပေးသွားပါမယ်။
-ခဏစောင့်ပါ။ ပြင်ဆင်နေဆဲ။ မပြီးသေးပါ....
+**ဒီ ၂ရက်လောက်အတွင်းမှာ training လုပ်ထားတဲ့ မော်ဒယ်တွေအားလုံးနဲ့ ဒေတာကို အချိန်ရရင် ရသလို တင်ပေးသွားပါမယ်။
+ခဏစောင့်ပါ။ ပြင်ဆင်နေဆဲ။ မပြီးသေးပါ....**
 
 - 10K of ASEAN MT Myanmar data
 
