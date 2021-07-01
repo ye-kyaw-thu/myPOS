@@ -1,6 +1,6 @@
 # myPOS Version 3.0
 
-### Introduction in English
+### Introduction in English (for ver. 3.0)
 myPOS Corpus (Myanmar Part-of-Speech Corpus) for Myanmar language NLP Research and Developments
 
 WAIT!!!
