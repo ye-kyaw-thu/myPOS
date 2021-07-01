@@ -114,4 +114,4 @@ Zar Zar Hlaing, Ye Kyaw Thu, Myat Myo Nwe Wai, Thepchai Supnithi, Ponrudee Netis
 - [CRF++ Toolkit (CRF++-0.58.tar.gz)](https://drive.google.com/drive/u/0/folders/0B4y35FiV1wh7fngteFhHQUN2Y1B5eUJBNHZUemJYQV9VWlBUb3JlX0xBdWVZTWtSbVBneU0)
 - [RDR Toolkit (RDRPOSTagger)](https://github.com/datquocnguyen/RDRPOSTagger)
 - [3gHMM Toolkit (jita-0.3.3 GitHub Repository)](https://github.com/danieldk/jitar/releases)  
-- [NCRF++ GitHub Repository:](https://github.com/jiesutd/NCRFpp)  
+- [NCRF++ GitHub Repository](https://github.com/jiesutd/NCRFpp)  
