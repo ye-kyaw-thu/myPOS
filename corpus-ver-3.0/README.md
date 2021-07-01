@@ -8,6 +8,8 @@ I am uploading models and data ....
 
 - 10K of ASEAN MT Myanmar data
 
+The following figure shows NCRF++ architecture for parsing a Myanmar sentence "မင်းကျောင်းမသွားဘူးလား" (Don't you go to school?). Here, green, red, yellow and blue circles represent character embeddings, word embeddings, character sequence representations and word sequence representations, respectively. The gray circles represent the embeddings of sparse features.  
+
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/etc/fig_iSAI-NLP2020-paper_updated.png" />  
 </p>  
@@ -15,6 +17,7 @@ I am uploading models and data ....
   Fig. Character sequence, word sequence and inference layers of NCRF++  
   
   (Figure inspired from reference [NCRF++](https://github.com/jiesutd/NCRFpp))  
+  
   
 </div>   
 
