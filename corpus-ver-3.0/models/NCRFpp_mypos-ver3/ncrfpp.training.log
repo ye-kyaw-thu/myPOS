@@ -1,0 +1,2031 @@
+
+## Data Folder
+
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ tree ./mypos_data/
+./mypos_data/
+├── dev.bmes
+├── raw.bmes
+├── test.bmes
+└── train.bmes
+
+0 directories, 4 files
+
+
+## Data Format
+
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/mypos_data$ head -n 20 train.bmes 
+၁၉၆၂ num
+ခုနှစ် n
+ခန့်မှန်း v
+သန်းခေါင်စာရင်း n
+အရ ppm
+လူဦးရေ n
+၁၁၅၉၃၁ num
+ယောက် part
+ရှိ v
+သည် ppm
+။ punc
+
+လူ n
+တိုင်း part
+တွင် ppm
+သင့်မြတ် v
+လျော်ကန် v
+စွာ part
+ကန့်သတ် v
+ထား part
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/mypos_data$ head -n 20 dev.bmes 
+Host fw
+name fw
+များ part
+ကို ppm
+ASCII fw
+စာလုံး n
+များ part
+a fw
+မှ ppm
+z fw
+စာလုံး n
+အကြီး n
+အသေး n
+မ part
+လို v
+၊ punc
+0 fw
+မှ ppm
+9 fw
+ထိ ppm
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/mypos_data$ head -n 20 test.bmes 
+တစ် tn
+ကိုက် n
+ကို ppm
+ဝမ် n
+ခုနှစ်ထောင် tn
+ပါ part
+။ punc
+
+မနှစ် n
+က ppm
+သူ pron
+ကျွန်မ pron
+ကို ppm
+သင် v
+ပေး part
+တယ် ppm
+။ punc
+
+ကျွန်တော့် pron
+ခုံ n
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/mypos_data$ head -n 20 raw.bmes 
+၁၉၆၂ num
+ခုနှစ် n
+ခန့်မှန်း v
+သန်းခေါင်စာရင်း n
+အရ ppm
+လူဦးရေ n
+၁၁၅၉၃၁ num
+ယောက် part
+ရှိ v
+သည် ppm
+။ punc
+
+လူ n
+တိုင်း part
+တွင် ppm
+သင့်မြတ် v
+လျော်ကန် v
+စွာ part
+ကန့်သတ် v
+ထား part
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/mypos_data$
+
+## Prepared Configuration Files for Model 1
+
+1st Learn to know about configuration file of NCRF++:
+Ref: https://github.com/jiesutd/NCRFpp/blob/master/readme/Configuration.md
+
+## wordCNN-CRF-charLSTM
+
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ cat ./wordCNN-CRF-charLSTM.train.config 
+### use # to comment out the configure item
+
+###This model was trained using a LSTM structure to encode character sequences, CNN for word sequence information and CRF as inference layer.
+###Learning rate 0.005 was used for word CNN models
+
+### I/O ###
+train_dir=/home/ye/tool/NCRFpp/mypos_data/train.bmes
+dev_dir=/home/ye/tool/NCRFpp/mypos_data/dev.bmes
+test_dir=/home/ye/tool/NCRFpp/mypos_data/test.bmes
+model_dir=/home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp
+#word_emb_dir=mypos3/sample.word.bmes
+
+#raw_dir=
+#decode_dir=
+#dset_dir=
+#load_model_dir=
+#char_emb_dir=
+
+norm_word_emb=False
+norm_char_emb=False
+number_normalized=True
+seg=True
+word_emb_dim=50
+char_emb_dim=30
+
+###NetworkConfiguration###
+use_crf=True
+use_char=True
+word_seq_feature=CNN
+char_seq_feature=LSTM
+#feature=[POS] emb_size=20
+#feature=[Cap] emb_size=20
+#nbest=1
+
+###TrainingSetting###
+status=train
+optimizer=SGD
+#iteration=100 #occur (ERROR: LOSS EXPLOSION (>1e8) ! PLEASE SET PROPER PARAMETERS AND STRUCTURE! EXIT....)
+#iteration=1
+iteration=10
+batch_size=10
+ave_batch_loss=False
+
+###Hyperparameters###
+cnn_layer=4
+char_hidden_dim=50
+hidden_dim=200
+dropout=0.5
+lstm_layer=1
+bilstm=True
+
+#learning_rate=0.015 #(iteration=10, not ok )
+#learning_rate=0.005 #(iteration=10, ok , acc =0.8935932047145585)
+#learning_rate=0.0005 #(iteration=10, ok)
+#learning_rate=0.001 #(iteration=10, ok, accuracy= 0.9330128838260793)
+#learning_rate=0.003 #(iteration=10,ok acc= 0.943789563155658)
+
+learning_rate=0.004 #(iteration=10, ok, acc =0.9494523825201379)
+
+#learning_rate=0.0049 #(iteration=10, ok , acc = 0.9461)
+#learning_rate=0.0045 # (iteration=10, ok, acc = 0.9492328965562652,0.9399)
+
+lr_decay=0.05
+momentum=0
+l2=1e-8
+gpu=True
+#clip=
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$
+
+## Change to NCRF++ Conda Environment
+
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ conda info --envs
+# conda environments:
+#
+base                  *  /home/ye/anaconda3
+NCRF++                   /home/ye/anaconda3/envs/NCRF++
+align-linguistic         /home/ye/anaconda3/envs/align-linguistic
+postedit                 /home/ye/anaconda3/envs/postedit
+py2.7env                 /home/ye/anaconda3/envs/py2.7env
+py3.6env                 /home/ye/anaconda3/envs/py3.6env
+py3.9env                 /home/ye/anaconda3/envs/py3.9env
+
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ conda activate NCRF++
+
+## Training
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ time python ./main.py --config ./trained-models/wordCNN-CRF-charLSTM/wordCNN-CRF-charLSTM.train.config
+Seed num: 42
+MODEL: train
+Training model...
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: None
+     Dset   file directory: None
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp
+     Loadmodel   directory: None
+     Decode file directory: None
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: True
+     Model word extractor: CNN
+     Model       use_char: True
+     Model char extractor: LSTM
+     Model char_hidden_dim: 50
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+build sequence labeling network...
+use_char:  True
+char feature extractor:  LSTM
+word feature extractor:  CNN
+use crf:  True
+build word sequence feature extractor: CNN...
+build word representation...
+build char sequence feature extractor: LSTM ...
+CNN layer:  4
+build CRF...
+Epoch: 0/10
+ Learning rate is set as: 0.004
+Shuffle: first input word list: [949, 3480, 21, 1343, 322, 1448, 42, 1980, 418, 6442, 425, 11, 12]
+     Instance: 500; Time: 1.85s; loss: 12375.9500; acc: 2157/6246=0.3453
+     Instance: 1000; Time: 1.83s; loss: 8596.7063; acc: 5370/12661=0.4241
+     Instance: 1500; Time: 1.97s; loss: 7887.8221; acc: 9243/19269=0.4797
+     Instance: 2000; Time: 1.84s; loss: 7011.6636; acc: 13307/25712=0.5175
+     Instance: 2500; Time: 1.80s; loss: 6348.9780; acc: 17522/32078=0.5462
+     Instance: 3000; Time: 2.04s; loss: 6285.4290; acc: 22055/38733=0.5694
+     Instance: 3500; Time: 1.93s; loss: 6203.1873; acc: 26748/45458=0.5884
+     Instance: 4000; Time: 1.94s; loss: 5620.3020; acc: 31285/51915=0.6026
+     Instance: 4500; Time: 1.91s; loss: 5355.5977; acc: 35932/58351=0.6158
+     Instance: 5000; Time: 1.84s; loss: 5120.9021; acc: 40687/64780=0.6281
+     Instance: 5500; Time: 1.76s; loss: 4766.0892; acc: 45227/70921=0.6377
+     Instance: 6000; Time: 1.91s; loss: 5071.5975; acc: 49979/77406=0.6457
+     Instance: 6500; Time: 2.11s; loss: 5141.3385; acc: 54957/84098=0.6535
+     Instance: 7000; Time: 1.98s; loss: 4963.1040; acc: 59814/90586=0.6603
+...
+...
+...
+     Instance: 22000; Time: 2.08s; loss: 1291.0231; acc: 273331/288646=0.9469
+     Instance: 22500; Time: 2.09s; loss: 1305.2756; acc: 279686/295375=0.9469
+     Instance: 23000; Time: 2.29s; loss: 1180.2310; acc: 286357/302378=0.9470
+     Instance: 23500; Time: 2.01s; loss: 1333.7314; acc: 292805/309187=0.9470
+     Instance: 24000; Time: 1.94s; loss: 1150.1599; acc: 298972/315667=0.9471
+     Instance: 24500; Time: 2.24s; loss: 1405.7015; acc: 305663/322761=0.9470
+     Instance: 25000; Time: 1.90s; loss: 1258.2488; acc: 311603/329035=0.9470
+     Instance: 25500; Time: 1.93s; loss: 1204.4753; acc: 317752/335514=0.9471
+     Instance: 26000; Time: 1.79s; loss: 1166.0259; acc: 323324/341406=0.9470
+     Instance: 26500; Time: 1.90s; loss: 1112.3651; acc: 329312/347720=0.9471
+     Instance: 27000; Time: 2.05s; loss: 1191.1559; acc: 335429/354186=0.9470
+     Instance: 27500; Time: 1.94s; loss: 1094.8536; acc: 341468/360535=0.9471
+     Instance: 28000; Time: 1.86s; loss: 1246.5371; acc: 347494/366928=0.9470
+     Instance: 28500; Time: 1.89s; loss: 1229.1721; acc: 353689/373476=0.9470
+     Instance: 29000; Time: 1.85s; loss: 1342.2838; acc: 359619/379780=0.9469
+     Instance: 29500; Time: 1.87s; loss: 1162.4028; acc: 365488/385964=0.9469
+     Instance: 30000; Time: 2.12s; loss: 1334.4508; acc: 371757/392622=0.9469
+     Instance: 30500; Time: 2.00s; loss: 1254.5905; acc: 377817/399033=0.9468
+     Instance: 31000; Time: 2.12s; loss: 1386.1918; acc: 384388/405997=0.9468
+     Instance: 31500; Time: 2.10s; loss: 1345.6281; acc: 390488/412472=0.9467
+     Instance: 32000; Time: 1.88s; loss: 1271.8593; acc: 396418/418742=0.9467
+     Instance: 32500; Time: 2.02s; loss: 1307.4089; acc: 402900/425600=0.9467
+     Instance: 33000; Time: 1.98s; loss: 1294.0461; acc: 409165/432236=0.9466
+     Instance: 33500; Time: 1.89s; loss: 1206.3320; acc: 415426/438832=0.9467
+     Instance: 34000; Time: 1.94s; loss: 1340.3555; acc: 421738/445536=0.9466
+     Instance: 34500; Time: 1.78s; loss: 1303.1823; acc: 427611/451788=0.9465
+     Instance: 35000; Time: 1.68s; loss: 1020.5472; acc: 433516/457992=0.9466
+     Instance: 35500; Time: 1.81s; loss: 1040.9233; acc: 439499/464285=0.9466
+     Instance: 36000; Time: 1.86s; loss: 1085.5169; acc: 445446/470524=0.9467
+     Instance: 36500; Time: 1.90s; loss: 1206.6525; acc: 451513/476942=0.9467
+     Instance: 37000; Time: 1.92s; loss: 1159.6719; acc: 457278/483050=0.9466
+     Instance: 37500; Time: 1.92s; loss: 1182.0245; acc: 463344/489453=0.9467
+     Instance: 38000; Time: 1.84s; loss: 1151.6410; acc: 469443/495899=0.9467
+     Instance: 38500; Time: 2.00s; loss: 1179.4587; acc: 475560/502350=0.9467
+     Instance: 39000; Time: 1.86s; loss: 1194.1824; acc: 481533/508663=0.9467
+     Instance: 39500; Time: 1.99s; loss: 1229.8407; acc: 487740/515211=0.9467
+     Instance: 39999; Time: 2.07s; loss: 1239.6592; acc: 494124/521958=0.9467
+Epoch: 9 training finished. Time: 157.60s, speed: 253.79st/s,  total loss: 98644.99523925781
+totalloss: 98644.99523925781
+Right token =  27442  All token =  28668  acc =  0.9572345472303614
+Dev: time: 2.37s, speed: 930.51st/s; acc: 0.9572, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12893  All token =  13468  acc =  0.9573062073062073
+Test: time: 1.14s, speed: 881.74st/s; acc: 0.9573, p: -1.0000, r: -1.0000, f: -1.0000
+
+real	27m19.630s
+user	27m15.699s
+sys	0m3.682s
+
+## Prepare decode.config File
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ cat decode.config 
+### Decode ###
+status=decode
+raw_dir=/home/ye/tool/NCRFpp/mypos_data/test.bmes
+nbest=10
+decode_dir=/home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/test.bmes.out
+dset_dir=/home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp.dset
+load_model_dir=/home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp.0.model
+
+## Testing
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ time python ./main.py --config ./trained-models/wordCNN-CRF-charLSTM/decode.config 
+Seed num: 42
+MODEL: decode
+/home/ye/tool/NCRFpp/mypos_data/test.bmes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Dset   file directory: /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp.dset
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp
+     Loadmodel   directory: /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp.0.model
+     Decode file directory: /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/test.bmes.out
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: True
+     Model word extractor: CNN
+     Model       use_char: True
+     Model char extractor: LSTM
+     Model char_hidden_dim: 50
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+nbest: 10
+Load Model from file:  /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp
+build sequence labeling network...
+use_char:  True
+char feature extractor:  LSTM
+word feature extractor:  CNN
+use crf:  True
+build word sequence feature extractor: CNN...
+build word representation...
+build char sequence feature extractor: LSTM ...
+CNN layer:  4
+build CRF...
+Decode raw data, nbest: 10 ...
+Right token =  12212  All token =  13468  acc =  0.9067419067419067
+raw: time:2.00s, speed:500.61st/s; acc: 0.9067, p: -1.0000, r: -1.0000, f: -1.0000
+Predict raw 10-best result has been written into file. /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/test.bmes.out
+
+real	0m6.559s
+user	0m6.105s
+sys	0m1.060s
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$
+
+## Check POS-Tagged Output or Hyp
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ head -n 20 ./test.bmes.out 
+# 0.4926 0.1313 0.1141 0.0733 0.0510 0.0396 0.0304 0.0247 0.0234 0.0195
+တစ် tn tn tn tn tn tn tn tn tn tn
+ကိုက် n part n n n n part n n n
+ကို ppm ppm ppm ppm ppm ppm ppm ppm ppm ppm
+ဝမ် n n n v adv adj n adv v n
+ခုနှစ်ထောင် n n v n v n v n v adj
+ပါ part part part part part part part part part part
+။ punc punc punc punc punc punc punc punc punc punc
+
+# 0.5034 0.1659 0.1021 0.0741 0.0578 0.0505 0.0163 0.0142 0.0083 0.0076
+မနှစ် n n n n n n n n pron n
+က ppm ppm ppm ppm ppm ppm ppm ppm ppm ppm
+သူ pron n fw adj fw adv pron pron pron n
+ကျွန်မ pron pron pron pron fw pron pron pron pron fw
+ကို ppm ppm ppm ppm ppm ppm ppm ppm ppm ppm
+သင် v v v v v v adj v v v
+ပေး part part part part part part part v part part
+တယ် ppm ppm ppm ppm ppm ppm ppm ppm ppm ppm
+။ punc punc punc punc punc punc punc punc punc punc
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ 
+
+## Prepare n-best 1 decode file
+
+#nbest=10
+nbest=1
+
+## Testing
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ time python ./main.py --config ./trained-models/wordCNN-CRF-charLSTM/decode.config 
+Seed num: 42
+MODEL: decode
+/home/ye/tool/NCRFpp/mypos_data/test.bmes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Dset   file directory: /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp.dset
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp
+     Loadmodel   directory: /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp.0.model
+     Decode file directory: /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/test.bmes.out
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: True
+     Model word extractor: CNN
+     Model       use_char: True
+     Model char extractor: LSTM
+     Model char_hidden_dim: 50
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+nbest: 1
+Load Model from file:  /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/ncrfpp
+build sequence labeling network...
+use_char:  True
+char feature extractor:  LSTM
+word feature extractor:  CNN
+use crf:  True
+build word sequence feature extractor: CNN...
+build word representation...
+build char sequence feature extractor: LSTM ...
+CNN layer:  4
+build CRF...
+Decode raw data, nbest: 1 ...
+Right token =  12212  All token =  13468  acc =  0.9067419067419067
+raw: time:1.43s, speed:703.99st/s; acc: 0.9067, p: -1.0000, r: -1.0000, f: -1.0000
+Predict raw 1-best result has been written into file. /home/ye/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM/test.bmes.out
+
+real	0m5.953s
+user	0m5.425s
+sys	0m1.167s
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$
+
+## Check the POS-tagged output
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ head -n 20 ./test.bmes.out 
+# 1.0000
+တစ် tn
+ကိုက် n
+ကို ppm
+ဝမ် n
+ခုနှစ်ထောင် n
+ပါ part
+။ punc
+
+# 1.0000
+မနှစ် n
+က ppm
+သူ pron
+ကျွန်မ pron
+ကို ppm
+သင် v
+ပေး part
+တယ် ppm
+။ punc
+
+## Cleaning the POS-tagged Output File
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ grep -v "# 1.0000" test.bmes.out > test.bmes.out.clean
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ head -n 20 ./test.bmes.out.clean 
+တစ် tn
+ကိုက် n
+ကို ppm
+ဝမ် n
+ခုနှစ်ထောင် n
+ပါ part
+။ punc
+
+မနှစ် n
+က ppm
+သူ pron
+ကျွန်မ pron
+ကို ppm
+သင် v
+ပေး part
+တယ် ppm
+။ punc
+
+ကျွန်တော့် pron
+ခုံ n
+
+## Change Format Column to Row
+
+perl script မှာ \t နေရာကို <space> နဲ့ အစားထိုးခဲ့တယ်။
+      $line =~ s/ /\//;
+      
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ perl ./col2line.pl ./test.bmes.out.clean > ./test.bmes.out.clean.row
+
+For hyp file:
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ head ./test.bmes.out.clean.row 
+တစ်/tn ကိုက်/n ကို/ppm ဝမ်/n ခုနှစ်ထောင်/n ပါ/part ။/punc
+မနှစ်/n က/ppm သူ/pron ကျွန်မ/pron ကို/ppm သင်/v ပေး/part တယ်/ppm ။/punc
+ကျွန်တော့်/pron ခုံ/n သွား/v ရှာ/part မလို့/part ။/punc
+အတန်း/n စ/v တာ/part ကြာ/v ပြီ/ppm လား/part ။/punc
+ဆေး/n နည်းနည်း/n စား/v လိုက်/part ၊/punc သုံး/tn လေး/part ရက်/n လောက်/part အနားယူ/v လိုက်/part ရင်/conj ပျောက်/v သွား/part မှာ/ppm ပါ/part ။/punc
+အေးချမ်း/v မှု/part နဲ့/conj စည်းကမ်း/n ကို/ppm တည်မြဲ/v အောင်/conj ထိန်းသိမ်း/v သည်/ppm ။/punc
+ဇွန်း/n ကို/ppm လိုအပ်/v တယ်/ppm ။/punc
+ဘွဲ့/n ရ/v ရင်/conj ဘာ/pron လုပ်/v မ/part လို့/part လဲ/part ။/punc
+ကျွန်တော်/pron ချောင်းဆိုး/v ခြင်း/part အတွက်/ppm တစ်/tn ခု/part ခု/part လို/v ချင်/part တယ်/ppm ။/punc
+အသီးအနှံ/n တို့/part မှ/ppm လွဲ/v လျှင်/conj လူ/n တို့/part ၏/ppm အဓိက/n အစားအစာ/n မှာ/ppm ငါး/n ဖြစ်/v သည်/ppm ။/punc
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$
+
+For reference file:
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ perl ./col2line.pl ../../mypos_data/test.bmes > ./ref.row
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ head ./ref.row 
+တစ်/tn ကိုက်/n ကို/ppm ဝမ်/n ခုနှစ်ထောင်/tn ပါ/part ။/punc
+မနှစ်/n က/ppm သူ/pron ကျွန်မ/pron ကို/ppm သင်/v ပေး/part တယ်/ppm ။/punc
+ကျွန်တော့်/pron ခုံ/n သွား/v ရှာ/v မလို့/part ။/punc
+အတန်း/n စ/v တာ/part ကြာ/v ပြီ/ppm လား/part ။/punc
+ဆေး/n နည်းနည်း/adv စား/v လိုက်/part ၊/punc သုံး/tn လေး/tn ရက်/n လောက်/part အနားယူ/v လိုက်/part ရင်/conj ပျောက်/v သွား/part မှာ/ppm ပါ/part ။/punc
+အေးချမ်း/v မှု/part နဲ့/conj စည်းကမ်း/n ကို/ppm တည်မြဲ/v အောင်/part ထိန်းသိမ်း/v သည်/ppm ။/punc
+ဇွန်း/n ကို/ppm လိုအပ်/v တယ်/ppm ။/punc
+ဘွဲ့/n ရ/v ရင်/conj ဘာ/n လုပ်/v မ/part လို့/part လဲ/part ။/punc
+ကျွန်တော်/pron ချောင်းဆိုး/v ခြင်း/part အတွက်/ppm တစ်/tn ခု/part ခု/part လို/v ချင်/part တယ်/ppm ။/punc
+အသီးအနှံ/n တို့/part မှ/ppm လွဲ/v လျှင်/conj လူ/n တို့/part ၏/ppm အဓိက/n အစားအစာ/n မှာ/ppm ငါး/n ဖြစ်/v သည်/ppm ။/punc
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ 
+
+## Evaluation with evaluate.py
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ wget https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/iSAI-NLP2020-paper-experiment/2_CRF/1_CRF_with_otest_50%25_ASEAN_Corpus/evaluate.py
+--2021-07-02 12:43:48--  https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/iSAI-NLP2020-paper-experiment/2_CRF/1_CRF_with_otest_50%25_ASEAN_Corpus/evaluate.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.108.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 13149 (13K) [text/plain]
+Saving to: ‘evaluate.py’
+
+evaluate.py                                   100%[================================================================================================>]  12.84K  --.-KB/s    in 0.003s  
+
+2021-07-02 12:43:49 (4.52 MB/s) - ‘evaluate.py’ saved [13149/13149]
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$
+
+Check help screen...
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ python2.7 ./evaluate.py
+
+The evaluation program for Chinese Tagger. 
+
+  Yue Zhang 2006
+  Computing laboratory, Oxford
+
+evaluate.py candidate_text reference_text
+
+The candidate and reference text need to be files with tagged sentences. Each sentence takes one line, and each word is in the format of Word_Tag.
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ python2.7 ./evaluate.py ./test.bmes.out.clean.row ./ref.row 
+Tag precision: 0.906741906742
+
+## 2nd Model (wordLSTM-charCNN)
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ cat ./wordLSTM-charCNN.train.config 
+### use # to comment out the configure item
+
+###This model was trained using a CNN structure to encode character sequences and LSTM for word sequence information without using inference layer.
+###Learning rate 0.015 was used for word LSTM models
+
+### I/O ###
+train_dir=/home/ye/tool/NCRFpp/mypos_data/train.bmes
+dev_dir=/home/ye/tool/NCRFpp/mypos_data/dev.bmes
+test_dir=/home/ye/tool/NCRFpp/mypos_data/test.bmes
+model_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp
+#word_emb_dir=sample_data/sample.word.emb
+
+#raw_dir=
+#decode_dir=
+#dset_dir=
+#load_model_dir=
+#char_emb_dir=
+
+norm_word_emb=False
+norm_char_emb=False
+number_normalized=True
+seg=True
+word_emb_dim=50
+char_emb_dim=30
+
+###NetworkConfiguration###
+use_crf=False
+use_char=True
+word_seq_feature=LSTM
+char_seq_feature=CNN
+#feature=[POS] emb_size=20
+#feature=[Cap] emb_size=20
+#nbest=1
+
+###TrainingSetting###
+status=train
+optimizer=SGD
+#iteration=100
+iteration=10
+batch_size=10
+ave_batch_loss=False
+
+###Hyperparameters###
+cnn_layer=4
+char_hidden_dim=50
+hidden_dim=200
+dropout=0.5
+lstm_layer=1
+bilstm=True
+#learning_rate=0.015
+#learning_rate=0.005
+learning_rate=0.004
+lr_decay=0.05
+momentum=0
+l2=1e-8
+gpu=True
+#clip=
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$
+
+## Training
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ python ./main.py --config /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/wordLSTM-charCNN.train.config | tee /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/wordLSTM-charCNN.train.log1
+Seed num: 42
+MODEL: train
+Training model...
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: None
+     Dset   file directory: None
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp
+     Loadmodel   directory: None
+     Decode file directory: None
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: False
+     Model word extractor: LSTM
+     Model       use_char: True
+     Model char extractor: CNN
+     Model char_hidden_dim: 50
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/home/ye/.local/lib/python3.8/site-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+build sequence labeling network...
+use_char:  True
+char feature extractor:  CNN
+word feature extractor:  LSTM
+use crf:  False
+build word sequence feature extractor: LSTM...
+build word representation...
+build char sequence feature extractor: CNN ...
+Epoch: 0/10
+ Learning rate is set as: 0.004
+Shuffle: first input word list: [949, 3480, 21, 1343, 322, 1448, 42, 1980, 418, 6442, 425, 11, 12]
+     Instance: 500; Time: 0.54s; loss: 13004.0330; acc: 1675/6246=0.2682
+     Instance: 1000; Time: 0.62s; loss: 11981.7332; acc: 3873/12661=0.3059
+     Instance: 1500; Time: 0.55s; loss: 11514.1427; acc: 6385/19269=0.3314
+     Instance: 2000; Time: 0.53s; loss: 10137.5935; acc: 9275/25712=0.3607
+     Instance: 2500; Time: 0.52s; loss: 8878.2474; acc: 12683/32078=0.3954
+     Instance: 3000; Time: 0.57s; loss: 8522.5853; acc: 16572/38733=0.4279
+...
+...
+...
+     Instance: 34500; Time: 0.54s; loss: 934.3925; acc: 429257/449978=0.9540
+     Instance: 35000; Time: 0.52s; loss: 965.2445; acc: 435443/456471=0.9539
+     Instance: 35500; Time: 0.54s; loss: 976.1361; acc: 441614/462953=0.9539
+     Instance: 36000; Time: 0.55s; loss: 1052.8621; acc: 447794/469431=0.9539
+     Instance: 36500; Time: 0.57s; loss: 1066.7935; acc: 454062/476008=0.9539
+     Instance: 37000; Time: 0.60s; loss: 986.7577; acc: 460553/482806=0.9539
+     Instance: 37500; Time: 0.59s; loss: 1115.9505; acc: 467138/489717=0.9539
+     Instance: 38000; Time: 0.56s; loss: 876.4263; acc: 473511/496343=0.9540
+     Instance: 38500; Time: 0.57s; loss: 1024.3057; acc: 479827/502953=0.9540
+     Instance: 39000; Time: 0.55s; loss: 897.1292; acc: 485963/509346=0.9541
+     Instance: 39500; Time: 0.52s; loss: 831.4212; acc: 491902/515554=0.9541
+     Instance: 39999; Time: 0.56s; loss: 1005.6320; acc: 498015/521958=0.9541
+Epoch: 8 training finished. Time: 44.93s, speed: 890.25st/s,  total loss: 79896.4106452465
+totalloss: 79896.4106452465
+Right token =  27574  All token =  28668  acc =  0.9618389842332915
+Dev: time: 1.56s, speed: 1418.90st/s; acc: 0.9618, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12954  All token =  13468  acc =  0.9618354618354619
+Test: time: 0.75s, speed: 1337.35st/s; acc: 0.9618, p: -1.0000, r: -1.0000, f: -1.0000
+Epoch: 9/10
+ Learning rate is set as: 0.0027586206896551726
+Shuffle: first input word list: [363, 3341, 53, 11083, 42, 189, 86, 648, 12]
+     Instance: 500; Time: 0.57s; loss: 915.7091; acc: 6230/6514=0.9564
+     Instance: 1000; Time: 0.60s; loss: 970.1298; acc: 12358/12941=0.9549
+     Instance: 1500; Time: 0.56s; loss: 1036.4163; acc: 18588/19480=0.9542
+     Instance: 2000; Time: 0.52s; loss: 981.1680; acc: 24881/26062=0.9547
+     Instance: 2500; Time: 0.58s; loss: 907.9577; acc: 31377/32826=0.9559
+     Instance: 3000; Time: 0.61s; loss: 949.9684; acc: 37712/39464=0.9556
+     Instance: 3500; Time: 0.56s; loss: 812.8297; acc: 43786/45794=0.9562
+     Instance: 4000; Time: 0.58s; loss: 1007.4379; acc: 50196/52488=0.9563
+     Instance: 4500; Time: 0.59s; loss: 952.2392; acc: 56661/59224=0.9567
+     Instance: 5000; Time: 0.62s; loss: 916.9039; acc: 62424/65262=0.9565
+     Instance: 5500; Time: 0.58s; loss: 1092.4440; acc: 68935/72103=0.9561
+     Instance: 6000; Time: 0.56s; loss: 1101.7976; acc: 75060/78557=0.9555
+     Instance: 6500; Time: 0.57s; loss: 1038.8617; acc: 81413/85212=0.9554
+     Instance: 7000; Time: 0.57s; loss: 1013.6025; acc: 87945/92047=0.9554
+     Instance: 7500; Time: 0.56s; loss: 1035.9450; acc: 94236/98645=0.9553
+     Instance: 8000; Time: 0.60s; loss: 1098.4580; acc: 100472/105202=0.9550
+     Instance: 8500; Time: 0.55s; loss: 883.0405; acc: 106666/111653=0.9553
+     Instance: 9000; Time: 0.54s; loss: 940.1831; acc: 112838/118118=0.9553
+     Instance: 9500; Time: 0.52s; loss: 1077.6688; acc: 118940/124530=0.9551
+     Instance: 10000; Time: 0.55s; loss: 885.5119; acc: 124904/130766=0.9552
+     Instance: 10500; Time: 0.58s; loss: 1011.4473; acc: 131018/137159=0.9552
+     Instance: 11000; Time: 0.57s; loss: 894.4990; acc: 137374/143775=0.9555
+     Instance: 11500; Time: 0.56s; loss: 988.3739; acc: 143294/149992=0.9553
+     Instance: 12000; Time: 0.58s; loss: 937.8531; acc: 149418/156401=0.9554
+     Instance: 12500; Time: 0.60s; loss: 1109.3793; acc: 155740/163045=0.9552
+     Instance: 13000; Time: 0.54s; loss: 926.9759; acc: 161668/169246=0.9552
+     Instance: 13500; Time: 0.56s; loss: 913.4603; acc: 168169/176016=0.9554
+     Instance: 14000; Time: 0.56s; loss: 1031.6655; acc: 174205/182374=0.9552
+     Instance: 14500; Time: 0.56s; loss: 981.1468; acc: 180587/189045=0.9553
+     Instance: 15000; Time: 0.63s; loss: 914.4094; acc: 187260/195988=0.9555
+     Instance: 15500; Time: 0.59s; loss: 977.1663; acc: 193491/202514=0.9554
+     Instance: 16000; Time: 0.62s; loss: 983.0269; acc: 199984/209299=0.9555
+     Instance: 16500; Time: 0.61s; loss: 991.8857; acc: 206711/216332=0.9555
+     Instance: 17000; Time: 0.56s; loss: 891.0921; acc: 213015/222917=0.9556
+     Instance: 17500; Time: 0.58s; loss: 954.3169; acc: 219122/229311=0.9556
+     Instance: 18000; Time: 0.55s; loss: 994.3952; acc: 225367/235863=0.9555
+     Instance: 18500; Time: 0.53s; loss: 992.6933; acc: 231491/242279=0.9555
+     Instance: 19000; Time: 0.57s; loss: 957.4447; acc: 238142/249215=0.9556
+     Instance: 19500; Time: 0.54s; loss: 942.1889; acc: 244258/255610=0.9556
+     Instance: 20000; Time: 0.55s; loss: 1046.5003; acc: 250563/262223=0.9555
+     Instance: 20500; Time: 0.54s; loss: 988.9074; acc: 256828/268781=0.9555
+     Instance: 21000; Time: 0.60s; loss: 961.5385; acc: 263155/275406=0.9555
+     Instance: 21500; Time: 0.56s; loss: 953.8112; acc: 269460/281998=0.9555
+     Instance: 22000; Time: 0.57s; loss: 963.4657; acc: 275805/288646=0.9555
+     Instance: 22500; Time: 0.55s; loss: 993.5400; acc: 282245/295375=0.9555
+     Instance: 23000; Time: 0.60s; loss: 962.2032; acc: 288978/302378=0.9557
+     Instance: 23500; Time: 0.56s; loss: 1000.6060; acc: 295499/309187=0.9557
+     Instance: 24000; Time: 0.57s; loss: 891.5502; acc: 301702/315667=0.9558
+     Instance: 24500; Time: 0.61s; loss: 1068.7439; acc: 308484/322761=0.9558
+     Instance: 25000; Time: 0.53s; loss: 975.1244; acc: 314484/329035=0.9558
+     Instance: 25500; Time: 0.53s; loss: 950.9123; acc: 320675/335514=0.9558
+     Instance: 26000; Time: 0.51s; loss: 870.3272; acc: 326306/341406=0.9558
+     Instance: 26500; Time: 0.53s; loss: 899.3765; acc: 332344/347720=0.9558
+     Instance: 27000; Time: 0.56s; loss: 941.1073; acc: 338530/354186=0.9558
+     Instance: 27500; Time: 0.56s; loss: 884.9378; acc: 344597/360535=0.9558
+     Instance: 28000; Time: 0.53s; loss: 1027.1756; acc: 350693/366928=0.9558
+     Instance: 28500; Time: 0.53s; loss: 993.6451; acc: 356955/373476=0.9558
+     Instance: 29000; Time: 0.53s; loss: 1017.1797; acc: 362948/379780=0.9557
+     Instance: 29500; Time: 0.54s; loss: 894.2281; acc: 368878/385964=0.9557
+     Instance: 30000; Time: 0.58s; loss: 988.7027; acc: 375229/392622=0.9557
+     Instance: 30500; Time: 0.54s; loss: 1017.3475; acc: 381349/399033=0.9557
+     Instance: 31000; Time: 0.58s; loss: 1077.5020; acc: 387997/405997=0.9557
+     Instance: 31500; Time: 0.59s; loss: 996.4018; acc: 394179/412472=0.9557
+     Instance: 32000; Time: 0.54s; loss: 930.7483; acc: 400166/418742=0.9556
+     Instance: 32500; Time: 0.56s; loss: 1044.4093; acc: 406718/425600=0.9556
+     Instance: 33000; Time: 0.56s; loss: 1018.7816; acc: 413068/432236=0.9557
+     Instance: 33500; Time: 0.55s; loss: 947.8866; acc: 419377/438832=0.9557
+     Instance: 34000; Time: 0.54s; loss: 982.1611; acc: 425764/445536=0.9556
+     Instance: 34500; Time: 0.51s; loss: 1035.0730; acc: 431704/451788=0.9555
+     Instance: 35000; Time: 0.49s; loss: 869.3620; acc: 437648/457992=0.9556
+     Instance: 35500; Time: 0.53s; loss: 837.6343; acc: 443690/464285=0.9556
+     Instance: 36000; Time: 0.53s; loss: 878.5795; acc: 449660/470524=0.9557
+     Instance: 36500; Time: 0.54s; loss: 951.3898; acc: 455803/476942=0.9557
+     Instance: 37000; Time: 0.53s; loss: 968.3987; acc: 461619/483050=0.9556
+     Instance: 37500; Time: 0.53s; loss: 892.7293; acc: 467745/489453=0.9556
+     Instance: 38000; Time: 0.53s; loss: 901.5785; acc: 473900/495899=0.9556
+     Instance: 38500; Time: 0.57s; loss: 951.1543; acc: 480075/502350=0.9557
+     Instance: 39000; Time: 0.54s; loss: 936.8333; acc: 486109/508663=0.9557
+     Instance: 39500; Time: 0.56s; loss: 1038.0831; acc: 492341/515211=0.9556
+     Instance: 39999; Time: 0.57s; loss: 977.8382; acc: 498790/521958=0.9556
+Epoch: 9 training finished. Time: 44.84s, speed: 892.05st/s,  total loss: 77539.16856563091
+totalloss: 77539.16856563091
+Right token =  27572  All token =  28668  acc =  0.9617692200362774
+Dev: time: 1.56s, speed: 1416.10st/s; acc: 0.9618, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12965  All token =  13468  acc =  0.9626522126522127
+Test: time: 0.76s, speed: 1334.39st/s; acc: 0.9627, p: -1.0000, r: -1.0000, f: -1.0000
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ 
+
+## Prepare decode.config for POS-tagging
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ cat decode.config 
+### Decode ###
+status=decode
+raw_dir=/home/ye/tool/NCRFpp/mypos_data/test.bmes
+#nbest=10
+nbest=1
+decode_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/test.bmes.out
+dset_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp.dset
+load_model_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp.0.model
+
+## Testing
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ python ./main.py --config /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/decode.config 
+Seed num: 42
+MODEL: decode
+/home/ye/tool/NCRFpp/mypos_data/test.bmes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Dset   file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp.dset
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp
+     Loadmodel   directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp.0.model
+     Decode file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/test.bmes.out
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: False
+     Model word extractor: LSTM
+     Model       use_char: True
+     Model char extractor: CNN
+     Model char_hidden_dim: 50
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+nbest: 1
+Load Model from file:  /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp
+build sequence labeling network...
+use_char:  True
+char feature extractor:  CNN
+word feature extractor:  LSTM
+use crf:  False
+build word sequence feature extractor: LSTM...
+build word representation...
+build char sequence feature extractor: CNN ...
+Decode raw data, nbest: 1 ...
+Nbest output is currently supported only for CRF! Exit...
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$
+
+Got Error! and thus I should comment out the nbest in the decode.config file.
+
+## Test again
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ python ./main.py --config /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/decode.config 
+Seed num: 42
+MODEL: decode
+/home/ye/tool/NCRFpp/mypos_data/test.bmes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Dset   file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp.dset
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp
+     Loadmodel   directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp.0.model
+     Decode file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/test.bmes.out
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: False
+     Model word extractor: LSTM
+     Model       use_char: True
+     Model char extractor: CNN
+     Model char_hidden_dim: 50
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+nbest: None
+Load Model from file:  /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp
+build sequence labeling network...
+use_char:  True
+char feature extractor:  CNN
+word feature extractor:  LSTM
+use crf:  False
+build word sequence feature extractor: LSTM...
+build word representation...
+build char sequence feature extractor: CNN ...
+Decode raw data, nbest: None ...
+Right token =  12557  All token =  13468  acc =  0.9323581823581824
+raw: time:0.79s, speed:1270.67st/s; acc: 0.9324, p: -1.0000, r: -1.0000, f: -1.0000
+Traceback (most recent call last):
+  File "./main.py", line 568, in <module>
+    data.write_decoded_results(decode_results, 'raw')
+  File "/home/ye/tool/NCRFpp/utils/data.py", line 334, in write_decoded_results
+    fout.write(content_list[idx][0][idy].encode('utf-8') + " " + predict_results[idx][idy] + '\n')
+TypeError: can't concat str to bytes
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ python ./main.py --config /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/decode.config ^C
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ cd trained-models/wordLSTM-charCNN/
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ ls
+decode.config  ncrfpp.0.model  ncrfpp.dset  test.bmes.out  wordLSTM-charCNN.train.config  wordLSTM-charCNN.train.log1
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ head -n 20 ./test.bmes.out 
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ wc test.bmes.out 
+0 0 0 test.bmes.out
+
+*** No output!!!
+
+## Debugging
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ gedit utils/data.py
+at Line 334:
+                    #fout.write(content_list[idx][0][idy].encode('utf-8') + " " + predict_results[idx][idy] + '\n')
+                    fout.write(content_list[idx][0][idy].encode('utf-8') + " " + predict_results[idx][idy] + b'\n')
+                    
+## Test Again
+
+Error!
+
+Debugging
+
+                    #fout.write(content_list[idx][0][idy].encode('utf-8') + " " + predict_results[idx][idy] + '\n')
+                    fout.write(str(content_list[idx][0][idy].encode('utf-8')) + " " + predict_results[idx][idy] + '\n')
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ python ./main.py --config /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/decode.config 
+Seed num: 42
+MODEL: decode
+/home/ye/tool/NCRFpp/mypos_data/test.bmes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Dset   file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp.dset
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp
+     Loadmodel   directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp.0.model
+     Decode file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/test.bmes.out
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: False
+     Model word extractor: LSTM
+     Model       use_char: True
+     Model char extractor: CNN
+     Model char_hidden_dim: 50
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+nbest: None
+Load Model from file:  /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp
+build sequence labeling network...
+use_char:  True
+char feature extractor:  CNN
+word feature extractor:  LSTM
+use crf:  False
+build word sequence feature extractor: LSTM...
+build word representation...
+build char sequence feature extractor: CNN ...
+Decode raw data, nbest: None ...
+Right token =  12557  All token =  13468  acc =  0.9323581823581824
+raw: time:0.78s, speed:1288.99st/s; acc: 0.9324, p: -1.0000, r: -1.0000, f: -1.0000
+Predict raw result has been written into file. /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/test.bmes.out
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ 
+
+Run and got output however ....
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ head -n 20 ./test.bmes.out 
+b'\xe1\x80\x90\xe1\x80\x85\xe1\x80\xba' tn
+b'\xe1\x80\x80\xe1\x80\xad\xe1\x80\xaf\xe1\x80\x80\xe1\x80\xba' n
+b'\xe1\x80\x80\xe1\x80\xad\xe1\x80\xaf' ppm
+b'\xe1\x80\x9d\xe1\x80\x99\xe1\x80\xba' n
+b'\xe1\x80\x81\xe1\x80\xaf\xe1\x80\x94\xe1\x80\xbe\xe1\x80\x85\xe1\x80\xba\xe1\x80\x91\xe1\x80\xb1\xe1\x80\xac\xe1\x80\x84\xe1\x80\xba' n
+b'\xe1\x80\x95\xe1\x80\xab' part
+b'\xe1\x81\x8b' punc
+
+b'\xe1\x80\x99\xe1\x80\x94\xe1\x80\xbe\xe1\x80\x85\xe1\x80\xba' n
+b'\xe1\x80\x80' ppm
+b'\xe1\x80\x9e\xe1\x80\xb0' pron
+b'\xe1\x80\x80\xe1\x80\xbb\xe1\x80\xbd\xe1\x80\x94\xe1\x80\xba\xe1\x80\x99' pron
+b'\xe1\x80\x80\xe1\x80\xad\xe1\x80\xaf' ppm
+b'\xe1\x80\x9e\xe1\x80\x84\xe1\x80\xba' v
+b'\xe1\x80\x95\xe1\x80\xb1\xe1\x80\xb8' part
+b'\xe1\x80\x90\xe1\x80\x9a\xe1\x80\xba' ppm
+b'\xe1\x81\x8b' punc
+
+b'\xe1\x80\x80\xe1\x80\xbb\xe1\x80\xbd\xe1\x80\x94\xe1\x80\xba\xe1\x80\x90\xe1\x80\xb1\xe1\x80\xac\xe1\x80\xba\xe1\x80\xb7' pron
+b'\xe1\x80\x81\xe1\x80\xaf\xe1\x80\xb6' n
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$
+
+Debugging:
+
+                    #fout.write(content_list[idx][0][idy].encode('utf-8') + " " + predict_results[idx][idy] + '\n')
+                    #fout.write(str(content_list[idx][0][idy].encode('utf-8')) + " " + predict_results[idx][idy] + '\n')
+                    fout.write(content_list[idx][0][idy] + " " + predict_results[idx][idy] + '\n')
+                    
+Testing again and it looks OK:
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ python ./main.py --config /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/decode.config 
+Seed num: 42
+MODEL: decode
+/home/ye/tool/NCRFpp/mypos_data/test.bmes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Dset   file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp.dset
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp
+     Loadmodel   directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp.0.model
+     Decode file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/test.bmes.out
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: False
+     Model word extractor: LSTM
+     Model       use_char: True
+     Model char extractor: CNN
+     Model char_hidden_dim: 50
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+nbest: None
+Load Model from file:  /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/ncrfpp
+build sequence labeling network...
+use_char:  True
+char feature extractor:  CNN
+word feature extractor:  LSTM
+use crf:  False
+build word sequence feature extractor: LSTM...
+build word representation...
+build char sequence feature extractor: CNN ...
+Decode raw data, nbest: None ...
+Right token =  12557  All token =  13468  acc =  0.9323581823581824
+raw: time:0.79s, speed:1267.47st/s; acc: 0.9324, p: -1.0000, r: -1.0000, f: -1.0000
+Predict raw result has been written into file. /home/ye/tool/NCRFpp/trained-models/wordLSTM-charCNN/test.bmes.out
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ cd trained-models/wordLSTM-charCNN/
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ ls
+decode.config  ncrfpp.0.model  ncrfpp.dset  test.bmes.out  wordLSTM-charCNN.train.config  wordLSTM-charCNN.train.log1
+
+## Check the POS tagged output or Hyp 
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ head -n 20 ./test.bmes.out 
+တစ် tn
+ကိုက် n
+ကို ppm
+ဝမ် n
+ခုနှစ်ထောင် n
+ပါ part
+။ punc
+
+မနှစ် n
+က ppm
+သူ pron
+ကျွန်မ pron
+ကို ppm
+သင် v
+ပေး part
+တယ် ppm
+။ punc
+
+ကျွန်တော့် pron
+ခုံ n
+                                        
+
+## Change column to row
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ perl ./col2line.pl ./test.bmes.out > ./test.bmes.out.row
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ head ./test.bmes.out.row 
+တစ်/tn ကိုက်/n ကို/ppm ဝမ်/n ခုနှစ်ထောင်/n ပါ/part ။/punc
+မနှစ်/n က/ppm သူ/pron ကျွန်မ/pron ကို/ppm သင်/v ပေး/part တယ်/ppm ။/punc
+ကျွန်တော့်/pron ခုံ/n သွား/v ရှာ/v မလို့/part ။/punc
+အတန်း/n စ/v တာ/part ကြာ/v ပြီ/ppm လား/part ။/punc
+ဆေး/n နည်းနည်း/adv စား/v လိုက်/part ၊/punc သုံး/tn လေး/part ရက်/n လောက်/part အနားယူ/v လိုက်/part ရင်/conj ပျောက်/v သွား/part မှာ/ppm ပါ/part ။/punc
+အေးချမ်း/v မှု/part နဲ့/conj စည်းကမ်း/n ကို/ppm တည်မြဲ/v အောင်/conj ထိန်းသိမ်း/v သည်/ppm ။/punc
+ဇွန်း/n ကို/ppm လိုအပ်/v တယ်/ppm ။/punc
+ဘွဲ့/n ရ/v ရင်/conj ဘာ/pron လုပ်/v မ/part လို့/part လဲ/part ။/punc
+ကျွန်တော်/pron ချောင်းဆိုး/v ခြင်း/part အတွက်/ppm တစ်/tn ခု/part ခု/part လို/v ချင်/part တယ်/ppm ။/punc
+အသီးအနှံ/n တို့/part မှ/ppm လွဲ/v လျှင်/conj လူ/n တို့/part ၏/ppm အဓိက/n အစားအစာ/n မှာ/ppm ငါး/n ဖြစ်/v သည်/ppm ။/punc
+
+## Evaluation with evaluate.py
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ perl ../wordCNN-CRF-charLSTM/evaluate.py ./test.bmes.out.row ^C
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ cp ../wordCNN-CRF-charLSTM/ref.row .
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ python2.7 ../wordCNN-CRF-charLSTM/evaluate.py ./test.bmes.out.row ./ref.row 
+Tag precision: 0.932358182358
+
+## Preparing config file for the No.3 Model or wordLSTM-CRF-charCNN
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN$ cat ./wordLSTM-CRF-charCNN.train.config 
+### use # to comment out the configure item
+
+###This model was trained using a CNN structure to encode character sequences, LSTM for word sequence information and CRF as inference layer.
+###Learning rate 0.015 was used for word LSTM models
+
+### I/O ###
+train_dir=/home/ye/tool/NCRFpp/mypos_data/train.bmes
+dev_dir=/home/ye/tool/NCRFpp/mypos_data/dev.bmes
+test_dir=/home/ye/tool/NCRFpp/mypos_data/test.bmes
+model_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN/wordLSTM-CRF-charCNN
+#word_emb_dir=sample_data/sample.word.emb
+
+#raw_dir=
+#decode_dir=
+#dset_dir=
+#load_model_dir=
+#char_emb_dir=
+
+norm_word_emb=False
+norm_char_emb=False
+number_normalized=True
+seg=True
+word_emb_dim=50
+char_emb_dim=30
+
+###NetworkConfiguration###
+use_crf=True
+use_char=True
+word_seq_feature=LSTM
+char_seq_feature=CNN
+#feature=[POS] emb_size=20
+#feature=[Cap] emb_size=20
+#nbest=1
+
+###TrainingSetting###
+status=train
+optimizer=SGD
+#iteration=100
+iteration=10
+batch_size=10
+ave_batch_loss=False
+
+###Hyperparameters###
+cnn_layer=4
+char_hidden_dim=50
+hidden_dim=200
+dropout=0.5
+lstm_layer=1
+bilstm=True
+#learning_rate=0.015
+#learning_rate=0.005
+learning_rate=0.004
+lr_decay=0.05
+momentum=0
+l2=1e-8
+gpu=True
+#clip=
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN$ 
+
+## Training No. 3 Model 
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ time python ./main.py --config ./trained-models/wordLSTM-CRF-charCNN/wordLSTM-CRF-charCNN.train.config | tee ./trained-models/wordLSTM-CRF-charCNN/wordLSTM-CRF-charCNN.train.log1
+Seed num: 42
+MODEL: train
+Training model...
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: None
+     Dset   file directory: None
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN/wordLSTM-CRF-charCNN
+     Loadmodel   directory: None
+     Decode file directory: None
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: True
+     Model word extractor: LSTM
+     Model       use_char: True
+     Model char extractor: CNN
+     Model char_hidden_dim: 50
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+build sequence labeling network...
+use_char:  True
+char feature extractor:  CNN
+word feature extractor:  LSTM
+use crf:  True
+build word sequence feature extractor: LSTM...
+build word representation...
+build char sequence feature extractor: CNN ...
+build CRF...
+Epoch: 0/10
+ Learning rate is set as: 0.004
+Shuffle: first input word list: [949, 3480, 21, 1343, 322, 1448, 42, 1980, 418, 6442, 425, 11, 12]
+     Instance: 500; Time: 1.92s; loss: 11891.1092; acc: 1843/6246=0.2951
+     Instance: 1000; Time: 1.92s; loss: 10423.0661; acc: 4054/12661=0.3202
+     Instance: 1500; Time: 2.02s; loss: 10256.4276; acc: 6554/19269=0.3401
+     Instance: 2000; Time: 1.77s; loss: 9208.4286; acc: 9445/25712=0.3673
+     Instance: 2500; Time: 1.76s; loss: 8048.5595; acc: 12815/32078=0.3995
+     Instance: 3000; Time: 2.02s; loss: 7662.2146; acc: 16674/38733=0.4305
+     Instance: 3500; Time: 1.91s; loss: 6934.2386; acc: 20949/45458=0.4608
+     Instance: 4000; Time: 1.90s; loss: 6204.3500; acc: 25275/51915=0.4869
+     Instance: 4500; Time: 1.99s; loss: 5704.6369; acc: 29727/58351=0.5095
+     Instance: 5000; Time: 1.87s; loss: 5419.8036; acc: 34298/64780=0.5295
+     Instance: 5500; Time: 1.82s; loss: 4864.3752; acc: 38742/70921=0.5463
+
+...
+...
+...
+     Instance: 25000; Time: 1.95s; loss: 955.2180; acc: 314314/329035=0.9553
+     Instance: 25500; Time: 1.96s; loss: 930.2239; acc: 320512/335514=0.9553
+     Instance: 26000; Time: 1.83s; loss: 879.3995; acc: 326138/341406=0.9553
+     Instance: 26500; Time: 1.86s; loss: 891.6900; acc: 332156/347720=0.9552
+     Instance: 27000; Time: 2.04s; loss: 925.8646; acc: 338328/354186=0.9552
+     Instance: 27500; Time: 1.96s; loss: 852.8782; acc: 344403/360535=0.9553
+     Instance: 28000; Time: 1.86s; loss: 1002.4531; acc: 350493/366928=0.9552
+     Instance: 28500; Time: 1.92s; loss: 975.7603; acc: 356750/373476=0.9552
+     Instance: 29000; Time: 1.84s; loss: 1030.0405; acc: 362740/379780=0.9551
+     Instance: 29500; Time: 1.87s; loss: 853.0125; acc: 368670/385964=0.9552
+     Instance: 30000; Time: 2.13s; loss: 953.8318; acc: 375014/392622=0.9552
+     Instance: 30500; Time: 1.95s; loss: 962.0784; acc: 381149/399033=0.9552
+     Instance: 31000; Time: 2.17s; loss: 1055.4861; acc: 387786/405997=0.9551
+     Instance: 31500; Time: 2.13s; loss: 987.2560; acc: 393965/412472=0.9551
+     Instance: 32000; Time: 1.93s; loss: 924.6783; acc: 399943/418742=0.9551
+     Instance: 32500; Time: 2.06s; loss: 1019.7875; acc: 406463/425600=0.9550
+     Instance: 33000; Time: 2.04s; loss: 955.3447; acc: 412817/432236=0.9551
+     Instance: 33500; Time: 1.95s; loss: 922.7651; acc: 419120/438832=0.9551
+     Instance: 34000; Time: 2.09s; loss: 948.7419; acc: 425530/445536=0.9551
+     Instance: 34500; Time: 1.96s; loss: 983.5111; acc: 431473/451788=0.9550
+     Instance: 35000; Time: 1.87s; loss: 835.7413; acc: 437408/457992=0.9551
+     Instance: 35500; Time: 1.96s; loss: 844.9693; acc: 443439/464285=0.9551
+     Instance: 36000; Time: 1.92s; loss: 803.5557; acc: 449429/470524=0.9552
+     Instance: 36500; Time: 1.98s; loss: 933.0826; acc: 455566/476942=0.9552
+     Instance: 37000; Time: 1.93s; loss: 940.2606; acc: 461387/483050=0.9552
+     Instance: 37500; Time: 1.95s; loss: 848.4575; acc: 467524/489453=0.9552
+     Instance: 38000; Time: 1.91s; loss: 865.8682; acc: 473671/495899=0.9552
+     Instance: 38500; Time: 2.11s; loss: 920.9868; acc: 479840/502350=0.9552
+     Instance: 39000; Time: 1.94s; loss: 901.5262; acc: 485867/508663=0.9552
+     Instance: 39500; Time: 2.08s; loss: 1015.3102; acc: 492079/515211=0.9551
+     Instance: 39999; Time: 2.15s; loss: 945.8122; acc: 498534/521958=0.9551
+Epoch: 9 training finished. Time: 161.84s, speed: 247.15st/s,  total loss: 75409.48913574219
+totalloss: 75409.48913574219
+Right token =  27574  All token =  28668  acc =  0.9618389842332915
+Dev: time: 2.30s, speed: 959.57st/s; acc: 0.9618, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12940  All token =  13468  acc =  0.9607959607959607
+Test: time: 1.12s, speed: 898.44st/s; acc: 0.9608, p: -1.0000, r: -1.0000, f: -1.0000
+
+real	27m54.523s
+user	27m41.629s
+sys	0m4.609s
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ 
+
+## Prepare decode.config file
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN$ cat decode.config 
+### Decode ###
+status=decode
+raw_dir=/home/ye/tool/NCRFpp/mypos_data/test.bmes
+#nbest=10
+#nbest=1
+decode_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN/test.bmes.out
+dset_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN/wordLSTM-CRF-charCNN.dset
+load_model_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN/wordLSTM-CRF-charCNN.0.model
+
+
+## Testing with test data manually
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ time python ./main.py --config ./trained-models/wordLSTM-CRF-charCNN/decode.config
+Seed num: 42
+MODEL: decode
+/home/ye/tool/NCRFpp/mypos_data/test.bmes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Dset   file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN/wordLSTM-CRF-charCNN.dset
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN/wordLSTM-CRF-charCNN
+     Loadmodel   directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN/wordLSTM-CRF-charCNN.0.model
+     Decode file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN/test.bmes.out
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: True
+     Model word extractor: LSTM
+     Model       use_char: True
+     Model char extractor: CNN
+     Model char_hidden_dim: 50
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+nbest: None
+Load Model from file:  /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN/wordLSTM-CRF-charCNN
+build sequence labeling network...
+use_char:  True
+char feature extractor:  CNN
+word feature extractor:  LSTM
+use crf:  True
+build word sequence feature extractor: LSTM...
+build word representation...
+build char sequence feature extractor: CNN ...
+build CRF...
+Decode raw data, nbest: None ...
+Right token =  12518  All token =  13468  acc =  0.9294624294624294
+raw: time:1.10s, speed:911.28st/s; acc: 0.9295, p: -1.0000, r: -1.0000, f: -1.0000
+Predict raw result has been written into file. /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN/test.bmes.out
+
+real	0m5.806s
+user	0m5.262s
+sys	0m1.164s
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ 
+
+## Check the hyp
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN$ head -n 20 ./test.bmes.out 
+တစ် tn
+ကိုက် n
+ကို ppm
+ဝမ် v
+ခုနှစ်ထောင် n
+ပါ part
+။ punc
+
+မနှစ် n
+က ppm
+သူ pron
+ကျွန်မ pron
+ကို ppm
+သင် v
+ပေး part
+တယ် ppm
+။ punc
+
+ကျွန်တော့် pron
+ခုံ v
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN$ 
+
+## Change column to row format
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN$ perl ./col2line.pl ./test.bmes.out > ./test.bmes.out.row
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN$ head ./test.bmes.out.row 
+တစ်/tn ကိုက်/n ကို/ppm ဝမ်/v ခုနှစ်ထောင်/n ပါ/part ။/punc
+မနှစ်/n က/ppm သူ/pron ကျွန်မ/pron ကို/ppm သင်/v ပေး/part တယ်/ppm ။/punc
+ကျွန်တော့်/pron ခုံ/v သွား/part ရှာ/v မလို့/part ။/punc
+အတန်း/n စ/v တာ/part ကြာ/v ပြီ/ppm လား/part ။/punc
+ဆေး/n နည်းနည်း/adv စား/v လိုက်/part ၊/punc သုံး/tn လေး/part ရက်/n လောက်/part အနားယူ/v လိုက်/part ရင်/conj ပျောက်/v သွား/part မှာ/ppm ပါ/part ။/punc
+အေးချမ်း/v မှု/part နဲ့/conj စည်းကမ်း/n ကို/ppm တည်မြဲ/v အောင်/conj ထိန်းသိမ်း/v သည်/ppm ။/punc
+ဇွန်း/n ကို/ppm လိုအပ်/v တယ်/ppm ။/punc
+ဘွဲ့/n ရ/v ရင်/conj ဘာ/pron လုပ်/v မ/part လို့/part လဲ/part ။/punc
+ကျွန်တော်/pron ချောင်းဆိုး/v ခြင်း/part အတွက်/ppm တစ်/tn ခု/part ခု/part လို/v ချင်/part တယ်/ppm ။/punc
+အသီးအနှံ/n တို့/part မှ/ppm လွဲ/v လျှင်/conj လူ/n တို့/part ၏/ppm အဓိက/n အစားအစာ/n မှာ/ppm ငါး/n ဖြစ်/v သည်/ppm ။/punc
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN$ 
+
+## Evaluation with evaluate.py
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN$ python2.7 ../wordCNN-CRF-charLSTM/evaluate.py ./test.bmes.out.row ./ref.row 
+Tag precision: 0.929462429462
+
+## Prepare configuration file for Model 4 or wordLSTM-CRF
+
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF$ cat ./wordLSTM-CRF.train.config 
+### use # to comment out the configure item
+
+###This model was trained using only LSTM for word sequence information and CRF as inference layer.
+###Learning rate 0.015 was used for word LSTM models
+
+### I/O ###
+train_dir=/home/ye/tool/NCRFpp/mypos_data/train.bmes
+dev_dir=/home/ye/tool/NCRFpp/mypos_data/dev.bmes
+test_dir=/home/ye/tool/NCRFpp/mypos_data/test.bmes
+model_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/ncrfpp
+#word_emb_dir=sample_data/sample.word.emb
+
+#raw_dir=
+#decode_dir=
+#dset_dir=
+#load_model_dir=
+#char_emb_dir=
+
+norm_word_emb=False
+norm_char_emb=False
+number_normalized=True
+seg=True
+word_emb_dim=50
+char_emb_dim=30
+
+###NetworkConfiguration###
+use_crf=True
+use_char=False
+word_seq_feature=LSTM
+#char_seq_feature=CNN
+#feature=[POS] emb_size=20
+#feature=[Cap] emb_size=20
+#nbest=1
+
+###TrainingSetting###
+status=train
+optimizer=SGD
+#iteration=100
+iteration=10
+batch_size=10
+ave_batch_loss=False
+
+###Hyperparameters###
+cnn_layer=4
+char_hidden_dim=50
+hidden_dim=200
+dropout=0.5
+lstm_layer=1
+bilstm=True
+#learning_rate=0.015
+#learning_rate=0.005
+learning_rate=0.004
+lr_decay=0.05
+momentum=0
+l2=1e-8
+gpu=True
+#clip=
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF$ 
+
+## Training Model 4 or wordLSTM-CRF
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ time python ./main.py --config ./trained-models/wordLSTM-CRF/wordLSTM-CRF.train.config | tee ./trained-models/wordLSTM-CRF/wordLSTM-CRF.train.log1
+Seed num: 42
+MODEL: train
+Training model...
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: None
+     Dset   file directory: None
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/ncrfpp
+     Loadmodel   directory: None
+     Decode file directory: None
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: True
+     Model word extractor: LSTM
+     Model       use_char: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+build sequence labeling network...
+use_char:  False
+word feature extractor:  LSTM
+use crf:  True
+build word sequence feature extractor: LSTM...
+build word representation...
+build CRF...
+Epoch: 0/10
+ Learning rate is set as: 0.004
+Shuffle: first input word list: [949, 3480, 21, 1343, 322, 1448, 42, 1980, 418, 6442, 425, 11, 12]
+     Instance: 500; Time: 1.77s; loss: 12104.8516; acc: 1859/6246=0.2976
+     Instance: 1000; Time: 1.75s; loss: 10416.9796; acc: 4108/12661=0.3245
+     Instance: 1500; Time: 1.88s; loss: 10412.7845; acc: 6530/19269=0.3389
+     Instance: 2000; Time: 1.76s; loss: 9719.4550; acc: 9111/25712=0.3543
+     Instance: 2500; Time: 1.78s; loss: 8877.9384; acc: 12132/32078=0.3782
+     Instance: 3000; Time: 1.97s; loss: 8434.0600; acc: 15592/38733=0.4026
+     Instance: 3500; Time: 1.87s; loss: 7543.0128; acc: 19608/45458=0.4313
+...
+...
+...
+     Instance: 24500; Time: 2.20s; loss: 1194.7354; acc: 306854/322761=0.9507
+     Instance: 25000; Time: 1.78s; loss: 1068.2030; acc: 312791/329035=0.9506
+     Instance: 25500; Time: 1.85s; loss: 1027.9930; acc: 318944/335514=0.9506
+     Instance: 26000; Time: 1.74s; loss: 972.0849; acc: 324537/341406=0.9506
+     Instance: 26500; Time: 1.75s; loss: 967.3505; acc: 330557/347720=0.9506
+     Instance: 27000; Time: 1.95s; loss: 1052.3071; acc: 336694/354186=0.9506
+     Instance: 27500; Time: 1.88s; loss: 952.8104; acc: 342735/360535=0.9506
+     Instance: 28000; Time: 1.79s; loss: 1083.9240; acc: 348792/366928=0.9506
+     Instance: 28500; Time: 1.81s; loss: 1058.7773; acc: 355018/373476=0.9506
+     Instance: 29000; Time: 1.76s; loss: 1134.2601; acc: 360959/379780=0.9504
+     Instance: 29500; Time: 1.80s; loss: 965.5670; acc: 366835/385964=0.9504
+     Instance: 30000; Time: 2.01s; loss: 1125.0901; acc: 373141/392622=0.9504
+     Instance: 30500; Time: 1.93s; loss: 1165.1981; acc: 379217/399033=0.9503
+     Instance: 31000; Time: 2.07s; loss: 1201.6756; acc: 385817/405997=0.9503
+     Instance: 31500; Time: 1.93s; loss: 1118.2620; acc: 391955/412472=0.9503
+     Instance: 32000; Time: 1.74s; loss: 991.6329; acc: 397913/418742=0.9503
+     Instance: 32500; Time: 1.89s; loss: 1137.4006; acc: 404431/425600=0.9503
+     Instance: 33000; Time: 1.85s; loss: 1062.8757; acc: 410725/432236=0.9502
+     Instance: 33500; Time: 1.77s; loss: 1008.6786; acc: 416977/438832=0.9502
+     Instance: 34000; Time: 1.82s; loss: 1114.9058; acc: 423329/445536=0.9502
+     Instance: 34500; Time: 1.68s; loss: 1029.8195; acc: 429249/451788=0.9501
+     Instance: 35000; Time: 1.56s; loss: 916.0280; acc: 435170/457992=0.9502
+     Instance: 35500; Time: 1.79s; loss: 983.7975; acc: 441162/464285=0.9502
+     Instance: 36000; Time: 1.78s; loss: 925.8323; acc: 447104/470524=0.9502
+     Instance: 36500; Time: 1.83s; loss: 1048.6026; acc: 453196/476942=0.9502
+     Instance: 37000; Time: 1.77s; loss: 935.5826; acc: 459020/483050=0.9503
+     Instance: 37500; Time: 1.72s; loss: 968.1849; acc: 465114/489453=0.9503
+     Instance: 38000; Time: 1.74s; loss: 958.8950; acc: 471247/495899=0.9503
+     Instance: 38500; Time: 1.83s; loss: 1029.6614; acc: 477362/502350=0.9503
+     Instance: 39000; Time: 1.73s; loss: 1006.4805; acc: 483383/508663=0.9503
+     Instance: 39500; Time: 1.94s; loss: 1040.7686; acc: 489588/515211=0.9503
+     Instance: 39999; Time: 1.94s; loss: 1040.9660; acc: 496010/521958=0.9503
+Epoch: 9 training finished. Time: 152.05s, speed: 263.06st/s,  total loss: 83476.27557373047
+totalloss: 83476.27557373047
+Right token =  27402  All token =  28668  acc =  0.9558392632900795
+Dev: time: 2.18s, speed: 1011.66st/s; acc: 0.9558, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12887  All token =  13468  acc =  0.9568607068607069
+Test: time: 1.05s, speed: 960.37st/s; acc: 0.9569, p: -1.0000, r: -1.0000, f: -1.0000
+
+real	26m42.175s
+user	26m28.599s
+sys	0m4.402s
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ 
+
+## Prepare decode.config File
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF$ cat decode.config 
+### Decode ###
+status=decode
+raw_dir=/home/ye/tool/NCRFpp/mypos_data/test.bmes
+#nbest=10
+#nbest=1
+decode_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/test.bmes.out
+dset_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/ncrfpp.dset
+load_model_dir=/home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/ncrfpp.0.model
+
+## Testing or Decoding or POS-tagging
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ time python ./main.py --config ./trained-models/wordLSTM-CRF/decode.config 
+Seed num: 42
+MODEL: decode
+/home/ye/tool/NCRFpp/mypos_data/test.bmes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Dset   file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/ncrfpp.dset
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/ncrfpp
+     Loadmodel   directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/ncrfpp.0.model
+     Decode file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/test.bmes.out
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: True
+     Model word extractor: LSTM
+     Model       use_char: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+nbest: None
+Load Model from file:  /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/ncrfpp
+build sequence labeling network...
+use_char:  False
+word feature extractor:  LSTM
+use crf:  True
+build word sequence feature extractor: LSTM...
+build word representation...
+build CRF...
+Decode raw data, nbest: None ...
+Right token =  12402  All token =  13468  acc =  0.9208494208494209
+raw: time:1.03s, speed:981.10st/s; acc: 0.9208, p: -1.0000, r: -1.0000, f: -1.0000
+Predict raw result has been written into file. /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/test.bmes.out
+
+real	0m5.496s
+user	0m4.960s
+sys	0m1.182s
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp$ 
+
+## Check the Hyp File
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF$ head -n 20 ./test.bmes.out 
+တစ် tn
+ကိုက် n
+ကို ppm
+ဝမ် n
+ခုနှစ်ထောင် v
+ပါ part
+။ punc
+
+မနှစ် n
+က ppm
+သူ pron
+ကျွန်မ pron
+ကို ppm
+သင် v
+ပေး part
+တယ် ppm
+။ punc
+
+ကျွန်တော့် pron
+ခုံ n
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF$
+
+## Convert column to row format
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF$ perl ../wordCNN-CRF-charLSTM/col2line.pl ./test.bmes.out > ./test.bmes.out.row
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF$ head ./test.bmes.out.row 
+တစ်/tn ကိုက်/n ကို/ppm ဝမ်/n ခုနှစ်ထောင်/v ပါ/part ။/punc
+မနှစ်/n က/ppm သူ/pron ကျွန်မ/pron ကို/ppm သင်/v ပေး/part တယ်/ppm ။/punc
+ကျွန်တော့်/pron ခုံ/n သွား/v ရှာ/v မလို့/part ။/punc
+အတန်း/n စ/v တာ/part ကြာ/v ပြီ/ppm လား/part ။/punc
+ဆေး/n နည်းနည်း/adv စား/v လိုက်/part ၊/punc သုံး/tn လေး/part ရက်/n လောက်/part အနားယူ/v လိုက်/part ရင်/conj ပျောက်/v သွား/part မှာ/ppm ပါ/part ။/punc
+အေးချမ်း/v မှု/part နဲ့/conj စည်းကမ်း/n ကို/ppm တည်မြဲ/v အောင်/conj ထိန်းသိမ်း/v သည်/ppm ။/punc
+ဇွန်း/n ကို/ppm လိုအပ်/v တယ်/ppm ။/punc
+ဘွဲ့/n ရ/v ရင်/conj ဘာ/pron လုပ်/v မ/part လို့/part လဲ/part ။/punc
+ကျွန်တော်/pron ချောင်းဆိုး/v ခြင်း/part အတွက်/ppm တစ်/tn ခု/part ခု/part လို/v ချင်/part တယ်/ppm ။/punc
+အသီးအနှံ/n တို့/part မှ/ppm လွဲ/v လျှင်/conj လူ/n တို့/part ၏/ppm အဓိက/n အစားအစာ/n မှာ/ppm ငါး/n ဖြစ်/v သည်/ppm ။/punc
+
+## Evaluation with evaluate.py
+
+(NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF$ python2.7 ../wordCNN-CRF-charLSTM/evaluate.py ./test.bmes.out.row ../wordCNN-CRF-charLSTM/ref.row 
+Tag precision: 0.920849420849
+
+

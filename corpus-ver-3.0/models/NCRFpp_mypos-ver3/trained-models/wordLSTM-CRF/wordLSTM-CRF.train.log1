@@ -1,0 +1,958 @@
+Seed num: 42
+MODEL: train
+Training model...
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Start   Sequence   Laebling   task...
+     Tag          scheme: NoSeg
+     Split         token:  ||| 
+     MAX SENTENCE LENGTH: 250
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 23773
+     Char  alphabet size: 262
+     Label alphabet size: 16
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 50
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: /home/ye/tool/NCRFpp/mypos_data/train.bmes
+     Dev    file directory: /home/ye/tool/NCRFpp/mypos_data/dev.bmes
+     Test   file directory: /home/ye/tool/NCRFpp/mypos_data/test.bmes
+     Raw    file directory: None
+     Dset   file directory: None
+     Model  file directory: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/ncrfpp
+     Loadmodel   directory: None
+     Decode file directory: None
+     Train instance number: 39999
+     Dev   instance number: 2196
+     Test  instance number: 1000
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: True
+     Model word extractor: LSTM
+     Model       use_char: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: SGD
+     Iteration: 10
+     BatchSize: 10
+     Average  batch   loss: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.004
+     Hyper        lr_decay: 0.05
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 1
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+build sequence labeling network...
+use_char:  False
+word feature extractor:  LSTM
+use crf:  True
+build word sequence feature extractor: LSTM...
+build word representation...
+build CRF...
+Epoch: 0/10
+ Learning rate is set as: 0.004
+Shuffle: first input word list: [949, 3480, 21, 1343, 322, 1448, 42, 1980, 418, 6442, 425, 11, 12]
+     Instance: 500; Time: 1.77s; loss: 12104.8516; acc: 1859/6246=0.2976
+     Instance: 1000; Time: 1.75s; loss: 10416.9796; acc: 4108/12661=0.3245
+     Instance: 1500; Time: 1.88s; loss: 10412.7845; acc: 6530/19269=0.3389
+     Instance: 2000; Time: 1.76s; loss: 9719.4550; acc: 9111/25712=0.3543
+     Instance: 2500; Time: 1.78s; loss: 8877.9384; acc: 12132/32078=0.3782
+     Instance: 3000; Time: 1.97s; loss: 8434.0600; acc: 15592/38733=0.4026
+     Instance: 3500; Time: 1.87s; loss: 7543.0128; acc: 19608/45458=0.4313
+     Instance: 4000; Time: 1.87s; loss: 6629.8405; acc: 23705/51915=0.4566
+     Instance: 4500; Time: 1.87s; loss: 6038.2607; acc: 28086/58351=0.4813
+     Instance: 5000; Time: 1.81s; loss: 5865.3363; acc: 32499/64780=0.5017
+     Instance: 5500; Time: 1.69s; loss: 5191.8307; acc: 36895/70921=0.5202
+     Instance: 6000; Time: 1.80s; loss: 5469.2729; acc: 41580/77406=0.5372
+     Instance: 6500; Time: 2.02s; loss: 5416.6566; acc: 46484/84098=0.5527
+     Instance: 7000; Time: 1.91s; loss: 5210.6340; acc: 51297/90586=0.5663
+     Instance: 7500; Time: 1.81s; loss: 4787.3801; acc: 56268/97058=0.5797
+     Instance: 8000; Time: 1.87s; loss: 4647.5347; acc: 61221/103527=0.5914
+     Instance: 8500; Time: 1.73s; loss: 4406.0404; acc: 66178/109837=0.6025
+     Instance: 9000; Time: 2.03s; loss: 4829.8616; acc: 71558/116683=0.6133
+     Instance: 9500; Time: 1.84s; loss: 4288.0830; acc: 76726/123192=0.6228
+     Instance: 10000; Time: 2.06s; loss: 4676.0946; acc: 82126/130044=0.6315
+     Instance: 10500; Time: 1.97s; loss: 4083.6299; acc: 87503/136713=0.6400
+     Instance: 11000; Time: 2.02s; loss: 4254.6107; acc: 93048/143589=0.6480
+     Instance: 11500; Time: 1.97s; loss: 3993.4130; acc: 98260/150021=0.6550
+     Instance: 12000; Time: 1.76s; loss: 3592.5835; acc: 103568/156429=0.6621
+     Instance: 12500; Time: 1.98s; loss: 4361.6591; acc: 109034/163135=0.6684
+     Instance: 13000; Time: 1.84s; loss: 3851.8364; acc: 114535/169780=0.6746
+     Instance: 13500; Time: 1.97s; loss: 3326.3855; acc: 119922/176201=0.6806
+     Instance: 14000; Time: 1.85s; loss: 3425.3845; acc: 125118/182421=0.6859
+     Instance: 14500; Time: 1.92s; loss: 3520.5240; acc: 130733/189119=0.6913
+     Instance: 15000; Time: 1.87s; loss: 3298.3597; acc: 136200/195564=0.6964
+     Instance: 15500; Time: 1.76s; loss: 3099.6354; acc: 141567/201863=0.7013
+     Instance: 16000; Time: 2.04s; loss: 3753.4615; acc: 147399/208793=0.7060
+     Instance: 16500; Time: 1.90s; loss: 3106.3558; acc: 152895/215230=0.7104
+     Instance: 17000; Time: 1.77s; loss: 2909.9483; acc: 158230/221441=0.7145
+     Instance: 17500; Time: 1.83s; loss: 2921.9927; acc: 163703/227801=0.7186
+     Instance: 18000; Time: 1.85s; loss: 3131.5198; acc: 169325/234356=0.7225
+     Instance: 18500; Time: 1.80s; loss: 3221.9303; acc: 174736/240737=0.7258
+     Instance: 19000; Time: 1.79s; loss: 2967.5519; acc: 180155/247021=0.7293
+     Instance: 19500; Time: 2.02s; loss: 2958.5749; acc: 185730/253469=0.7328
+     Instance: 20000; Time: 2.17s; loss: 3240.6956; acc: 191644/260335=0.7361
+     Instance: 20500; Time: 1.91s; loss: 2932.1199; acc: 197302/266891=0.7393
+     Instance: 21000; Time: 1.92s; loss: 2982.2841; acc: 202942/273433=0.7422
+     Instance: 21500; Time: 1.94s; loss: 3004.1884; acc: 208865/280296=0.7452
+     Instance: 22000; Time: 1.92s; loss: 2745.1944; acc: 214683/286971=0.7481
+     Instance: 22500; Time: 1.82s; loss: 2508.9790; acc: 220186/293248=0.7509
+     Instance: 23000; Time: 1.86s; loss: 2632.6189; acc: 225751/299608=0.7535
+     Instance: 23500; Time: 1.99s; loss: 3017.5917; acc: 231961/306711=0.7563
+     Instance: 24000; Time: 1.95s; loss: 2630.9378; acc: 237639/313164=0.7588
+     Instance: 24500; Time: 1.89s; loss: 2455.0800; acc: 243120/319387=0.7612
+     Instance: 25000; Time: 2.09s; loss: 2981.0315; acc: 249240/326370=0.7637
+     Instance: 25500; Time: 1.86s; loss: 2663.3591; acc: 254800/332748=0.7657
+     Instance: 26000; Time: 2.07s; loss: 2733.8204; acc: 260618/339382=0.7679
+     Instance: 26500; Time: 1.81s; loss: 2582.5766; acc: 266403/345972=0.7700
+     Instance: 27000; Time: 1.67s; loss: 2435.0150; acc: 271673/351985=0.7718
+     Instance: 27500; Time: 1.95s; loss: 2368.2052; acc: 277286/358317=0.7739
+     Instance: 28000; Time: 2.05s; loss: 2603.6740; acc: 282941/364777=0.7757
+     Instance: 28500; Time: 2.03s; loss: 2399.3342; acc: 288844/371428=0.7777
+     Instance: 29000; Time: 2.00s; loss: 2656.7014; acc: 294825/378209=0.7795
+     Instance: 29500; Time: 2.11s; loss: 2489.1253; acc: 300898/385057=0.7814
+     Instance: 30000; Time: 1.97s; loss: 2423.3173; acc: 306886/391787=0.7833
+     Instance: 30500; Time: 1.81s; loss: 2496.3282; acc: 312734/398378=0.7850
+     Instance: 31000; Time: 1.84s; loss: 2269.1215; acc: 318602/404954=0.7868
+     Instance: 31500; Time: 1.72s; loss: 2304.7394; acc: 324055/411115=0.7882
+     Instance: 32000; Time: 1.76s; loss: 2241.3526; acc: 329560/417318=0.7897
+     Instance: 32500; Time: 1.79s; loss: 2008.8916; acc: 334948/423336=0.7912
+     Instance: 33000; Time: 2.04s; loss: 2509.7280; acc: 340935/430091=0.7927
+     Instance: 33500; Time: 2.06s; loss: 2436.0574; acc: 346996/436849=0.7943
+     Instance: 34000; Time: 1.98s; loss: 2157.6084; acc: 352707/443212=0.7958
+     Instance: 34500; Time: 1.97s; loss: 2327.4269; acc: 358670/449880=0.7973
+     Instance: 35000; Time: 1.99s; loss: 2614.8599; acc: 364802/456773=0.7987
+     Instance: 35500; Time: 1.92s; loss: 2394.5453; acc: 370797/463487=0.8000
+     Instance: 36000; Time: 1.78s; loss: 2189.3427; acc: 376498/469830=0.8013
+     Instance: 36500; Time: 1.85s; loss: 2421.8953; acc: 382170/476227=0.8025
+     Instance: 37000; Time: 1.83s; loss: 2198.9255; acc: 387864/482599=0.8037
+     Instance: 37500; Time: 2.09s; loss: 2172.8074; acc: 394050/489458=0.8051
+     Instance: 38000; Time: 1.89s; loss: 2198.1395; acc: 399898/495989=0.8063
+     Instance: 38500; Time: 1.73s; loss: 2212.6614; acc: 405779/502542=0.8075
+     Instance: 39000; Time: 1.88s; loss: 2141.7756; acc: 411718/509123=0.8087
+     Instance: 39500; Time: 1.84s; loss: 2179.0294; acc: 417476/515523=0.8098
+     Instance: 39999; Time: 1.88s; loss: 2199.7250; acc: 423242/521958=0.8109
+Epoch: 0 training finished. Time: 151.62s, speed: 263.81st/s,  total loss: 302906.07597351074
+totalloss: 302906.07597351074
+Right token =  26389  All token =  28668  acc =  0.9205036975024418
+Dev: time: 2.19s, speed: 1007.61st/s; acc: 0.9205, p: -1.0000, r: -1.0000, f: -1.0000
+Exceed previous best f score: -10
+Save current best model in file: /home/ye/tool/NCRFpp/trained-models/wordLSTM-CRF/ncrfpp.0.model
+Right token =  12402  All token =  13468  acc =  0.9208494208494209
+Test: time: 1.07s, speed: 948.72st/s; acc: 0.9208, p: -1.0000, r: -1.0000, f: -1.0000
+Epoch: 1/10
+ Learning rate is set as: 0.0038095238095238095
+Shuffle: first input word list: [3350, 16862, 16863, 6253, 5839, 16864, 16865, 12, 1058, 50, 16390, 2870, 12, 16866, 16867, 12, 1058, 50, 14909, 2870, 12, 396, 9473, 1972, 1144, 2869, 261, 1963, 56, 709, 156, 12]
+     Instance: 500; Time: 1.94s; loss: 2202.1860; acc: 5893/6561=0.8982
+     Instance: 1000; Time: 1.89s; loss: 2176.3544; acc: 11901/13236=0.8991
+     Instance: 1500; Time: 1.96s; loss: 2233.7795; acc: 18060/20066=0.9000
+     Instance: 2000; Time: 1.95s; loss: 2115.2790; acc: 23660/26306=0.8994
+     Instance: 2500; Time: 1.77s; loss: 1983.0044; acc: 29349/32600=0.9003
+     Instance: 3000; Time: 1.81s; loss: 2056.5267; acc: 35147/39031=0.9005
+     Instance: 3500; Time: 1.73s; loss: 1967.1245; acc: 40980/45486=0.9009
+     Instance: 4000; Time: 1.80s; loss: 1992.6327; acc: 46564/51700=0.9007
+     Instance: 4500; Time: 1.91s; loss: 2149.5482; acc: 52439/58235=0.9005
+     Instance: 5000; Time: 1.98s; loss: 2240.5282; acc: 58400/64858=0.9004
+     Instance: 5500; Time: 1.89s; loss: 1865.1474; acc: 64216/71262=0.9011
+     Instance: 6000; Time: 1.94s; loss: 1956.6566; acc: 70379/78022=0.9020
+     Instance: 6500; Time: 2.03s; loss: 2046.2364; acc: 76382/84649=0.9023
+     Instance: 7000; Time: 1.82s; loss: 1888.8057; acc: 82022/90856=0.9028
+     Instance: 7500; Time: 2.05s; loss: 2145.6018; acc: 88110/97578=0.9030
+     Instance: 8000; Time: 1.88s; loss: 1911.7386; acc: 94056/104105=0.9035
+     Instance: 8500; Time: 1.95s; loss: 1941.5477; acc: 100077/110691=0.9041
+     Instance: 9000; Time: 1.99s; loss: 2043.8089; acc: 106143/117418=0.9040
+     Instance: 9500; Time: 1.83s; loss: 2014.6249; acc: 112135/124021=0.9042
+     Instance: 10000; Time: 1.79s; loss: 1968.5182; acc: 117740/130218=0.9042
+     Instance: 10500; Time: 1.96s; loss: 2014.4670; acc: 123873/136968=0.9044
+     Instance: 11000; Time: 1.96s; loss: 1936.9164; acc: 129795/143477=0.9046
+     Instance: 11500; Time: 2.14s; loss: 1957.8434; acc: 136054/150345=0.9049
+     Instance: 12000; Time: 1.79s; loss: 1815.9670; acc: 142016/156865=0.9053
+     Instance: 12500; Time: 1.78s; loss: 1890.9652; acc: 147791/163234=0.9054
+     Instance: 13000; Time: 1.96s; loss: 1938.6405; acc: 153683/169719=0.9055
+     Instance: 13500; Time: 1.94s; loss: 1933.9471; acc: 159825/176450=0.9058
+     Instance: 14000; Time: 1.93s; loss: 1794.3331; acc: 165658/182816=0.9061
+     Instance: 14500; Time: 1.79s; loss: 1799.1780; acc: 171609/189328=0.9064
+     Instance: 15000; Time: 1.90s; loss: 1806.3092; acc: 177467/195738=0.9067
+     Instance: 15500; Time: 1.79s; loss: 1905.0888; acc: 183380/202218=0.9068
+     Instance: 16000; Time: 2.05s; loss: 1807.6724; acc: 189562/208962=0.9072
+     Instance: 16500; Time: 1.87s; loss: 1785.9344; acc: 195336/215298=0.9073
+     Instance: 17000; Time: 1.84s; loss: 1925.0217; acc: 201293/221823=0.9074
+     Instance: 17500; Time: 2.15s; loss: 1936.1952; acc: 207456/228583=0.9076
+     Instance: 18000; Time: 1.90s; loss: 1871.2272; acc: 213392/235096=0.9077
+     Instance: 18500; Time: 1.86s; loss: 1836.7743; acc: 219289/241589=0.9077
+     Instance: 19000; Time: 2.01s; loss: 1822.8666; acc: 225451/248288=0.9080
+     Instance: 19500; Time: 1.85s; loss: 1884.4187; acc: 231248/254660=0.9081
+     Instance: 20000; Time: 1.72s; loss: 1651.0849; acc: 237075/261013=0.9083
+     Instance: 20500; Time: 2.03s; loss: 1928.9559; acc: 242951/267441=0.9084
+     Instance: 21000; Time: 2.02s; loss: 2120.7808; acc: 249029/274160=0.9083
+     Instance: 21500; Time: 1.88s; loss: 1821.8907; acc: 254830/280534=0.9084
+     Instance: 22000; Time: 1.93s; loss: 1965.3331; acc: 260658/286952=0.9084
+     Instance: 22500; Time: 1.96s; loss: 1821.5802; acc: 266643/293482=0.9085
+     Instance: 23000; Time: 1.93s; loss: 1693.2494; acc: 272489/299852=0.9087
+     Instance: 23500; Time: 2.05s; loss: 1759.9744; acc: 278616/306514=0.9090
+     Instance: 24000; Time: 1.82s; loss: 1739.4839; acc: 284469/312904=0.9091
+     Instance: 24500; Time: 2.02s; loss: 1827.7690; acc: 290481/319452=0.9093
+     Instance: 25000; Time: 1.95s; loss: 1825.2381; acc: 296640/326174=0.9095
+     Instance: 25500; Time: 2.03s; loss: 1705.6603; acc: 302625/332680=0.9097
+     Instance: 26000; Time: 2.42s; loss: 1841.0601; acc: 308791/339399=0.9098
+     Instance: 26500; Time: 1.70s; loss: 1662.6469; acc: 314444/345544=0.9100
+     Instance: 27000; Time: 1.70s; loss: 1731.9476; acc: 320181/351792=0.9101
+     Instance: 27500; Time: 2.02s; loss: 1877.5805; acc: 326464/358641=0.9103
+     Instance: 28000; Time: 2.07s; loss: 1834.9286; acc: 332572/365279=0.9105
+     Instance: 28500; Time: 1.89s; loss: 1706.4402; acc: 338745/371967=0.9107
+     Instance: 29000; Time: 1.77s; loss: 1630.2225; acc: 344415/378128=0.9108
+     Instance: 29500; Time: 1.81s; loss: 1686.3743; acc: 350125/384337=0.9110
+     Instance: 30000; Time: 1.90s; loss: 1699.8099; acc: 355924/390633=0.9111
+     Instance: 30500; Time: 2.03s; loss: 1855.6408; acc: 362038/397325=0.9112
+     Instance: 31000; Time: 2.04s; loss: 1807.6768; acc: 368096/403936=0.9113
+     Instance: 31500; Time: 2.07s; loss: 1792.3231; acc: 374197/410596=0.9114
+     Instance: 32000; Time: 2.10s; loss: 1691.8184; acc: 379959/416884=0.9114
+     Instance: 32500; Time: 1.99s; loss: 1522.1173; acc: 385857/423259=0.9116
+     Instance: 33000; Time: 2.01s; loss: 1699.9489; acc: 391773/429688=0.9118
+     Instance: 33500; Time: 2.07s; loss: 1556.1124; acc: 397664/436056=0.9120
+     Instance: 34000; Time: 1.94s; loss: 1629.3531; acc: 403780/442655=0.9122
+     Instance: 34500; Time: 1.86s; loss: 1647.4866; acc: 409677/449062=0.9123
+     Instance: 35000; Time: 2.11s; loss: 1838.9805; acc: 415842/455806=0.9123
+     Instance: 35500; Time: 2.15s; loss: 1767.2193; acc: 422030/462531=0.9124
+     Instance: 36000; Time: 1.86s; loss: 1739.6975; acc: 428009/469017=0.9126
+     Instance: 36500; Time: 1.84s; loss: 1648.0667; acc: 433936/475450=0.9127
+     Instance: 37000; Time: 2.02s; loss: 1758.3112; acc: 440235/482277=0.9128
+     Instance: 37500; Time: 2.13s; loss: 1904.1727; acc: 446458/489085=0.9128
+     Instance: 38000; Time: 1.93s; loss: 1680.5310; acc: 452444/495586=0.9129
+     Instance: 38500; Time: 2.07s; loss: 1713.5739; acc: 458734/502412=0.9131
+     Instance: 39000; Time: 1.92s; loss: 1599.9517; acc: 464612/508776=0.9132
+     Instance: 39500; Time: 1.86s; loss: 1615.4570; acc: 470503/515182=0.9133
+     Instance: 39999; Time: 2.02s; loss: 1779.8242; acc: 476746/521958=0.9134
+Epoch: 1 training finished. Time: 155.02s, speed: 258.02st/s,  total loss: 148343.6904296875
+totalloss: 148343.6904296875
+Right token =  26868  All token =  28668  acc =  0.9372122226873169
+Dev: time: 2.18s, speed: 1012.05st/s; acc: 0.9372, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12628  All token =  13468  acc =  0.9376299376299376
+Test: time: 1.05s, speed: 956.01st/s; acc: 0.9376, p: -1.0000, r: -1.0000, f: -1.0000
+Epoch: 2/10
+ Learning rate is set as: 0.0036363636363636364
+Shuffle: first input word list: [12494, 92, 119, 3850, 178, 71, 87, 12]
+     Instance: 500; Time: 1.81s; loss: 1684.0519; acc: 5886/6370=0.9240
+     Instance: 1000; Time: 2.21s; loss: 1695.9366; acc: 12013/13025=0.9223
+     Instance: 1500; Time: 1.89s; loss: 1699.4328; acc: 18036/19555=0.9223
+     Instance: 2000; Time: 2.02s; loss: 1595.5109; acc: 24215/26257=0.9222
+     Instance: 2500; Time: 1.92s; loss: 1514.9393; acc: 30179/32714=0.9225
+     Instance: 3000; Time: 1.78s; loss: 1537.1586; acc: 36018/39015=0.9232
+     Instance: 3500; Time: 1.94s; loss: 1657.4922; acc: 42297/45822=0.9231
+     Instance: 4000; Time: 1.96s; loss: 1626.6803; acc: 48358/52389=0.9231
+     Instance: 4500; Time: 1.82s; loss: 1623.1188; acc: 54448/58979=0.9232
+     Instance: 5000; Time: 1.83s; loss: 1661.8448; acc: 60237/65272=0.9229
+     Instance: 5500; Time: 1.99s; loss: 1710.0496; acc: 66454/72006=0.9229
+     Instance: 6000; Time: 1.78s; loss: 1530.0233; acc: 72178/78223=0.9227
+     Instance: 6500; Time: 1.98s; loss: 1662.1348; acc: 78324/84857=0.9230
+     Instance: 7000; Time: 1.97s; loss: 1755.8611; acc: 84376/91449=0.9227
+     Instance: 7500; Time: 2.26s; loss: 1760.0392; acc: 90987/98605=0.9227
+     Instance: 8000; Time: 1.99s; loss: 1698.8245; acc: 97253/105373=0.9229
+     Instance: 8500; Time: 1.87s; loss: 1700.4946; acc: 103247/111856=0.9230
+     Instance: 9000; Time: 1.66s; loss: 1571.1409; acc: 108909/118026=0.9228
+     Instance: 9500; Time: 2.04s; loss: 1615.9125; acc: 114899/124501=0.9229
+     Instance: 10000; Time: 1.92s; loss: 1711.7965; acc: 121179/131286=0.9230
+     Instance: 10500; Time: 1.96s; loss: 1595.9789; acc: 127196/137792=0.9231
+     Instance: 11000; Time: 1.90s; loss: 1732.8008; acc: 133208/144355=0.9228
+     Instance: 11500; Time: 1.79s; loss: 1556.6635; acc: 138822/150439=0.9228
+     Instance: 12000; Time: 1.80s; loss: 1663.3948; acc: 144857/156980=0.9228
+     Instance: 12500; Time: 1.90s; loss: 1480.2734; acc: 151013/163597=0.9231
+     Instance: 13000; Time: 1.93s; loss: 1652.4233; acc: 157090/170199=0.9230
+     Instance: 13500; Time: 2.06s; loss: 1695.4460; acc: 163354/176986=0.9230
+     Instance: 14000; Time: 1.90s; loss: 1543.1516; acc: 169389/183490=0.9232
+     Instance: 14500; Time: 1.87s; loss: 1447.9941; acc: 175382/189942=0.9233
+     Instance: 15000; Time: 1.68s; loss: 1514.5521; acc: 181477/196497=0.9236
+     Instance: 15500; Time: 2.11s; loss: 1599.9608; acc: 187847/203370=0.9237
+     Instance: 16000; Time: 1.83s; loss: 1653.1249; acc: 193823/209836=0.9237
+     Instance: 16500; Time: 1.97s; loss: 1570.8643; acc: 200046/216522=0.9239
+     Instance: 17000; Time: 2.01s; loss: 1522.7146; acc: 205977/222916=0.9240
+     Instance: 17500; Time: 1.84s; loss: 1655.5215; acc: 211863/229309=0.9239
+     Instance: 18000; Time: 1.99s; loss: 1500.5799; acc: 218036/235929=0.9242
+     Instance: 18500; Time: 1.96s; loss: 1572.0971; acc: 224236/242635=0.9242
+     Instance: 19000; Time: 1.85s; loss: 1495.2131; acc: 230197/249056=0.9243
+     Instance: 19500; Time: 1.95s; loss: 1801.2224; acc: 236287/255696=0.9241
+     Instance: 20000; Time: 2.06s; loss: 1589.3992; acc: 242679/262575=0.9242
+     Instance: 20500; Time: 1.87s; loss: 1561.6485; acc: 248650/269005=0.9243
+     Instance: 21000; Time: 1.90s; loss: 1550.5189; acc: 254613/275452=0.9243
+     Instance: 21500; Time: 1.86s; loss: 1606.2182; acc: 260631/281949=0.9244
+     Instance: 22000; Time: 1.77s; loss: 1342.1879; acc: 266386/288141=0.9245
+     Instance: 22500; Time: 1.90s; loss: 1368.8838; acc: 272696/294875=0.9248
+     Instance: 23000; Time: 1.69s; loss: 1476.8416; acc: 278515/301147=0.9248
+     Instance: 23500; Time: 1.97s; loss: 1499.3441; acc: 284604/307686=0.9250
+     Instance: 24000; Time: 2.00s; loss: 1483.5844; acc: 290872/314410=0.9251
+     Instance: 24500; Time: 2.09s; loss: 1506.5502; acc: 296973/320972=0.9252
+     Instance: 25000; Time: 1.88s; loss: 1572.1902; acc: 302793/327262=0.9252
+     Instance: 25500; Time: 1.88s; loss: 1640.9412; acc: 308892/333836=0.9253
+     Instance: 26000; Time: 1.69s; loss: 1392.3576; acc: 314628/339993=0.9254
+     Instance: 26500; Time: 2.04s; loss: 1579.9898; acc: 320802/346656=0.9254
+     Instance: 27000; Time: 2.08s; loss: 1379.9798; acc: 327076/353359=0.9256
+     Instance: 27500; Time: 2.17s; loss: 1556.5897; acc: 333327/360095=0.9257
+     Instance: 28000; Time: 1.81s; loss: 1486.7614; acc: 339345/366567=0.9257
+     Instance: 28500; Time: 1.98s; loss: 1516.7800; acc: 345221/372905=0.9258
+     Instance: 29000; Time: 2.02s; loss: 1493.6428; acc: 351400/379567=0.9258
+     Instance: 29500; Time: 1.83s; loss: 1480.1049; acc: 357376/385987=0.9259
+     Instance: 30000; Time: 1.99s; loss: 1510.7141; acc: 363489/392581=0.9259
+     Instance: 30500; Time: 2.18s; loss: 1491.3323; acc: 369688/399226=0.9260
+     Instance: 31000; Time: 1.93s; loss: 1451.7167; acc: 375573/405565=0.9260
+     Instance: 31500; Time: 1.90s; loss: 1310.8724; acc: 381382/411810=0.9261
+     Instance: 32000; Time: 1.85s; loss: 1294.6602; acc: 387309/418135=0.9263
+     Instance: 32500; Time: 2.00s; loss: 1504.7148; acc: 393277/424559=0.9263
+     Instance: 33000; Time: 1.95s; loss: 1323.8295; acc: 399203/430890=0.9265
+     Instance: 33500; Time: 2.21s; loss: 1541.0815; acc: 405334/437483=0.9265
+     Instance: 34000; Time: 2.05s; loss: 1473.7943; acc: 411183/443750=0.9266
+     Instance: 34500; Time: 2.29s; loss: 1526.3528; acc: 417466/450516=0.9266
+     Instance: 35000; Time: 1.87s; loss: 1425.5469; acc: 423280/456763=0.9267
+     Instance: 35500; Time: 1.86s; loss: 1442.2719; acc: 429270/463191=0.9268
+     Instance: 36000; Time: 1.70s; loss: 1393.2430; acc: 434984/469316=0.9268
+     Instance: 36500; Time: 1.99s; loss: 1552.6572; acc: 441348/476175=0.9269
+     Instance: 37000; Time: 2.03s; loss: 1302.8607; acc: 447310/482540=0.9270
+     Instance: 37500; Time: 1.84s; loss: 1432.3091; acc: 453136/488807=0.9270
+     Instance: 38000; Time: 1.93s; loss: 1408.7412; acc: 459195/495290=0.9271
+     Instance: 38500; Time: 2.05s; loss: 1437.7712; acc: 465482/502031=0.9272
+     Instance: 39000; Time: 1.96s; loss: 1559.9317; acc: 471795/508820=0.9272
+     Instance: 39500; Time: 2.00s; loss: 1427.9731; acc: 477816/515283=0.9273
+     Instance: 39999; Time: 2.19s; loss: 1369.9280; acc: 484068/521958=0.9274
+Epoch: 2 training finished. Time: 155.24s, speed: 257.66st/s,  total loss: 123533.23693847656
+totalloss: 123533.23693847656
+Right token =  27101  All token =  28668  acc =  0.9453397516394586
+Dev: time: 2.40s, speed: 920.27st/s; acc: 0.9453, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12721  All token =  13468  acc =  0.9445351945351945
+Test: time: 1.10s, speed: 911.31st/s; acc: 0.9445, p: -1.0000, r: -1.0000, f: -1.0000
+Epoch: 3/10
+ Learning rate is set as: 0.0034782608695652175
+Shuffle: first input word list: [17017, 12]
+     Instance: 500; Time: 2.15s; loss: 1557.3019; acc: 6413/6876=0.9327
+     Instance: 1000; Time: 2.11s; loss: 1356.3754; acc: 12655/13510=0.9367
+     Instance: 1500; Time: 2.13s; loss: 1367.1722; acc: 18490/19767=0.9354
+     Instance: 2000; Time: 2.06s; loss: 1383.0300; acc: 24660/26344=0.9361
+     Instance: 2500; Time: 1.96s; loss: 1403.2761; acc: 30815/32931=0.9357
+     Instance: 3000; Time: 2.00s; loss: 1434.2864; acc: 36769/39346=0.9345
+     Instance: 3500; Time: 1.97s; loss: 1340.7986; acc: 42619/45554=0.9356
+     Instance: 4000; Time: 2.03s; loss: 1674.5226; acc: 48570/52022=0.9336
+     Instance: 4500; Time: 2.01s; loss: 1424.8160; acc: 54562/58462=0.9333
+     Instance: 5000; Time: 1.98s; loss: 1233.0488; acc: 60451/64712=0.9342
+     Instance: 5500; Time: 2.08s; loss: 1379.4555; acc: 66677/71342=0.9346
+     Instance: 6000; Time: 2.12s; loss: 1408.1808; acc: 72580/77689=0.9342
+     Instance: 6500; Time: 1.76s; loss: 1365.7042; acc: 78319/83855=0.9340
+     Instance: 7000; Time: 2.03s; loss: 1446.4192; acc: 84536/90536=0.9337
+     Instance: 7500; Time: 2.19s; loss: 1583.3707; acc: 91053/97515=0.9337
+     Instance: 8000; Time: 1.82s; loss: 1360.5346; acc: 97131/104017=0.9338
+     Instance: 8500; Time: 1.86s; loss: 1379.5605; acc: 103166/110464=0.9339
+     Instance: 9000; Time: 1.75s; loss: 1307.8482; acc: 109007/116698=0.9341
+     Instance: 9500; Time: 2.02s; loss: 1378.1407; acc: 114986/123109=0.9340
+     Instance: 10000; Time: 2.06s; loss: 1409.9466; acc: 121189/129758=0.9340
+     Instance: 10500; Time: 1.92s; loss: 1421.3192; acc: 127269/136300=0.9337
+     Instance: 11000; Time: 2.00s; loss: 1437.3395; acc: 133534/143012=0.9337
+     Instance: 11500; Time: 1.77s; loss: 1338.6041; acc: 139389/149300=0.9336
+     Instance: 12000; Time: 2.03s; loss: 1543.4015; acc: 145730/156129=0.9334
+     Instance: 12500; Time: 2.12s; loss: 1527.6436; acc: 152024/162884=0.9333
+     Instance: 13000; Time: 1.88s; loss: 1522.2972; acc: 158010/169345=0.9331
+     Instance: 13500; Time: 1.79s; loss: 1388.8629; acc: 163972/175713=0.9332
+     Instance: 14000; Time: 1.98s; loss: 1564.9464; acc: 170237/182474=0.9329
+     Instance: 14500; Time: 2.07s; loss: 1329.8106; acc: 176704/189358=0.9332
+     Instance: 15000; Time: 2.06s; loss: 1299.3117; acc: 182906/195931=0.9335
+     Instance: 15500; Time: 2.00s; loss: 1323.3692; acc: 188772/202209=0.9335
+     Instance: 16000; Time: 1.87s; loss: 1506.8478; acc: 194619/208506=0.9334
+     Instance: 16500; Time: 2.04s; loss: 1384.2645; acc: 200632/214961=0.9333
+     Instance: 17000; Time: 1.73s; loss: 1272.8334; acc: 206508/221227=0.9335
+     Instance: 17500; Time: 1.88s; loss: 1409.0801; acc: 212527/227683=0.9334
+     Instance: 18000; Time: 1.99s; loss: 1385.7705; acc: 218944/234542=0.9335
+     Instance: 18500; Time: 1.90s; loss: 1340.6899; acc: 224816/240828=0.9335
+     Instance: 19000; Time: 2.02s; loss: 1412.2242; acc: 231123/247576=0.9335
+     Instance: 19500; Time: 2.02s; loss: 1558.9150; acc: 237373/254335=0.9333
+     Instance: 20000; Time: 1.91s; loss: 1331.1901; acc: 243186/260547=0.9334
+     Instance: 20500; Time: 2.14s; loss: 1578.7410; acc: 249413/267258=0.9332
+     Instance: 21000; Time: 1.99s; loss: 1377.2849; acc: 255565/273828=0.9333
+     Instance: 21500; Time: 1.87s; loss: 1511.7218; acc: 261527/280260=0.9332
+     Instance: 22000; Time: 1.98s; loss: 1349.3155; acc: 267682/286817=0.9333
+     Instance: 22500; Time: 1.84s; loss: 1458.6687; acc: 273913/293481=0.9333
+     Instance: 23000; Time: 2.00s; loss: 1470.0891; acc: 279905/299936=0.9332
+     Instance: 23500; Time: 2.28s; loss: 1523.9322; acc: 286390/306872=0.9333
+     Instance: 24000; Time: 2.06s; loss: 1455.1941; acc: 292576/313496=0.9333
+     Instance: 24500; Time: 2.08s; loss: 1240.0830; acc: 298707/320000=0.9335
+     Instance: 25000; Time: 1.95s; loss: 1388.5619; acc: 304610/326293=0.9335
+     Instance: 25500; Time: 2.05s; loss: 1236.7851; acc: 310677/332751=0.9337
+     Instance: 26000; Time: 2.06s; loss: 1476.6359; acc: 316646/339152=0.9336
+     Instance: 26500; Time: 1.94s; loss: 1426.1999; acc: 322723/345683=0.9336
+     Instance: 27000; Time: 1.91s; loss: 1353.4664; acc: 328688/352064=0.9336
+     Instance: 27500; Time: 1.77s; loss: 1332.4999; acc: 334198/357987=0.9335
+     Instance: 28000; Time: 1.93s; loss: 1245.5248; acc: 339859/364013=0.9336
+     Instance: 28500; Time: 2.20s; loss: 1306.2029; acc: 346369/370928=0.9338
+     Instance: 29000; Time: 1.93s; loss: 1295.7332; acc: 352578/377539=0.9339
+     Instance: 29500; Time: 1.98s; loss: 1442.9199; acc: 358771/384159=0.9339
+     Instance: 30000; Time: 2.00s; loss: 1449.0977; acc: 365120/390950=0.9339
+     Instance: 30500; Time: 1.83s; loss: 1319.3577; acc: 370960/397196=0.9339
+     Instance: 31000; Time: 1.85s; loss: 1173.8138; acc: 376849/403462=0.9340
+     Instance: 31500; Time: 1.92s; loss: 1298.5160; acc: 382775/409792=0.9341
+     Instance: 32000; Time: 1.95s; loss: 1351.8858; acc: 388913/416337=0.9341
+     Instance: 32500; Time: 1.93s; loss: 1325.2507; acc: 395161/422984=0.9342
+     Instance: 33000; Time: 2.05s; loss: 1405.8882; acc: 401488/429707=0.9343
+     Instance: 33500; Time: 1.98s; loss: 1408.1578; acc: 407654/436299=0.9343
+     Instance: 34000; Time: 1.94s; loss: 1337.7648; acc: 414021/443076=0.9344
+     Instance: 34500; Time: 2.11s; loss: 1414.1290; acc: 420421/449920=0.9344
+     Instance: 35000; Time: 1.89s; loss: 1347.2651; acc: 426400/456313=0.9344
+     Instance: 35500; Time: 1.89s; loss: 1153.2681; acc: 432414/462708=0.9345
+     Instance: 36000; Time: 2.00s; loss: 1260.0616; acc: 438550/469242=0.9346
+     Instance: 36500; Time: 1.87s; loss: 1373.8996; acc: 444730/475849=0.9346
+     Instance: 37000; Time: 1.96s; loss: 1338.1710; acc: 450774/482303=0.9346
+     Instance: 37500; Time: 2.21s; loss: 1439.1786; acc: 457376/489359=0.9346
+     Instance: 38000; Time: 1.83s; loss: 1270.9379; acc: 463389/495759=0.9347
+     Instance: 38500; Time: 1.80s; loss: 1266.5320; acc: 469373/502126=0.9348
+     Instance: 39000; Time: 1.96s; loss: 1344.6262; acc: 475464/508634=0.9348
+     Instance: 39500; Time: 2.19s; loss: 1394.9668; acc: 481871/515455=0.9348
+     Instance: 39999; Time: 1.95s; loss: 1302.1368; acc: 487946/521958=0.9348
+Epoch: 3 training finished. Time: 158.14s, speed: 252.94st/s,  total loss: 110936.97570800781
+totalloss: 110936.97570800781
+Right token =  27188  All token =  28668  acc =  0.9483744942095717
+Dev: time: 2.26s, speed: 977.37st/s; acc: 0.9484, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12755  All token =  13468  acc =  0.9470596970596971
+Test: time: 1.10s, speed: 912.60st/s; acc: 0.9471, p: -1.0000, r: -1.0000, f: -1.0000
+Epoch: 4/10
+ Learning rate is set as: 0.0033333333333333335
+Shuffle: first input word list: [64, 205, 217, 10193, 17880, 42, 1020, 20, 124, 87, 12]
+     Instance: 500; Time: 2.07s; loss: 1426.5986; acc: 6410/6866=0.9336
+     Instance: 1000; Time: 2.01s; loss: 1326.2905; acc: 12555/13410=0.9362
+     Instance: 1500; Time: 1.90s; loss: 1132.5479; acc: 18509/19727=0.9383
+     Instance: 2000; Time: 1.93s; loss: 1303.5062; acc: 24519/26111=0.9390
+     Instance: 2500; Time: 1.75s; loss: 1172.1520; acc: 30268/32229=0.9392
+     Instance: 3000; Time: 2.20s; loss: 1235.1690; acc: 36429/38782=0.9393
+     Instance: 3500; Time: 1.94s; loss: 1275.5161; acc: 42465/45214=0.9392
+     Instance: 4000; Time: 2.20s; loss: 1288.6164; acc: 48883/52005=0.9400
+     Instance: 4500; Time: 2.04s; loss: 1363.9281; acc: 55237/58791=0.9395
+     Instance: 5000; Time: 2.14s; loss: 1443.8322; acc: 61925/65903=0.9396
+     Instance: 5500; Time: 1.87s; loss: 1226.6053; acc: 67948/72313=0.9396
+     Instance: 6000; Time: 1.93s; loss: 1259.6292; acc: 73965/78707=0.9398
+     Instance: 6500; Time: 1.72s; loss: 1093.8297; acc: 79681/84778=0.9399
+     Instance: 7000; Time: 2.11s; loss: 1302.8272; acc: 85988/91480=0.9400
+     Instance: 7500; Time: 1.95s; loss: 1287.3165; acc: 92290/98174=0.9401
+     Instance: 8000; Time: 1.63s; loss: 1255.5713; acc: 97854/104121=0.9398
+     Instance: 8500; Time: 1.99s; loss: 1274.3879; acc: 103753/110409=0.9397
+     Instance: 9000; Time: 1.81s; loss: 1221.8807; acc: 109687/116729=0.9397
+     Instance: 9500; Time: 1.80s; loss: 1295.1404; acc: 115996/123415=0.9399
+     Instance: 10000; Time: 1.92s; loss: 1323.6929; acc: 122134/129936=0.9400
+     Instance: 10500; Time: 2.02s; loss: 1273.0100; acc: 128370/136585=0.9399
+     Instance: 11000; Time: 1.90s; loss: 1256.4360; acc: 134357/142947=0.9399
+     Instance: 11500; Time: 1.95s; loss: 1366.3447; acc: 140441/149446=0.9397
+     Instance: 12000; Time: 2.00s; loss: 1371.1831; acc: 146510/155910=0.9397
+     Instance: 12500; Time: 1.67s; loss: 1161.7780; acc: 152155/161904=0.9398
+     Instance: 13000; Time: 1.79s; loss: 1285.7396; acc: 158170/168316=0.9397
+     Instance: 13500; Time: 2.03s; loss: 1310.2610; acc: 164458/174983=0.9399
+     Instance: 14000; Time: 1.81s; loss: 1204.1112; acc: 170557/181469=0.9399
+     Instance: 14500; Time: 2.04s; loss: 1372.0314; acc: 177102/188442=0.9398
+     Instance: 15000; Time: 1.83s; loss: 1373.1456; acc: 183188/194935=0.9397
+     Instance: 15500; Time: 1.82s; loss: 1154.3911; acc: 189524/201645=0.9399
+     Instance: 16000; Time: 1.85s; loss: 1228.5819; acc: 195766/208282=0.9399
+     Instance: 16500; Time: 1.91s; loss: 1440.9455; acc: 201995/214956=0.9397
+     Instance: 17000; Time: 1.96s; loss: 1232.5692; acc: 207953/221280=0.9398
+     Instance: 17500; Time: 1.98s; loss: 1315.3840; acc: 214068/227819=0.9396
+     Instance: 18000; Time: 1.97s; loss: 1310.7083; acc: 220013/234195=0.9394
+     Instance: 18500; Time: 1.99s; loss: 1287.2930; acc: 226244/240829=0.9394
+     Instance: 19000; Time: 1.99s; loss: 1249.2063; acc: 232668/247657=0.9395
+     Instance: 19500; Time: 2.02s; loss: 1345.0696; acc: 238747/254161=0.9394
+     Instance: 20000; Time: 1.86s; loss: 1201.1468; acc: 244830/260624=0.9394
+     Instance: 20500; Time: 1.87s; loss: 1421.8835; acc: 251202/267424=0.9393
+     Instance: 21000; Time: 1.88s; loss: 1223.4821; acc: 257251/273863=0.9393
+     Instance: 21500; Time: 1.87s; loss: 1196.4113; acc: 263241/280225=0.9394
+     Instance: 22000; Time: 1.93s; loss: 1354.4788; acc: 269382/286772=0.9394
+     Instance: 22500; Time: 1.93s; loss: 1400.8115; acc: 275661/293469=0.9393
+     Instance: 23000; Time: 2.19s; loss: 1444.4042; acc: 282014/300245=0.9393
+     Instance: 23500; Time: 1.93s; loss: 1262.7051; acc: 287973/306591=0.9393
+     Instance: 24000; Time: 2.00s; loss: 1384.4910; acc: 294153/313197=0.9392
+     Instance: 24500; Time: 1.85s; loss: 1194.3945; acc: 300191/319614=0.9392
+     Instance: 25000; Time: 1.87s; loss: 1326.6085; acc: 306393/326207=0.9393
+     Instance: 25500; Time: 1.93s; loss: 1229.5132; acc: 312479/332652=0.9394
+     Instance: 26000; Time: 2.01s; loss: 1283.8639; acc: 318679/339277=0.9393
+     Instance: 26500; Time: 1.86s; loss: 1305.2267; acc: 324699/345700=0.9393
+     Instance: 27000; Time: 2.01s; loss: 1410.6929; acc: 330973/352393=0.9392
+     Instance: 27500; Time: 1.91s; loss: 1183.0924; acc: 337115/358882=0.9393
+     Instance: 28000; Time: 2.17s; loss: 1287.3595; acc: 343367/365554=0.9393
+     Instance: 28500; Time: 1.89s; loss: 1292.1731; acc: 349593/372188=0.9393
+     Instance: 29000; Time: 1.85s; loss: 1280.1923; acc: 355341/378348=0.9392
+     Instance: 29500; Time: 1.86s; loss: 1268.2236; acc: 361377/384760=0.9392
+     Instance: 30000; Time: 1.90s; loss: 1260.7940; acc: 367467/391238=0.9392
+     Instance: 30500; Time: 1.71s; loss: 1329.5056; acc: 373459/397628=0.9392
+     Instance: 31000; Time: 2.06s; loss: 1225.5934; acc: 379689/404249=0.9392
+     Instance: 31500; Time: 1.79s; loss: 1195.1819; acc: 385530/410445=0.9393
+     Instance: 32000; Time: 1.88s; loss: 1362.1161; acc: 391638/416987=0.9392
+     Instance: 32500; Time: 2.10s; loss: 1508.0339; acc: 397916/423714=0.9391
+     Instance: 33000; Time: 1.93s; loss: 1134.7902; acc: 403860/430017=0.9392
+     Instance: 33500; Time: 1.82s; loss: 1253.8982; acc: 409868/436404=0.9392
+     Instance: 34000; Time: 1.84s; loss: 1301.2020; acc: 415847/442769=0.9392
+     Instance: 34500; Time: 1.97s; loss: 1329.0635; acc: 421883/449201=0.9392
+     Instance: 35000; Time: 2.01s; loss: 1361.7678; acc: 428360/456103=0.9392
+     Instance: 35500; Time: 2.16s; loss: 1240.8336; acc: 434551/462677=0.9392
+     Instance: 36000; Time: 2.08s; loss: 1276.6476; acc: 440640/469164=0.9392
+     Instance: 36500; Time: 2.52s; loss: 1293.5012; acc: 447530/476443=0.9393
+     Instance: 37000; Time: 2.03s; loss: 1309.6521; acc: 453345/482678=0.9392
+     Instance: 37500; Time: 2.26s; loss: 1348.2468; acc: 459659/489387=0.9393
+     Instance: 38000; Time: 1.93s; loss: 1245.6598; acc: 465707/495815=0.9393
+     Instance: 38500; Time: 1.91s; loss: 1348.5604; acc: 472005/502530=0.9393
+     Instance: 39000; Time: 1.98s; loss: 1224.1843; acc: 478368/509290=0.9393
+     Instance: 39500; Time: 1.83s; loss: 1130.2639; acc: 484325/515598=0.9393
+     Instance: 39999; Time: 1.81s; loss: 1117.1064; acc: 490326/521958=0.9394
+Epoch: 4 training finished. Time: 155.67s, speed: 256.95st/s,  total loss: 102794.9848022461
+totalloss: 102794.9848022461
+Right token =  27261  All token =  28668  acc =  0.950920887400586
+Dev: time: 2.23s, speed: 989.37st/s; acc: 0.9509, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12786  All token =  13468  acc =  0.9493614493614494
+Test: time: 1.07s, speed: 936.99st/s; acc: 0.9494, p: -1.0000, r: -1.0000, f: -1.0000
+Epoch: 5/10
+ Learning rate is set as: 0.0032
+Shuffle: first input word list: [1793, 396, 8784, 88, 61, 265, 252, 5972, 84, 78, 509, 1515, 413, 15619, 398, 4256, 1195, 201, 178, 422, 5972, 61, 6078, 4949, 71, 1439, 37, 6367, 201, 178, 537, 11, 12]
+     Instance: 500; Time: 1.92s; loss: 1221.5503; acc: 6019/6407=0.9394
+     Instance: 1000; Time: 2.09s; loss: 1139.3547; acc: 12044/12803=0.9407
+     Instance: 1500; Time: 2.32s; loss: 1422.5023; acc: 18536/19731=0.9394
+     Instance: 2000; Time: 1.84s; loss: 1295.8248; acc: 24700/26301=0.9391
+     Instance: 2500; Time: 1.90s; loss: 1213.1205; acc: 30742/32726=0.9394
+     Instance: 3000; Time: 1.94s; loss: 1207.2112; acc: 36890/39250=0.9399
+     Instance: 3500; Time: 1.78s; loss: 1132.2630; acc: 42759/45496=0.9398
+     Instance: 4000; Time: 1.91s; loss: 1176.1679; acc: 49058/52166=0.9404
+     Instance: 4500; Time: 2.03s; loss: 1255.8748; acc: 55337/58823=0.9407
+     Instance: 5000; Time: 1.94s; loss: 1353.0789; acc: 61557/65453=0.9405
+     Instance: 5500; Time: 1.67s; loss: 1006.6639; acc: 67249/71451=0.9412
+     Instance: 6000; Time: 1.90s; loss: 1178.5751; acc: 73518/78093=0.9414
+     Instance: 6500; Time: 1.83s; loss: 1122.8038; acc: 79297/84200=0.9418
+     Instance: 7000; Time: 1.97s; loss: 1241.9455; acc: 85527/90823=0.9417
+     Instance: 7500; Time: 1.82s; loss: 1135.4019; acc: 91558/97198=0.9420
+     Instance: 8000; Time: 2.03s; loss: 1343.1513; acc: 97720/103758=0.9418
+     Instance: 8500; Time: 1.82s; loss: 1354.5602; acc: 103697/110159=0.9413
+     Instance: 9000; Time: 1.96s; loss: 1388.7783; acc: 109949/116856=0.9409
+     Instance: 9500; Time: 1.85s; loss: 1062.1588; acc: 116023/123265=0.9412
+     Instance: 10000; Time: 1.89s; loss: 1244.1904; acc: 122192/129808=0.9413
+     Instance: 10500; Time: 1.87s; loss: 1238.4696; acc: 128319/136326=0.9413
+     Instance: 11000; Time: 1.90s; loss: 1302.8407; acc: 134408/142831=0.9410
+     Instance: 11500; Time: 1.72s; loss: 1110.3452; acc: 140386/149151=0.9412
+     Instance: 12000; Time: 1.91s; loss: 1285.3140; acc: 146795/155945=0.9413
+     Instance: 12500; Time: 1.80s; loss: 1175.5071; acc: 152596/162109=0.9413
+     Instance: 13000; Time: 2.03s; loss: 1252.0286; acc: 159040/168909=0.9416
+     Instance: 13500; Time: 1.93s; loss: 1235.6140; acc: 165141/175365=0.9417
+     Instance: 14000; Time: 1.85s; loss: 1185.2555; acc: 171076/181660=0.9417
+     Instance: 14500; Time: 1.88s; loss: 1229.2285; acc: 177110/188071=0.9417
+     Instance: 15000; Time: 1.93s; loss: 1298.3516; acc: 183259/194604=0.9417
+     Instance: 15500; Time: 2.31s; loss: 1410.5658; acc: 189706/201490=0.9415
+     Instance: 16000; Time: 2.02s; loss: 1306.7923; acc: 195948/208122=0.9415
+     Instance: 16500; Time: 1.93s; loss: 1199.5512; acc: 202203/214749=0.9416
+     Instance: 17000; Time: 2.30s; loss: 1335.8309; acc: 208693/221665=0.9415
+     Instance: 17500; Time: 1.92s; loss: 1191.6723; acc: 214717/228064=0.9415
+     Instance: 18000; Time: 2.28s; loss: 1070.7012; acc: 220507/234208=0.9415
+     Instance: 18500; Time: 1.91s; loss: 1218.8019; acc: 226705/240736=0.9417
+     Instance: 19000; Time: 1.85s; loss: 1152.3969; acc: 232734/247109=0.9418
+     Instance: 19500; Time: 1.88s; loss: 1110.3821; acc: 238810/253535=0.9419
+     Instance: 20000; Time: 1.86s; loss: 1124.2871; acc: 244692/259777=0.9419
+     Instance: 20500; Time: 1.97s; loss: 1240.7793; acc: 250957/266440=0.9419
+     Instance: 21000; Time: 1.87s; loss: 1109.8797; acc: 256999/272816=0.9420
+     Instance: 21500; Time: 1.89s; loss: 1227.5552; acc: 263028/279216=0.9420
+     Instance: 22000; Time: 2.04s; loss: 1197.5532; acc: 269321/285891=0.9420
+     Instance: 22500; Time: 1.91s; loss: 1240.0311; acc: 275415/292370=0.9420
+     Instance: 23000; Time: 1.99s; loss: 1250.1152; acc: 282013/299345=0.9421
+     Instance: 23500; Time: 2.28s; loss: 1185.4366; acc: 288310/306005=0.9422
+     Instance: 24000; Time: 1.93s; loss: 1287.6881; acc: 294311/312393=0.9421
+     Instance: 24500; Time: 2.36s; loss: 1079.4199; acc: 300511/318920=0.9423
+     Instance: 25000; Time: 2.09s; loss: 1275.7819; acc: 307053/325876=0.9422
+     Instance: 25500; Time: 2.06s; loss: 1276.9986; acc: 313383/332579=0.9423
+     Instance: 26000; Time: 2.13s; loss: 1277.8088; acc: 319794/339402=0.9422
+     Instance: 26500; Time: 2.05s; loss: 1092.8574; acc: 326206/346148=0.9424
+     Instance: 27000; Time: 2.03s; loss: 1125.2846; acc: 332357/352626=0.9425
+     Instance: 27500; Time: 1.96s; loss: 1309.7448; acc: 338578/359272=0.9424
+     Instance: 28000; Time: 1.83s; loss: 1119.8453; acc: 344769/365795=0.9425
+     Instance: 28500; Time: 2.06s; loss: 1240.2745; acc: 350809/372215=0.9425
+     Instance: 29000; Time: 2.14s; loss: 1234.7490; acc: 356997/378782=0.9425
+     Instance: 29500; Time: 2.32s; loss: 1218.9484; acc: 363726/385907=0.9425
+     Instance: 30000; Time: 1.93s; loss: 1151.6664; acc: 369814/392367=0.9425
+     Instance: 30500; Time: 1.90s; loss: 1218.5905; acc: 375912/398840=0.9425
+     Instance: 31000; Time: 1.85s; loss: 1203.1943; acc: 381924/405241=0.9425
+     Instance: 31500; Time: 2.09s; loss: 1306.7477; acc: 388124/411816=0.9425
+     Instance: 32000; Time: 2.14s; loss: 1165.6207; acc: 394809/418851=0.9426
+     Instance: 32500; Time: 1.96s; loss: 1140.5553; acc: 400953/425374=0.9426
+     Instance: 33000; Time: 2.18s; loss: 1081.7061; acc: 407263/432015=0.9427
+     Instance: 33500; Time: 2.04s; loss: 1075.3002; acc: 412946/438026=0.9427
+     Instance: 34000; Time: 2.01s; loss: 1134.8903; acc: 418962/444388=0.9428
+     Instance: 34500; Time: 1.85s; loss: 1150.4288; acc: 424991/450777=0.9428
+     Instance: 35000; Time: 2.24s; loss: 1256.2819; acc: 431133/457325=0.9427
+     Instance: 35500; Time: 1.97s; loss: 1124.0419; acc: 437090/463660=0.9427
+     Instance: 36000; Time: 1.97s; loss: 1334.9028; acc: 443358/470315=0.9427
+     Instance: 36500; Time: 2.04s; loss: 1158.1483; acc: 449580/476907=0.9427
+     Instance: 37000; Time: 2.04s; loss: 1337.0863; acc: 455887/483613=0.9427
+     Instance: 37500; Time: 1.67s; loss: 1056.3157; acc: 461633/489674=0.9427
+     Instance: 38000; Time: 1.93s; loss: 1297.3911; acc: 467623/496032=0.9427
+     Instance: 38500; Time: 1.97s; loss: 1266.0295; acc: 473779/502561=0.9427
+     Instance: 39000; Time: 1.96s; loss: 1204.0856; acc: 479888/509041=0.9427
+     Instance: 39500; Time: 1.87s; loss: 1187.2202; acc: 485907/515430=0.9427
+     Instance: 39999; Time: 2.07s; loss: 1199.5251; acc: 492082/521958=0.9428
+Epoch: 5 training finished. Time: 158.10s, speed: 252.99st/s,  total loss: 96969.59448242188
+totalloss: 96969.59448242188
+Right token =  27311  All token =  28668  acc =  0.9526649923259384
+Dev: time: 2.31s, speed: 954.56st/s; acc: 0.9527, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12827  All token =  13468  acc =  0.9524057024057024
+Test: time: 1.12s, speed: 894.14st/s; acc: 0.9524, p: -1.0000, r: -1.0000, f: -1.0000
+Epoch: 6/10
+ Learning rate is set as: 0.003076923076923077
+Shuffle: first input word list: [1080, 61, 6527, 919, 56, 26, 691, 2235, 56, 3550, 1572, 56, 194, 304, 10, 87, 12]
+     Instance: 500; Time: 2.07s; loss: 1186.9674; acc: 5923/6285=0.9424
+     Instance: 1000; Time: 1.93s; loss: 1163.8325; acc: 11871/12590=0.9429
+     Instance: 1500; Time: 1.94s; loss: 1179.5317; acc: 17876/18982=0.9417
+     Instance: 2000; Time: 1.91s; loss: 1129.7898; acc: 23582/25040=0.9418
+     Instance: 2500; Time: 2.02s; loss: 1100.4681; acc: 29807/31622=0.9426
+     Instance: 3000; Time: 1.85s; loss: 1261.7581; acc: 35761/37932=0.9428
+     Instance: 3500; Time: 2.07s; loss: 1252.9692; acc: 42164/44721=0.9428
+     Instance: 4000; Time: 2.15s; loss: 1092.9226; acc: 48742/51648=0.9437
+     Instance: 4500; Time: 1.93s; loss: 985.2113; acc: 54534/57754=0.9442
+     Instance: 5000; Time: 1.86s; loss: 1195.9097; acc: 60534/64095=0.9444
+     Instance: 5500; Time: 1.94s; loss: 1137.1674; acc: 66716/70633=0.9445
+     Instance: 6000; Time: 1.82s; loss: 1104.4429; acc: 72534/76779=0.9447
+     Instance: 6500; Time: 1.94s; loss: 1217.3556; acc: 78703/83289=0.9449
+     Instance: 7000; Time: 1.91s; loss: 1088.4811; acc: 84833/89761=0.9451
+     Instance: 7500; Time: 1.96s; loss: 1196.8270; acc: 90953/96254=0.9449
+     Instance: 8000; Time: 1.93s; loss: 1134.0384; acc: 96826/102473=0.9449
+     Instance: 8500; Time: 2.22s; loss: 1162.1082; acc: 103111/109105=0.9451
+     Instance: 9000; Time: 2.05s; loss: 1052.8455; acc: 109319/115642=0.9453
+     Instance: 9500; Time: 2.11s; loss: 1103.9226; acc: 115296/121963=0.9453
+     Instance: 10000; Time: 2.11s; loss: 1132.9041; acc: 121364/128389=0.9453
+     Instance: 10500; Time: 2.06s; loss: 1110.6614; acc: 127482/134871=0.9452
+     Instance: 11000; Time: 2.04s; loss: 1288.6031; acc: 133611/141406=0.9449
+     Instance: 11500; Time: 1.92s; loss: 1253.8416; acc: 140029/148200=0.9449
+     Instance: 12000; Time: 2.12s; loss: 1220.4183; acc: 146570/155133=0.9448
+     Instance: 12500; Time: 2.02s; loss: 1193.8456; acc: 152718/161626=0.9449
+     Instance: 13000; Time: 2.07s; loss: 1135.0794; acc: 158961/168213=0.9450
+     Instance: 13500; Time: 2.09s; loss: 1060.5140; acc: 165149/174735=0.9451
+     Instance: 14000; Time: 1.91s; loss: 1069.2984; acc: 171207/181120=0.9453
+     Instance: 14500; Time: 2.01s; loss: 1165.0528; acc: 177375/187636=0.9453
+     Instance: 15000; Time: 1.93s; loss: 1103.8323; acc: 183462/194051=0.9454
+     Instance: 15500; Time: 1.97s; loss: 1156.2335; acc: 189635/200596=0.9454
+     Instance: 16000; Time: 1.97s; loss: 1126.5659; acc: 195966/207299=0.9453
+     Instance: 16500; Time: 2.18s; loss: 1196.2344; acc: 202380/214065=0.9454
+     Instance: 17000; Time: 2.10s; loss: 1049.2181; acc: 208845/220858=0.9456
+     Instance: 17500; Time: 2.01s; loss: 1118.7862; acc: 214865/227233=0.9456
+     Instance: 18000; Time: 1.99s; loss: 1147.0101; acc: 220974/233713=0.9455
+     Instance: 18500; Time: 2.13s; loss: 1170.6030; acc: 227711/240804=0.9456
+     Instance: 19000; Time: 2.08s; loss: 1173.4100; acc: 234006/247456=0.9456
+     Instance: 19500; Time: 2.03s; loss: 1132.7879; acc: 240067/253880=0.9456
+     Instance: 20000; Time: 1.82s; loss: 1128.7849; acc: 245954/260102=0.9456
+     Instance: 20500; Time: 2.04s; loss: 1188.6401; acc: 252265/266766=0.9456
+     Instance: 21000; Time: 2.02s; loss: 1082.4003; acc: 258611/273462=0.9457
+     Instance: 21500; Time: 2.18s; loss: 1286.5995; acc: 265097/280361=0.9456
+     Instance: 22000; Time: 1.92s; loss: 1366.6058; acc: 271241/286920=0.9454
+     Instance: 22500; Time: 1.95s; loss: 1379.0798; acc: 277725/293819=0.9452
+     Instance: 23000; Time: 2.04s; loss: 1189.4259; acc: 283827/300279=0.9452
+     Instance: 23500; Time: 1.92s; loss: 1187.3560; acc: 289617/306425=0.9451
+     Instance: 24000; Time: 2.21s; loss: 1306.0408; acc: 296192/313409=0.9451
+     Instance: 24500; Time: 1.98s; loss: 1069.2022; acc: 302463/320019=0.9451
+     Instance: 25000; Time: 1.93s; loss: 1031.4857; acc: 308780/326685=0.9452
+     Instance: 25500; Time: 1.90s; loss: 1131.7383; acc: 314969/333229=0.9452
+     Instance: 26000; Time: 2.17s; loss: 1258.5398; acc: 321195/339853=0.9451
+     Instance: 26500; Time: 2.01s; loss: 1191.9989; acc: 327477/346525=0.9450
+     Instance: 27000; Time: 2.11s; loss: 1237.1590; acc: 333974/353391=0.9451
+     Instance: 27500; Time: 1.80s; loss: 1156.7629; acc: 339985/359777=0.9450
+     Instance: 28000; Time: 1.91s; loss: 1114.6936; acc: 346170/366303=0.9450
+     Instance: 28500; Time: 2.05s; loss: 1031.8870; acc: 352389/372848=0.9451
+     Instance: 29000; Time: 2.23s; loss: 1260.6180; acc: 358832/379675=0.9451
+     Instance: 29500; Time: 1.85s; loss: 1037.7806; acc: 364771/385938=0.9452
+     Instance: 30000; Time: 1.98s; loss: 1145.2914; acc: 371031/392562=0.9452
+     Instance: 30500; Time: 1.85s; loss: 1178.8260; acc: 377055/398939=0.9451
+     Instance: 31000; Time: 1.80s; loss: 1119.6243; acc: 382955/405192=0.9451
+     Instance: 31500; Time: 1.87s; loss: 1096.5527; acc: 388642/411205=0.9451
+     Instance: 32000; Time: 1.96s; loss: 1232.7178; acc: 394988/417926=0.9451
+     Instance: 32500; Time: 2.17s; loss: 1209.3936; acc: 401280/424602=0.9451
+     Instance: 33000; Time: 2.16s; loss: 1198.0781; acc: 407675/431359=0.9451
+     Instance: 33500; Time: 2.07s; loss: 1113.0729; acc: 413838/437883=0.9451
+     Instance: 34000; Time: 2.06s; loss: 1344.3358; acc: 420297/444732=0.9451
+     Instance: 34500; Time: 1.94s; loss: 1147.4755; acc: 426272/451066=0.9450
+     Instance: 35000; Time: 1.98s; loss: 1034.1559; acc: 432427/457523=0.9451
+     Instance: 35500; Time: 2.27s; loss: 1133.2186; acc: 438583/464035=0.9452
+     Instance: 36000; Time: 1.86s; loss: 1107.3699; acc: 444427/470230=0.9451
+     Instance: 36500; Time: 1.92s; loss: 1169.1133; acc: 450243/476409=0.9451
+     Instance: 37000; Time: 1.93s; loss: 1167.9158; acc: 456478/482990=0.9451
+     Instance: 37500; Time: 1.76s; loss: 1140.7613; acc: 462271/489129=0.9451
+     Instance: 38000; Time: 1.96s; loss: 1169.3914; acc: 468623/495841=0.9451
+     Instance: 38500; Time: 1.93s; loss: 1078.8747; acc: 474700/502253=0.9451
+     Instance: 39000; Time: 1.92s; loss: 1160.4400; acc: 480820/508732=0.9451
+     Instance: 39500; Time: 2.05s; loss: 1268.4728; acc: 487353/515675=0.9451
+     Instance: 39999; Time: 1.83s; loss: 1198.7691; acc: 493254/521958=0.9450
+Epoch: 6 training finished. Time: 159.66s, speed: 250.52st/s,  total loss: 92802.09936523438
+totalloss: 92802.09936523438
+Right token =  27329  All token =  28668  acc =  0.9532928700990652
+Dev: time: 2.23s, speed: 990.77st/s; acc: 0.9533, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12847  All token =  13468  acc =  0.9538907038907039
+Test: time: 1.07s, speed: 939.29st/s; acc: 0.9539, p: -1.0000, r: -1.0000, f: -1.0000
+Epoch: 7/10
+ Learning rate is set as: 0.002962962962962963
+Shuffle: first input word list: [632, 346, 87, 205, 116, 128, 138, 12, 517, 50, 315, 3388, 261, 1595, 137, 71, 156, 12]
+     Instance: 500; Time: 1.78s; loss: 1074.6736; acc: 5960/6307=0.9450
+     Instance: 1000; Time: 1.92s; loss: 1206.3311; acc: 12405/13127=0.9450
+     Instance: 1500; Time: 1.95s; loss: 1069.4240; acc: 18640/19692=0.9466
+     Instance: 2000; Time: 1.92s; loss: 1180.5904; acc: 24946/26376=0.9458
+     Instance: 2500; Time: 2.26s; loss: 1052.9139; acc: 31374/33153=0.9463
+     Instance: 3000; Time: 1.97s; loss: 1140.2878; acc: 37351/39475=0.9462
+     Instance: 3500; Time: 1.83s; loss: 1021.9757; acc: 43234/45678=0.9465
+     Instance: 4000; Time: 1.79s; loss: 1086.4571; acc: 49265/52046=0.9466
+     Instance: 4500; Time: 1.98s; loss: 1041.6406; acc: 55147/58231=0.9470
+     Instance: 5000; Time: 2.01s; loss: 1188.4552; acc: 61280/64722=0.9468
+     Instance: 5500; Time: 1.79s; loss: 971.2422; acc: 67049/70772=0.9474
+     Instance: 6000; Time: 2.22s; loss: 1270.3881; acc: 73627/77736=0.9471
+     Instance: 6500; Time: 2.20s; loss: 1213.2291; acc: 79884/84383=0.9467
+     Instance: 7000; Time: 1.90s; loss: 1172.1053; acc: 85977/90840=0.9465
+     Instance: 7500; Time: 1.79s; loss: 1028.7311; acc: 92037/97208=0.9468
+     Instance: 8000; Time: 1.75s; loss: 1271.1003; acc: 98022/103565=0.9465
+     Instance: 8500; Time: 1.85s; loss: 1178.3097; acc: 104210/110110=0.9464
+     Instance: 9000; Time: 1.83s; loss: 1116.5268; acc: 110559/116806=0.9465
+     Instance: 9500; Time: 1.97s; loss: 1075.7654; acc: 116867/123443=0.9467
+     Instance: 10000; Time: 2.05s; loss: 1175.7124; acc: 123008/129923=0.9468
+     Instance: 10500; Time: 1.98s; loss: 1144.7605; acc: 129159/136433=0.9467
+     Instance: 11000; Time: 2.09s; loss: 1165.7992; acc: 135902/143536=0.9468
+     Instance: 11500; Time: 1.86s; loss: 977.9979; acc: 141887/149808=0.9471
+     Instance: 12000; Time: 1.73s; loss: 1031.0959; acc: 147832/156070=0.9472
+     Instance: 12500; Time: 1.93s; loss: 1067.4603; acc: 153954/162518=0.9473
+     Instance: 13000; Time: 1.94s; loss: 1038.0576; acc: 160203/169103=0.9474
+     Instance: 13500; Time: 1.78s; loss: 1078.1116; acc: 165998/175236=0.9473
+     Instance: 14000; Time: 1.81s; loss: 1080.6870; acc: 172147/181739=0.9472
+     Instance: 14500; Time: 1.80s; loss: 1069.2984; acc: 178157/188070=0.9473
+     Instance: 15000; Time: 1.96s; loss: 1163.7401; acc: 184483/194763=0.9472
+     Instance: 15500; Time: 1.86s; loss: 1023.8506; acc: 190621/201206=0.9474
+     Instance: 16000; Time: 2.00s; loss: 1154.1917; acc: 196960/207903=0.9474
+     Instance: 16500; Time: 1.96s; loss: 1080.9163; acc: 203052/214323=0.9474
+     Instance: 17000; Time: 1.88s; loss: 1139.9249; acc: 209204/220836=0.9473
+     Instance: 17500; Time: 1.95s; loss: 1021.1530; acc: 215436/227392=0.9474
+     Instance: 18000; Time: 1.82s; loss: 1069.6318; acc: 221649/233943=0.9474
+     Instance: 18500; Time: 1.69s; loss: 923.1003; acc: 227458/240037=0.9476
+     Instance: 19000; Time: 1.93s; loss: 1115.1537; acc: 233788/246692=0.9477
+     Instance: 19500; Time: 1.85s; loss: 1006.8221; acc: 239955/253163=0.9478
+     Instance: 20000; Time: 2.14s; loss: 1286.8749; acc: 246645/260260=0.9477
+     Instance: 20500; Time: 1.99s; loss: 992.6183; acc: 252723/266653=0.9478
+     Instance: 21000; Time: 2.02s; loss: 1174.1550; acc: 258856/273126=0.9478
+     Instance: 21500; Time: 2.13s; loss: 1136.4218; acc: 265131/279762=0.9477
+     Instance: 22000; Time: 2.05s; loss: 1133.8611; acc: 271252/286258=0.9476
+     Instance: 22500; Time: 2.05s; loss: 1061.9947; acc: 277249/292606=0.9475
+     Instance: 23000; Time: 2.09s; loss: 1150.8003; acc: 283495/299178=0.9476
+     Instance: 23500; Time: 1.99s; loss: 1032.9111; acc: 289813/305807=0.9477
+     Instance: 24000; Time: 2.27s; loss: 1017.9191; acc: 296151/312443=0.9479
+     Instance: 24500; Time: 2.11s; loss: 1068.0388; acc: 302534/319133=0.9480
+     Instance: 25000; Time: 2.02s; loss: 1104.6171; acc: 308607/325512=0.9481
+     Instance: 25500; Time: 2.16s; loss: 1197.0091; acc: 315040/332305=0.9480
+     Instance: 26000; Time: 1.89s; loss: 1107.2289; acc: 321086/338691=0.9480
+     Instance: 26500; Time: 2.28s; loss: 1215.0439; acc: 327489/345465=0.9480
+     Instance: 27000; Time: 2.06s; loss: 1210.6411; acc: 333488/351829=0.9479
+     Instance: 27500; Time: 1.94s; loss: 1079.1932; acc: 339676/358360=0.9479
+     Instance: 28000; Time: 2.12s; loss: 1046.0061; acc: 345985/365008=0.9479
+     Instance: 28500; Time: 2.06s; loss: 1186.4798; acc: 352359/371742=0.9479
+     Instance: 29000; Time: 1.93s; loss: 1081.3604; acc: 358242/377963=0.9478
+     Instance: 29500; Time: 2.10s; loss: 1201.3876; acc: 364631/384746=0.9477
+     Instance: 30000; Time: 2.24s; loss: 1292.6263; acc: 371245/391781=0.9476
+     Instance: 30500; Time: 1.99s; loss: 1099.8918; acc: 377240/398098=0.9476
+     Instance: 31000; Time: 2.09s; loss: 1048.4632; acc: 383535/404722=0.9477
+     Instance: 31500; Time: 2.07s; loss: 1112.7456; acc: 389838/411359=0.9477
+     Instance: 32000; Time: 2.03s; loss: 1105.4718; acc: 396221/418064=0.9478
+     Instance: 32500; Time: 1.98s; loss: 1260.6319; acc: 402475/424696=0.9477
+     Instance: 33000; Time: 1.91s; loss: 1098.6649; acc: 408466/431052=0.9476
+     Instance: 33500; Time: 2.00s; loss: 1169.3665; acc: 414702/437629=0.9476
+     Instance: 34000; Time: 2.00s; loss: 995.3099; acc: 420907/444147=0.9477
+     Instance: 34500; Time: 2.16s; loss: 1131.0182; acc: 427084/450667=0.9477
+     Instance: 35000; Time: 1.90s; loss: 1041.9771; acc: 432899/456808=0.9477
+     Instance: 35500; Time: 1.98s; loss: 992.6183; acc: 438947/463145=0.9478
+     Instance: 36000; Time: 2.05s; loss: 1167.2286; acc: 445352/469913=0.9477
+     Instance: 36500; Time: 1.94s; loss: 1129.3495; acc: 451718/476627=0.9477
+     Instance: 37000; Time: 1.92s; loss: 1147.6676; acc: 457778/483049=0.9477
+     Instance: 37500; Time: 1.98s; loss: 1077.5753; acc: 463928/489553=0.9477
+     Instance: 38000; Time: 2.26s; loss: 1280.1552; acc: 470236/496259=0.9476
+     Instance: 38500; Time: 1.95s; loss: 1149.5439; acc: 476279/502655=0.9475
+     Instance: 39000; Time: 1.96s; loss: 1084.7522; acc: 482363/509092=0.9475
+     Instance: 39500; Time: 1.98s; loss: 1120.6874; acc: 488476/515575=0.9474
+     Instance: 39999; Time: 1.98s; loss: 1087.4976; acc: 494531/521958=0.9475
+Epoch: 7 training finished. Time: 158.35s, speed: 252.60st/s,  total loss: 88965.41784667969
+totalloss: 88965.41784667969
+Right token =  27378  All token =  28668  acc =  0.9550020929259104
+Dev: time: 2.30s, speed: 960.60st/s; acc: 0.9550, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12866  All token =  13468  acc =  0.9553014553014553
+Test: time: 1.12s, speed: 900.08st/s; acc: 0.9553, p: -1.0000, r: -1.0000, f: -1.0000
+Epoch: 8/10
+ Learning rate is set as: 0.0028571428571428576
+Shuffle: first input word list: [438, 5445, 199, 949, 8829, 66, 21, 2196, 204, 5655, 293, 5792, 20, 816, 13129, 201, 178, 13130, 2234, 13131, 42, 2594, 467, 1204, 2608, 84, 1225, 1598, 467, 13132, 2608, 13133, 9156, 13134, 201, 381, 596, 425, 11, 12]
+     Instance: 500; Time: 1.90s; loss: 1028.2389; acc: 6247/6560=0.9523
+     Instance: 1000; Time: 1.93s; loss: 1029.3603; acc: 12016/12645=0.9503
+     Instance: 1500; Time: 1.98s; loss: 1098.3661; acc: 18196/19165=0.9494
+     Instance: 2000; Time: 2.05s; loss: 1165.1473; acc: 24654/25997=0.9483
+     Instance: 2500; Time: 2.08s; loss: 1072.7404; acc: 31047/32728=0.9486
+     Instance: 3000; Time: 1.86s; loss: 908.7861; acc: 36896/38867=0.9493
+     Instance: 3500; Time: 2.14s; loss: 1093.9265; acc: 43205/45530=0.9489
+     Instance: 4000; Time: 2.09s; loss: 1076.9109; acc: 49205/51871=0.9486
+     Instance: 4500; Time: 2.09s; loss: 1100.1469; acc: 55429/58454=0.9482
+     Instance: 5000; Time: 1.92s; loss: 939.2632; acc: 61364/64668=0.9489
+     Instance: 5500; Time: 2.19s; loss: 1202.3964; acc: 67840/71524=0.9485
+     Instance: 6000; Time: 2.08s; loss: 1165.0709; acc: 74238/78291=0.9482
+     Instance: 6500; Time: 1.89s; loss: 1247.5735; acc: 80391/84816=0.9478
+     Instance: 7000; Time: 1.92s; loss: 1031.4485; acc: 86396/91142=0.9479
+     Instance: 7500; Time: 1.86s; loss: 1125.8817; acc: 92308/97384=0.9479
+     Instance: 8000; Time: 2.05s; loss: 1110.8620; acc: 98756/104174=0.9480
+     Instance: 8500; Time: 2.03s; loss: 1046.2190; acc: 104932/110664=0.9482
+     Instance: 9000; Time: 2.04s; loss: 1059.7277; acc: 111009/117066=0.9483
+     Instance: 9500; Time: 2.15s; loss: 1072.8393; acc: 117416/123815=0.9483
+     Instance: 10000; Time: 2.11s; loss: 1107.6010; acc: 123467/130205=0.9483
+     Instance: 10500; Time: 2.08s; loss: 1158.5791; acc: 129914/136988=0.9484
+     Instance: 11000; Time: 2.06s; loss: 1082.4526; acc: 136130/143543=0.9484
+     Instance: 11500; Time: 2.01s; loss: 999.9212; acc: 142133/149855=0.9485
+     Instance: 12000; Time: 1.81s; loss: 1133.8204; acc: 148124/156209=0.9482
+     Instance: 12500; Time: 1.84s; loss: 1047.1550; acc: 154167/162590=0.9482
+     Instance: 13000; Time: 1.94s; loss: 1028.1096; acc: 160373/169105=0.9484
+     Instance: 13500; Time: 2.03s; loss: 1186.2079; acc: 166604/175689=0.9483
+     Instance: 14000; Time: 1.95s; loss: 1008.7602; acc: 172956/182353=0.9485
+     Instance: 14500; Time: 1.85s; loss: 1059.4036; acc: 179011/188730=0.9485
+     Instance: 15000; Time: 2.08s; loss: 1196.0803; acc: 185285/195371=0.9484
+     Instance: 15500; Time: 1.84s; loss: 1140.1491; acc: 191433/201891=0.9482
+     Instance: 16000; Time: 1.81s; loss: 1163.2551; acc: 197722/208565=0.9480
+     Instance: 16500; Time: 1.84s; loss: 1158.4963; acc: 204068/215236=0.9481
+     Instance: 17000; Time: 1.96s; loss: 1117.2993; acc: 210392/221915=0.9481
+     Instance: 17500; Time: 1.76s; loss: 1042.9696; acc: 216523/228349=0.9482
+     Instance: 18000; Time: 1.66s; loss: 935.6845; acc: 222408/234520=0.9484
+     Instance: 18500; Time: 1.97s; loss: 1131.9492; acc: 228968/241416=0.9484
+     Instance: 19000; Time: 1.81s; loss: 1011.1173; acc: 235112/247878=0.9485
+     Instance: 19500; Time: 1.91s; loss: 1176.3032; acc: 241404/254527=0.9484
+     Instance: 20000; Time: 1.61s; loss: 967.8818; acc: 247391/260826=0.9485
+     Instance: 20500; Time: 1.96s; loss: 1097.1852; acc: 253998/267794=0.9485
+     Instance: 21000; Time: 1.67s; loss: 1056.7109; acc: 260035/274168=0.9485
+     Instance: 21500; Time: 1.84s; loss: 1139.9397; acc: 266235/280721=0.9484
+     Instance: 22000; Time: 1.79s; loss: 920.3947; acc: 272624/287405=0.9486
+     Instance: 22500; Time: 1.56s; loss: 1075.6674; acc: 278407/293519=0.9485
+     Instance: 23000; Time: 1.65s; loss: 1049.5107; acc: 284717/300176=0.9485
+     Instance: 23500; Time: 1.60s; loss: 1067.6580; acc: 290539/306321=0.9485
+     Instance: 24000; Time: 1.95s; loss: 1050.9595; acc: 296880/312989=0.9485
+     Instance: 24500; Time: 1.86s; loss: 1035.7583; acc: 303181/319625=0.9486
+     Instance: 25000; Time: 2.08s; loss: 1259.5203; acc: 309739/326569=0.9485
+     Instance: 25500; Time: 1.81s; loss: 1023.1704; acc: 315739/332882=0.9485
+     Instance: 26000; Time: 1.83s; loss: 1056.9580; acc: 321881/339337=0.9486
+     Instance: 26500; Time: 1.70s; loss: 985.0224; acc: 327867/345649=0.9486
+     Instance: 27000; Time: 1.73s; loss: 1009.3403; acc: 333898/351987=0.9486
+     Instance: 27500; Time: 2.02s; loss: 1146.9839; acc: 340118/358564=0.9486
+     Instance: 28000; Time: 1.97s; loss: 1040.3676; acc: 346278/365057=0.9486
+     Instance: 28500; Time: 1.96s; loss: 1041.6617; acc: 352457/371577=0.9485
+     Instance: 29000; Time: 2.11s; loss: 1189.4636; acc: 359009/378503=0.9485
+     Instance: 29500; Time: 1.96s; loss: 1209.2652; acc: 365464/385315=0.9485
+     Instance: 30000; Time: 1.78s; loss: 1046.9910; acc: 371368/391545=0.9485
+     Instance: 30500; Time: 1.78s; loss: 1061.7432; acc: 377803/398315=0.9485
+     Instance: 31000; Time: 1.84s; loss: 1048.2386; acc: 383990/404813=0.9486
+     Instance: 31500; Time: 1.89s; loss: 979.5749; acc: 390089/411217=0.9486
+     Instance: 32000; Time: 1.66s; loss: 1031.2595; acc: 396016/417453=0.9486
+     Instance: 32500; Time: 1.59s; loss: 1038.0932; acc: 401946/423717=0.9486
+     Instance: 33000; Time: 1.98s; loss: 1004.5192; acc: 408448/430547=0.9487
+     Instance: 33500; Time: 1.79s; loss: 970.5832; acc: 414380/436798=0.9487
+     Instance: 34000; Time: 1.86s; loss: 1153.8860; acc: 420845/443631=0.9486
+     Instance: 34500; Time: 1.82s; loss: 1079.6147; acc: 426867/449978=0.9486
+     Instance: 35000; Time: 1.71s; loss: 1051.1725; acc: 433019/456471=0.9486
+     Instance: 35500; Time: 1.80s; loss: 1077.2193; acc: 439167/462953=0.9486
+     Instance: 36000; Time: 1.92s; loss: 1110.7836; acc: 445305/469431=0.9486
+     Instance: 36500; Time: 1.95s; loss: 1187.3880; acc: 451513/476008=0.9485
+     Instance: 37000; Time: 2.10s; loss: 1084.1315; acc: 457931/482806=0.9485
+     Instance: 37500; Time: 1.97s; loss: 1229.4033; acc: 464456/489717=0.9484
+     Instance: 38000; Time: 1.85s; loss: 978.8881; acc: 470776/496343=0.9485
+     Instance: 38500; Time: 1.90s; loss: 1043.7224; acc: 477059/502953=0.9485
+     Instance: 39000; Time: 1.90s; loss: 1004.9311; acc: 483140/509346=0.9485
+     Instance: 39500; Time: 1.79s; loss: 910.2615; acc: 489052/515554=0.9486
+     Instance: 39999; Time: 1.79s; loss: 1008.3151; acc: 495143/521958=0.9486
+Epoch: 8 training finished. Time: 151.92s, speed: 263.28st/s,  total loss: 85984.35961914062
+totalloss: 85984.35961914062
+Right token =  27403  All token =  28668  acc =  0.9558741453885866
+Dev: time: 2.16s, speed: 1020.42st/s; acc: 0.9559, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12888  All token =  13468  acc =  0.9569349569349569
+Test: time: 1.02s, speed: 987.73st/s; acc: 0.9569, p: -1.0000, r: -1.0000, f: -1.0000
+Epoch: 9/10
+ Learning rate is set as: 0.0027586206896551726
+Shuffle: first input word list: [363, 3341, 53, 11083, 42, 189, 86, 648, 12]
+     Instance: 500; Time: 1.79s; loss: 960.0744; acc: 6199/6514=0.9516
+     Instance: 1000; Time: 1.77s; loss: 952.6760; acc: 12333/12941=0.9530
+     Instance: 1500; Time: 1.87s; loss: 1110.1331; acc: 18544/19480=0.9520
+     Instance: 2000; Time: 1.75s; loss: 1120.5853; acc: 24789/26062=0.9512
+     Instance: 2500; Time: 2.13s; loss: 1042.3169; acc: 31246/32826=0.9519
+     Instance: 3000; Time: 1.87s; loss: 983.7547; acc: 37558/39464=0.9517
+     Instance: 3500; Time: 1.78s; loss: 949.1973; acc: 43582/45794=0.9517
+     Instance: 4000; Time: 1.81s; loss: 1084.4331; acc: 49946/52488=0.9516
+     Instance: 4500; Time: 2.10s; loss: 1076.5327; acc: 56348/59224=0.9514
+     Instance: 5000; Time: 1.98s; loss: 963.3344; acc: 62081/65262=0.9513
+     Instance: 5500; Time: 2.22s; loss: 1166.4052; acc: 68562/72103=0.9509
+     Instance: 6000; Time: 2.10s; loss: 1122.6750; acc: 74681/78557=0.9507
+     Instance: 6500; Time: 2.02s; loss: 1023.0265; acc: 81010/85212=0.9507
+     Instance: 7000; Time: 2.18s; loss: 1105.1432; acc: 87512/92047=0.9507
+     Instance: 7500; Time: 2.02s; loss: 1153.5076; acc: 93760/98645=0.9505
+     Instance: 8000; Time: 2.06s; loss: 1157.1827; acc: 99956/105202=0.9501
+     Instance: 8500; Time: 1.96s; loss: 994.5038; acc: 106106/111653=0.9503
+     Instance: 9000; Time: 2.07s; loss: 1060.5034; acc: 112224/118118=0.9501
+     Instance: 9500; Time: 1.68s; loss: 1191.7413; acc: 118283/124530=0.9498
+     Instance: 10000; Time: 1.63s; loss: 961.5620; acc: 124215/130766=0.9499
+     Instance: 10500; Time: 1.74s; loss: 1061.9938; acc: 130304/137159=0.9500
+     Instance: 11000; Time: 1.80s; loss: 941.5895; acc: 136613/143775=0.9502
+     Instance: 11500; Time: 1.87s; loss: 999.3065; acc: 142509/149992=0.9501
+     Instance: 12000; Time: 1.92s; loss: 1015.2025; acc: 148583/156401=0.9500
+     Instance: 12500; Time: 1.97s; loss: 1127.4694; acc: 154882/163045=0.9499
+     Instance: 13000; Time: 1.79s; loss: 1047.1348; acc: 160761/169246=0.9499
+     Instance: 13500; Time: 1.90s; loss: 958.4624; acc: 167237/176016=0.9501
+     Instance: 14000; Time: 1.87s; loss: 1090.4055; acc: 173279/182374=0.9501
+     Instance: 14500; Time: 2.28s; loss: 978.1056; acc: 179647/189045=0.9503
+     Instance: 15000; Time: 2.08s; loss: 997.7327; acc: 186282/195988=0.9505
+     Instance: 15500; Time: 1.80s; loss: 1009.1599; acc: 192497/202514=0.9505
+     Instance: 16000; Time: 2.04s; loss: 1047.1620; acc: 198959/209299=0.9506
+     Instance: 16500; Time: 2.20s; loss: 1019.9443; acc: 205654/216332=0.9506
+     Instance: 17000; Time: 2.02s; loss: 979.6402; acc: 211943/222917=0.9508
+     Instance: 17500; Time: 1.98s; loss: 989.6544; acc: 218019/229311=0.9508
+     Instance: 18000; Time: 1.99s; loss: 1045.8737; acc: 224245/235863=0.9507
+     Instance: 18500; Time: 1.81s; loss: 1059.3727; acc: 230325/242279=0.9507
+     Instance: 19000; Time: 2.17s; loss: 1000.5498; acc: 236963/249215=0.9508
+     Instance: 19500; Time: 1.75s; loss: 1000.5174; acc: 243052/255610=0.9509
+     Instance: 20000; Time: 1.94s; loss: 1182.9609; acc: 249317/262223=0.9508
+     Instance: 20500; Time: 1.81s; loss: 1052.3917; acc: 255539/268781=0.9507
+     Instance: 21000; Time: 2.06s; loss: 1031.4718; acc: 261856/275406=0.9508
+     Instance: 21500; Time: 1.80s; loss: 1060.0378; acc: 268145/281998=0.9509
+     Instance: 22000; Time: 1.93s; loss: 1077.7003; acc: 274435/288646=0.9508
+     Instance: 22500; Time: 1.88s; loss: 1096.0945; acc: 280808/295375=0.9507
+     Instance: 23000; Time: 2.13s; loss: 1077.3420; acc: 287457/302378=0.9507
+     Instance: 23500; Time: 2.16s; loss: 1089.1269; acc: 293929/309187=0.9507
+     Instance: 24000; Time: 1.96s; loss: 972.2327; acc: 300110/315667=0.9507
+     Instance: 24500; Time: 2.20s; loss: 1194.7354; acc: 306854/322761=0.9507
+     Instance: 25000; Time: 1.78s; loss: 1068.2030; acc: 312791/329035=0.9506
+     Instance: 25500; Time: 1.85s; loss: 1027.9930; acc: 318944/335514=0.9506
+     Instance: 26000; Time: 1.74s; loss: 972.0849; acc: 324537/341406=0.9506
+     Instance: 26500; Time: 1.75s; loss: 967.3505; acc: 330557/347720=0.9506
+     Instance: 27000; Time: 1.95s; loss: 1052.3071; acc: 336694/354186=0.9506
+     Instance: 27500; Time: 1.88s; loss: 952.8104; acc: 342735/360535=0.9506
+     Instance: 28000; Time: 1.79s; loss: 1083.9240; acc: 348792/366928=0.9506
+     Instance: 28500; Time: 1.81s; loss: 1058.7773; acc: 355018/373476=0.9506
+     Instance: 29000; Time: 1.76s; loss: 1134.2601; acc: 360959/379780=0.9504
+     Instance: 29500; Time: 1.80s; loss: 965.5670; acc: 366835/385964=0.9504
+     Instance: 30000; Time: 2.01s; loss: 1125.0901; acc: 373141/392622=0.9504
+     Instance: 30500; Time: 1.93s; loss: 1165.1981; acc: 379217/399033=0.9503
+     Instance: 31000; Time: 2.07s; loss: 1201.6756; acc: 385817/405997=0.9503
+     Instance: 31500; Time: 1.93s; loss: 1118.2620; acc: 391955/412472=0.9503
+     Instance: 32000; Time: 1.74s; loss: 991.6329; acc: 397913/418742=0.9503
+     Instance: 32500; Time: 1.89s; loss: 1137.4006; acc: 404431/425600=0.9503
+     Instance: 33000; Time: 1.85s; loss: 1062.8757; acc: 410725/432236=0.9502
+     Instance: 33500; Time: 1.77s; loss: 1008.6786; acc: 416977/438832=0.9502
+     Instance: 34000; Time: 1.82s; loss: 1114.9058; acc: 423329/445536=0.9502
+     Instance: 34500; Time: 1.68s; loss: 1029.8195; acc: 429249/451788=0.9501
+     Instance: 35000; Time: 1.56s; loss: 916.0280; acc: 435170/457992=0.9502
+     Instance: 35500; Time: 1.79s; loss: 983.7975; acc: 441162/464285=0.9502
+     Instance: 36000; Time: 1.78s; loss: 925.8323; acc: 447104/470524=0.9502
+     Instance: 36500; Time: 1.83s; loss: 1048.6026; acc: 453196/476942=0.9502
+     Instance: 37000; Time: 1.77s; loss: 935.5826; acc: 459020/483050=0.9503
+     Instance: 37500; Time: 1.72s; loss: 968.1849; acc: 465114/489453=0.9503
+     Instance: 38000; Time: 1.74s; loss: 958.8950; acc: 471247/495899=0.9503
+     Instance: 38500; Time: 1.83s; loss: 1029.6614; acc: 477362/502350=0.9503
+     Instance: 39000; Time: 1.73s; loss: 1006.4805; acc: 483383/508663=0.9503
+     Instance: 39500; Time: 1.94s; loss: 1040.7686; acc: 489588/515211=0.9503
+     Instance: 39999; Time: 1.94s; loss: 1040.9660; acc: 496010/521958=0.9503
+Epoch: 9 training finished. Time: 152.05s, speed: 263.06st/s,  total loss: 83476.27557373047
+totalloss: 83476.27557373047
+Right token =  27402  All token =  28668  acc =  0.9558392632900795
+Dev: time: 2.18s, speed: 1011.66st/s; acc: 0.9558, p: -1.0000, r: -1.0000, f: -1.0000
+Right token =  12887  All token =  13468  acc =  0.9568607068607069
+Test: time: 1.05s, speed: 960.37st/s; acc: 0.9569, p: -1.0000, r: -1.0000, f: -1.0000
