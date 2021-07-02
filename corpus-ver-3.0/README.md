@@ -222,6 +222,30 @@ First, download or clone the myPOS repository. It contains pre-trained models fo
 $git clone https://github.com/ye-kyaw-thu/myPOS
 ```
 
+We assumed you already installed jitar, CRF++, RDR and NCRF++ toolkits on your computer...  
+
+Tagging with 3gHMM model:  
+```
+cat ./otest.nopipe.word | ../jitar-0.3.3-bin/jitar-0.3.3/bin/jitar-tag ./t1/train1.nopipe.word.model > ./otest1.nopipe.word.TAGGED
+```
+
+Tagging with CRF model:  
+
+command syntax: crf_test -m \<model_file\> \<test_files\>  
+
+```
+   $crf_test -m ./t1/train1.nopipe.crf-model ./otest.nopipe.col > ./otest1.nopipe.col.result
+```
+
+Tagging with CRF model:  
+```
+
+```
+
+Tagging with CRF model:  
+```
+
+```
 
 ### Evaluation
 Although some modeling tools provide the accuracy or F1-score, we will use `evaluate.py` for comparison among different models.  
