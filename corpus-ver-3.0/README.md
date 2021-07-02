@@ -57,7 +57,7 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
   </tr>
   <tr>
     <td>RDR</td>
-    <td> 96.53% </td>
+    <td> <b>96.53%</b> </td>
 
   </tr>
     <tr>
