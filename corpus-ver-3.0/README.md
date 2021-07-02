@@ -243,8 +243,11 @@ python2.7 RDRPOSTagger.py tag ./t1/train1.nopipe.RDR /t1/train1.nopipe.DICT ./t1
 ```
 
 Tagging with NCRF++ model:  
-```
 
+Don't forget to prepare `decode.config` file in advance.  
+(decode.config ဖိုင်ကို အရင်ပြင်ထားရပါလိမ့်မယ်)  
+```
+python ./main.py --config ./trained-models/wordLSTM-CRF/decode.config
 ```
 
 ### Evaluation
