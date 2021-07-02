@@ -167,7 +167,7 @@ In the example 10 sentences given above, compound words are as follows:
 ### Statistics of POS Distribution
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/etc/POS-tag-distribution-of-myPOS-ver3.png" alt="drawing" width="200"/>  
+<img src="https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/etc/POS-tag-distribution-of-myPOS-ver3.png" alt="drawing" width="800"/>  
 </p>  
 <div align="center">
   Fig. POS tag distribution of myPOS corpus version 3.0  
