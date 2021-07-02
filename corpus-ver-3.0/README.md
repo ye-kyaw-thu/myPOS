@@ -5,18 +5,12 @@ myPOS Corpus (Myanmar Part-of-Speech Corpus) for Myanmar language NLP Research a
 
 To the best of our knowledge, this corpus will be the biggest publicly available POS tagged dataset for Burmese or Myanmar language. We used 15 POS tag-set same as version 1.0 and 2.0. Please read the main README file (under myPOS/ folder) for the detail explanation of word segmentation and POS tag definition of the corpus. In this version 3.0, we extended the myPOS corpus of 11K sentences to 43,196 sentences by adding about 20K Myanmar sentences from our developing parallel corpora (i.e. Myanmar-Chinese and Myanmar-Korean) and 12K Myanmar sentences from ASEAN MT corpus of NECTEC, Thailand (See Table.1). All new raw sentences are manually segmented and POS tagging was done with myPOS RDR POS tagger. After that, we checked and fixed the POS tagging errors manually for the whole extended corpus. The manual POS tagging was mainly done by Ms. Zar Zar Hlaing (one of my Ph.D. students who is pursuing her Ph.D. degree at the KMITL, Bangkok, Thailand) and my colleague Dr. Myat Myo Nwe Wai (MIIT, Mandalay, Myanmar). I take care this whle myPOS project. Moreover, Dr.Thepchai Supnithi (LST, NECTEC, Thailand) and Prof. Ponrudee Netisopakul (KMITL, Bangkok, Thailand)supporting this project in several ways.  
 
-Ye Kyaw Thu
-Visiting Professor,
-LST, NECTEC, Thailand
+I do hope releasing this myPOS version 3.0 is one of the key milestones of our Myanmar NLP R&D.  
 
-**WAIT!!!
-I am uploading models and data .... and keep updating this README file also!
-Hope to finish & release ASAP...**
-
-**ဒီ ၂ရက်လောက်အတွင်းမှာ training လုပ်ထားတဲ့ မော်ဒယ်တွေအားလုံးနဲ့ ဒေတာကို အချိန်ရရင် ရသလို တင်ပေးသွားပါမယ်။
-ခဏစောင့်ပါ။ ပြင်ဆင်နေဆဲ။ မပြီးသေးပါ....**
-
-
+Ye Kyaw Thu,  
+Visiting Professor,  
+LST, NECTEC, Thailand  
+Date: 2 July 2021  
 
 ### မိတ်ဆက် (Introduction in Myanmar Language)
 myPOS version 3.0 က မှာ သုံးခဲ့တဲ့ tag-set တွေက ရှေ့က ဗားရှင်းတွေ ဖြစ်တဲ့ version 1.0, 2.0 နဲ့ အတူတူပါပဲ။ POS tag စုစုပေါင်း 15 ခုပါဝင်ပါတယ်။ ဒီနေရာမှာ tag တွေကို အတိုကောက်တွေနဲ့တကွ တွဲဖော်ပြရရင် abb (Abbreviation), adj (Adjective), adv (Adverb), conj (Conjunction), fw (Foreign Word), int (Interjection), n (Noun), num (Number), part (Particle), ppm (Post-positional Marker), pronc (Pronoun), punc (Punctuation), sb (Symbol), tn (Text Number) နဲ့ v (Verb) တို့ဖြစ်ကြပါတယ်။ တကယ်က ဒီနှစ်ထဲမှာ myPOS version 2.0 အနေနဲ့ပဲ release လုပ်နိုင်လိမ့်မယ်လို ထင်ထားခဲ့တာပါ။ ဒါပေမဲ့ ဝမ်းသာစရာကောင်းတာက... myPOS version 2.0 မှာ open-test data အဖြစ် သုံးခဲ့တဲ့ ASEAN-MT corpus ထဲက travel-tour ဒိုမိန်းဒေတာ စာကြောင်းရေ တစ်သောင်းနှစ်ထောင်ကျော်ကိုပါ ရှဲလုပ်ဖို့ လက်ရှိ ကျွန်တော် အလုပ်လုပ်နေတဲ့ Lab ရဲ့ Leader ဒေါက်တာ Thepchai က ခွင့်ပြုလို့ myPOS version 3.0 အနေနဲ့ release လုပ်ဖို့ ဖြစ်လာခဲ့ရပါတယ်။ NECTEC မှာ အလုပ်လုပ်နေစဉ် မှာ မြန်မာစာ NLP R&D အတွက် contribution/collaboration တစ်ခု ဖြစ်သွားလို့ အတိုင်းထက်မသိ ဝမ်းသာရပါတယ်။  
