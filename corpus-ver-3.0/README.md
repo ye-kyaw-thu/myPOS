@@ -1,7 +1,9 @@
 # myPOS Version 3.0
 
 ### Introduction in English (for ver. 3.0)
-myPOS Corpus (Myanmar Part-of-Speech Corpus) for Myanmar language NLP Research and Developments
+myPOS Corpus (Myanmar Part-of-Speech Corpus) for Myanmar language NLP Research and Developments.
+
+To the best of our knowledge, this corpus will be the biggest publicly available POS tagged dataset for Burmese or Myanmar language. We used 15 POS tag-set same as version 1.0 and 2.0. Please read the main README file (under myPOS/ folder) for the detail explanation of word segmentation and POS tag definition of the corpus. In this version 3.0, we extended the myPOS corpus of 11K sentences to 43,196 sentences by adding about 20K Myanmar sentences from our developing parallel corpora (i.e. Myanmar-Chinese and Myanmar-Korean) and 12K Myanmar sentences from ASEAN MT corpus of NECTEC, Thailand. 
 
 **WAIT!!!
 I am uploading models and data .... and keep updating this README file also!
@@ -10,7 +12,7 @@ Hope to finish & release ASAP...**
 **ဒီ ၂ရက်လောက်အတွင်းမှာ training လုပ်ထားတဲ့ မော်ဒယ်တွေအားလုံးနဲ့ ဒေတာကို အချိန်ရရင် ရသလို တင်ပေးသွားပါမယ်။
 ခဏစောင့်ပါ။ ပြင်ဆင်နေဆဲ။ မပြီးသေးပါ....**
 
-- 10K of ASEAN MT Myanmar data
+
 
 ### မိတ်ဆက် (Introduction in Myanmar Language)
 myPOS version 3.0 က မှာ သုံးခဲ့တဲ့ tag-set တွေက ရှေ့က ဗားရှင်းတွေ ဖြစ်တဲ့ version 1.0, 2.0 နဲ့ အတူတူပါပဲ။ POS tag စုစုပေါင်း 15 ခုပါဝင်ပါတယ်။ ဒီနေရာမှာ tag တွေကို အတိုကောက်တွေနဲ့တကွ တွဲဖော်ပြရရင် abb (Abbreviation), adj (Adjective), adv (Adverb), conj (Conjunction), fw (Foreign Word), int (Interjection), n (Noun), num (Number), part (Particle), ppm (Post-positional Marker), pronc (Pronoun), punc (Punctuation), sb (Symbol), tn (Text Number) နဲ့ v (Verb) တို့ဖြစ်ကြပါတယ်။ တကယ်က ဒီနှစ်ထဲမှာ myPOS version 2.0 အနေနဲ့ပဲ release လုပ်နိုင်လိမ့်မယ်လို ထင်ထားခဲ့တာပါ။ ဒါပေမဲ့ ဝမ်းသာစရာကောင်းတာက... myPOS version 2.0 မှာ open-test data အဖြစ် သုံးခဲ့တဲ့ ASEAN-MT corpus ထဲက travel-tour ဒိုမိန်းဒေတာ စာကြောင်းရေ တစ်သောင်းနှစ်ထောင်ကျော်ကိုပါ ရှဲလုပ်ဖို့ လက်ရှိ ကျွန်တော် အလုပ်လုပ်နေတဲ့ Lab ရဲ့ Leader ဒေါက်တာ Thepchai က ခွင့်ပြုလို့ myPOS version 3.0 အနေနဲ့ release လုပ်ဖို့ ဖြစ်လာခဲ့ရပါတယ်။ NECTEC မှာ အလုပ်လုပ်နေစဉ် မှာ မြန်မာစာ NLP R&D အတွက် contribution/collaboration တစ်ခု ဖြစ်သွားလို့ အတိုင်းထက်မသိ ဝမ်းသာရပါတယ်။  
@@ -37,7 +39,7 @@ myPOS version 3.0 ရဲ့ စာကြောင်းရေတိုင်း�
 
 P.S. \[at\] နေရာမှာ @ သင်္ကေတကို အစားထိုးပေးပါ။  
 
-myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့ experiment လုပ်ခဲ့တဲ့ မော်ဒယ်တွေကတော့ စုစုပေါင်း လေးခုပါ။ အဲဒီ မော်ဒယ်တွေကတော့ 3-gram HMM, CRF, RDR နဲ့ NCRF++ တို့ ဖြစ်ပြီးတော့ မော်ဒယ် တစ်ခုချင်းစီကို open-test ဒေတာသုံး POS tagging လုပ်ကြည့်ပြီးတော့ hypothesis ဖိုင်ကို evaluation လုပ်ထားတဲ့ ရလဒ်တွေကတော့ အောက်ပါအတိုင်းပါ။ ရလဒ်အကောင်းဆုံး ပေးနိုင်တာကတော့ xxxx မော်ဒယ်လို့ ရှာဖွေတွေ့ရှိပါတယ်။  
+myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့ experiment လုပ်ခဲ့တဲ့ မော်ဒယ်တွေကတော့ စုစုပေါင်း လေးခုပါ။ အဲဒီ မော်ဒယ်တွေကတော့ 3-gram HMM, CRF, RDR နဲ့ NCRF++ တို့ ဖြစ်ပြီးတော့ မော်ဒယ် တစ်ခုချင်းစီကို open-test ဒေတာသုံး POS tagging လုပ်ကြည့်ပြီးတော့ hypothesis ဖိုင်ကို evaluation လုပ်ထားတဲ့ ရလဒ်တွေကတော့ အောက်ပါအတိုင်းပါ။ လက်ရှိ run ခဲ့တဲ့ experiment တွေကနေ ရလဒ်အကောင်းဆုံး ပေးနိုင်တာကတော့ RDR မော်ဒယ်လို့ ရှာဖွေတွေ့ရှိပါတယ်။ နောက်ပိုင်း အချိန်ရတဲ့အခါမှာ NCRF++ မော်ဒယ်ကို parameter tuning တချို့ ဆက်လုပ်ပြီး အကောင်းဆုံးမော်ဒယ်ကို တင်ပေးနိုင်အောင် ကြိုးစားပါမယ်။  
 
   
 <div align="center">
