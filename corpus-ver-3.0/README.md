@@ -250,6 +250,11 @@ Tagging with NCRF++ model:
 ### Evaluation
 Although some modeling tools provide the accuracy or F1-score, we will use `evaluate.py` for comparison among different models.  
 
+command syntax: python2.7 ./evaluate.py <hypothesis> <reference>  
+```
+python2.7 ./evaluate.py ./test.bmes.out.row ./ref.row  
+```
+
 
 ## To Do
 
