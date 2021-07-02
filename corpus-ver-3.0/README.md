@@ -216,13 +216,15 @@ Zar Zar Hlaing, Ye Kyaw Thu, Myat Myo Nwe Wai, Thepchai Supnithi, Ponrudee Netis
 
 ## Quick Start
 ### Using Pre-trained Models
-First, download or clone the myPOS repository. It contains pre-trained models for each version.  
 
+First, download or clone the myPOS repository. It contains pre-trained models for each version.  
+(အရင်ဆုံး train လုပ်ပေးထားတဲ့ model ဖိုင်တွေကို github site ကနေ Download Button ကနေ ဒေါင်းလုဒ် လုပ်ယူတာဖြစ်ဖြစ်၊ git command က ကိုယ့်စက်ထဲမှာ install လုပ်ထားပြီးသားဆိုရင် git clone လုပ်ယူတာ ဖြစ်ဖြစ် လုပ်ပါ။)  
 ```
 $git clone https://github.com/ye-kyaw-thu/myPOS
 ```
 
 We assumed you already installed jitar, CRF++, RDR and NCRF++ toolkits on your computer...  
+(လိုအပ်တဲ့ toolkit တွေဖြစ်တဲ့ jitar, CRF++, RDR နဲ့ NCRF++ တွေကိုတော့ ကိုယ်အသုံးပြုမယ့် စက်ထဲမှာ installation ကြိုလုပ်ထားရပါလိမ့်မယ်။ တခြား လိုအပ်တဲ့ library, dependencies တွေလည်း ပြင်ဆင်ထားရပါလိမ့်မယ်။)
 
 Tagging with 3gHMM model:  
 ```
