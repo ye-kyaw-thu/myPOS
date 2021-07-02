@@ -164,7 +164,15 @@ In the example 10 sentences given above, compound words are as follows:
   
 - ဘက်ပတစ်/n|ကျောင်း/n
   - "ဘက်ပတစ်ကျောင်း" means "Baptist church" in English. It is a Myanmar compound word formed by combination of "ဘက်ပတစ်" (Baptist) and "ကျောင်း" (church or school).  
- 
+### Statistics of POS Distribution
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/etc/POS-tag-distribution-of-myPOS-ver3.png" />  
+</p>  
+<div align="center">
+  Fig. POS tag distribution of myPOS corpus version 3.0  
+</div>   
+
 ## Models of myPOS Version 3.0
 
 The 3gHMM, CRF, RDR and NCRF++ models are under the following link:  
