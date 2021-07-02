@@ -178,8 +178,6 @@ In the example 10 sentences given above, compound words are as follows:
 The 3gHMM, CRF, RDR and NCRF++ models are under the following link:  
 [https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/models](https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/models)  
 
-Note: NCRF++ မော်ဒယ်က file size ကြီးလို့ လက်ရှိ တင်ဖို့ ကြိုးစားနေဆဲ.... 
-
 ## iSAI-NLP 2020 Experiment (used myPOS Version 2.0)
 
 All the experiments that we prepared for iSAI-NLP 2020 conference paper entitled "Myanmar POS resource extension effects on automatic tagging methods" are stored under the following link:  
