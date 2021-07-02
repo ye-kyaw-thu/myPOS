@@ -237,12 +237,12 @@ command syntax: crf_test -m \<model_file\> \<test_files\>
    $crf_test -m ./t1/train1.nopipe.crf-model ./otest.nopipe.col > ./otest1.nopipe.col.result
 ```
 
-Tagging with CRF model:  
+Tagging with RDR model:  
+```
+python2.7 RDRPOSTagger.py tag ./t1/train1.nopipe.RDR /t1/train1.nopipe.DICT ./t1/otest.nopipe.word
 ```
 
-```
-
-Tagging with CRF model:  
+Tagging with NCRF++ model:  
 ```
 
 ```
