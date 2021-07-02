@@ -42,7 +42,7 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
   
 <div align="center">
 <table style="margin-left: auto; margin-right: auto;">
-  <caption>Table.2 POS tagging accuracies of myPOS (version 3.0) </caption>    
+  <caption>Table.2 POS tagging accuracies (F1-score) of myPOS (version 3.0) </caption>    
   <tr>
     <th>Methods</th>
     <th>open-test data</th> 
@@ -61,23 +61,23 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
 
   </tr>
     <tr>
-    <td>NCRF++ xxx</td>
-    <td> xx.xx </td>
+    <td>NCRF++, wordCNN-CRF-charLSTM </td>
+    <td> 90.67 </td>
 
   </tr>
   <tr>
-    <td>NCRF++ xxx</td>
-    <td> xx.xx </td>
+    <td>NCRF++, wordLSTM-charCNN</td>
+    <td> 93.24 </td>
 
   </tr>
   <tr>
-    <td>NCRF++ xxx</td>
-    <td> xx.xx </td>
+    <td>NCRF++, wordLSTM-CRF-charCNN</td>
+    <td> 92.95 </td>
 
   </tr>
   <tr>
-    <td>NCRF++ xxx</td>
-    <td> xx.xx </td>
+    <td>NCRF++, wordLSTM-CRF</td>
+    <td> 92.08 </td>
 
   </tr>
 </table>
