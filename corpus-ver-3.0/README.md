@@ -42,7 +42,7 @@ myPOS version 3.0 ရဲ့ corpus ကိုသုံးပြီးတော့
   
 <div align="center">
 <table style="margin-left: auto; margin-right: auto;">
-  <caption>Table.2 POS tagging accuracies (F1-score) of myPOS (version 3.0) </caption>    
+  <caption>Table.2 POS tagging accuracies (F1-score) of myPOS (version 3.0) with open-test data (1,000 sentences)</caption>    
   <tr>
     <th>Methods</th>
     <th>open-test data</th> 
