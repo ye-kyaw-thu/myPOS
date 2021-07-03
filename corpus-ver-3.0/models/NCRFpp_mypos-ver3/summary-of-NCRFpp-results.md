@@ -1,6 +1,6 @@
 # Summary of NCRF++ results with myPOS (version 3.0)
 
-## Model1: wordCNN-CRF-charLSTM
+## Model-1: wordCNN-CRF-charLSTM
 ***Training/Testing:***  
 Right token =  12893  All token =  13468  acc =  0.9573062073062073
 Test: time: 1.14s, speed: 881.74st/s; acc: 0.9573, p: -1.0000, r: -1.0000, f: -1.0000
@@ -17,7 +17,7 @@ Tag precision: 0.906741906742
 
 ==========
 
-## Model2: wordLSTM-charCNN
+## Model-2: wordLSTM-charCNN
 ***Training/Testing:***  
 Right token =  12965  All token =  13468  acc =  0.9626522126522127
 Test: time: 0.76s, speed: 1334.39st/s; acc: 0.9627, p: -1.0000, r: -1.0000, f: -1.0000
@@ -34,7 +34,7 @@ Tag precision: 0.932358182358
 
 ==========
 
-## Model3: wordLSTM-CRF-charCNN
+## Model-3: wordLSTM-CRF-charCNN
 ***Training/Testing:***  
 Right token =  12940  All token =  13468  acc =  0.9607959607959607
 Test: time: 1.12s, speed: 898.44st/s; acc: 0.9608, p: -1.0000, r: -1.0000, f: -1.0000
@@ -51,7 +51,7 @@ Tag precision: 0.929462429462
 
 ==========
 
-## Model 4: wordLSTM-CRF
+## Model-4: wordLSTM-CRF
 ***Training/Testing:***  
 Right token =  12887  All token =  13468  acc =  0.9568607068607069
 Test: time: 1.05s, speed: 960.37st/s; acc: 0.9569, p: -1.0000, r: -1.0000, f: -1.0000
