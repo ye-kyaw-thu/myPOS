@@ -10,8 +10,10 @@ Right token =  12212  All token =  13468  acc =  0.9067419067419067
 raw: time:1.43s, speed:703.99st/s; acc: 0.9067, p: -1.0000, r: -1.0000, f: -1.0000
 
 ***Evaluation with evaluate.py:*** 
+```
 (NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordCNN-CRF-charLSTM$ python2.7 ./evaluate.py ./test.bmes.out.clean.row ./ref.row 
 Tag precision: 0.906741906742
+```
 
 ==========
 
@@ -25,8 +27,10 @@ Right token =  12557  All token =  13468  acc =  0.9323581823581824
 raw: time:0.79s, speed:1267.47st/s; acc: 0.9324, p: -1.0000, r: -1.0000, f: -1.0000
 
 ***Evaluation with evaluate.py:***
+```
 (NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-charCNN$ python2.7 ../wordCNN-CRF-charLSTM/evaluate.py ./test.bmes.out.row ./ref.row 
 Tag precision: 0.932358182358
+```
 
 ==========
 
@@ -40,8 +44,10 @@ Right token =  12518  All token =  13468  acc =  0.9294624294624294
 raw: time:1.10s, speed:911.28st/s; acc: 0.9295, p: -1.0000, r: -1.0000, f: -1.0000
 
 ***Evaluation with evaluate.py:***
+```
 (NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF-charCNN$ python2.7 ../wordCNN-CRF-charLSTM/evaluate.py ./test.bmes.out.row ./ref.row 
 Tag precision: 0.929462429462
+```
 
 ==========
 
@@ -55,8 +61,10 @@ Right token =  12402  All token =  13468  acc =  0.9208494208494209
 raw: time:1.03s, speed:981.10st/s; acc: 0.9208, p: -1.0000, r: -1.0000, f: -1.0000
 
 ***evaluate.py:***
+```
 (NCRF++) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/NCRFpp/trained-models/wordLSTM-CRF$ python2.7 ../wordCNN-CRF-charLSTM/evaluate.py ./test.bmes.out.row ../wordCNN-CRF-charLSTM/ref.row 
 Tag precision: 0.920849420849
+```
 
 ## Confirmation on row2col and col2row conversion error
 
