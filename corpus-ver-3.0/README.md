@@ -166,7 +166,7 @@ In the example 10 sentences given above, compound words are as follows:
   - "ဘက်ပတစ်ကျောင်း" means "Baptist church" in English. It is a Myanmar compound word formed by combination of "ဘက်ပတစ်" (Baptist) and "ကျောင်း" (church or school).  
 ### Statistics of POS Distribution
 
-The following graph shows the POS tag distribution of myPOS (version 3.0).  
+The following graph shows the POS tag distribution of myPOS (version 3.0). We might need to consider adding some more Myanmar sentences that contain abb (Abbreviation) , fw (Foreign Word), int (Interjection), num (Number) and sb (Symbol) POS tags.
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/etc/POS-tag-distribution-of-myPOS-ver3.png" alt="drawing" width="800"/>  
@@ -266,3 +266,5 @@ python2.7 ./evaluate.py ./test.bmes.out.row ./ref.row
 - updating compound words
 - rechecking manual tagging errors
 - corpus extension and accuracy improvements
+- adding some more sentences that contain abb (Abbreviation) , fw (Foreign Word), int (Interjection), num (Number) and sb (Symbol) POS tags
+
