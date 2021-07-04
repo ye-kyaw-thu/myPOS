@@ -228,7 +228,7 @@ We assumed you already installed jitar, CRF++, RDR and NCRF++ toolkits on your c
 
 Tagging with 3gHMM model:  
 ```
-cat ./otest.nopipe.word | ../jitar-0.3.3-bin/jitar-0.3.3/bin/jitar-tag ./t1/train1.nopipe.word.model > ./otest1.nopipe.word.TAGGED
+$cat ./otest.nopipe.word | ../jitar-0.3.3-bin/jitar-0.3.3/bin/jitar-tag ./t1/train1.nopipe.word.model > ./otest1.nopipe.word.TAGGED
 ```
 
 Tagging with CRF model:  
@@ -241,7 +241,7 @@ command syntax: crf_test -m \<model_file\> \<test_files\>
 
 Tagging with RDR model:  
 ```
-python2.7 RDRPOSTagger.py tag ./t1/train1.nopipe.RDR /t1/train1.nopipe.DICT ./t1/otest.nopipe.word
+$python2.7 RDRPOSTagger.py tag ./t1/train1.nopipe.RDR /t1/train1.nopipe.DICT ./t1/otest.nopipe.word
 ```
 
 Tagging with NCRF++ model:  
@@ -249,7 +249,7 @@ Tagging with NCRF++ model:
 Don't forget to prepare `decode.config` file in advance.  
 (decode.config ဖိုင်ကို အရင်ပြင်ထားရပါလိမ့်မယ်)  
 ```
-python ./main.py --config ./trained-models/wordLSTM-CRF/decode.config
+$python ./main.py --config ./trained-models/wordLSTM-CRF/decode.config
 ```
 
 ### Evaluation
@@ -257,7 +257,7 @@ Although some modeling tools provide the accuracy or F1-score, we will use `eval
 
 command syntax: python2.7 ./evaluate.py <hypothesis> <reference>  
 ```
-python2.7 ./evaluate.py ./test.bmes.out.row ./ref.row  
+$python2.7 ./evaluate.py ./test.bmes.out.row ./ref.row  
 ```
 
 
