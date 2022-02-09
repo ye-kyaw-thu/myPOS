@@ -14,7 +14,7 @@ y
 ကျွန်တော်တို့ရဲ့ myPOS ရဲ့ UPOS အကြား mapping table က အောက်ပါအတိုင်း ပါ။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/myPOS/blob/master/myPOS-to-universalPOS/mapping-scheme-between-myPOS-and-UPOS.png" alt="Mapping scheme" width="1200"/>  
+<img src="https://github.com/ye-kyaw-thu/myPOS/blob/master/myPOS-to-universalPOS/mapping-scheme-btw-myPOS-and-UPOS.png" alt="Mapping scheme" width="1200"/>  
 </p>  
 <div align="center">
   Fig.1 Mapping scheme between POS tag-set of myPOS and Universal POS tags.  
