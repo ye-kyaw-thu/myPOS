@@ -6,6 +6,9 @@ Part of Speech (POS) tagging ကိုပဲ ကမ္ဘာပေါ်မှ�
 
 FYI: Universal Dependency Tree ကိုလည်း ပြင်ဆင်နေပါတယ်။ စာတမ်းရေးပြီးသွားတဲ့အခါမှာ အားလုံးသုံးလို့ ရအောင် တင်ပေးသွားပါမယ်။  
 
+y  
+9 Feb 2022  
+
 ## Mapping Scheme
 
 ကျွန်တော်တို့ရဲ့ myPOS ရဲ့ UPOS အကြား mapping table က အောက်ပါအတိုင်း ပါ။  
@@ -21,12 +24,16 @@ FYI: Universal Dependency Tree ကိုလည်း ပြင်ဆင်နေ
 
 ## Conversion Example
 
-```
-(base) ye@:/media/ye/project2/students/zar-zar-hlaing/Journal/mypos2upos/myPOS-v3-pos2upos$ shuf ./mypos-ver.3.0.txt | head  > ./mypos-head.txt
-```
+တင်ပေးထားတဲ့ python script ကိုသုံးပြီးတော့ myPOS tag-set ကနေ Universal POS tag-set ကို ပြောင်းတာကို ဥပမာအနေနဲ့ run ပြပါမယ်။ အရင်ဆုံး myPOS (version 3.0) ဖိုင်ထဲကို ကျပန်းမွှေလိုက်ပြီး အဲဒီအထဲကနေ စာကြောင်း ၁၀ကြောင်းကို ပဲ mypos-head.txt ဖိုင် အဖြစ် သိမ်းမယ်။  
 
 ```
-(base) ye@:/media/ye/project2/students/zar-zar-hlaing/Journal/mypos2upos/myPOS-v3-pos2upos$ head ./mypos-head.txt 
+$ shuf ./mypos-ver.3.0.txt | head  > ./mypos-head.txt
+```
+
+ကျပန်း ဆွဲထုတ်ယူထားတဲ့ myPOS tag-set နဲ့ tagged လုပ်ထားတဲ့ စာကြောင်း ၁၀ကြောင်းကို screen ပေါ်မှာ ရိုက်ထုတ်ကြည့်မယ်။  
+
+```
+$ head ./mypos-head.txt 
 ဒါ/pron ဆို/v ည/n အတွက်/ppm ကျွန်တော်/pron ဘယ်/pron မှာ/ppm နေ/v ရ/part မလဲ/part ။/punc
 ဘယ်လို/adv ဝတ်ဝတ်/v ရ/v ပါ/part တယ်/ppm ။/punc
 ထမင်း/n ကို/ppm ဟင်းသီးဟင်းရွက်/n နှင့်/conj ငရုတ်သီး/n မှုန့်/n ထည့်/v ပြီး/part နယ်စား/v ရင်/conj အရသာရှိ/v တယ်/ppm ။/punc
@@ -39,8 +46,10 @@ FYI: Universal Dependency Tree ကိုလည်း ပြင်ဆင်နေ
 တစ်/tn ည/n ကို/ppm ဒေါ်လာ/n ၁၀ဝ/num ပါ/part ။/punc
 ```
 
+```mypos2upos.py``` script ကို run လိုက်ရင် အောက်ပါအတိုင်း UPOS tag-set အဖြစ် ပြောင်းပေးပါလိမ့်မယ်။  
+
 ```
-(base) ye@:/media/ye/project2/students/zar-zar-hlaing/Journal/mypos2upos/myPOS-v3-pos2upos$ python ./mypos2upos.py ./mypos-head.txt 
+$ python ./mypos2upos.py ./mypos-head.txt 
 ဒါ/PRON ဆို/VERB ည/NOUN အတွက်/ADP ကျွန်တော်/PRON ဘယ်/PRON မှာ/ADP နေ/VERB ရ/PRT မလဲ/PRT ။/.
 ဘယ်လို/ADV ဝတ်ဝတ်/VERB ရ/VERB ပါ/PRT တယ်/ADP ။/.
 ထမင်း/NOUN ကို/ADP ဟင်းသီးဟင်းရွက်/NOUN နှင့်/CONJ ငရုတ်သီး/NOUN မှုန့်/NOUN ထည့်/VERB ပြီး/PRT နယ်စား/VERB ရင်/CONJ အရသာရှိ/VERB တယ်/ADP ။/.
@@ -52,3 +61,21 @@ FYI: Universal Dependency Tree ကိုလည်း ပြင်ဆင်နေ
 သူ/PRON တို့/PRT က/ADP ပွဲခ/NOUN ယူ/VERB ပါ/PRT သလား/PRT ။/.
 တစ်/NUM ည/NOUN ကို/ADP ဒေါ်လာ/NOUN ၁၀ဝ/NOUNum ပါ/PRT ။/.
 ```
+
+တကယ်လို့ ထွက်လာတဲ့ output ကို ဖိုင်ထဲမှာ သိမ်းချင်တယ် ဆိုရင်တော့ ထုံးစံအတိုင်း ">" နဲ့ ဖိုင်နာမည်တစ်ခုပေးပြီး redirection လုပ်ပေးလိုက်ယုံပါပဲ။  
+
+```
+$ python ./mypos2upos.py ./mypos-head.txt > mypos-head-upos.txt
+$ cat ./mypos-head-upos.txt 
+ဒါ/PRON ဆို/VERB ည/NOUN အတွက်/ADP ကျွန်တော်/PRON ဘယ်/PRON မှာ/ADP နေ/VERB ရ/PRT မလဲ/PRT ။/.
+ဘယ်လို/ADV ဝတ်ဝတ်/VERB ရ/VERB ပါ/PRT တယ်/ADP ။/.
+ထမင်း/NOUN ကို/ADP ဟင်းသီးဟင်းရွက်/NOUN နှင့်/CONJ ငရုတ်သီး/NOUN မှုန့်/NOUN ထည့်/VERB ပြီး/PRT နယ်စား/VERB ရင်/CONJ အရသာရှိ/VERB တယ်/ADP ။/.
+အများ/NOUN က/ADP လို့လားတောင့်တ/VERB ကြ/PRT တဲ့/PRT လူ့ဘောင်အဖွဲ့အစည်း/NOUN တရပ်/NOUN ဖန်တီး/VERB ဖို့/PRT အတွက်/ADP နိုင်ငံသား/NOUN အားလုံး/ADJ ဝိုင်းဝန်း/ADV ကြိုးစား/VERB ကြ/PRT ရ/PRT တယ်/ADP ။/.
+ကောင်း/ADJ ပါ/PRT ပြီ/ADP ဆရာ/NOUN ၊/. ကောင်း/ADJ သော/PRT ည/NOUN ပါ/PRT ။/.
+ကဲ/X ၊/. အတွင်း/NOUN|ဘက်/NOUN ခေါင်း/NOUN သွား/VERB လျှော်/VERB ပါ/PRT ၊/. ပြီး/VERB ရင်/CONJ လေမှုတ်/VERB ပေး/PRT မယ်/ADP ။/.
+မနုဿဗေဒ/NOUN ဟူ/VERB သည်/ADP လူသား/NOUN|မျိုးနွယ်စု/NOUN စတင်/VERB|ဖြစ်ပေါ်/VERB|လာ/PRT|ပုံ/PRT ၊/. သမိုင်း/NOUN|ကြောင်း/PRT နှင့်/CONJ လူသား/NOUN များ/PRT နှင့်/ADP ပတ်သက်/VERB ဆက်နွယ်/VERB သော/PRT လူမှု/NOUN ကိစ္စ/NOUN Humanity/X ကို/ADP လေ့လာ/VERB|ခြင်း/PRT ဖြစ်/VERB သည်/ADP ။/.
+ဆရာ/NOUN|ဦးမောင်မောင်/NOUN ၊/. ဌာနမှူး/NOUN က/ADP လာ/VERB ခဲ့/PRT ပါ/PRT ဦး/PRT တဲ့/PRT ။/.
+သူ/PRON တို့/PRT က/ADP ပွဲခ/NOUN ယူ/VERB ပါ/PRT သလား/PRT ။/.
+တစ်/NUM ည/NOUN ကို/ADP ဒေါ်လာ/NOUN ၁၀ဝ/NOUNum ပါ/PRT ။/.
+```
+
