@@ -79,3 +79,9 @@ $ cat ./mypos-head-upos.txt
 တစ်/NUM ည/NOUN ကို/ADP ဒေါ်လာ/NOUN ၁၀ဝ/NOUNum ပါ/PRT ။/.
 ```
 
+## Reference
+
+- [https://universaldependencies.org/u/pos/](https://universaldependencies.org/u/pos/)  
+- [https://universaldependencies.org/#language-u](https://universaldependencies.org/#language-u) 
+- [UPOS Paper](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/37072.pdf)
+- [Introduction to Universal Dependencies Concept](https://universaldependencies.org/introduction.html)
