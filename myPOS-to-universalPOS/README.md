@@ -11,7 +11,7 @@ y
 
 ## Mapping Scheme
 
-ကျွန်တော်တို့ရဲ့ myPOS ရဲ့ UPOS အကြား mapping table က အောက်ပါအတိုင်း ပါ။  
+ကျွန်တော်တို့ရဲ့ myPOS နဲ့ UPOS အကြား mapping table က အောက်ပါအတိုင်း ပါ။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/myPOS/blob/master/myPOS-to-universalPOS/mypos-to-upos-mapping.png" alt="Mapping scheme" width="1200"/>  
