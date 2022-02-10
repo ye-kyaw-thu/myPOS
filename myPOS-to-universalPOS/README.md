@@ -83,7 +83,7 @@ $ cat ./mypos-head-upos.txt
 
 Currently, please cite as:  
 
-myPOS to Universal POS Conversion, Ye Kyaw Thu and Zar Zar Hlaing, 10 Feb 2022, GitHub Link: https://github.com/ye-kyaw-thu/myWord  
+myPOS to Universal POS Conversion, Ye Kyaw Thu and Zar Zar Hlaing, 10 Feb 2022, GitHub Link: https://github.com/ye-kyaw-thu/myPOS/tree/master/myPOS-to-universalPOS  
 
 ## Reference
 
