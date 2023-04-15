@@ -112,7 +112,8 @@ The link of the myPOS corpus (ver. 3.0) is as follow:
 [https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/corpus](https://github.com/ye-kyaw-thu/myPOS/tree/master/corpus-ver-3.0/corpus)  
 
 The myPOS corpus version 3.0: [mypos-ver.3.0.txt](https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/corpus/mypos-ver.3.0.txt)  
-Shuffled version of the corpus: [mypos-ver.3.0.shuf.txt](https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/corpus/mypos-ver.3.0.shuf.txt)
+Shuffled version of the corpus: [mypos-ver.3.0.shuf.txt](https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/corpus/mypos-ver.3.0.shuf.txt)  
+Raw data, removed some punctuation characters for several NLP tasks:  [mypos-ver.3.0.shuf.notag.nopunc.txt](https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/corpus/mypos-ver.3.0.shuf.notag.nopunc.txt)  
 
 Training corpus for building models: [train.mypos-ver3.txt](https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/corpus/train.mypos-ver3.txt)  
 Open-test data for evaluation: [otest.1k.txt](https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-ver-3.0/corpus/otest.1k.txt)  
