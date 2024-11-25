@@ -131,11 +131,11 @@ Contributors
 - [Ye Kyaw Thu](https://sites.google.com/site/yekyawthunlp/) (Supervisor)  
 
 **For myPOS version 2.0 and 3.0:**  
-- Zar Zar Hlaing (King Mongkut's Institute of Technology Ladkrabang:KMITL, Bangkok, Thailand)  
+- Zar Zar Hlaing (King Mongkut's Institute of Technology Ladkrabang: KMITL, Bangkok, Thailand)  
 - Ye Kyaw Thu (National Electronics and Computer Technology Center: NECTEC, Pathumthani, Thailand)  
-- Myat Myo Nwe Wai (Myanmar Institute of Information Technology:MIIT, Mandalay, Myanmar)  
+- Myat Myo Nwe Wai (Myanmar Institute of Information Technology: MIIT, Mandalay, Myanmar)  
 - Thepchai Supnithi (National Electronics and Computer Technology Center: NECTEC, Pathumthani, Thailand)  
-- Ponrudee Netisopakul (King Mongkut's Institute of Technology Ladkrabang:KMITL, Bangkok, Thailand) 
+- Ponrudee Netisopakul (King Mongkut's Institute of Technology Ladkrabang: KMITL, Bangkok, Thailand) 
 
 ## Acknowledgements
 We would like to express our gratitude to Dr. Andrew Finch and Dr. Chenchen Ding for their valuable comments for myPOS draft version 0.8.
